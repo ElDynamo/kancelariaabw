@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Nawigacja główna" [ref=e4]:
+      - link "Kancelaria Prawna ABW — strona główna" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Kancelaria Prawna ABW
+        - generic [ref=e7]: Radca Prawny Anna Jarczyńska
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Strona główna" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Usługi" [ref=e12] [cursor=pointer]:
+            - /url: /uslugi
+        - listitem [ref=e13]:
+          - link "Cennik" [ref=e14] [cursor=pointer]:
+            - /url: /cennik
+        - listitem [ref=e15]:
+          - link "Blog" [ref=e16] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e17]:
+          - link "O mnie" [ref=e18] [cursor=pointer]:
+            - /url: /o-mnie
+        - listitem [ref=e19]:
+          - link "Kontakt" [ref=e20] [cursor=pointer]:
+            - /url: /kontakt
+      - link "Umów konsultację prawną" [ref=e21] [cursor=pointer]:
+        - /url: /kontakt
+        - text: Umów konsultację
+  - main [ref=e22]:
+    - article [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e27]: Dokumenty prawne
+        - heading "Regulamin" [level=1] [ref=e28]
+        - paragraph [ref=e29]: Regulamin świadczenia usług drogą elektroniczną zgodny z Ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz.U. 2002 Nr 144, poz. 1204 ze zm.)
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - heading "§1. Postanowienia ogólne" [level=2] [ref=e32]
+            - paragraph [ref=e33]: "Niniejszy regulamin określa zasady korzystania z serwisu internetowego dostępnego pod adresem kancelariaabw.pl (dalej: „Serwis\"), prowadzonego przez Annę Jarczyńską, prowadzącą działalność pod firmą Kancelaria Prawna ABW z siedzibą we Wrocławiu (dalej: „Usługodawca\")."
+          - generic [ref=e34]:
+            - heading "§2. Rodzaje świadczonych usług" [level=2] [ref=e35]
+            - paragraph [ref=e36]: "Za pośrednictwem Serwisu świadczone są następujące usługi drogą elektroniczną:"
+            - list [ref=e37]:
+              - listitem [ref=e38]: udostępnianie informacji o ofercie kancelarii,
+              - listitem [ref=e39]: obsługa formularza kontaktowego,
+              - listitem [ref=e40]: dostęp do treści bloga prawniczego.
+          - generic [ref=e41]:
+            - heading "§3. Wymagania techniczne" [level=2] [ref=e42]
+            - paragraph [ref=e43]: "Do korzystania z Serwisu niezbędne jest: urządzenie z dostępem do Internetu, przeglądarka internetowa obsługująca HTML5 i CSS3, aktywny adres e-mail (w przypadku korzystania z formularza kontaktowego)."
+          - generic [ref=e44]:
+            - heading "§4. Zasady korzystania z Serwisu" [level=2] [ref=e45]
+            - paragraph [ref=e46]: Użytkownik zobowiązuje się do korzystania z Serwisu zgodnie z prawem, niniejszym Regulaminem i dobrymi obyczajami. Zakazane jest dostarczanie treści bezprawnych oraz działania mogące zakłócić działanie Serwisu.
+          - generic [ref=e47]:
+            - heading "§5. Formularz kontaktowy" [level=2] [ref=e48]
+            - paragraph [ref=e49]: Korzystanie z formularza kontaktowego jest dobrowolne. Wysłanie wiadomości przez formularz nie jest równoznaczne z nawiązaniem stosunku prawnego (umowy o świadczenie pomocy prawnej). Odpowiedź na zapytanie nastąpi w ciągu 3 dni roboczych.
+          - generic [ref=e50]:
+            - heading "§6. Odpowiedzialność" [level=2] [ref=e51]
+            - paragraph [ref=e52]: Treści zamieszczone w Serwisie mają charakter wyłącznie informacyjny i nie stanowią porady prawnej. Usługodawca nie ponosi odpowiedzialności za decyzje podjęte na podstawie informacji zawartych w Serwisie bez uprzedniej konsultacji prawnej.
+          - generic [ref=e53]:
+            - heading "§7. Własność intelektualna" [level=2] [ref=e54]
+            - paragraph [ref=e55]: Wszelkie treści dostępne w Serwisie, w tym teksty, grafiki i projekt strony, są chronione prawem autorskim i stanowią własność Usługodawcy. Kopiowanie bez zgody jest zabronione.
+          - generic [ref=e56]:
+            - heading "§8. Postanowienia końcowe" [level=2] [ref=e57]
+            - paragraph [ref=e58]: Regulamin wchodzi w życie z dniem publikacji. Usługodawca zastrzega prawo do zmiany regulaminu z powiadomieniem użytkowników poprzez publikację nowej wersji w Serwisie. W sprawach nieuregulowanych zastosowanie mają przepisy prawa polskiego, w szczególności Kodeksu cywilnego i Ustawy o świadczeniu usług drogą elektroniczną.
+          - generic [ref=e59]:
+            - heading "§9. Kontakt" [level=2] [ref=e60]
+            - paragraph [ref=e61]:
+              - text: "Kontakt z Usługodawcą:"
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e62] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+              - text: ", tel. 609 366 160."
+  - contentinfo [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: Kancelaria Prawna ABW
+          - paragraph [ref=e68]: Radca Prawny Anna Jarczyńska
+          - paragraph [ref=e69]: Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
+        - generic [ref=e70]:
+          - heading "Usługi" [level=2] [ref=e71]
+          - list [ref=e72]:
+            - listitem [ref=e73]:
+              - link "Prawo rodzinne" [ref=e74] [cursor=pointer]:
+                - /url: /uslugi/prawo-rodzinne
+            - listitem [ref=e75]:
+              - link "Prawo cywilne" [ref=e76] [cursor=pointer]:
+                - /url: /uslugi/prawo-cywilne
+            - listitem [ref=e77]:
+              - link "Prawo karne" [ref=e78] [cursor=pointer]:
+                - /url: /uslugi/prawo-karne
+        - generic [ref=e79]:
+          - heading "Kontakt" [level=2] [ref=e80]
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - paragraph [ref=e83]: Telefon
+              - link "609 366 160" [ref=e84] [cursor=pointer]:
+                - /url: tel:+48609366160
+            - generic [ref=e85]:
+              - paragraph [ref=e86]: Email
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e87] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+            - generic [ref=e88]:
+              - paragraph [ref=e89]: Lokalizacje
+              - paragraph [ref=e90]: Wrocław
+              - paragraph [ref=e91]: Bielany Wrocławskie
+            - generic [ref=e92]:
+              - paragraph [ref=e93]: Godziny pracy
+              - paragraph [ref=e94]: Pon.–Pt., 9:00–17:00
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: © 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
+        - navigation "Linki prawne" [ref=e97]:
+          - list [ref=e98]:
+            - listitem [ref=e99]:
+              - link "Polityka prywatności" [ref=e100] [cursor=pointer]:
+                - /url: /polityka-prywatnosci
+            - listitem [ref=e101]:
+              - link "Regulamin" [ref=e102] [cursor=pointer]:
+                - /url: /regulamin
+            - listitem [ref=e103]:
+              - link "Przetwarzanie danych" [ref=e104] [cursor=pointer]:
+                - /url: /przetwarzanie-danych
+  - generic [ref=e107]:
+    - button "Menu" [ref=e108]:
+      - img [ref=e110]
+      - generic: Menu
+    - button "Inspect" [ref=e114]:
+      - img [ref=e116]
+      - generic: Inspect
+    - button "Audit" [ref=e118]:
+      - img [ref=e120]
+      - generic: Audit
+    - button "Settings" [ref=e123]:
+      - img [ref=e125]
+      - generic: Settings
+```

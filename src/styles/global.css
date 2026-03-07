@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-off-white: #f8fafc;
+  --color-navy: #1a3a5c;
+  --color-navy-dark: #0f2540;
+  --color-navy-light: #2d5a8e;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
+  --color-text: #1e2a3a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* Fonts */
+  --font-serif: "Baskervville", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* Spacing — premium large sections */
+  --spacing-section: 6rem;
+  --spacing-section-lg: 10rem;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-navy);
+}
+
+/* Utility classes */
+.btn-primary {
+  @apply bg-navy text-white font-sans text-sm uppercase tracking-wider
+         px-6 py-3 rounded-lg transition-colors duration-200
+         hover:bg-navy-dark focus:outline-none focus:ring-2 focus:ring-gold;
+}
+
+.btn-outline {
+  @apply border-2 border-navy text-navy font-sans text-sm uppercase tracking-wider
+         px-6 py-3 rounded-lg transition-colors duration-200
+         hover:bg-navy hover:text-white;
+}
+
+.section {
+  @apply py-20 lg:py-28;
+}
+
+.container-site {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+.heading-xl {
+  @apply font-serif text-4xl lg:text-6xl text-navy leading-tight;
+}
+
+.heading-lg {
+  @apply font-serif text-3xl lg:text-5xl text-navy leading-tight;
+}
+
+.heading-md {
+  @apply font-serif text-2xl lg:text-3xl text-navy;
+}
+
+.text-body {
+  @apply font-sans text-base text-text-muted leading-relaxed;
+}

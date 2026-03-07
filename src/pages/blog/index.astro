@@ -1,0 +1,94 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+import Button from '@components/ui/Button.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const categoryColors: Record<string, string> = {
+  'Prawo rodzinne': 'bg-blue-50 text-blue-700',
+  'Prawo cywilne': 'bg-green-50 text-green-700',
+  'Prawo karne': 'bg-red-50 text-red-700',
+  'Porady ogólne': 'bg-gray-100 text-gray-700',
+};
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Kancelarii Prawnej ABW",
+  "description": "Artykuły prawne — prawo rodzinne, cywilne, karne we Wrocławiu",
+  "url": "https://kancelariaabw.pl/blog",
+  "author": {
+    "@type": "Person",
+    "name": "Anna Jarczyńska"
+  }
+};
+---
+
+<Layout
+  title="Blog prawniczy — Kancelaria Prawna ABW Wrocław"
+  description="Artykuły o prawie rodzinnym, cywilnym i karnym. Porady radcy prawnego Anny Jarczyńskiej z Wrocławia."
+>
+  <Fragment slot="head">
+    <StructuredData schema={blogSchema} />
+  </Fragment>
+
+  <section class="section bg-white">
+    <div class="container-site">
+      <div class="text-center mb-14">
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Wiedza i porady</span>
+        <h1 class="heading-xl mt-2">Blog prawniczy</h1>
+        <p class="text-body max-w-2xl mx-auto mt-4">
+          Praktyczne artykuły o polskim prawie. Piszę przystępnie o sprawach, które dotykają codziennego życia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map(post => (
+          <article class="group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">
+            <!-- Category tag -->
+            <div class="p-5 pb-0">
+              <span class:list={['font-sans text-xs px-2 py-1 rounded-full inline-block', categoryColors[post.data.category] ?? 'bg-gray-100 text-gray-700']}>
+                {post.data.category}
+              </span>
+            </div>
+            <!-- Content -->
+            <div class="p-5 flex flex-col gap-3 flex-1">
+              <time
+                datetime={post.data.publishDate.toISOString()}
+                class="font-sans text-xs text-text-muted"
+              >
+                {post.data.publishDate.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </time>
+              <h2 class="font-serif text-xl text-navy group-hover:text-gold transition-colors leading-snug">
+                <a href={`/blog/${post.slug}`} class="after:absolute after:inset-0">
+                  {post.data.title}
+                </a>
+              </h2>
+              <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3">
+                {post.data.description}
+              </p>
+              <div class="mt-auto pt-4 border-t border-border">
+                <span class="font-sans text-xs text-gold uppercase tracking-wider">
+                  Przeczytaj artykuł →
+                </span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-center text-body py-20">Wkrótce pojawią się pierwsze artykuły.</p>
+      )}
+
+      <div class="mt-16 bg-off-white rounded-3xl p-8 text-center">
+        <h2 class="heading-md mb-3">Szukasz pomocy prawnej?</h2>
+        <p class="text-body mb-6">Artykuły to tylko ogólna wiedza — Twoja sprawa wymaga profesjonalnej oceny.</p>
+        <Button href="/kontakt" variant="primary" size="lg">Umów konsultację</Button>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,53 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import ServiceCard from '@components/ui/ServiceCard.astro';
+import Button from '@components/ui/Button.astro';
+
+const services = [
+  {
+    icon: '⚖️',
+    title: 'Prawo rodzinne',
+    description: 'Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi, adopcja.',
+    href: '/uslugi/prawo-rodzinne',
+  },
+  {
+    icon: '📜',
+    title: 'Prawo cywilne',
+    description: 'Umowy, odszkodowania, nieruchomości, prawo spadkowe, windykacja należności.',
+    href: '/uslugi/prawo-cywilne',
+  },
+  {
+    icon: '🛡️',
+    title: 'Prawo karne',
+    description: 'Obrona w sprawach karnych i karnoskarbowych, reprezentacja pokrzywdzonych.',
+    href: '/uslugi/prawo-karne',
+  },
+];
+---
+
+<Layout
+  title="Usługi prawne Wrocław — Kancelaria Prawna ABW"
+  description="Kancelaria Prawna ABW oferuje pomoc prawną w sprawach rodzinnych, cywilnych i karnych we Wrocławiu. Sprawdź zakres naszych usług."
+>
+  <section class="section bg-white">
+    <div class="container-site">
+      <div class="text-center mb-14">
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Co oferujemy</span>
+        <h1 class="heading-xl mt-2">Usługi prawne</h1>
+        <p class="text-body max-w-2xl mx-auto mt-4">
+          Świadczymy kompleksową pomoc prawną w trzech kluczowych obszarach prawa. Każda sprawa traktowana jest indywidualnie.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {services.map(s => <ServiceCard {...s} />)}
+      </div>
+      <div class="mt-16 bg-off-white rounded-3xl p-8 lg:p-12 text-center">
+        <h2 class="heading-md mb-4">Nie wiesz, czy możemy Ci pomóc?</h2>
+        <p class="text-body mb-6 max-w-xl mx-auto">
+          Skontaktuj się z nami, opisz swoją sytuację — bezpłatnie ocenimy, czy i jak możemy Ci pomóc.
+        </p>
+        <Button href="/kontakt" variant="primary" size="lg">Skontaktuj się</Button>
+      </div>
+    </div>
+  </section>
+</Layout>

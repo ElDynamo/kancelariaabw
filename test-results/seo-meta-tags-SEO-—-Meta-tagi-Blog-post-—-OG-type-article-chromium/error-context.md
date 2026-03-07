@@ -1,0 +1,223 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Nawigacja główna" [ref=e4]:
+      - link "Kancelaria Prawna ABW — strona główna" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Kancelaria Prawna ABW
+        - generic [ref=e7]: Radca Prawny Anna Jarczyńska
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Strona główna" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Usługi" [ref=e12] [cursor=pointer]:
+            - /url: /uslugi
+        - listitem [ref=e13]:
+          - link "Cennik" [ref=e14] [cursor=pointer]:
+            - /url: /cennik
+        - listitem [ref=e15]:
+          - link "Blog" [ref=e16] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e17]:
+          - link "O mnie" [ref=e18] [cursor=pointer]:
+            - /url: /o-mnie
+        - listitem [ref=e19]:
+          - link "Kontakt" [ref=e20] [cursor=pointer]:
+            - /url: /kontakt
+      - link "Umów konsultację prawną" [ref=e21] [cursor=pointer]:
+        - /url: /kontakt
+        - text: Umów konsultację
+  - main [ref=e22]:
+    - article [ref=e23]:
+      - generic [ref=e25]:
+        - navigation "Breadcrumb" [ref=e26]:
+          - list [ref=e27]:
+            - listitem [ref=e28]:
+              - link "Strona główna" [ref=e29] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e30]: ›
+            - listitem [ref=e31]:
+              - link "Blog" [ref=e32] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e33]: ›
+            - listitem [ref=e34]: Jak przebiega sprawa o rozwód w Polsce? Przewodnik krok po kroku
+        - generic [ref=e35]:
+          - text: Prawo rodzinne
+          - heading "Jak przebiega sprawa o rozwód w Polsce? Przewodnik krok po kroku" [level=1] [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - text: "Autor:"
+              - strong [ref=e39]: Anna Jarczyńska
+            - generic [ref=e40]: ·
+            - time [ref=e41]: 15 lutego 2026
+          - generic "Tagi" [ref=e42]:
+            - generic [ref=e43]: "#rozwód"
+            - generic [ref=e44]: "#prawo rodzinne"
+            - generic [ref=e45]: "#sąd okręgowy"
+            - generic [ref=e46]: "#Wrocław"
+        - generic [ref=e47]:
+          - paragraph [ref=e48]: Decyzja o rozwodzie to jeden z najtrudniejszych kroków w życiu. Wiele osób nie wie, czego się spodziewać i jak przebiega cały proces. Ten artykuł wyjaśnia poszczególne etapy sprawy o rozwód w Polsce.
+          - heading "Kto może złożyć pozew o rozwód?" [level=2] [ref=e49]:
+            - link "Kto może złożyć pozew o rozwód?" [ref=e50] [cursor=pointer]:
+              - /url: "#kto-może-złożyć-pozew-o-rozwód"
+          - paragraph [ref=e51]: "Pozew o rozwód może złożyć każdy z małżonków do sądu okręgowego właściwego dla ostatniego miejsca zamieszkania małżonków, jeśli choć jedno z nich ma tam jeszcze miejsce zamieszkania. Pozew składa się na piśmie, dołączając:"
+          - list [ref=e52]:
+            - listitem [ref=e53]: odpis aktu małżeństwa,
+            - listitem [ref=e54]: odpisy aktów urodzenia dzieci,
+            - listitem [ref=e55]: dokumenty finansowe (jeśli dochodzimy alimentów lub podziału majątku),
+            - listitem [ref=e56]: dowód uiszczenia opłaty sądowej (600 zł lub 100 zł przy zgodnym wniosku).
+          - heading "Czy muszę udowodnić winę małżonka?" [level=2] [ref=e57]:
+            - link "Czy muszę udowodnić winę małżonka?" [ref=e58] [cursor=pointer]:
+              - /url: "#czy-muszę-udowodnić-winę-małżonka"
+          - paragraph [ref=e59]: "Nie jest to konieczne. Sąd może orzec rozwód:"
+          - paragraph [ref=e60]:
+            - strong [ref=e61]: bez orzekania o winie
+            - text: — szybciej, taniej, mniej konfliktowo. Wymagana jest zgoda obu stron.
+          - paragraph [ref=e62]:
+            - strong [ref=e63]: z orzekaniem o winie
+            - text: — sąd ustala, który z małżonków ponosi winę. Ma to znaczenie dla alimentów między byłymi małżonkami, ale wydłuża postępowanie.
+          - heading "Jak długo trwa sprawa o rozwód?" [level=2] [ref=e64]:
+            - link "Jak długo trwa sprawa o rozwód?" [ref=e65] [cursor=pointer]:
+              - /url: "#jak-długo-trwa-sprawa-o-rozwód"
+          - paragraph [ref=e66]: "Czas postępowania zależy od kilku czynników:"
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - strong [ref=e69]: Rozwód bez orzekania o winie, brak małoletnich dzieci
+              - text: ": zwykle 3–6 miesięcy od złożenia pozwu."
+            - listitem [ref=e70]:
+              - strong [ref=e71]: Rozwód z orzekaniem o winie lub małoletnie dzieci
+              - text: ": często rok lub dłużej."
+            - listitem [ref=e72]:
+              - strong [ref=e73]: Sporne kwestie majątku i opieki
+              - text: ": mogą znacznie wydłużyć postępowanie."
+          - heading "Co sąd rozstrzyga przy rozwodzie?" [level=2] [ref=e74]:
+            - link "Co sąd rozstrzyga przy rozwodzie?" [ref=e75] [cursor=pointer]:
+              - /url: "#co-sąd-rozstrzyga-przy-rozwodzie"
+          - paragraph [ref=e76]: "W wyroku rozwodowym sąd obligatoryjnie rozstrzyga o:"
+          - list [ref=e77]:
+            - listitem [ref=e78]: winie rozkładu pożycia (o ile jest żądanie),
+            - listitem [ref=e79]: władzy rodzicielskiej nad małoletnimi dziećmi,
+            - listitem [ref=e80]: kontaktach rodziców z dziećmi,
+            - listitem [ref=e81]: alimentach na dzieci.
+          - paragraph [ref=e82]: "Fakultatywnie (na wniosek) sąd może orzec o:"
+          - list [ref=e83]:
+            - listitem [ref=e84]: podziale majątku wspólnego,
+            - listitem [ref=e85]: alimentach między małżonkami,
+            - listitem [ref=e86]: sposobie korzystania ze wspólnego mieszkania.
+          - heading "Jak przygotować się do rozwodu?" [level=2] [ref=e87]:
+            - link "Jak przygotować się do rozwodu?" [ref=e88] [cursor=pointer]:
+              - /url: "#jak-przygotować-się-do-rozwodu"
+          - list [ref=e89]:
+            - listitem [ref=e90]:
+              - strong [ref=e91]: Zabezpiecz dokumenty
+              - text: — akty, umowy, wyciągi bankowe, dokumenty majątku.
+            - listitem [ref=e92]:
+              - strong [ref=e93]: Opisz swoją sytuację prawnikowi
+              - text: — każda sprawa jest inna.
+            - listitem [ref=e94]:
+              - strong [ref=e95]: Rozważ mediację
+              - text: — może przyspieszyć sprawę i zmniejszyć koszty.
+            - listitem [ref=e96]:
+              - strong [ref=e97]: Zadbaj o dobro dzieci
+              - text: — sąd będzie kierował się ich najlepszym interesem.
+          - separator [ref=e98]
+          - paragraph [ref=e99]:
+            - emphasis [ref=e100]: Masz pytania dotyczące sprawy o rozwód we Wrocławiu? Skontaktuj się z Kancelarią Prawną ABW — Anna Jarczyńska, tel. 609 366 160.
+        - complementary "Kontakt z kancelarią" [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - paragraph [ref=e104]: Potrzebujesz pomocy?
+              - heading "Ten artykuł to ogólna informacja. Twoja sprawa jest wyjątkowa." [level=2] [ref=e105]:
+                - text: Ten artykuł to ogólna informacja.
+                - text: Twoja sprawa jest wyjątkowa.
+              - paragraph [ref=e106]: Skontaktuj się z kancelarią — przeanalizujemy Twoją sytuację i przedstawimy dostępne opcje.
+              - generic [ref=e107]:
+                - link "Umów konsultację" [ref=e108] [cursor=pointer]:
+                  - /url: /kontakt
+                - link "609 366 160" [ref=e109] [cursor=pointer]:
+                  - /url: tel:+48609366160
+            - generic [ref=e110]:
+              - paragraph [ref=e111]: Dane kancelarii
+              - generic [ref=e112]:
+                - paragraph [ref=e113]: Telefon
+                - link "609 366 160" [ref=e114] [cursor=pointer]:
+                  - /url: tel:+48609366160
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: Email
+                - link "a.jarczynska@kancelariaabw.pl" [ref=e117] [cursor=pointer]:
+                  - /url: mailto:a.jarczynska@kancelariaabw.pl
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: Lokalizacje
+                - paragraph [ref=e120]: Wrocław · Bielany Wrocławskie
+              - generic [ref=e121]:
+                - paragraph [ref=e122]: Godziny
+                - paragraph [ref=e123]: Pon.–Pt., 9:00–17:00
+        - link "← Wróć do bloga" [ref=e125] [cursor=pointer]:
+          - /url: /blog
+  - contentinfo [ref=e126]:
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: Kancelaria Prawna ABW
+          - paragraph [ref=e131]: Radca Prawny Anna Jarczyńska
+          - paragraph [ref=e132]: Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
+        - generic [ref=e133]:
+          - heading "Usługi" [level=2] [ref=e134]
+          - list [ref=e135]:
+            - listitem [ref=e136]:
+              - link "Prawo rodzinne" [ref=e137] [cursor=pointer]:
+                - /url: /uslugi/prawo-rodzinne
+            - listitem [ref=e138]:
+              - link "Prawo cywilne" [ref=e139] [cursor=pointer]:
+                - /url: /uslugi/prawo-cywilne
+            - listitem [ref=e140]:
+              - link "Prawo karne" [ref=e141] [cursor=pointer]:
+                - /url: /uslugi/prawo-karne
+        - generic [ref=e142]:
+          - heading "Kontakt" [level=2] [ref=e143]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - paragraph [ref=e146]: Telefon
+              - link "609 366 160" [ref=e147] [cursor=pointer]:
+                - /url: tel:+48609366160
+            - generic [ref=e148]:
+              - paragraph [ref=e149]: Email
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e150] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+            - generic [ref=e151]:
+              - paragraph [ref=e152]: Lokalizacje
+              - paragraph [ref=e153]: Wrocław
+              - paragraph [ref=e154]: Bielany Wrocławskie
+            - generic [ref=e155]:
+              - paragraph [ref=e156]: Godziny pracy
+              - paragraph [ref=e157]: Pon.–Pt., 9:00–17:00
+      - generic [ref=e158]:
+        - paragraph [ref=e159]: © 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
+        - navigation "Linki prawne" [ref=e160]:
+          - list [ref=e161]:
+            - listitem [ref=e162]:
+              - link "Polityka prywatności" [ref=e163] [cursor=pointer]:
+                - /url: /polityka-prywatnosci
+            - listitem [ref=e164]:
+              - link "Regulamin" [ref=e165] [cursor=pointer]:
+                - /url: /regulamin
+            - listitem [ref=e166]:
+              - link "Przetwarzanie danych" [ref=e167] [cursor=pointer]:
+                - /url: /przetwarzanie-danych
+  - generic [ref=e170]:
+    - button "Menu" [ref=e171]:
+      - img [ref=e173]
+      - generic: Menu
+    - button "Inspect" [ref=e177]:
+      - img [ref=e179]
+      - generic: Inspect
+    - button "Audit" [ref=e181]:
+      - img [ref=e183]
+      - generic: Audit
+    - button "Settings" [ref=e186]:
+      - img [ref=e188]
+      - generic: Settings
+```

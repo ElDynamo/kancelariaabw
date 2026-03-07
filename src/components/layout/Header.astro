@@ -1,0 +1,101 @@
+---
+const navLinks = [
+  { href: '/', label: 'Strona główna' },
+  { href: '/uslugi', label: 'Usługi' },
+  { href: '/cennik', label: 'Cennik' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/o-mnie', label: 'O mnie' },
+  { href: '/kontakt', label: 'Kontakt' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+  <div class="container-site">
+    <nav class="flex items-center justify-between h-16 lg:h-20" aria-label="Nawigacja główna">
+
+      <!-- Logo -->
+      <a href="/" class="flex flex-col leading-tight" aria-label="Kancelaria Prawna ABW — strona główna">
+        <span class="font-serif text-lg text-navy font-normal tracking-wide">Kancelaria Prawna ABW</span>
+        <span class="font-sans text-xs text-text-muted uppercase tracking-widest">Radca Prawny Anna Jarczyńska</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-8" role="list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                'font-sans text-xs uppercase tracking-widest transition-colors duration-200',
+                currentPath === link.href
+                  ? 'text-gold font-medium'
+                  : 'text-text-muted hover:text-navy',
+              ]}
+              aria-current={currentPath === link.href ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA Button -->
+      <a
+        href="/kontakt"
+        class="hidden lg:inline-flex btn-primary"
+        aria-label="Umów konsultację prawną"
+      >
+        Umów konsultację
+      </a>
+
+      <!-- Mobile menu button — Vue Island -->
+      <button
+        type="button"
+        class="lg:hidden p-2 text-navy"
+        aria-label="Otwórz menu"
+        aria-expanded="false"
+        id="mobile-menu-btn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-border bg-white" role="navigation" aria-label="Menu mobilne">
+    <ul class="container-site py-4 flex flex-col gap-4" role="list">
+      {navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'block font-sans text-sm uppercase tracking-widest py-2 transition-colors',
+              currentPath === link.href ? 'text-gold' : 'text-text-muted hover:text-navy',
+            ]}
+            aria-current={currentPath === link.href ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href="/kontakt" class="btn-primary inline-block w-full text-center mt-2">
+          Umów konsultację
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden', isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

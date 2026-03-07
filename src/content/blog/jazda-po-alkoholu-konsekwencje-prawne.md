@@ -1,0 +1,49 @@
+---
+title: 'Co grozi za jazdę po alkoholu? Prawo karne drogowe w Polsce'
+description: 'Jazda po alkoholu w Polsce — konsekwencje prawne, kary, zakaz prowadzenia pojazdów. Radca Prawny Anna Jarczyńska wyjaśnia przepisy prawa karnego.'
+publishDate: 2026-03-05
+category: 'Prawo karne'
+tags: ['prawo karne', 'jazda po alkoholu', 'DUI', 'zakaz prowadzenia', 'Wrocław']
+draft: false
+---
+
+Jazda pod wpływem alkoholu to jedno z najpoważniejszych przestępstw drogowych w Polsce. Konsekwencje prawne są surowe i zależą od stężenia alkoholu we krwi.
+
+## Wykroczenie czy przestępstwo?
+
+Polskie prawo rozróżnia dwa progi:
+
+**Wykroczenie (art. 87 Kodeksu wykroczeń)**  
+Stężenie alkoholu: 0,2–0,5 promila (lub 0,1–0,25 mg/l w wydychanym powietrzu).  
+Kara: areszt do 30 dni, grzywna 2500–30 000 zł, zakaz prowadzenia pojazdów 6 miesięcy–3 lata.
+
+**Przestępstwo (art. 178a Kodeksu karnego)**  
+Stężenie alkoholu: powyżej 0,5 promila (lub 0,25 mg/l w wydechu).  
+Kara: pozbawienie wolności do 2 lat (lub do 3 lat jeśli droga publiczna), zakaz prowadzenia pojazdów 3–15 lat, obowiązkowe świadczenie pieniężne 5000–60 000 zł.
+
+## Zakaz prowadzenia pojazdów — na jak długo?
+
+Zakaz orzekany jest jako środek karny. W razie recydywy lub wypadku sąd orzeka zakaz dożywotni. Zakaz wpisany jest do Krajowego Rejestru Karnego i jest weryfikowalny przez pracodawcę.
+
+## Czy można uniknąć zakazu prowadzenia?
+
+W typowym pierwszym przypadku przestępstwa możliwe jest warunkowe umorzenie postępowania, ale sąd i tak może orzec krótszy zakaz. Przy recydywie — zakaz jest obligatoryjny.
+
+## Co robić po zatrzymaniu?
+
+1. Zachowaj spokój, skorzystaj z prawa do odmowy wyjaśnień.
+2. Niezwłocznie skontaktuj się z radcą prawnym lub adwokatem.
+3. Nie podpisuj żadnych dokumentów bez konsultacji z prawnikiem.
+4. Zadbaj o dokumentację — wyniki badań, okoliczności zdarzenia.
+
+## Czy warto mieć prawnika w sprawie karnej?
+
+Tak. Prawnik może:
+- kwestionować prawidłowość przeprowadzonego badania alkomatem,
+- wnioskować o warunkowe umorzenie lub zawieszenie kary,
+- negocjować warunki zakazu prowadzenia,
+- minimalizować skutki dla Twojej sytuacji zawodowej i życiowej.
+
+---
+
+*Masz sprawę karną dotyczącą Twojej sytuacji drogowej? Skontaktuj się z Kancelarią Prawną ABW we Wrocławiu: 609 366 160 — Anna Jarczyńska, Radca Prawny.*

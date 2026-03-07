@@ -1,0 +1,49 @@
+---
+title: 'Alimenty na dziecko — jak je uzyskać i w jakiej wysokości?'
+description: 'Alimenty na dziecko w Polsce — kto może żądać, jak obliczyć wysokość, jak egzekwować. Praktyczny przewodnik radcy prawnego z Wrocławia.'
+publishDate: 2026-02-28
+category: 'Prawo rodzinne'
+tags: ['alimenty', 'alimenty na dziecko', 'prawo rodzinne', 'Wrocław']
+draft: false
+---
+
+Alimenty to świadczenie pieniężne należne dziecku od rodzica, który nie pełni osobistej opieki. W Polsce obowiązek alimentacyjny wynika bezpośrednio z Kodeksu rodzinnego i opiekuńczego.
+
+## Kto i od kiedy jest zobowiązany do płacenia alimentów?
+
+Obowiązek alimentacyjny spoczywa na każdym z rodziców, niezależnie od tego, czy byli małżeństwem. Trwa co do zasady do usamodzielnienia się dziecka (ukończenie 18 lat lub ukończenie nauki — zwykle do 25 roku życia).
+
+## Jak oblicza się wysokość alimentów?
+
+Sąd bierze pod uwagę dwa czynniki:
+
+**1. Usprawiedliwione potrzeby dziecka** — koszty utrzymania, edukacji, leczenia, zajęć dodatkowych.
+
+**2. Możliwości zarobkowe i majątkowe zobowiązanego** — nie faktyczne zarobki, ale potencjalne (sąd może wziąć pod uwagę, że rodzic celowo nie pracuje lub pracuje poniżej kwalifikacji).
+
+Nie istnieje żadna sztywna "tabela alimentów". Kwoty w Polsce wahają się w granicach 600–2500 zł miesięcznie na jedno dziecko, ale bywają wyższe lub niższe.
+
+## Jak uzyskać alimenty?
+
+### Ścieżka sądowa
+1. Złóż pozew o alimenty do sądu rejonowego (wydział rodzinny) właściwego dla miejsca zamieszkania dziecka.
+2. Do pozwu dołącz: akt urodzenia dziecka, zestawienie kosztów utrzymania, dokumenty o zarobkach i możliwościach pozwanego.
+3. Sąd może już na pierwszej rozprawie wydać tymczasowe postanowienie o alimentach.
+
+### Ugoda u mediatora lub notariusza
+Rodzice mogą zawrzeć ugodę przed mediatorem lub w formie aktu notarialnego — taki dokument jest tytułem wykonawczym, bez konieczności postępowania sądowego.
+
+## Co gdy dłużnik nie płaci?
+
+W razie niepłacenia alimentów można:
+- złożyć wniosek do komornika o wszczęcie egzekucji,
+- zgłosić się do Funduszu Alimentacyjnego (jeśli spełnione są warunki dochodowe),
+- złożyć zawiadomienie o popełnieniu przestępstwa niealimentacji (art. 209 kk).
+
+## Podwyżka alimentów
+
+Jeśli sytuacja dziecka zmieni się (wyższe koszty edukacji, choroba) lub sytuacja ekonomiczna dłużnika ulegnie znacznej poprawie — można złożyć pozew o podwyższenie alimentów.
+
+---
+
+*Potrzebujesz pomocy w sprawie alimentów we Wrocławiu? Zadzwoń do Kancelarii Prawnej ABW: 609 366 160.*

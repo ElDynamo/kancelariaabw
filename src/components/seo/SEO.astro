@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  image = '/og-default.jpg',
+  canonical,
+  type = 'website',
+} = Astro.props;
+
+const siteUrl = 'https://kancelariaabw.pl';
+const canonicalUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
+const fullTitle = title.includes('Kancelaria') ? title : `${title} | Kancelaria ABW`;
+const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+---
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Kancelaria Prawna ABW" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Slot for JSON-LD structured data -->
+<slot />

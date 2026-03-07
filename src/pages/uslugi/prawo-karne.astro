@@ -1,0 +1,81 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Prawo karne Wrocław",
+  "provider": { "@type": "LegalService", "name": "Kancelaria Prawna ABW", "telephone": "+48609366160" },
+  "serviceType": "Legal Services",
+  "areaServed": "Wrocław"
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+    { "@type": "ListItem", "position": 3, "name": "Prawo karne", "item": "https://kancelariaabw.pl/uslugi/prawo-karne" },
+  ]
+};
+---
+
+<Layout
+  title="Prawo karne Wrocław — Obrona w sprawach karnych"
+  description="Kancelaria Prawna ABW — obrona w sprawach karnych i karnoskarbowych we Wrocławiu. Reprezentacja podejrzanych i pokrzywdzonych. Tel: 609 366 160."
+>
+  <Fragment slot="head">
+    <StructuredData schema={serviceSchema} />
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <section class="section bg-white">
+    <div class="container-site max-w-4xl">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-text-muted">
+          <li><a href="/" class="hover:text-navy">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/uslugi" class="hover:text-navy">Usługi</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-navy">Prawo karne</li>
+        </ol>
+      </nav>
+
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Usługi</span>
+      </div>
+      <h1 class="heading-xl mb-6">Prawo karne<br/><span class="text-gold">Wrocław</span></h1>
+      <p class="text-body text-lg mb-10">
+        W obliczu zarzutów karnych kluczowe jest szybkie działanie i profesjonalna pomoc prawna. Kancelaria zapewnia obronę na każdym etapie postępowania — od zatrzymania po prawomocny wyrok.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+        {[
+          { title: 'Obrona w postępowaniu karnym', desc: 'Reprezentacja podejrzanego i oskarżonego na etapie postępowania przygotowawczego i przed sądem.' },
+          { title: 'Reprezentacja pokrzywdzonych', desc: 'Ochrona interesów ofiar przestępstw — oskarżyciel posiłkowy, powództwo cywilne.' },
+          { title: 'Sprawy karnoskarbowe', desc: 'Obrona w postępowaniach dotyczących przestępstw i wykroczeń skarbowych.' },
+          { title: 'Wykroczenia', desc: 'Reprezentacja w sprawach o wykroczenia przed sądem i organami administracyjnymi.' },
+          { title: 'Warunkowe umorzenie', desc: 'Starania o warunkowe umorzenie postępowania lub zawieszenie kary.' },
+          { title: 'Etap wykonawczy', desc: 'Wnioski o odroczenie kary, przerwę w wykonaniu kary, warunkowe przedterminowe zwolnienie.' },
+        ].map(item => (
+          <div class="bg-off-white rounded-xl p-5 border border-border">
+            <h2 class="font-serif text-lg text-navy mb-2">{item.title}</h2>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-navy rounded-3xl p-8 text-center">
+        <h2 class="font-serif text-2xl text-white mb-3">Masz sprawę karną? Zadzwoń teraz.</h2>
+        <p class="font-sans text-white/70 mb-6">W sprawach karnych liczy się każda godzina. Skontaktuj się bez zwłoki.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="tel:+48609366160" class="btn-primary bg-gold text-navy hover:bg-gold-light">609 366 160</a>
+          <a href="/kontakt" class="btn-outline border-white text-white hover:bg-white hover:text-navy">Formularz kontaktowy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

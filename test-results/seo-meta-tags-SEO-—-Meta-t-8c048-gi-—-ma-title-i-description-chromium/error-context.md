@@ -1,0 +1,129 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Nawigacja główna" [ref=e4]:
+      - link "Kancelaria Prawna ABW — strona główna" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Kancelaria Prawna ABW
+        - generic [ref=e7]: Radca Prawny Anna Jarczyńska
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Strona główna" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Usługi" [ref=e12] [cursor=pointer]:
+            - /url: /uslugi
+        - listitem [ref=e13]:
+          - link "Cennik" [ref=e14] [cursor=pointer]:
+            - /url: /cennik
+        - listitem [ref=e15]:
+          - link "Blog" [ref=e16] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e17]:
+          - link "O mnie" [ref=e18] [cursor=pointer]:
+            - /url: /o-mnie
+        - listitem [ref=e19]:
+          - link "Kontakt" [ref=e20] [cursor=pointer]:
+            - /url: /kontakt
+      - link "Umów konsultację prawną" [ref=e21] [cursor=pointer]:
+        - /url: /kontakt
+        - text: Umów konsultację
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - text: Co oferujemy
+        - heading "Usługi prawne" [level=1] [ref=e26]
+        - paragraph [ref=e27]: Świadczymy kompleksową pomoc prawną w trzech kluczowych obszarach prawa. Każda sprawa traktowana jest indywidualnie.
+      - generic [ref=e28]:
+        - article [ref=e29]:
+          - generic [ref=e31]:
+            - heading "Prawo rodzinne" [level=3] [ref=e32]
+            - paragraph [ref=e33]: Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi, adopcja.
+          - 'link "Dowiedz się więcej o: Prawo rodzinne" [ref=e34] [cursor=pointer]':
+            - /url: /uslugi/prawo-rodzinne
+            - text: Dowiedz się więcej →
+        - article [ref=e35]:
+          - generic [ref=e37]:
+            - heading "Prawo cywilne" [level=3] [ref=e38]
+            - paragraph [ref=e39]: Umowy, odszkodowania, nieruchomości, prawo spadkowe, windykacja należności.
+          - 'link "Dowiedz się więcej o: Prawo cywilne" [ref=e40] [cursor=pointer]':
+            - /url: /uslugi/prawo-cywilne
+            - text: Dowiedz się więcej →
+        - article [ref=e41]:
+          - generic [ref=e43]:
+            - heading "Prawo karne" [level=3] [ref=e44]
+            - paragraph [ref=e45]: Obrona w sprawach karnych i karnoskarbowych, reprezentacja pokrzywdzonych.
+          - 'link "Dowiedz się więcej o: Prawo karne" [ref=e46] [cursor=pointer]':
+            - /url: /uslugi/prawo-karne
+            - text: Dowiedz się więcej →
+      - generic [ref=e47]:
+        - heading "Nie wiesz, czy możemy Ci pomóc?" [level=2] [ref=e48]
+        - paragraph [ref=e49]: Skontaktuj się z nami, opisz swoją sytuację — bezpłatnie ocenimy, czy i jak możemy Ci pomóc.
+        - link "Skontaktuj się" [ref=e50] [cursor=pointer]:
+          - /url: /kontakt
+  - contentinfo [ref=e51]:
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: Kancelaria Prawna ABW
+          - paragraph [ref=e56]: Radca Prawny Anna Jarczyńska
+          - paragraph [ref=e57]: Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
+        - generic [ref=e58]:
+          - heading "Usługi" [level=2] [ref=e59]
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "Prawo rodzinne" [ref=e62] [cursor=pointer]:
+                - /url: /uslugi/prawo-rodzinne
+            - listitem [ref=e63]:
+              - link "Prawo cywilne" [ref=e64] [cursor=pointer]:
+                - /url: /uslugi/prawo-cywilne
+            - listitem [ref=e65]:
+              - link "Prawo karne" [ref=e66] [cursor=pointer]:
+                - /url: /uslugi/prawo-karne
+        - generic [ref=e67]:
+          - heading "Kontakt" [level=2] [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - paragraph [ref=e71]: Telefon
+              - link "609 366 160" [ref=e72] [cursor=pointer]:
+                - /url: tel:+48609366160
+            - generic [ref=e73]:
+              - paragraph [ref=e74]: Email
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e75] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+            - generic [ref=e76]:
+              - paragraph [ref=e77]: Lokalizacje
+              - paragraph [ref=e78]: Wrocław
+              - paragraph [ref=e79]: Bielany Wrocławskie
+            - generic [ref=e80]:
+              - paragraph [ref=e81]: Godziny pracy
+              - paragraph [ref=e82]: Pon.–Pt., 9:00–17:00
+      - generic [ref=e83]:
+        - paragraph [ref=e84]: © 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
+        - navigation "Linki prawne" [ref=e85]:
+          - list [ref=e86]:
+            - listitem [ref=e87]:
+              - link "Polityka prywatności" [ref=e88] [cursor=pointer]:
+                - /url: /polityka-prywatnosci
+            - listitem [ref=e89]:
+              - link "Regulamin" [ref=e90] [cursor=pointer]:
+                - /url: /regulamin
+            - listitem [ref=e91]:
+              - link "Przetwarzanie danych" [ref=e92] [cursor=pointer]:
+                - /url: /przetwarzanie-danych
+  - generic [ref=e95]:
+    - button "Menu" [ref=e96]:
+      - img [ref=e98]
+      - generic: Menu
+    - button "Inspect" [ref=e102]:
+      - img [ref=e104]
+      - generic: Inspect
+    - button "Audit" [ref=e106]:
+      - img [ref=e108]
+      - generic: Audit
+    - button "Settings" [ref=e111]:
+      - img [ref=e113]
+      - generic: Settings
+```
