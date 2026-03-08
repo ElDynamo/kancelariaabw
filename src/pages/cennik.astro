@@ -9,7 +9,7 @@ import Button from '@components/ui/Button.astro';
 >
   <section class="section bg-white">
     <div class="container-site max-w-4xl">
-      <div class="text-center mb-14">
+      <div class="text-center mb-14 reveal">
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Transparentność</span>
         <h1 class="heading-xl mt-2">Cennik</h1>
         <p class="text-body max-w-2xl mx-auto mt-4">
@@ -17,7 +17,7 @@ import Button from '@components/ui/Button.astro';
         </p>
       </div>
 
-      <div class="space-y-3 mb-14">
+      <div class="space-y-3 mb-14 reveal delay-100">
         {[
           { service: 'Porada prawna (1 godzina)', price: 'od 200 zł', note: '' },
           { service: 'Analiza dokumentów', price: 'od 250 zł', note: '' },
@@ -37,7 +37,7 @@ import Button from '@components/ui/Button.astro';
         ))}
       </div>
 
-      <div class="bg-off-white rounded-3xl p-8 border border-border mb-8">
+      <div class="bg-off-white rounded-3xl p-8 border border-border mb-8 reveal delay-200">
         <h2 class="font-serif text-xl text-navy mb-4">Ważne informacje</h2>
         <ul class="space-y-3 font-sans text-sm text-text-muted">
           <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> Podane ceny są cenami netto — do kwot należy doliczyć podatek VAT 23%.</li>
@@ -48,7 +48,7 @@ import Button from '@components/ui/Button.astro';
         </ul>
       </div>
 
-      <div class="text-center">
+      <div class="text-center reveal delay-300">
         <Button href="/kontakt" variant="primary" size="lg">Zapytaj o wycenę swojej sprawy</Button>
       </div>
     </div>

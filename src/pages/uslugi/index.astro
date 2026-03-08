@@ -3,62 +3,56 @@ import Layout from '@components/layout/Layout.astro';
 import ServiceCard from '@components/ui/ServiceCard.astro';
 import Button from '@components/ui/Button.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
+import CTASection from '@components/ui/CTASection.astro';
 
-const services = [
+const mainServices = [
   {
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 9l9-6 9 6M6 12l-3 6h6l-3-6zm12 0l-3 6h6l-3-6z"/></svg>,
-    title: 'Prawo rodzinne',
-
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 9l9-6 9 6M6 12l-3 6h6l-3-6zm12 0l-3 6h6l-3-6z"/></svg>`,
     title: 'Prawo rodzinne',
     description: 'Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi.',
     href: '/uslugi/prawo-rodzinne',
+    badge: 'Główna specjalizacja',
   },
   {
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>,
-    title: 'Prawo cywilne',
-
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
     title: 'Prawo cywilne',
     description: 'Umowy, roszczenia, prawo spadkowe, windykacja należności.',
     href: '/uslugi/prawo-cywilne',
+    badge: null,
   },
   {
-    icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-    title: 'Prawo karne',
-
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
     title: 'Prawo karne',
     description: 'Obrona w sprawach karnych i karnoskarbowych, reprezentacja pokrzywdzonych.',
     href: '/uslugi/prawo-karne',
+    badge: null,
   },
 ];
 
-const pillarServices = [
+const additionalServices = [
   {
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
-    title: 'Upadłość konsumencka — Wrocław',
+    title: 'Upadłość konsumencka',
     description: 'Zadłużony? Pomożemy ogłosić upadłość i zacząć od nowa. Zatrzymaj komornika.',
     href: '/uslugi/upadlosc-konsumencka-wroclaw',
-    badge: 'Najwyższy priorytet',
   },
   {
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
-    title: 'Odszkodowania komunikacyjne',
+    title: 'Odszkodowania',
     description: 'Wypadek drogowy? Ubezpieczyciel zaniżył wypłatę? Uzyskamy pełne odszkodowanie.',
     href: '/uslugi/odszkodowania-komunikacyjne-wroclaw',
-    badge: null,
   },
   {
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     title: 'Prawo nieruchomości',
     description: 'Eksmisje, najem, bezumowne korzystanie z lokalu, zakup i sprzedaż nieruchomości.',
     href: '/uslugi/prawo-nieruchomosci-wroclaw',
-    badge: null,
   },
   {
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
     title: 'Obsługa prawna firm',
     description: 'Umowy B2B, windykacja, ochrona przed nieuczciwą konkurencją, RODO.',
     href: '/uslugi/obsluga-prawna-firm-wroclaw',
-    badge: null,
   },
 ];
 
@@ -80,44 +74,50 @@ const breadcrumb = {
   </Fragment>
 
   <!-- HERO -->
-  <section class="section bg-navy text-white">
-    <div class="container-site max-w-4xl text-center">
-      <div class="flex items-center justify-center gap-2 mb-4">
-        <span class="h-px w-8 bg-gold"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Co oferujemy</span>
-        <span class="h-px w-8 bg-gold"></span>
+  <section class="py-24 lg:py-32 bg-navy text-white text-center relative overflow-hidden">
+    <!-- Subtle gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-dark/50 to-transparent pointer-events-none"></div>
+    <div class="container-site relative z-10 max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-4 mb-8 reveal">
+        <span class="h-px w-12 bg-gold/50"></span>
+        <span class="font-sans text-xs uppercase tracking-[0.2em] text-gold">Obszary Praktyki</span>
+        <span class="h-px w-12 bg-gold/50"></span>
       </div>
-      <h1 class="font-serif text-4xl md:text-5xl text-white mb-5">Usługi prawne Wrocław</h1>
-      <p class="font-sans text-white opacity-70 text-lg max-w-2xl mx-auto mb-8">
-        Radca Prawny Anna Jarczyńska świadczy kompleksową pomoc prawną dla osób fizycznych i przedsiębiorców
-        na terenie Wrocławia, Bielan Wrocławskich i Dolnego Śląska.
+      <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-8 reveal delay-100">
+        Kompleksowe wsparcie<br/>
+        <span class="text-gold italic font-light">prawne dla Ciebie i Twojej firmy</span>
+      </h1>
+      <p class="font-sans text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto reveal delay-200">
+        Rozumiemy, że każda sprawa to dla Ciebie priorytet. Prowadzimy Cię przez gąszcz przepisów z pełnym profesjonalizmem, dyskrecją i celnością w działaniu.
       </p>
     </div>
   </section>
 
   <!-- PILLAR PAGES — główne specjalizacje SEO -->
-  <section class="py-16 lg:py-20 bg-off-white">
-    <div class="container-site">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="h-px w-8 bg-gold"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Specjalizacje</span>
+  <section class="py-20 lg:py-32 bg-off-white">
+    <div class="container-site max-w-6xl">
+      <div class="text-center mb-16 md:mb-24 reveal">
+        <h2 class="font-serif text-4xl lg:text-5xl text-navy mb-6">Nasze główne specjalizacje</h2>
+        <p class="font-sans text-text-muted text-lg max-w-2xl mx-auto">Obszary, w których zdobyliśmy największe doświadczenie, dając naszym klientom poczucie bezpieczeństwa na sali rozpraw i w życiu codziennym.</p>
       </div>
-      <h2 class="font-serif text-3xl text-navy mb-2">Główne obszary praktyki</h2>
-      <p class="font-sans text-text-muted mb-10">Szczegółowe strony z pełnym opisem procedur, FAQ i podstawami prawnymi.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {pillarServices.map(s => (
-          <a href={s.href} class="group bg-white rounded-2xl p-7 border border-border reveal delay-100 hover:border-navy hover:shadow-lg transition-all block">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-white transition-all">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+        {mainServices.map((s) => (
+          <a href={s.href} class="group bg-white p-8 md:p-10 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-center text-center">
+            <div class="flex flex-col items-center mb-6">
+              <div class="w-16 h-16 rounded-full bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold transition-colors duration-500 mb-4">
                 <Fragment set:html={s.icon} />
               </div>
               {s.badge && (
-                <span class="font-sans text-xs px-2 py-1 rounded-full text-navy opacity-60 border border-border">{s.badge}</span>
+                <span class="inline-flex font-sans text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-gold/30 text-gold rounded-full whitespace-nowrap">{s.badge}</span>
               )}
             </div>
-            <h3 class="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
-            <p class="font-sans text-sm text-text-muted leading-relaxed mb-4">{s.description}</p>
-            <span class="font-sans text-xs text-navy opacity-50 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
+            <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-gold transition-colors duration-500">{s.title}</h3>
+            <p class="font-sans text-base text-text-muted leading-relaxed mb-8">{s.description}</p>
+            <div class="flex items-center text-sm font-sans uppercase tracking-[0.2em] text-navy group-hover:text-gold transition-colors mt-auto">
+              <span class="mr-3">Więcej informacji</span>
+              <span class="w-8 h-px bg-current transform origin-left transition-transform duration-500 group-hover:scale-x-150"></span>
+            </div>
           </a>
         ))}
       </div>
@@ -125,18 +125,25 @@ const breadcrumb = {
   </section>
 
   <!-- OGÓLNE OBSZARY PRAWA -->
-  <section class="py-16 lg:py-20 bg-white">
-    <div class="container-site">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="h-px w-8 bg-gold"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Ogólne obszary</span>
+  <section class="py-20 lg:py-32 bg-white">
+    <div class="container-site max-w-6xl">
+      <div class="text-center mb-16 md:mb-24 reveal">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <span class="h-px w-8 bg-gold/50"></span>
+          <span class="font-sans text-xs uppercase tracking-[0.2em] text-gold">Uzupełniająco</span>
+          <span class="h-px w-8 bg-gold/50"></span>
+        </div>
+        <h2 class="font-serif text-3xl lg:text-4xl text-navy mb-6">Pozostałe dziedziny prawa</h2>
+        <p class="font-sans text-text-muted text-lg max-w-2xl mx-auto">Kompleksowa reprezentacja i doradztwo prawne w szerokim spektrum spraw, od negocjacji po postępowania przed organami.</p>
       </div>
-      <h2 class="font-serif text-3xl text-navy mb-10">Pozostałe obszary prawa</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map(s => (
-          <a href={s.href} class="group bg-off-white rounded-2xl p-6 border border-border reveal delay-200 hover:border-navy transition-all block">
-            <div class="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center text-navy mb-4 group-hover:bg-navy group-hover:text-white transition-colors"><Fragment set:html={s.icon} /></div>
-            <h3 class="font-serif text-lg text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 reveal delay-200">
+        {additionalServices.map(s => (
+          <a href={s.href} class="group p-6 border border-border/50 bg-off-white hover:bg-white hover:border-gold/50 transition-all duration-500 flex flex-col items-center text-center">
+            <div class="w-12 h-12 text-navy/80 mb-5 group-hover:text-gold transition-colors duration-500">
+               <Fragment set:html={s.icon} />
+            </div>
+            <h3 class="font-serif text-lg md:text-xl text-navy mb-3 group-hover:text-gold transition-colors duration-500">{s.title}</h3>
             <p class="font-sans text-sm text-text-muted leading-relaxed">{s.description}</p>
           </a>
         ))}
@@ -145,21 +152,6 @@ const breadcrumb = {
   </section>
 
   <!-- CTA -->
-  <section class="section bg-navy">
-    <div class="container-site max-w-3xl text-center">
-      <h2 class="font-serif text-3xl text-white mb-4">Nie wiesz, czy możemy Ci pomóc?</h2>
-      <p class="font-sans text-white opacity-70 mb-8 max-w-xl mx-auto">
-        Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
-          Skontaktuj się
-        </a>
-        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">
-          609 366 160
-        </a>
-      </div>
-    </div>
-  </section>
+  <CTASection />
 </Layout>
 

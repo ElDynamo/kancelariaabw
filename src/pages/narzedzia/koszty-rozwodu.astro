@@ -83,27 +83,35 @@ const faqSchema = {
       </nav>
 
       <!-- Header -->
-      <div class="flex items-center gap-2 mb-4">
+      <div class="flex items-center gap-2 mb-4 reveal">
         <span class="h-px w-8 bg-gold"></span>
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
       </div>
-      <h1 class="heading-xl mb-4">
-        Kalkulator kosztów rozwodu<br />
-        <span class="text-gold">2025</span>
-      </h1>
-      <p class="text-body text-lg max-w-2xl mb-10">
-        Ile kosztuje rozwód w Polsce? Oblicz szacunkowy koszt postępowania — opłatę sądową,
-        honorarium radcy prawnego i dodatkowe wydatki. Wyniki opierają się na aktualnych
-        przepisach UKSC i stawkach rynkowych Wrocław 2025.
-      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+        <div class="reveal delay-100">
+          <h1 class="heading-xl mb-4">
+            Kalkulator kosztów rozwodu<br />
+            <span class="text-gold">2025</span>
+          </h1>
+          <p class="text-body text-lg max-w-2xl">
+            Ile kosztuje rozwód w Polsce? Oblicz szacunkowy koszt postępowania — opłatę sądową,
+            honorarium radcy prawnego i dodatkowe wydatki. Wyniki opierają się na aktualnych
+            przepisach UKSC i stawkach rynkowych (Wrocław 2025).
+          </p>
+        </div>
+        <div class="reveal delay-200 flex justify-center md:justify-end">
+             <img src="/tools/divorce_cost_graphic_pl_1772990272156.png" alt="Grafika wektorowa kalkulator rozwodowy" class="rounded-[2.5rem] shadow-2xl shadow-navy/10 transform rotate-1 hover:rotate-0 transition-transform duration-500 w-full max-w-sm lg:max-w-md object-contain p-2 bg-white">
+        </div>
+      </div>
 
       <!-- Calculator -->
-      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border">
+      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border w-full reveal delay-300 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.05)]">
         <DivorceCalculator client:visible />
       </div>
 
       <!-- Artykuł SEO -->
-      <article class="prose prose-navy max-w-3xl mx-auto">
+      <article class="prose prose-navy max-w-3xl mx-auto reveal">
         <h2>Ile kosztuje rozwód? — Szczegółowy przewodnik</h2>
         <p>
           Koszty postępowania rozwodowego w Polsce składają się z kilku elementów. Wbrew powszechnemu
@@ -154,7 +162,7 @@ const faqSchema = {
       </article>
 
       <!-- FAQ -->
-      <section class="mt-12" aria-labelledby="faq-heading">
+      <section class="mt-12 reveal" aria-labelledby="faq-heading">
         <h2 id="faq-heading" class="font-serif text-2xl text-navy mb-6">Często zadawane pytania</h2>
         <div class="space-y-4">
           {[
@@ -175,7 +183,7 @@ const faqSchema = {
       </section>
 
       <!-- CTA -->
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center">
+      <div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
         <h2 class="font-serif text-2xl text-white mb-3">Nie wiesz ile zapłacisz w swojej sprawie?</h2>
         <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">
           Każda sprawa o rozwód jest inna. Umów bezpłatną rozmowę wstępną — ocenimy Twoją sytuację i podamy konkretny kosztorys.

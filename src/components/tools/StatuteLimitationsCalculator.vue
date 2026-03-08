@@ -1,100 +1,113 @@
 <template>
   <div class="statute-calculator font-sans">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      <div class="space-y-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
+      <div class="lg:col-span-7 space-y-8">
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Rodzaj roszczenia</label>
-          <select v-model="form.rodzaj"
-            class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-sm focus:border-gold focus:outline-none bg-white">
-            <option v-for="opt in roszczeniaOptions" :key="opt.value" :value="opt.value">{{ opt.label }} ({{ opt.termin }})</option>
-          </select>
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">1</span>
+            Rodzaj roszczenia
+          </label>
+          <div class="relative">
+            <select v-model="form.rodzaj"
+              class="w-full appearance-none bg-off-white border-2 border-transparent rounded-2xl px-5 py-4 font-sans text-navy text-sm md:text-base font-medium focus:bg-white focus:border-gold focus:outline-none transition-all shadow-inner cursor-pointer pr-10">
+              <option v-for="opt in roszczeniaOptions" :key="opt.value" :value="opt.value">{{ opt.label }} ({{ opt.termin }})</option>
+            </select>
+            <svg class="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-navy/50 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+          <p class="text-xs font-medium text-navy/60 mt-3 px-2">
+            {{ roszczeniaOptions.find(o => o.value === form.rodzaj)?.sub }}
+          </p>
         </div>
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">2</span>
             Data wymagalności roszczenia
           </label>
           <input type="date" v-model="form.dataWymagalnosci"
             :max="today"
-            class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-base focus:border-gold focus:outline-none" />
-          <p class="text-xs text-text-muted mt-1">Data, od kiedy mogłeś żądać zapłaty / spełnienia świadczenia</p>
+            class="w-full bg-off-white border-2 border-transparent rounded-2xl px-5 py-4 font-sans text-navy text-base md:text-lg font-medium focus:bg-white focus:border-gold focus:outline-none transition-all shadow-inner" />
+          <p class="text-xs font-medium text-navy/60 mt-3 px-2">Data, od kiedy mogłeś prawnie zażądać zapłaty / spełnienia świadczenia.</p>
         </div>
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">3</span>
             Czy nastąpiło przerwanie biegu przedawnienia?
           </label>
-          <div class="grid grid-cols-2 gap-3 mb-3">
+          <div class="grid grid-cols-2 gap-4 mb-5">
             <button v-for="opt in takNieOptions" :key="opt.value"
               @click="form.przerwanie = opt.value"
-              :class="['p-3 rounded-xl border-2 text-sm font-semibold transition-all',
+              :class="['w-full py-3 px-4 rounded-2xl border-2 text-sm md:text-base transition-all font-medium',
                 form.przerwanie === opt.value
-                  ? 'border-gold bg-navy text-white' : 'border-border bg-white text-navy hover:border-navy']">
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
               {{ opt.label }}
             </button>
           </div>
-          <div v-if="form.przerwanie === 'tak'">
-            <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Data przerwania biegu</label>
+          
+          <div v-show="form.przerwanie === 'tak'" class="transition-all duration-500 pt-3 border-t border-border/50">
+            <label class="block text-xs font-semibold uppercase tracking-widest text-navy mb-3 px-2">Data przerwania biegu</label>
             <input type="date" v-model="form.dataPrzerwania"
-              class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-base focus:border-gold focus:outline-none" />
-            <p class="text-xs text-text-muted mt-1">np. data wytoczenia powództwa, uznania długu, ugody</p>
+              class="w-full bg-off-white border-2 border-transparent rounded-2xl px-5 py-4 font-sans text-navy text-base font-medium focus:bg-white focus:border-gold focus:outline-none transition-all shadow-inner" />
+            <p class="text-xs font-medium text-navy/60 mt-3 px-2">np. data wniesienia pozwu, wezwania do próby ugodowej, lub data pisma z uznaniem długu.</p>
           </div>
         </div>
       </div>
 
       <!-- Result -->
-      <div :class="['rounded-2xl p-6 flex flex-col justify-between', statusBg]">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-3xl">{{ statusIcon }}</span>
-            <div>
-              <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold">Status</p>
-              <p class="text-white font-semibold text-lg">{{ statusLabel }}</p>
+      <div class="lg:col-span-5 relative">
+        <div :class="['rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 border border-white/10 shadow-[0_20px_50px_-12px_rgba(15,37,64,0.3)] min-h-[500px] overflow-hidden transition-colors duration-700', statusBg]">
+          <!-- Dekoracyjny gradient -->
+          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[20rem] h-[20rem] bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl filter drop-shadow-md">{{ statusIcon }}</span>
+              <div>
+                <p class="text-xs text-white/60 uppercase tracking-widest font-bold mb-1">Status sprawy</p>
+                <p class="text-white font-bold text-xl md:text-2xl tracking-tight leading-none">{{ statusLabel }}</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white/10 rounded-2xl p-5 border border-white/5 backdrop-blur-md">
+                <p class="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Data przedawnienia</p>
+                <p class="text-gold text-2xl md:text-3xl font-bold font-sans tracking-tight drop-shadow-sm mb-1">{{ dataPrzedawnieniaFormatted }}</p>
+                <p class="text-white/60 text-xs font-medium">Bieg terminu często upływa z 31 XII (KC art. 118 zd. 2)</p>
+              </div>
+
+              <div class="bg-white/5 rounded-2xl p-5 border border-white/5 backdrop-blur-sm flex justify-between items-center">
+                <p class="text-xs text-white/60 uppercase tracking-widest font-semibold">Termin bazowy</p>
+                <p class="text-white font-bold text-sm bg-white/10 px-3 py-1 rounded-lg">{{ terminInfo }}</p>
+              </div>
+
+              <div v-show="dniPozostalo > 0 && dniPozostalo <= 90" class="bg-orange-600/30 rounded-2xl p-5 border border-orange-400/30 backdrop-blur-md animate-pulse">
+                <p class="text-orange-300 font-bold text-sm flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-orange-300"></span> Pozostało tylko {{ dniPozostalo }} dni!
+                </p>
+                <p class="text-white/80 font-medium text-xs mt-2 leading-relaxed">Natychmiast wyślij ostateczne przedsądowe wezwanie do zapłaty lub złóż pozew by przerwać bieg!</p>
+              </div>
+
+              <div v-show="dniPozostalo <= 0" class="bg-red-800/40 rounded-2xl p-5 border border-red-500/40 backdrop-blur-md">
+                <p class="text-red-300 font-bold text-sm tracking-wide">Roszczenie uległo przedawnieniu</p>
+                <p class="text-white/80 font-medium text-xs mt-2 leading-relaxed">Przeciwnik może skutecznie uchylić się od zapłaty. W sprawach konsumenckich (B2C) Sąd zbada ten zarzut z urzędu.</p>
+              </div>
             </div>
           </div>
 
-          <div class="space-y-3">
-            <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Data przedawnienia</p>
-              <p class="text-gold text-xl font-bold font-serif">{{ dataPrzedawnieniaFormatted }}</p>
-              <p class="text-white opacity-60 text-xs mt-1">Koniec terminu upada 31 XII roku (KC art. 118 zd. 2)</p>
-            </div>
-
-            <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Termin przedawnienia</p>
-              <p class="text-white text-sm">{{ terminInfo }}</p>
-            </div>
-
-            <div v-if="dniPozostalo > 0 && dniPozostalo <= 90" class="bg-red-800/50 rounded-xl p-4 border border-red-400/30">
-              <p class="text-red-300 font-semibold text-sm">⚠️ Pozostało {{ dniPozostalo }} dni!</p>
-              <p class="text-white opacity-70 text-xs mt-1">Działaj natychmiast — złóż pozew lub wezwanie do zapłaty</p>
-            </div>
-
-            <div v-if="dniPozostalo <= 0" class="bg-red-900/50 rounded-xl p-4 border border-red-400/30">
-              <p class="text-red-300 font-semibold text-sm">❌ Roszczenie przedawnione</p>
-              <p class="text-white opacity-70 text-xs mt-1">Skonsultuj się z prawnikiem — w sprawach konsumenckich sąd bada przedawnienie z urzędu</p>
-            </div>
-
-            <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
-              <p class="text-white opacity-70 text-xs">{{ podstawaPrawna }}</p>
-            </div>
-          </div>
+          <a href="/kontakt"
+            class="relative z-10 mt-10 block text-center px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20 text-navy bg-gold">
+            Zweryfikuj daty z prawnikiem
+          </a>
         </div>
-
-        <a href="/kontakt"
-          class="mt-6 block text-center px-5 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide"
-          style="background:#c9a84c; color:#0f2540;">
-          Skonsultuj swoją sprawę
-        </a>
       </div>
     </div>
 
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900">
-      <strong>⚠️ Uwaga:</strong> Kalkulator stosuje przepisy KC art. 117–125 po nowelizacji z 9 VII 2018 r.
-      W sprawach z konsumentami sąd uwzględnia przedawnienie z urzędu od 2018 r.
-      Kalkulator nie zastępuje analizy prawnej — skonsultuj się z radcą prawnym.
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0">
+      <strong>⚠️ Aktualne przepisy:</strong> Kalkulator uwzględnia skracające terminy przedawnienia wprowadzone przez <em>Ustawę z dnia 13 kwietnia 2018 r. o zmianie ustawy – Kodeks cywilny oraz niektórych innych ustaw (Dz. U. z 2018 r. poz. 1104, weszła w życie 9 lipca 2018 r.)</em>.
+      W sprawach z udziałem konsumentów, sąd bada przedawnienie z urzędu. Kalkulator ma charakter orientacyjny i nie zastępuje profesjonalnej analizy prawnej.
     </div>
   </div>
 </template>

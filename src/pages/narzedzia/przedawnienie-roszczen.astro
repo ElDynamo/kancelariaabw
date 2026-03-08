@@ -49,19 +49,28 @@ const faqSchema = {
           <li aria-current="page" class="text-navy">Przedawnienie roszczeń</li>
         </ol>
       </nav>
-      <div class="flex items-center gap-2 mb-4">
+      <div class="flex items-center gap-2 mb-4 reveal">
         <span class="h-px w-8 bg-gold"></span>
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
       </div>
-      <h1 class="heading-xl mb-4">Kalkulator przedawnienia<br /><span class="text-gold">roszczeń 2025</span></h1>
-      <p class="text-body text-lg max-w-2xl mb-10">
-        Kiedy dług się przedawnia? Oblicz dokładną datę przedawnienia roszczenia — z uwzględnieniem
-        nowelizacji KC z 2018 r. (skrócenie do 6 lat), zasady 31 grudnia i przerwania biegu.
-      </p>
-      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+        <div class="reveal delay-100">
+          <h1 class="heading-xl mb-4">Kalkulator przedawnienia<br /><span class="text-gold">roszczeń 2025</span></h1>
+          <p class="text-body text-lg max-w-2xl">
+            Kiedy dług się przedawnia? Oblicz dokładną datę przedawnienia roszczenia — z uwzględnieniem
+            nowelizacji KC z 2018 r. (skrócenie do 6 lat), zasady 31 grudnia i przerwania biegu.
+          </p>
+        </div>
+        <div class="reveal delay-200 flex justify-center md:justify-end">
+             <img src="/tools/limitation_graphic_pl_1772990335361.png" alt="Grafika wektorowa kalkulator przedawnienia roszczeń" class="rounded-[2.5rem] shadow-2xl shadow-navy/10 transform rotate-1 hover:rotate-0 transition-transform duration-500 w-full max-w-sm lg:max-w-md object-contain p-2 bg-white">
+        </div>
+      </div>
+
+      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border w-full reveal delay-300 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.05)]">
         <StatuteLimitationsCalculator client:visible />
       </div>
-      <article class="prose prose-navy max-w-3xl mx-auto">
+      <article class="prose prose-navy max-w-3xl mx-auto reveal">
         <h2>Terminy przedawnienia po nowelizacji 2018</h2>
         <p>
           Ustawa z 13 IV 2018 r. (weszła w życie 9 VII 2018 r.) gruntownie zmieniła przepisy
@@ -79,7 +88,7 @@ const faqSchema = {
           dopiero <strong>31 grudnia 2028 r.</strong>. To ważne przy planowaniu podjęcia działań.
         </p>
       </article>
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center">
+      <div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
         <h2 class="font-serif text-2xl text-white mb-3">Masz wątpliwości co do przedawnienia?</h2>
         <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">Przedawnienie to jeden z najczęstszych błędów prawnych — skonsultuj swoją sprawę, zanim upłynie termin.</p>
         <div class="flex flex-wrap gap-3 justify-center">

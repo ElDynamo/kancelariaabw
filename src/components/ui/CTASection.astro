@@ -1,0 +1,36 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonHref?: string;
+  phoneText?: string;
+  phoneHref?: string;
+}
+
+const {
+  title = "Nie wiesz, czy możemy Ci pomóc?",
+  description = "Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.",
+  buttonText = "Skontaktuj się",
+  buttonHref = "/kontakt",
+  phoneText = "609 366 160",
+  phoneHref = "tel:+48609366160"
+} = Astro.props;
+---
+
+<section class="section bg-off-white border-t border-border/50">
+  <div class="container-site max-w-3xl text-center reveal">
+    <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">{title}</h2>
+    <p class="font-sans text-text-muted text-lg mb-8 max-w-xl mx-auto">
+      {description}
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href={buttonHref} class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+        {buttonText}
+      </a>
+      <a href={phoneHref} class="font-sans text-navy border border-navy/30 rounded-lg px-6 py-3.5 hover:bg-navy/5 transition-colors uppercase tracking-wider font-semibold text-sm">
+        {phoneText}
+      </a>
+    </div>
+  </div>
+</section>

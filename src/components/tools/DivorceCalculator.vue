@@ -1,125 +1,152 @@
 <template>
   <div class="divorce-calculator font-sans">
     <!-- Inputs -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
+      <div class="lg:col-span-7 space-y-8">
 
-      <div class="space-y-5">
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Tryb orzekania o winie</label>
-          <div class="grid grid-cols-2 gap-3">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">1</span>
+            Tryb orzekania o winie
+          </label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <button v-for="opt in trybOptions" :key="opt.value"
               @click="form.tryb = opt.value"
-              :class="['p-3 rounded-xl border-2 text-sm font-medium transition-all text-left',
+              :class="['p-4 md:p-5 rounded-2xl border-2 transition-all text-left flex flex-col justify-center h-full',
                 form.tryb === opt.value
-                  ? 'border-gold bg-navy text-white'
-                  : 'border-border bg-white text-navy hover:border-navy']">
-              <span class="block font-semibold">{{ opt.label }}</span>
-              <span class="text-xs opacity-70">{{ opt.sub }}</span>
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
+              <span class="block font-semibold text-base mb-1" :class="{'text-navy': form.tryb === opt.value}">{{ opt.label }}</span>
+              <span class="text-xs font-medium opacity-80 leading-relaxed">{{ opt.sub }}</span>
             </button>
           </div>
         </div>
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Dzieci</label>
-          <div class="grid grid-cols-3 gap-2">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">2</span>
+            Dzieci
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button v-for="opt in dzieciOptions" :key="opt.value"
               @click="form.dzieci = opt.value"
-              :class="['p-3 rounded-xl border-2 text-sm font-medium transition-all',
+              :class="['w-full py-3 px-4 rounded-2xl border-2 text-sm md:text-base transition-all font-medium',
                 form.dzieci === opt.value
-                  ? 'border-gold bg-navy text-white'
-                  : 'border-border bg-white text-navy hover:border-navy']">
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
               {{ opt.label }}
             </button>
           </div>
         </div>
 
-        <div v-if="form.dzieci === 'tak'">
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Spór o opiekę nad dziećmi?</label>
-          <div class="grid grid-cols-2 gap-3">
+        <div v-show="form.dzieci === 'tak'" class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm transition-all duration-500">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">3</span>
+            Spór o opiekę nad dziećmi?
+          </label>
+          <div class="grid grid-cols-2 gap-4">
             <button v-for="opt in takNieOptions" :key="opt.value"
               @click="form.sporOpieka = opt.value"
-              :class="['p-3 rounded-xl border-2 text-sm font-medium transition-all',
+              :class="['w-full py-3 px-4 rounded-2xl border-2 text-sm md:text-base transition-all font-medium',
                 form.sporOpieka === opt.value
-                  ? 'border-gold bg-navy text-white'
-                  : 'border-border bg-white text-navy hover:border-navy']">
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
               {{ opt.label }}
             </button>
           </div>
         </div>
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Podział majątku</label>
-          <div class="grid grid-cols-2 gap-3">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">4</span>
+            Podział majątku
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button v-for="opt in majatekOptions" :key="opt.value"
               @click="form.majatekPodzial = opt.value"
-              :class="['p-3 rounded-xl border-2 text-sm font-medium transition-all',
+              :class="['p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-center text-center',
                 form.majatekPodzial === opt.value
-                  ? 'border-gold bg-navy text-white'
-                  : 'border-border bg-white text-navy hover:border-navy']">
-              <span class="block font-semibold text-sm">{{ opt.label }}</span>
-              <span class="text-xs opacity-70">{{ opt.sub }}</span>
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.05]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
+              <span class="block font-bold text-sm mb-1" :class="{'text-navy': form.majatekPodzial === opt.value}">{{ opt.label }}</span>
+              <span class="text-xs font-medium opacity-70">{{ opt.sub }}</span>
             </button>
           </div>
         </div>
 
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Reprezentacja prawna</label>
-          <div class="space-y-2">
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
+          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">5</span>
+            Reprezentacja prawna
+          </label>
+          <div class="space-y-3">
             <button v-for="opt in reprezentacjaOptions" :key="opt.value"
               @click="form.reprezentacja = opt.value"
-              :class="['w-full p-3 rounded-xl border-2 text-sm font-medium transition-all text-left flex justify-between items-center',
+              :class="['w-full p-4 md:p-5 rounded-2xl border-2 text-sm md:text-base transition-all text-left flex justify-between items-center',
                 form.reprezentacja === opt.value
-                  ? 'border-gold bg-navy text-white'
-                  : 'border-border bg-white text-navy hover:border-navy']">
-              <span>{{ opt.label }}</span>
-              <span :class="form.reprezentacja === opt.value ? 'text-gold' : 'text-text-muted'" class="text-xs">{{ opt.cena }}</span>
+                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
+                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
+              <span class="font-semibold">{{ opt.label }}</span>
+              <span :class="form.reprezentacja === opt.value ? 'text-gold font-bold' : 'text-navy/50 font-medium'" class="text-sm px-3 py-1 rounded-lg bg-navy/5">{{ opt.cena }}</span>
             </button>
           </div>
         </div>
       </div>
 
       <!-- Result panel -->
-      <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
-        <div>
-          <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-4">Szacunkowe koszty</p>
+      <div class="lg:col-span-5 relative">
+        <div class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 border border-white/10 shadow-[0_20px_50px_-12px_rgba(15,37,64,0.3)] min-h-[500px] overflow-hidden">
+          <!-- Dekoracyjny gradient -->
+          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[20rem] h-[20rem] bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <!-- Cost table -->
-          <div class="space-y-3 mb-6">
-            <div v-for="row in kosztTabela" :key="row.label"
-              class="flex justify-between items-center border-b border-white/10 pb-2">
-              <span class="text-sm text-white opacity-80">{{ row.label }}</span>
-              <span class="text-sm font-semibold text-white">{{ row.wartosc }}</span>
+          <div class="relative z-10">
+            <p class="text-sm text-white/70 uppercase tracking-widest font-semibold mb-6 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+              Szacunkowe wydatki
+            </p>
+
+            <div class="bg-white/5 rounded-2xl p-6 border border-white/5 backdrop-blur-sm mb-6">
+              <p class="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Suma łączna (brutto)</p>
+              <p class="text-4xl lg:text-5xl font-sans text-gold font-bold tracking-tight">{{ totalMin }} – {{ totalMax }}</p>
+            </div>
+
+            <!-- Cost table -->
+            <div class="space-y-4 mb-8">
+              <div v-for="row in kosztTabela" :key="row.label"
+                class="flex justify-between items-center border-b border-white/5 pb-3">
+                <span class="text-sm text-white/80 pr-4">{{ row.label }}</span>
+                <span class="text-sm font-bold text-white whitespace-nowrap">{{ row.wartosc }}</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-5 border border-white/5 backdrop-blur-sm">
+              <div class="w-12 h-12 rounded-xl bg-gold/20 text-gold flex items-center justify-center shrink-0">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-white/60 uppercase tracking-widest font-semibold mb-1">Szacowany czas</p>
+                <p class="text-white text-base font-medium">{{ czasPostepowania }}</p>
+              </div>
             </div>
           </div>
 
-          <div class="bg-white/10 rounded-xl p-4 mb-4">
-            <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-1">Łączny koszt (szacunek)</p>
-            <p class="text-3xl font-serif text-gold font-bold">{{ totalMin }} – {{ totalMax }}</p>
-            <p class="text-xs text-white opacity-60 mt-1">wartości w PLN (brutto)</p>
+          <div class="relative z-10 mt-10">
+            <a href="/kontakt"
+              class="block text-center px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20"
+              style="background:#c9a84c; color:#0f2540;">
+              Porozmawiaj o Twojej sprawie
+            </a>
+            <p class="text-xs text-white/50 text-center mt-4">Napisz lub zadzwoń by sprawdzić standardy</p>
           </div>
-
-          <div class="bg-white/5 rounded-xl p-4">
-            <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-2">⏱ Szacowany czas</p>
-            <p class="text-white text-sm font-semibold">{{ czasPostepowania }}</p>
-          </div>
-        </div>
-
-        <div class="mt-6">
-          <a href="/kontakt"
-            class="block text-center px-5 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide"
-            style="background:#c9a84c; color:#0f2540;">
-            Umów bezpłatną rozmowę
-          </a>
-          <p class="text-xs text-white opacity-60 text-center mt-2">Sprawdź czy Twój wynik jest typowy</p>
         </div>
       </div>
     </div>
 
     <!-- Disclaimer -->
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900">
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0">
       <strong>⚠️ Ważne:</strong> Powyższe wyliczenia mają charakter wyłącznie orientacyjny i nie stanowią porady prawnej.
-      Rzeczywiste koszty zależą od indywidualnych okoliczności sprawy. Honoraria prawnicze podane wg stawek rynkowych Wrocław 2025 — mogą się różnić.
-      Podstawa: UKSC (Dz.U. 2005 nr 167 poz. 1398 ze zm.).
+      Rzeczywiste koszty zależą od indywidualnych okoliczności sprawy. Honoraria prawnicze podane wg stawek rynkowych we Wrocławiu – mogą się różnić.
+      Podstawa prawna opłat sądowych: <em>Ustawa z dnia 28 lipca 2005 r. o kosztach sądowych w sprawach cywilnych (t.j. Dz. U. z 2023 r. poz. 1144 ze zm.)</em>.
     </div>
   </div>
 </template>

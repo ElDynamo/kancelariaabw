@@ -40,19 +40,28 @@ const webAppSchema = {
           <li aria-current="page" class="text-navy">Opłaty sądowe</li>
         </ol>
       </nav>
-      <div class="flex items-center gap-2 mb-4">
+      <div class="flex items-center gap-2 mb-4 reveal">
         <span class="h-px w-8 bg-gold"></span>
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
       </div>
-      <h1 class="heading-xl mb-4">Kalkulator opłat sądowych<br /><span class="text-gold">2025</span></h1>
-      <p class="text-body text-lg max-w-2xl mb-10">
-        Ile kosztuje pozew? Sprawdź opłatę sądową dla swojej sprawy — rozwód, alimenty, podział majątku,
-        zachowek i inne roszczenia cywilne. Uwzględnia nowelizację UKSC z 23 IX 2025 r.
-      </p>
-      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+        <div class="reveal delay-100">
+          <h1 class="heading-xl mb-4">Kalkulator opłat sądowych<br /><span class="text-gold">2025</span></h1>
+          <p class="text-body text-lg max-w-2xl">
+            Ile kosztuje pozew? Sprawdź opłatę sądową dla swojej sprawy — rozwód, alimenty, podział majątku,
+            zachowek i inne roszczenia cywilne. Uwzględnia nowelizację UKSC z 23 IX 2025 r.
+          </p>
+        </div>
+        <div class="reveal delay-200 flex justify-center md:justify-end">
+             <img src="/tools/court_fees_graphic_pl_1772990300994.png" alt="Grafika wektorowa opłaty sądowe" class="rounded-[2.5rem] shadow-2xl shadow-navy/10 transform rotate-1 hover:rotate-0 transition-transform duration-500 w-full max-w-sm lg:max-w-md object-contain p-2 bg-white">
+        </div>
+      </div>
+
+      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border w-full reveal delay-300 shadow-[0_8px_30px_-10px_rgba(0,0,0,0.05)]">
         <CourtFeesCalculator client:visible />
       </div>
-      <article class="prose prose-navy max-w-3xl mx-auto">
+      <article class="prose prose-navy max-w-3xl mx-auto reveal">
         <h2>Opłaty sądowe w sprawach cywilnych — co warto wiedzieć</h2>
         <p>
           Opłaty sądowe reguluje <strong>ustawa z 28 lipca 2005 r. o kosztach sądowych
@@ -71,7 +80,7 @@ const webAppSchema = {
           Wniosek składa się razem z pismem procesowym lub odrębnie.
         </p>
       </article>
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center">
+      <div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
         <h2 class="font-serif text-2xl text-white mb-3">Masz pytania o koszty sprawy?</h2>
         <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">Skonsultuj swoją sytuację — ocenimy czy masz szansę na zwolnienie z kosztów i jak zaplanować budżet sprawy.</p>
         <div class="flex flex-wrap gap-3 justify-center">
