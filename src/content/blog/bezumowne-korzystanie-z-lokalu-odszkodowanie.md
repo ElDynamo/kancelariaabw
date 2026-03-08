@@ -3,7 +3,7 @@ title: "Bezumowne korzystanie z lokalu — odszkodowanie dla właściciela nieru
 description: "Lokator nie wyszedł po końcu umowy? Właściciel ma prawo do wynagrodzenia za bezumowne korzystanie z nieruchomości — dowiedz się jak to wyliczyć i dochodzić."
 publishDate: 2026-02-20
 lastModified: 2026-03-08
-category: "Prawo nieruchomości"
+category: "Prawo cywilne"
 tags: ["bezumowne korzystanie", "eksmisja", "najem", "nieruchomości"]
 author: "Anna Jarczyńska"
 draft: false
