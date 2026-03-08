@@ -1,0 +1,141 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const tools = [
+  {
+    slug: 'koszty-rozwodu',
+    title: 'Kalkulator kosztów rozwodu',
+    desc: 'Oblicz szacunkowy koszt postępowania — opłata sądowa, honorarium prawnika, podział majątku.',
+    fraza: 'ile kosztuje rozwód',
+    icon: '⚖️',
+    kolor: 'from-navy to-slate-700',
+  },
+  {
+    slug: 'kalkulator-alimentow',
+    title: 'Kalkulator alimentów',
+    desc: 'Szacunkowa kwota alimentów wg dochodów i potrzeb dziecka. Opiera się na tablicach MS 2022.',
+    fraza: 'jak wyliczyć alimenty',
+    icon: '👶',
+    kolor: 'from-slate-700 to-navy',
+  },
+  {
+    slug: 'oplaty-sadowe',
+    title: 'Kalkulator opłat sądowych',
+    desc: 'Ile kosztuje pozew? Sprawdź opłatę stosunkową lub stałą według aktualnego UKSC 2025.',
+    fraza: 'opłata sądowa kalkulator',
+    icon: '🏛️',
+    kolor: 'from-navy to-slate-800',
+  },
+  {
+    slug: 'kalkulator-zachowku',
+    title: 'Kalkulator zachowku',
+    desc: 'Oblicz należny zachowek — substrat, darowizny, ułamek 1/2 lub 2/3 (art. 991 KC).',
+    fraza: 'ile wynosi zachowek',
+    icon: '📜',
+    kolor: 'from-slate-800 to-navy',
+  },
+  {
+    slug: 'przedawnienie-roszczen',
+    title: 'Kalkulator przedawnienia',
+    desc: 'Kiedy dług się przedawnia? Oblicz datę z uwzględnieniem reguły 31 XII i przerwania biegu.',
+    fraza: 'kiedy przedawnia się dług',
+    icon: '⏱️',
+    kolor: 'from-navy to-slate-700',
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Narzędzia prawne", "item": "https://kancelariaabw.pl/narzedzia" },
+  ]
+};
+---
+
+<Layout
+  title="Bezpłatne Narzędzia Prawne — Kalkulatory 2025 | Kancelaria ABW"
+  description="Bezpłatne kalkulatory prawne: koszty rozwodu, alimenty, zachowek, opłaty sądowe, przedawnienie. Aktualne przepisy 2025. Kancelaria Prawna ABW Wrocław."
+>
+  <Fragment slot="head">
+    <StructuredData schema={breadcrumbSchema} />
+  </Fragment>
+
+  <section class="section bg-white">
+    <div class="container-site max-w-5xl">
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-text-muted">
+          <li><a href="/" class="hover:text-navy">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-navy">Narzędzia prawne</li>
+        </ol>
+      </nav>
+
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Bezpłatne narzędzia</span>
+      </div>
+      <h1 class="heading-xl mb-4">Kalkulatory prawne<br /><span class="text-gold">online 2025</span></h1>
+      <p class="text-body text-lg max-w-2xl mb-12">
+        Bezpłatne narzędzia opracowane przez Kancelarię Prawną ABW na podstawie aktualnych przepisów
+        polskiego prawa. Oblicz orientacyjne koszty i terminy — szybko, bez rejestracji.
+      </p>
+
+      <!-- Siatka narzędzi -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {tools.map(tool => (
+          <a href={`/narzedzia/${tool.slug}`}
+            class="group relative overflow-hidden rounded-2xl border border-border bg-white hover:border-navy hover:shadow-lg transition-all duration-300 flex flex-col">
+            <div class={`bg-gradient-to-br ${tool.kolor} p-6 flex items-center justify-between`}>
+              <span class="text-4xl">{tool.icon}</span>
+              <span class="text-xs font-sans uppercase tracking-widest text-white/40">→</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="font-serif text-lg text-navy mb-2 group-hover:text-gold transition-colors">
+                {tool.title}
+              </h2>
+              <p class="font-sans text-sm text-text-muted leading-relaxed flex-1">{tool.desc}</p>
+              <div class="mt-4 flex items-center gap-2">
+                <span class="text-xs text-gold font-sans">Szukasz: „{tool.fraza}"?</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Info section -->
+      <div class="bg-off-white rounded-2xl p-8 border border-border mb-12">
+        <h2 class="font-serif text-xl text-navy mb-4">O naszych kalkulatorach</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans text-sm text-text-muted">
+          <div>
+            <p class="font-semibold text-navy mb-1">✅ Aktualne przepisy</p>
+            <p>Kalkulatory uwzględniają stan prawny na 2025 r., w tym nowelizację UKSC z IX 2025 i KC z 2018 r.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-navy mb-1">⚡ Bez rejestracji</p>
+            <p>Narzędzia działają w przeglądarce. Nie przechowujemy żadnych danych — pełna prywatność.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-navy mb-1">⚖️ Wyniki orientacyjne</p>
+            <p>Kalkulatory dają szacunkowe wyniki. Dokładna kwota zawsze zależy od okoliczności danej sprawy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-navy rounded-3xl p-8 text-center">
+        <h2 class="font-serif text-2xl text-white mb-3">Potrzebujesz dokładnej analizy swojej sprawy?</h2>
+        <p class="font-sans text-white/70 mb-6 max-w-lg mx-auto">
+          Kalkulatory to dobry punkt startowy. Umów bezpłatną rozmowę — ocenimy Twoją sytuację i podamy konkretny plan.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540;">Umów konsultację</a>
+          <a href="tel:+48609366160" class="btn-outline border-white text-white hover:bg-white hover:text-navy">609 366 160</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

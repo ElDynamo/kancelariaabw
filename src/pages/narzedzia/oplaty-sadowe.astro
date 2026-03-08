@@ -1,0 +1,84 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+import CourtFeesCalculator from '@components/tools/CourtFeesCalculator.vue';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Narzędzia prawne", "item": "https://kancelariaabw.pl/narzedzia" },
+    { "@type": "ListItem", "position": 3, "name": "Opłaty sądowe", "item": "https://kancelariaabw.pl/narzedzia/oplaty-sadowe" },
+  ]
+};
+const webAppSchema = {
+  "@context": "https://schema.org", "@type": "WebApplication",
+  "name": "Kalkulator Opłat Sądowych 2025",
+  "url": "https://kancelariaabw.pl/narzedzia/oplaty-sadowe",
+  "applicationCategory": "LegalService",
+  "description": "Bezpłatny kalkulator opłat sądowych. Sprawdź ile kosztuje pozew — rozwód, alimenty, podział majątku, zachowek. Aktualne stawki UKSC 2025.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" },
+  "provider": { "@type": "LegalService", "name": "Kancelaria Prawna ABW" }
+};
+---
+<Layout
+  title="Kalkulator Opłat Sądowych 2025 — ile kosztuje pozew?"
+  description="Kalkulator opłat sądowych w sprawach cywilnych. Sprawdź koszt pozwu: rozwód 600 zł, alimenty 0 zł, podział majątku 300–1000 zł. Aktualne stawki UKSC 2025."
+>
+  <Fragment slot="head">
+    <StructuredData schema={breadcrumbSchema} />
+    <StructuredData schema={webAppSchema} />
+  </Fragment>
+  <section class="section bg-white">
+    <div class="container-site max-w-5xl">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-text-muted">
+          <li><a href="/" class="hover:text-navy">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/narzedzia" class="hover:text-navy">Narzędzia prawne</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-navy">Opłaty sądowe</li>
+        </ol>
+      </nav>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
+      </div>
+      <h1 class="heading-xl mb-4">Kalkulator opłat sądowych<br /><span class="text-gold">2025</span></h1>
+      <p class="text-body text-lg max-w-2xl mb-10">
+        Ile kosztuje pozew? Sprawdź opłatę sądową dla swojej sprawy — rozwód, alimenty, podział majątku,
+        zachowek i inne roszczenia cywilne. Uwzględnia nowelizację UKSC z 23 IX 2025 r.
+      </p>
+      <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border">
+        <CourtFeesCalculator client:visible />
+      </div>
+      <article class="prose prose-navy max-w-none">
+        <h2>Opłaty sądowe w sprawach cywilnych — co warto wiedzieć</h2>
+        <p>
+          Opłaty sądowe reguluje <strong>ustawa z 28 lipca 2005 r. o kosztach sądowych
+          w sprawach cywilnych (UKSC)</strong>. System dzieli się na opłaty stałe (określona kwota)
+          i stosunkowe (procent od wartości przedmiotu sporu).
+        </p>
+        <h3>Nowelizacja UKSC — 23 IX 2025</h3>
+        <p>
+          Od 23 września 2025 r. maksymalna opłata stosunkowa wynosi <strong>100 000 zł</strong>
+          (wcześniej 200 000 zł). Zmiana dotyczy m.in. postępowań o wysokim WPS.
+        </p>
+        <h3>Zwolnienie z opłat sądowych</h3>
+        <p>
+          Strona może ubiegać się o zwolnienie z kosztów sądowych, jeśli wykaże, że bez uszczerbku
+          dla utrzymania koniecznego własnego i rodziny nie jest w stanie ponieść kosztów (art. 102 UKSC).
+          Wniosek składa się razem z pismem procesowym lub odrębnie.
+        </p>
+      </article>
+      <div class="mt-12 bg-navy rounded-3xl p-8 text-center">
+        <h2 class="font-serif text-2xl text-white mb-3">Masz pytania o koszty sprawy?</h2>
+        <p class="font-sans text-white/70 mb-6 max-w-lg mx-auto">Skonsultuj swoją sytuację — ocenimy czy masz szansę na zwolnienie z kosztów i jak zaplanować budżet sprawy.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540;">Umów konsultację</a>
+          <a href="/cennik" class="btn-outline border-white text-white hover:bg-white hover:text-navy">Zobacz cennik kancelarii</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
