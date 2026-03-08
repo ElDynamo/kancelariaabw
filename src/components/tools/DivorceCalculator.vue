@@ -4,90 +4,90 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
       <div class="lg:col-span-7 space-y-8">
 
-        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
-          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">1</span>
-            Tryb orzekania o winie
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
+          <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3">
+            <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-gold text-xs">1</span>
+            TRYB ORZEKANIA O WINIE
           </label>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <button v-for="opt in trybOptions" :key="opt.value"
               @click="form.tryb = opt.value"
-              :class="['p-4 md:p-5 rounded-2xl border-2 transition-all text-left flex flex-col justify-center h-full',
+              :class="['p-4 md:p-5 rounded-2xl transition-all text-left flex flex-col justify-center h-full border-2',
                 form.tryb === opt.value
-                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
-                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
-              <span class="block font-semibold text-base mb-1" :class="{'text-navy': form.tryb === opt.value}">{{ opt.label }}</span>
-              <span class="text-xs font-medium opacity-80 leading-relaxed">{{ opt.sub }}</span>
+                  ? 'border-gold bg-white text-navy shadow-md shadow-gold/10' 
+                  : 'border-slate-50 bg-slate-50 text-navy/60 hover:border-slate-200']">
+              <span class="block font-bold text-sm mb-1" :class="{'text-navy': form.tryb === opt.value}">{{ opt.label }}</span>
+              <span class="text-[11px] font-medium opacity-80 leading-relaxed">{{ opt.sub }}</span>
             </button>
           </div>
         </div>
 
-        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
-          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">2</span>
-            Dzieci
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
+          <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3 leading-snug">
+            <span class="w-6 h-6 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-gold text-xs">2</span>
+            DZIECI
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button v-for="opt in dzieciOptions" :key="opt.value"
               @click="form.dzieci = opt.value"
-              :class="['w-full py-3 px-4 rounded-2xl border-2 text-sm md:text-base transition-all font-medium',
+              :class="['w-full py-3.5 px-4 rounded-full text-sm font-bold transition-all border-2',
                 form.dzieci === opt.value
-                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
-                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
+                  ? 'border-gold bg-white text-navy shadow-md shadow-gold/10' 
+                  : 'border-slate-50 bg-slate-50 text-navy/60 hover:border-slate-200']">
               {{ opt.label }}
             </button>
           </div>
         </div>
 
-        <div v-show="form.dzieci === 'tak'" class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm transition-all duration-500">
-          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">3</span>
-            Spór o opiekę nad dziećmi?
+        <div v-show="form.dzieci === 'tak'" class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm transition-all duration-500">
+          <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3 leading-snug">
+            <span class="w-6 h-6 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-gold text-xs">3</span>
+            SPÓR O OPIEKĘ NAD DZIEĆMI?
           </label>
           <div class="grid grid-cols-2 gap-4">
             <button v-for="opt in takNieOptions" :key="opt.value"
               @click="form.sporOpieka = opt.value"
-              :class="['w-full py-3 px-4 rounded-2xl border-2 text-sm md:text-base transition-all font-medium',
+              :class="['w-full py-3.5 px-4 rounded-full text-sm font-bold transition-all border-2',
                 form.sporOpieka === opt.value
-                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
-                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
+                  ? 'border-gold bg-white text-navy shadow-md shadow-gold/10' 
+                  : 'border-slate-50 bg-slate-50 text-navy/60 hover:border-slate-200']">
               {{ opt.label }}
             </button>
           </div>
         </div>
 
-        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
-          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">4</span>
-            Podział majątku
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
+          <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3 leading-snug">
+            <span class="w-6 h-6 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-gold text-xs">4</span>
+            PODZIAŁ MAJĄTKU
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button v-for="opt in majatekOptions" :key="opt.value"
               @click="form.majatekPodzial = opt.value"
-              :class="['p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-center text-center',
+              :class="['p-4 rounded-2xl transition-all flex flex-col items-center justify-center text-center border-2',
                 form.majatekPodzial === opt.value
-                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.05]' 
-                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
-              <span class="block font-bold text-sm mb-1" :class="{'text-navy': form.majatekPodzial === opt.value}">{{ opt.label }}</span>
-              <span class="text-xs font-medium opacity-70">{{ opt.sub }}</span>
+                  ? 'border-gold bg-white text-navy shadow-md shadow-gold/10' 
+                  : 'border-slate-50 bg-slate-50 text-navy/60 hover:border-slate-200']">
+              <span class="block font-bold text-[13px] mb-1" :class="{'text-navy': form.majatekPodzial === opt.value}">{{ opt.label }}</span>
+              <span class="text-[10px] font-medium opacity-70">{{ opt.sub }}</span>
             </button>
           </div>
         </div>
 
-        <div class="bg-white p-6 md:p-8 rounded-[2rem] border border-border/50 shadow-sm">
-          <label class="block text-sm font-semibold uppercase tracking-widest text-navy mb-4 flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center text-gold">5</span>
-            Reprezentacja prawna
+        <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
+          <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3 leading-snug">
+            <span class="w-6 h-6 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-gold text-xs">5</span>
+            REPREZENTACJA PRAWNA
           </label>
           <div class="space-y-3">
             <button v-for="opt in reprezentacjaOptions" :key="opt.value"
               @click="form.reprezentacja = opt.value"
-              :class="['w-full p-4 md:p-5 rounded-2xl border-2 text-sm md:text-base transition-all text-left flex justify-between items-center',
+              :class="['w-full p-4 rounded-2xl text-sm transition-all text-left flex justify-between items-center border-2',
                 form.reprezentacja === opt.value
-                  ? 'border-gold bg-white text-navy shadow-[0_8px_20px_-6px_rgba(201,168,76,0.3)] scale-[1.02]' 
-                  : 'border-transparent bg-off-white text-navy/70 hover:bg-navy/5 hover:text-navy']">
-              <span class="font-semibold">{{ opt.label }}</span>
-              <span :class="form.reprezentacja === opt.value ? 'text-gold font-bold' : 'text-navy/50 font-medium'" class="text-sm px-3 py-1 rounded-lg bg-navy/5">{{ opt.cena }}</span>
+                  ? 'border-gold bg-white text-navy shadow-md shadow-gold/10' 
+                  : 'border-slate-50 bg-slate-50 text-navy/60 hover:border-slate-200']">
+              <span class="font-bold text-[13px]">{{ opt.label }}</span>
+              <span :class="form.reprezentacja === opt.value ? 'text-gold font-bold bg-gold/10' : 'text-navy/40 font-bold bg-slate-200'" class="text-[11px] px-3 py-1.5 rounded-lg ml-2">{{ opt.cena }}</span>
             </button>
           </div>
         </div>
@@ -95,18 +95,16 @@
 
       <!-- Result panel -->
       <div class="lg:col-span-5 relative">
-        <div class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 border border-white/10 shadow-[0_20px_50px_-12px_rgba(15,37,64,0.3)] min-h-[500px] overflow-hidden">
-          <!-- Dekoracyjny gradient -->
-          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[20rem] h-[20rem] bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
+        <div class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
+          
           <div class="relative z-10">
-            <p class="text-sm text-white/70 uppercase tracking-widest font-semibold mb-6 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-              Szacunkowe wydatki
+            <p class="text-[10px] text-gold/80 uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+              SZACUNKOWE WYDATKI
             </p>
 
             <div class="bg-white/5 rounded-2xl p-6 border border-white/5 backdrop-blur-sm mb-6">
-              <p class="text-xs text-white/60 uppercase tracking-widest font-semibold mb-2">Suma łączna (brutto)</p>
+              <p class="text-[10px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-2">Suma łączna (brutto)</p>
               <p class="text-4xl lg:text-5xl font-sans text-gold font-bold tracking-tight">{{ totalMin }} – {{ totalMax }}</p>
             </div>
 
@@ -114,29 +112,29 @@
             <div class="space-y-4 mb-8">
               <div v-for="row in kosztTabela" :key="row.label"
                 class="flex justify-between items-center border-b border-white/5 pb-3">
-                <span class="text-sm text-white/80 pr-4">{{ row.label }}</span>
+                <span class="text-xs text-white/60 pr-4 leading-relaxed max-w-[70%]">{{ row.label }}</span>
                 <span class="text-sm font-bold text-white whitespace-nowrap">{{ row.wartosc }}</span>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-5 border border-white/5 backdrop-blur-sm">
-              <div class="w-12 h-12 rounded-xl bg-gold/20 text-gold flex items-center justify-center shrink-0">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="flex items-center gap-4 bg-[#3A424E] rounded-2xl p-5 mt-4 transition-all duration-300">
+              <div class="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div>
-                <p class="text-xs text-white/60 uppercase tracking-widest font-semibold mb-1">Szacowany czas</p>
-                <p class="text-white text-base font-medium">{{ czasPostepowania }}</p>
+                <p class="text-[10px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-1">Szacowany czas</p>
+                <p class="text-white text-sm font-bold">{{ czasPostepowania }}</p>
               </div>
             </div>
           </div>
 
-          <div class="relative z-10 mt-10">
+          <div class="relative z-10 mt-8">
             <a href="/kontakt"
-              class="block text-center px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20"
-              style="background:#c9a84c; color:#0f2540;">
-              Porozmawiaj o Twojej sprawie
+              class="block text-center px-6 py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all hover:opacity-90 active:scale-95"
+              style="background:#D4AF37; color:#1e293b;">
+              POROZMAWIAJ O TWOJEJ SPRAWIE
             </a>
-            <p class="text-xs text-white/50 text-center mt-4">Napisz lub zadzwoń by sprawdzić standardy</p>
+            <p class="text-[10px] text-white/40 font-medium text-center mt-4">Napisz lub zadzwoń by poznać wycenę</p>
           </div>
         </div>
       </div>
