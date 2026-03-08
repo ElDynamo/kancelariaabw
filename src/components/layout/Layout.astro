@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   image?: string;
   canonical?: string;
+  type?: 'website' | 'article';
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   description = 'Kancelaria Prawna ABW — Radca Prawny Anna Jarczyńska. Pomoc prawna we Wrocławiu: prawo rodzinne, cywilne, karne.',
   image,
   canonical,
+  type,
 } = Astro.props;
 ---
 <!doctype html>
@@ -43,7 +45,11 @@ const {
       description={description}
       image={image}
       canonical={canonical}
+      type={type}
     />
+
+    <!-- Slot for structured data and extra head tags -->
+    <slot name="head" />
 
     <!-- Plausible Analytics (self-hosted) -->
     <script

@@ -1,0 +1,128 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Nawigacja główna" [ref=e4]:
+      - link "Kancelaria Prawna ABW — strona główna" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Kancelaria Prawna ABW
+        - generic [ref=e7]: Radca Prawny Anna Jarczyńska
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Strona główna" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Usługi" [ref=e12] [cursor=pointer]:
+            - /url: /uslugi
+        - listitem [ref=e13]:
+          - link "Cennik" [ref=e14] [cursor=pointer]:
+            - /url: /cennik
+        - listitem [ref=e15]:
+          - link "Blog" [ref=e16] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e17]:
+          - link "O mnie" [ref=e18] [cursor=pointer]:
+            - /url: /o-mnie
+        - listitem [ref=e19]:
+          - link "Kontakt" [ref=e20] [cursor=pointer]:
+            - /url: /kontakt
+      - link "Umów konsultację prawną" [ref=e21] [cursor=pointer]:
+        - /url: /kontakt
+        - text: Umów konsultację
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - navigation "Breadcrumb" [ref=e25]:
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - link "Strona główna" [ref=e28] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e29]: ›
+          - listitem [ref=e30]:
+            - link "Usługi" [ref=e31] [cursor=pointer]:
+              - /url: /uslugi
+          - listitem [ref=e32]: ›
+          - listitem [ref=e33]: Prawo rodzinne
+      - generic [ref=e36]: Usługi
+      - heading "Prawo rodzinne Wrocław" [level=1] [ref=e37]:
+        - text: Prawo rodzinne
+        - text: Wrocław
+      - paragraph [ref=e38]: Sprawy rodzinne należą do najbardziej emocjonalnych i trudnych w życiu każdej osoby. Radca Prawny Anna Jarczyńska oferuje profesjonalne wsparcie prawne z pełnym zrozumieniem ludzkiego wymiaru każdej sprawy.
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "Rozwód" [level=2] [ref=e41]
+          - paragraph [ref=e42]: Prowadzenie spraw o rozwód — zarówno bez orzekania o winie, jak i z orzekaniem. Reprezentacja przed sądem okręgowym.
+        - generic [ref=e43]:
+          - heading "Alimenty" [level=2] [ref=e44]
+          - paragraph [ref=e45]: Ustalenie, podwyższenie lub obniżenie alimentów. Egzekucja alimentów z pomocą komornika.
+        - generic [ref=e46]:
+          - heading "Podział majątku" [level=2] [ref=e47]
+          - paragraph [ref=e48]: Podział majątku wspólnego małżonków — sądowy i umowny. Doradztwo w zakresie podziału nieruchomości i innych składników.
+        - generic [ref=e49]:
+          - heading "Władza rodzicielska" [level=2] [ref=e50]
+          - paragraph [ref=e51]: Ustalenie miejsca zamieszkania dziecka, ograniczenie lub pozbawienie władzy rodzicielskiej.
+        - generic [ref=e52]:
+          - heading "Kontakty z dziećmi" [level=2] [ref=e53]
+          - paragraph [ref=e54]: Ustalenie i egzekwowanie kontaktów rodzica z dzieckiem po rozstaniu.
+        - generic [ref=e55]:
+          - heading "Separacja" [level=2] [ref=e56]
+          - paragraph [ref=e57]: Orzeczenie separacji jako alternatywa dla rozwodu przy czasowych trudnościach małżeńskich.
+      - generic [ref=e58]:
+        - heading "Potrzebujesz pomocy w sprawie rodzinnej?" [level=2] [ref=e59]
+        - paragraph [ref=e60]: Umów bezpłatną rozmowę wstępną — ocenimy Twoją sytuację i zaproponujemy plan działania.
+        - generic [ref=e61]:
+          - link "Umów konsultację" [ref=e62] [cursor=pointer]:
+            - /url: /kontakt
+          - link "609 366 160" [ref=e63] [cursor=pointer]:
+            - /url: tel:+48609366160
+  - contentinfo [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: Kancelaria Prawna ABW
+          - paragraph [ref=e69]: Radca Prawny Anna Jarczyńska
+          - paragraph [ref=e70]: Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
+        - generic [ref=e71]:
+          - heading "Usługi" [level=2] [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - link "Prawo rodzinne" [ref=e75] [cursor=pointer]:
+                - /url: /uslugi/prawo-rodzinne
+            - listitem [ref=e76]:
+              - link "Prawo cywilne" [ref=e77] [cursor=pointer]:
+                - /url: /uslugi/prawo-cywilne
+            - listitem [ref=e78]:
+              - link "Prawo karne" [ref=e79] [cursor=pointer]:
+                - /url: /uslugi/prawo-karne
+        - generic [ref=e80]:
+          - heading "Kontakt" [level=2] [ref=e81]
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: Telefon
+              - link "609 366 160" [ref=e85] [cursor=pointer]:
+                - /url: tel:+48609366160
+            - generic [ref=e86]:
+              - paragraph [ref=e87]: Email
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e88] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+            - generic [ref=e89]:
+              - paragraph [ref=e90]: Lokalizacje
+              - paragraph [ref=e91]: Wrocław
+              - paragraph [ref=e92]: Bielany Wrocławskie
+            - generic [ref=e93]:
+              - paragraph [ref=e94]: Godziny pracy
+              - paragraph [ref=e95]: Pon.–Pt., 9:00–17:00
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: © 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
+        - navigation "Linki prawne" [ref=e98]:
+          - list [ref=e99]:
+            - listitem [ref=e100]:
+              - link "Polityka prywatności" [ref=e101] [cursor=pointer]:
+                - /url: /polityka-prywatnosci
+            - listitem [ref=e102]:
+              - link "Regulamin" [ref=e103] [cursor=pointer]:
+                - /url: /regulamin
+            - listitem [ref=e104]:
+              - link "Przetwarzanie danych" [ref=e105] [cursor=pointer]:
+                - /url: /przetwarzanie-danych
+```
