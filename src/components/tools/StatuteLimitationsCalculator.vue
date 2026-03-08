@@ -4,24 +4,15 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Rodzaj roszczenia</label>
-          <div class="space-y-2">
-            <button v-for="opt in roszczeniaOptions" :key="opt.value"
-              @click="form.rodzaj = opt.value"
-              :class="['w-full p-3 rounded-xl border-2 text-sm font-medium transition-all text-left',
-                form.rodzaj === opt.value
-                  ? 'border-gold bg-navy text-white' : 'border-border bg-white text-navy hover:border-navy']">
-              <div class="flex justify-between items-center">
-                <span class="font-semibold">{{ opt.label }}</span>
-                <span :class="form.rodzaj === opt.value ? 'text-gold' : 'text-gold'" class="text-xs font-bold">{{ opt.termin }}</span>
-              </div>
-              <span class="text-xs opacity-60">{{ opt.sub }}</span>
-            </button>
-          </div>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Rodzaj roszczenia</label>
+          <select v-model="form.rodzaj"
+            class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-sm focus:border-gold focus:outline-none bg-white">
+            <option v-for="opt in roszczeniaOptions" :key="opt.value" :value="opt.value">{{ opt.label }} ({{ opt.termin }})</option>
+          </select>
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Data wymagalności roszczenia
           </label>
           <input type="date" v-model="form.dataWymagalnosci"
@@ -31,7 +22,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Czy nastąpiło przerwanie biegu przedawnienia?
           </label>
           <div class="grid grid-cols-2 gap-3 mb-3">
@@ -44,7 +35,7 @@
             </button>
           </div>
           <div v-if="form.przerwanie === 'tak'">
-            <label class="block text-xs uppercase tracking-widest text-gold mb-2">Data przerwania biegu</label>
+            <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Data przerwania biegu</label>
             <input type="date" v-model="form.dataPrzerwania"
               class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-base focus:border-gold focus:outline-none" />
             <p class="text-xs text-text-muted mt-1">np. data wytoczenia powództwa, uznania długu, ugody</p>
@@ -58,20 +49,20 @@
           <div class="flex items-center gap-3 mb-4">
             <span class="text-3xl">{{ statusIcon }}</span>
             <div>
-              <p class="text-xs text-white/40 uppercase tracking-widest">Status</p>
+              <p class="text-xs text-white/70 uppercase tracking-widest font-semibold">Status</p>
               <p class="text-white font-semibold text-lg">{{ statusLabel }}</p>
             </div>
           </div>
 
           <div class="space-y-3">
             <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Data przedawnienia</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Data przedawnienia</p>
               <p class="text-gold text-xl font-bold font-serif">{{ dataPrzedawnieniaFormatted }}</p>
-              <p class="text-white/50 text-xs mt-1">Koniec terminu upada 31 XII roku (KC art. 118 zd. 2)</p>
+              <p class="text-white/60 text-xs mt-1">Koniec terminu upada 31 XII roku (KC art. 118 zd. 2)</p>
             </div>
 
             <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Termin przedawnienia</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Termin przedawnienia</p>
               <p class="text-white text-sm">{{ terminInfo }}</p>
             </div>
 
@@ -86,7 +77,7 @@
             </div>
 
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Podstawa prawna</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
               <p class="text-white/70 text-xs">{{ podstawaPrawna }}</p>
             </div>
           </div>

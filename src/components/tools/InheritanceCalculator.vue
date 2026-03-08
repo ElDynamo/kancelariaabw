@@ -4,7 +4,7 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Kim jesteś?</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Kim jesteś?</label>
           <div class="space-y-2">
             <button v-for="opt in relacjaOptions" :key="opt.value"
               @click="form.relacja = opt.value"
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Jesteś małoletni lub trwale niezdolny do pracy?
           </label>
           <div class="grid grid-cols-2 gap-3">
@@ -34,7 +34,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Wartość czystego spadku (aktywa – długi) [zł]
           </label>
           <input type="number" v-model.number="form.wartoscSpadku" min="0" step="10000"
@@ -43,7 +43,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Wartość darowizn doliczanych do masy [zł]
           </label>
           <input type="number" v-model.number="form.wartoscDarowizn" min="0" step="10000"
@@ -55,7 +55,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Ile dzieci (zstępnych) dziedziczy łącznie?
           </label>
           <div class="flex gap-2">
@@ -88,29 +88,29 @@
       <!-- Result -->
       <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
         <div>
-          <p class="text-xs text-white/40 uppercase tracking-widest mb-2">Twój zachowek</p>
+          <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-2">Twój zachowek</p>
           <p class="text-5xl font-serif text-gold font-bold mb-1">
             {{ zachowekFormatted }}
           </p>
-          <p class="text-white/50 text-sm mb-6">złotych</p>
+          <p class="text-white/70 text-sm mb-6">złotych</p>
 
           <div class="space-y-3">
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Substrat zachowku</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Substrat zachowku</p>
               <p class="text-white text-sm">{{ substatFormatted }} zł</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Twój udział ustawowy</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Twój udział ustawowy</p>
               <p class="text-white text-sm">{{ udzialFormatted }}</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Zastosowany ułamek</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Zastosowany ułamek</p>
               <p class="text-white text-sm">{{ ulamek }} (art. 991 KC)</p>
             </div>
             <div class="bg-amber-600/20 rounded-xl p-4 border border-amber-500/30">
-              <p class="text-xs text-amber-300 uppercase tracking-wide mb-1">⏱ Przedawnienie</p>
+              <p class="text-xs text-amber-300 uppercase tracking-wide font-semibold mb-1">⏱ Przedawnienie</p>
               <p class="text-white text-sm">{{ dataPrzedawnienia }}</p>
-              <p class="text-white/50 text-xs">5 lat od ogłoszenia testamentu (KC art. 1007)</p>
+              <p class="text-white/70 text-xs">5 lat od ogłoszenia testamentu (KC art. 1007)</p>
             </div>
           </div>
         </div>

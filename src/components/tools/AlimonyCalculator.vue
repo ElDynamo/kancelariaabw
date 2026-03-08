@@ -4,7 +4,7 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
             Dochód netto osoby zobowiązanej (zł/mies.)
           </label>
           <input type="number" v-model.number="form.dochodNetto" min="0" step="500"
@@ -16,7 +16,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Wiek dziecka</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Wiek dziecka</label>
           <div class="grid grid-cols-2 gap-2">
             <button v-for="opt in wiekOptions" :key="opt.value"
               @click="form.wiekDziecka = opt.value"
@@ -29,7 +29,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Liczba dzieci</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Liczba dzieci</label>
           <div class="flex gap-2">
             <button v-for="n in [1,2,3,4,5]" :key="n"
               @click="form.liczbaDzieci = n"
@@ -42,7 +42,7 @@
         </div>
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Rodzaj opieki</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Rodzaj opieki</label>
           <div class="grid grid-cols-2 gap-3">
             <button v-for="opt in opiekaOptions" :key="opt.value"
               @click="form.opiekaNaprzemienna = opt.value"
@@ -57,7 +57,7 @@
 
         <!-- Dodatkowe koszty -->
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Dodatkowe okoliczności</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Dodatkowe okoliczności</label>
           <div class="space-y-2">
             <label v-for="extra in extras" :key="extra.key"
               class="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-border hover:border-navy transition-colors">
@@ -74,24 +74,24 @@
       <!-- Result -->
       <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
         <div>
-          <p class="text-xs text-white/40 uppercase tracking-widest mb-2">Szacunkowe alimenty</p>
+          <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-2">Szacunkowe alimenty</p>
           <p class="text-5xl font-serif text-gold font-bold mb-1">
             {{ alimentyMin }}–{{ alimentyMax }}
           </p>
-          <p class="text-white/50 text-sm mb-6">zł miesięcznie / dziecko</p>
+          <p class="text-sm text-white/70 mb-6">zł miesięcznie / dziecko</p>
 
           <div class="space-y-3">
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Fundusz Alimentacyjny (max)</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Fundusz Alimentacyjny (max)</p>
               <p class="text-white text-sm">1 000 zł/mies. (od X 2024)</p>
-              <p class="text-white/40 text-xs">Tylko przy bezskutecznej egzekucji + dochód ≤ 900 zł/os.</p>
+              <p class="text-white/60 text-xs">Tylko przy bezskutecznej egzekucji + dochód ≤ 900 zł/os.</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Świadczenie 800+</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Świadczenie 800+</p>
               <p class="text-white/70 text-xs">Nie zmniejsza alimentów (KRiO art. 135 § 3)</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Udział w możliwościach</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Udział w możliwościach</p>
               <p class="text-white text-sm">~{{ procentDochodu }}% dochodów zobowiązanego</p>
             </div>
           </div>

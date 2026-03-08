@@ -4,17 +4,11 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs uppercase tracking-widest text-gold mb-2">Rodzaj sprawy</label>
-          <div class="space-y-2">
-            <button v-for="opt in sprawOptions" :key="opt.value"
-              @click="form.rodzajSprawy = opt.value"
-              :class="['w-full p-3 rounded-xl border-2 text-sm font-medium transition-all text-left',
-                form.rodzajSprawy === opt.value
-                  ? 'border-gold bg-navy text-white' : 'border-border bg-white text-navy hover:border-navy']">
-              <span class="font-semibold">{{ opt.label }}</span>
-              <span v-if="opt.sub" class="block text-xs opacity-60">{{ opt.sub }}</span>
-            </button>
-          </div>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Rodzaj sprawy</label>
+          <select v-model="form.rodzajSprawy"
+            class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-sm focus:border-gold focus:outline-none bg-white">
+            <option v-for="opt in sprawOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
+          </select>
         </div>
 
         <div v-if="showWPS">
@@ -49,9 +43,9 @@
       <!-- Result -->
       <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
         <div>
-          <p class="text-xs text-white/40 uppercase tracking-widest mb-2">Opłata sądowa</p>
+          <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-2">Opłata sądowa</p>
           <p class="text-5xl font-serif text-gold font-bold mb-1">{{ oplaataMain }}</p>
-          <p class="text-white/50 text-sm mb-6">złotych</p>
+          <p class="text-white/70 text-sm mb-6">złotych</p>
 
           <div class="space-y-3">
             <div v-if="zwrotInfo" class="bg-green-800/30 rounded-xl p-4 border border-green-500/30">
@@ -59,7 +53,7 @@
               <p class="text-white text-sm">{{ zwrotInfo }}</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/40 uppercase tracking-wide mb-1">Podstawa prawna</p>
+              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
               <p class="text-white/80 text-sm">{{ podstawaPrawna }}</p>
             </div>
             <div v-if="zwolnienieInfo" class="bg-amber-600/20 rounded-xl p-4 border border-amber-500/30">
