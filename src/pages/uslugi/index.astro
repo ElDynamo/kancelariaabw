@@ -27,28 +27,28 @@ const services = [
 
 const pillarServices = [
   {
-    icon: '🏦',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
     title: 'Upadłość konsumencka — Wrocław',
     description: 'Zadłużony? Pomożemy ogłosić upadłość i zacząć od nowa. Zatrzymaj komornika.',
     href: '/uslugi/upadlosc-konsumencka-wroclaw',
     badge: 'Najwyższy priorytet',
   },
   {
-    icon: '🚗',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
     title: 'Odszkodowania komunikacyjne',
     description: 'Wypadek drogowy? Ubezpieczyciel zaniżył wypłatę? Uzyskamy pełne odszkodowanie.',
     href: '/uslugi/odszkodowania-komunikacyjne-wroclaw',
     badge: null,
   },
   {
-    icon: '🏡',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     title: 'Prawo nieruchomości',
     description: 'Eksmisje, najem, bezumowne korzystanie z lokalu, zakup i sprzedaż nieruchomości.',
     href: '/uslugi/prawo-nieruchomosci-wroclaw',
     badge: null,
   },
   {
-    icon: '🏢',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
     title: 'Obsługa prawna firm',
     description: 'Umowy B2B, windykacja, ochrona przed nieuczciwą konkurencją, RODO.',
     href: '/uslugi/obsluga-prawna-firm-wroclaw',
@@ -101,15 +101,17 @@ const breadcrumb = {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {pillarServices.map(s => (
           <a href={s.href} class="group bg-white rounded-2xl p-7 border border-border hover:border-navy hover:shadow-lg transition-all block">
-            <div class="flex items-start justify-between mb-3">
-              <span class="text-3xl">{s.icon}</span>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-white transition-all">
+                <Fragment set:html={s.icon} />
+              </div>
               {s.badge && (
-                <span class="font-sans text-xs px-2 py-1 rounded-full text-gold border border-gold">{s.badge}</span>
+                <span class="font-sans text-xs px-2 py-1 rounded-full text-navy/60 border border-border">{s.badge}</span>
               )}
             </div>
             <h3 class="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
             <p class="font-sans text-sm text-text-muted leading-relaxed mb-4">{s.description}</p>
-            <span class="font-sans text-xs text-navy/60 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
+            <span class="font-sans text-xs text-navy/50 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
           </a>
         ))}
       </div>

@@ -60,7 +60,7 @@ const faqSchema = {
       <div class="bg-off-white rounded-3xl p-6 md:p-10 mb-12 border border-border">
         <InheritanceCalculator client:visible />
       </div>
-      <article class="prose prose-navy max-w-none">
+      <article class="prose prose-navy max-w-2xl">
         <h2>Jak obliczyć zachowek? — Krok po kroku</h2>
         <p>Obliczenie zachowku wymaga ustalenia trzech elementów:</p>
         <ol>
@@ -75,12 +75,23 @@ const faqSchema = {
           darowizny z ostatnich 10 lat (art. 994 KC). To częsty punkt sporny w sprawach spadkowych.
         </p>
       </article>
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center">
-        <h2 class="font-serif text-2xl text-white mb-3">Spór o zachowek? Pomożemy.</h2>
-        <p class="font-sans text-white/70 mb-6 max-w-lg mx-auto">Sprawy o zachowek wymagają analizy całej historii majątkowej rodziny. Umów konsultację.</p>
-        <div class="flex flex-wrap gap-3 justify-center">
-          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540;">Umów konsultację</a>
-          <a href="/uslugi/prawo-cywilne" class="btn-outline border-white text-white hover:bg-white hover:text-navy">Prawo cywilne</a>
+      <div class="mt-12 rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #0f2540 0%, #1a3a5c 100%);">
+        <div class="p-8 md:p-10 text-center">
+          <h2 class="font-serif text-2xl md:text-3xl text-white mb-3">Spór o zachowek? Pomożemy.</h2>
+          <p class="font-sans text-base text-white/80 mb-8 max-w-md mx-auto leading-relaxed">
+            Sprawy o zachowek wymagają analizy całej historii majątkowej rodziny. Umów konsultację.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="/kontakt"
+              class="inline-block px-6 py-3 font-sans font-semibold text-sm uppercase tracking-wide rounded-lg"
+              style="background:#c9a84c; color:#0f2540;">
+              Umów konsultację
+            </a>
+            <a href="/uslugi/prawo-cywilne"
+              class="inline-block px-6 py-3 font-sans font-semibold text-sm uppercase tracking-wide rounded-lg border-2 border-white/60 text-white hover:bg-white/10 transition-colors">
+              Prawo cywilne
+            </a>
+          </div>
         </div>
       </div>
     </div>
