@@ -1,7 +1,8 @@
+```html
 <template>
   <div class="alimony-calculator font-sans">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
-      <div class="lg:col-span-7 space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative items-start">
+      <div class="lg:col-span-7 space-y-8" id="kalkulator-form">
 
         <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
           <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3">
@@ -99,7 +100,7 @@
 
       <!-- Result -->
       <div class="lg:col-span-5 relative">
-        <div id="wyniki-kalkulatora" class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
+        <div id="wyniki-kalkulatora" class="bg-navy rounded-[2.5rem] p-6 lg:p-10 md:p-8 flex flex-col justify-between sticky top-32 lg:min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
           
           <div class="relative z-10">
             <p class="text-[10px] text-gold/80 uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-2">
@@ -117,6 +118,11 @@
                 <p class="text-white text-sm font-semibold mb-1">Max. 1 000 zł/miesięcznie <span class="text-white/40 text-[10px] ml-1">(od X 2024)</span></p>
                 <p class="text-white/40 text-[11px]">Przy bezskutecznej egzekucji i dochodzie ≤ 900 zł/os.</p>
               </div>
+              
+              <div class="bg-white/5 rounded-2xl p-6 border border-white/5 backdrop-blur-sm mb-6">
+              <p class="text-[10px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-2">Szacunkowe alimenty</p>
+              <p class="text-4xl lg:text-5xl font-sans text-gold font-bold tracking-tight tabular-nums whitespace-nowrap">{{ alimentyMin }}–{{ alimentyMax }}</p>
+            </div>
               
               <div class="bg-white/5 rounded-2xl p-5 border border-white/5 backdrop-blur-sm">
                 <p class="text-[10px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-2">Świadczenie 800+</p>
@@ -143,27 +149,29 @@
       </div>
     </div>
 
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0">
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0 mb-6 lg:mb-0">
       <strong>⚠️ Ważne:</strong> W polskim prawie nie istnieje stały wzór matematyczny do obliczania alimentów.
       Sąd zawsze decyduje indywidualnie na podstawie potrzeb uprawnionego oraz możliwości zarobkowych zobowiązanego (zgodnie z <em>Ustawą z dnia 25 lutego 1964 r. – Kodeks rodzinny i opiekuńczy (t.j. Dz. U. z 2023 r. poz. 2809 ze zm.)</em>). Niniejszy kalkulator opiera się na nieformalnych tablicach orientacyjnych MS z 2022 r. i ma charakter wyłącznie szacunkowy.
     </div>
 
     <!-- Mobile Sticky Bar -->
-    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
-      <div>
-        <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Szacunkowe alimenty</p>
-        <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none">{{ alimentyMin }}–{{ alimentyMax }}</p>
+    <transition name="fade-slide">
+      <div v-show="showSticky" class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
+        <div>
+          <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Szacunkowe alimenty</p>
+          <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none tabular-nums whitespace-nowrap">{{ alimentyMin }}–{{ alimentyMax }}</p>
+        </div>
+        <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
+          Wyniki
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
       </div>
-      <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
-        Szczegóły 
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-      </button>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 const form = ref({
   dochodNetto: 6000,
@@ -225,4 +233,43 @@ const procentDochodu = computed(() => {
 const scrollToResults = () => {
   document.getElementById('wyniki-kalkulatora')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
+
+// Scroll visibility logic
+const showSticky = ref(false);
+
+const checkStickyVisibility = () => {
+  const formEl = document.getElementById('kalkulator-form');
+  const resultsEl = document.getElementById('wyniki-kalkulatora');
+  if (!formEl || !resultsEl) return;
+  
+  const formRect = formEl.getBoundingClientRect();
+  const resultsRect = resultsEl.getBoundingClientRect();
+  
+  if (formRect.top < 100 && resultsRect.top > window.innerHeight) {
+    showSticky.value = true;
+  } else {
+    showSticky.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', checkStickyVisibility, { passive: true });
+  setTimeout(checkStickyVisibility, 100);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkStickyVisibility);
+});
 </script>
+
+<style scoped>
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+</style>

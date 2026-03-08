@@ -9,6 +9,9 @@ import compress from 'astro-compress';
 import node from '@astrojs/node';
 import rehypeSlug from 'rehype-slug';
 
+import react from '@astrojs/react';
+import keystatic from '@keystatic/astro';
+
 export default defineConfig({
     site: 'https://kancelariaabw.pl',
     // Astro 5.18: output:'static' = dawny 'hybrid'
@@ -16,6 +19,8 @@ export default defineConfig({
     output: 'static',
     adapter: node({ mode: 'standalone' }),
     integrations: [
+        react(),
+        keystatic(),
         vue(),
         sitemap(),
         mdx(),

@@ -1,7 +1,7 @@
 <template>
   <div class="court-fees-calculator font-sans">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
-      <div class="lg:col-span-7 space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative items-start">
+      <div class="lg:col-span-7 space-y-8" id="kalkulator-form">
 
         <div class="bg-white p-6 md:p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm">
           <label class="block text-[11px] font-bold uppercase tracking-[0.15em] text-navy mb-5 flex items-center gap-3">
@@ -57,14 +57,14 @@
 
       <!-- Result -->
       <div class="lg:col-span-5 relative">
-        <div id="wyniki-kalkulatora" class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
+        <div id="wyniki-kalkulatora" class="bg-navy rounded-[2.5rem] p-6 lg:p-10 md:p-8 flex flex-col justify-between sticky top-32 lg:min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
           
           <div class="relative z-10">
             <p class="text-[10px] text-gold/80 uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
               OPŁATA SĄDOWA
             </p>
-            <p class="text-5xl md:text-[3.5rem] font-serif text-gold font-bold mb-8 tracking-tight leading-none">
+            <p class="text-5xl md:text-[3.5rem] font-serif text-gold font-bold mb-8 tracking-tight leading-none tabular-nums whitespace-nowrap">
               {{ oplaataMain }}
             </p>
 
@@ -101,27 +101,29 @@
       </div>
     </div>
 
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0">
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0 mb-6 lg:mb-0">
       <strong>⚠️ Aktualne przepisy:</strong> <em>Ustawa z dnia 28 lipca 2005 r. o kosztach sądowych w sprawach cywilnych (t.j. Dz. U. z 2023 r. poz. 1144 ze zm.)</em>. Zgodnie z nowelizacją z 2019 r., maksymalna uiszczana opłata stosunkowa wynosi 200 000 zł.
       Kalkulator nie uwzględnia kosztów dodatkowych, takich jak zaliczki na biegłych czy koszty komornicze.
     </div>
 
     <!-- Mobile Sticky Bar -->
-    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
-      <div>
-        <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Opłata sądowa</p>
-        <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none">{{ oplaataMain }}</p>
+    <transition name="fade-slide">
+      <div v-show="showSticky" class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
+        <div>
+          <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Opłata Sądowa</p>
+          <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none tabular-nums whitespace-nowrap">{{ oplaataMain }}</p>
+        </div>
+        <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
+          Szczegóły 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
       </div>
-      <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
-        Szczegóły 
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-      </button>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 const form = ref({
   rodzajSprawy: 'rozwod_bez',
@@ -194,4 +196,43 @@ const zwolnienieInfo = computed(() => {
 const scrollToResults = () => {
   document.getElementById('wyniki-kalkulatora')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
+
+// Scroll visibility logic
+const showSticky = ref(false);
+
+const checkStickyVisibility = () => {
+  const formEl = document.getElementById('kalkulator-form');
+  const resultsEl = document.getElementById('wyniki-kalkulatora');
+  if (!formEl || !resultsEl) return;
+  
+  const formRect = formEl.getBoundingClientRect();
+  const resultsRect = resultsEl.getBoundingClientRect();
+  
+  if (formRect.top < 100 && resultsRect.top > window.innerHeight) {
+    showSticky.value = true;
+  } else {
+    showSticky.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', checkStickyVisibility, { passive: true });
+  setTimeout(checkStickyVisibility, 100);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkStickyVisibility);
+});
 </script>
+
+<style scoped>
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+</style>
