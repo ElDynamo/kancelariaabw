@@ -18,8 +18,8 @@ const legal = [
       <!-- Kolumna 1: O kancelarii -->
       <div>
         <p class="font-serif text-xl mb-2">Kancelaria Prawna ABW</p>
-        <p class="font-sans text-sm text-white/70 mb-4">Radca Prawny Anna Jarczyńska</p>
-        <p class="font-sans text-sm text-white/60 leading-relaxed">
+        <p class="font-sans text-sm text-white opacity-70 mb-4">Radca Prawny Anna Jarczyńska</p>
+        <p class="font-sans text-sm text-white opacity-60 leading-relaxed">
           Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
         </p>
       </div>
@@ -30,7 +30,7 @@ const legal = [
         <ul class="space-y-2" role="list">
           {services.map(s => (
             <li>
-              <a href={s.href} class="font-sans text-sm text-white/70 hover:text-gold transition-colors">
+              <a href={s.href} class="font-sans text-sm text-white opacity-70 hover:text-gold transition-colors">
                 {s.label}
               </a>
             </li>
@@ -43,25 +43,25 @@ const legal = [
         <h2 class="font-sans text-xs uppercase tracking-widest text-gold mb-5">Kontakt</h2>
         <address class="not-italic space-y-4">
           <div>
-            <p class="font-sans text-xs text-white/40 uppercase tracking-wide mb-1">Telefon</p>
-            <a href="tel:+48609366160" class="font-sans text-sm text-white/80 hover:text-gold transition-colors">
+            <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Telefon</p>
+            <a href="tel:+48609366160" class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors">
               609 366 160
             </a>
           </div>
           <div>
-            <p class="font-sans text-xs text-white/40 uppercase tracking-wide mb-1">Email</p>
-            <a href="mailto:a.jarczynska@kancelariaabw.pl" class="font-sans text-sm text-white/80 hover:text-gold transition-colors break-all">
+            <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Email</p>
+            <a href="mailto:a.jarczynska@kancelariaabw.pl" class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors break-all">
               a.jarczynska@kancelariaabw.pl
             </a>
           </div>
           <div>
-            <p class="font-sans text-xs text-white/40 uppercase tracking-wide mb-1">Lokalizacje</p>
-            <p class="font-sans text-sm text-white/80">Wrocław</p>
-            <p class="font-sans text-sm text-white/80">Bielany Wrocławskie</p>
+            <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Lokalizacje</p>
+            <p class="font-sans text-sm text-white opacity-80">Wrocław</p>
+            <p class="font-sans text-sm text-white opacity-80">Bielany Wrocławskie</p>
           </div>
           <div>
-            <p class="font-sans text-xs text-white/40 uppercase tracking-wide mb-1">Godziny pracy</p>
-            <p class="font-sans text-sm text-white/80">Pon.–Pt., 9:00–17:00</p>
+            <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Godziny pracy</p>
+            <p class="font-sans text-sm text-white opacity-80">Pon.–Pt., 9:00–17:00</p>
           </div>
         </address>
       </div>
@@ -70,14 +70,14 @@ const legal = [
 
     <!-- Dół footera -->
     <div class="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="font-sans text-xs text-white/40">
+      <p class="font-sans text-xs text-white opacity-40">
         © {new Date().getFullYear()} Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
       </p>
       <nav aria-label="Linki prawne">
         <ul class="flex gap-6" role="list">
           {legal.map(l => (
             <li>
-              <a href={l.href} class="font-sans text-xs text-white/40 hover:text-white/70 transition-colors">
+              <a href={l.href} class="font-sans text-xs text-white opacity-40 hover:text-white opacity-70 transition-colors">
                 {l.label}
               </a>
             </li>

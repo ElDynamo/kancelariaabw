@@ -5,7 +5,7 @@
 
       <div class="space-y-5">
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Tryb orzekania o winie</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Tryb orzekania o winie</label>
           <div class="grid grid-cols-2 gap-3">
             <button v-for="opt in trybOptions" :key="opt.value"
               @click="form.tryb = opt.value"
@@ -20,7 +20,7 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Dzieci</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Dzieci</label>
           <div class="grid grid-cols-3 gap-2">
             <button v-for="opt in dzieciOptions" :key="opt.value"
               @click="form.dzieci = opt.value"
@@ -34,7 +34,7 @@
         </div>
 
         <div v-if="form.dzieci === 'tak'">
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Spór o opiekę nad dziećmi?</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Spór o opiekę nad dziećmi?</label>
           <div class="grid grid-cols-2 gap-3">
             <button v-for="opt in takNieOptions" :key="opt.value"
               @click="form.sporOpieka = opt.value"
@@ -48,7 +48,7 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Podział majątku</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Podział majątku</label>
           <div class="grid grid-cols-2 gap-3">
             <button v-for="opt in majatekOptions" :key="opt.value"
               @click="form.majatekPodzial = opt.value"
@@ -63,7 +63,7 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Reprezentacja prawna</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Reprezentacja prawna</label>
           <div class="space-y-2">
             <button v-for="opt in reprezentacjaOptions" :key="opt.value"
               @click="form.reprezentacja = opt.value"
@@ -81,25 +81,25 @@
       <!-- Result panel -->
       <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
         <div>
-          <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-4">Szacunkowe koszty</p>
+          <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-4">Szacunkowe koszty</p>
 
           <!-- Cost table -->
           <div class="space-y-3 mb-6">
             <div v-for="row in kosztTabela" :key="row.label"
               class="flex justify-between items-center border-b border-white/10 pb-2">
-              <span class="text-sm text-white/80">{{ row.label }}</span>
+              <span class="text-sm text-white opacity-80">{{ row.label }}</span>
               <span class="text-sm font-semibold text-white">{{ row.wartosc }}</span>
             </div>
           </div>
 
           <div class="bg-white/10 rounded-xl p-4 mb-4">
-            <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-1">Łączny koszt (szacunek)</p>
+            <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-1">Łączny koszt (szacunek)</p>
             <p class="text-3xl font-serif text-gold font-bold">{{ totalMin }} – {{ totalMax }}</p>
-            <p class="text-xs text-white/60 mt-1">wartości w PLN (brutto)</p>
+            <p class="text-xs text-white opacity-60 mt-1">wartości w PLN (brutto)</p>
           </div>
 
           <div class="bg-white/5 rounded-xl p-4">
-            <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-2">⏱ Szacowany czas</p>
+            <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-2">⏱ Szacowany czas</p>
             <p class="text-white text-sm font-semibold">{{ czasPostepowania }}</p>
           </div>
         </div>
@@ -110,7 +110,7 @@
             style="background:#c9a84c; color:#0f2540;">
             Umów bezpłatną rozmowę
           </a>
-          <p class="text-xs text-white/60 text-center mt-2">Sprawdź czy Twój wynik jest typowy</p>
+          <p class="text-xs text-white opacity-60 text-center mt-2">Sprawdź czy Twój wynik jest typowy</p>
         </div>
       </div>
     </div>

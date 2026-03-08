@@ -4,7 +4,7 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Rodzaj roszczenia</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Rodzaj roszczenia</label>
           <select v-model="form.rodzaj"
             class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-sm focus:border-gold focus:outline-none bg-white">
             <option v-for="opt in roszczeniaOptions" :key="opt.value" :value="opt.value">{{ opt.label }} ({{ opt.termin }})</option>
@@ -12,7 +12,7 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">
             Data wymagalności roszczenia
           </label>
           <input type="date" v-model="form.dataWymagalnosci"
@@ -22,7 +22,7 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">
             Czy nastąpiło przerwanie biegu przedawnienia?
           </label>
           <div class="grid grid-cols-2 gap-3 mb-3">
@@ -35,7 +35,7 @@
             </button>
           </div>
           <div v-if="form.przerwanie === 'tak'">
-            <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Data przerwania biegu</label>
+            <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Data przerwania biegu</label>
             <input type="date" v-model="form.dataPrzerwania"
               class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-base focus:border-gold focus:outline-none" />
             <p class="text-xs text-text-muted mt-1">np. data wytoczenia powództwa, uznania długu, ugody</p>
@@ -49,36 +49,36 @@
           <div class="flex items-center gap-3 mb-4">
             <span class="text-3xl">{{ statusIcon }}</span>
             <div>
-              <p class="text-xs text-white/70 uppercase tracking-widest font-semibold">Status</p>
+              <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold">Status</p>
               <p class="text-white font-semibold text-lg">{{ statusLabel }}</p>
             </div>
           </div>
 
           <div class="space-y-3">
             <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Data przedawnienia</p>
+              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Data przedawnienia</p>
               <p class="text-gold text-xl font-bold font-serif">{{ dataPrzedawnieniaFormatted }}</p>
-              <p class="text-white/60 text-xs mt-1">Koniec terminu upada 31 XII roku (KC art. 118 zd. 2)</p>
+              <p class="text-white opacity-60 text-xs mt-1">Koniec terminu upada 31 XII roku (KC art. 118 zd. 2)</p>
             </div>
 
             <div class="bg-white/10 rounded-xl p-4">
-              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Termin przedawnienia</p>
+              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Termin przedawnienia</p>
               <p class="text-white text-sm">{{ terminInfo }}</p>
             </div>
 
             <div v-if="dniPozostalo > 0 && dniPozostalo <= 90" class="bg-red-800/50 rounded-xl p-4 border border-red-400/30">
               <p class="text-red-300 font-semibold text-sm">⚠️ Pozostało {{ dniPozostalo }} dni!</p>
-              <p class="text-white/70 text-xs mt-1">Działaj natychmiast — złóż pozew lub wezwanie do zapłaty</p>
+              <p class="text-white opacity-70 text-xs mt-1">Działaj natychmiast — złóż pozew lub wezwanie do zapłaty</p>
             </div>
 
             <div v-if="dniPozostalo <= 0" class="bg-red-900/50 rounded-xl p-4 border border-red-400/30">
               <p class="text-red-300 font-semibold text-sm">❌ Roszczenie przedawnione</p>
-              <p class="text-white/70 text-xs mt-1">Skonsultuj się z prawnikiem — w sprawach konsumenckich sąd bada przedawnienie z urzędu</p>
+              <p class="text-white opacity-70 text-xs mt-1">Skonsultuj się z prawnikiem — w sprawach konsumenckich sąd bada przedawnienie z urzędu</p>
             </div>
 
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
-              <p class="text-white/70 text-xs">{{ podstawaPrawna }}</p>
+              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
+              <p class="text-white opacity-70 text-xs">{{ podstawaPrawna }}</p>
             </div>
           </div>
         </div>

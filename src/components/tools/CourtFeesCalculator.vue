@@ -4,7 +4,7 @@
       <div class="space-y-5">
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-widest text-navy/70 mb-2">Rodzaj sprawy</label>
+          <label class="block text-xs font-semibold uppercase tracking-widest text-navy opacity-70 mb-2">Rodzaj sprawy</label>
           <select v-model="form.rodzajSprawy"
             class="w-full border-2 border-border rounded-xl px-4 py-3 font-sans text-navy text-sm focus:border-gold focus:outline-none bg-white">
             <option v-for="opt in sprawOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
@@ -43,9 +43,9 @@
       <!-- Result -->
       <div class="bg-navy rounded-2xl p-6 flex flex-col justify-between">
         <div>
-          <p class="text-xs text-white/70 uppercase tracking-widest font-semibold mb-2">Opłata sądowa</p>
+          <p class="text-xs text-white opacity-70 uppercase tracking-widest font-semibold mb-2">Opłata sądowa</p>
           <p class="text-5xl font-serif text-gold font-bold mb-1">{{ oplaataMain }}</p>
-          <p class="text-white/70 text-sm mb-6">złotych</p>
+          <p class="text-white opacity-70 text-sm mb-6">złotych</p>
 
           <div class="space-y-3">
             <div v-if="zwrotInfo" class="bg-green-800/30 rounded-xl p-4 border border-green-500/30">
@@ -53,12 +53,12 @@
               <p class="text-white text-sm">{{ zwrotInfo }}</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4">
-              <p class="text-xs text-white/70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
-              <p class="text-white/80 text-sm">{{ podstawaPrawna }}</p>
+              <p class="text-xs text-white opacity-70 uppercase tracking-wide font-semibold mb-1">Podstawa prawna</p>
+              <p class="text-white opacity-80 text-sm">{{ podstawaPrawna }}</p>
             </div>
             <div v-if="zwolnienieInfo" class="bg-amber-600/20 rounded-xl p-4 border border-amber-500/30">
               <p class="text-xs text-amber-300 uppercase tracking-wide mb-1">💡 Zwolnienie z opłat</p>
-              <p class="text-white/80 text-sm text-xs">{{ zwolnienieInfo }}</p>
+              <p class="text-white opacity-80 text-sm text-xs">{{ zwolnienieInfo }}</p>
             </div>
           </div>
         </div>

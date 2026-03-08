@@ -88,7 +88,7 @@ const breadcrumb = {
         <span class="h-px w-8 bg-gold"></span>
       </div>
       <h1 class="font-serif text-4xl md:text-5xl text-white mb-5">Usługi prawne Wrocław</h1>
-      <p class="font-sans text-white/70 text-lg max-w-2xl mx-auto mb-8">
+      <p class="font-sans text-white opacity-70 text-lg max-w-2xl mx-auto mb-8">
         Radca Prawny Anna Jarczyńska świadczy kompleksową pomoc prawną dla osób fizycznych i przedsiębiorców
         na terenie Wrocławia, Bielan Wrocławskich i Dolnego Śląska.
       </p>
@@ -112,12 +112,12 @@ const breadcrumb = {
                 <Fragment set:html={s.icon} />
               </div>
               {s.badge && (
-                <span class="font-sans text-xs px-2 py-1 rounded-full text-navy/60 border border-border">{s.badge}</span>
+                <span class="font-sans text-xs px-2 py-1 rounded-full text-navy opacity-60 border border-border">{s.badge}</span>
               )}
             </div>
             <h3 class="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
             <p class="font-sans text-sm text-text-muted leading-relaxed mb-4">{s.description}</p>
-            <span class="font-sans text-xs text-navy/50 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
+            <span class="font-sans text-xs text-navy opacity-50 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
           </a>
         ))}
       </div>
@@ -148,7 +148,7 @@ const breadcrumb = {
   <section class="section bg-navy">
     <div class="container-site max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Nie wiesz, czy możemy Ci pomóc?</h2>
-      <p class="font-sans text-white/70 mb-8 max-w-xl mx-auto">
+      <p class="font-sans text-white opacity-70 mb-8 max-w-xl mx-auto">
         Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">

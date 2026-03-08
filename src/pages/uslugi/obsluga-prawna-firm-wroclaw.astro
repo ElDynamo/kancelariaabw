@@ -53,12 +53,12 @@ const uslugi = [
   <section class="section bg-navy text-white">
     <div class="container-site max-w-5xl">
       <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white opacity-50">
           <li><a href="/" class="hover:text-white">Strona główna</a></li>
           <li aria-hidden="true">›</li>
           <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
           <li aria-hidden="true">›</li>
-          <li aria-current="page" class="text-white/80">Obsługa firm</li>
+          <li aria-current="page" class="text-white opacity-80">Obsługa firm</li>
         </ol>
       </nav>
       <div class="flex items-center gap-2 mb-4">
@@ -68,7 +68,7 @@ const uslugi = [
       <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
         Obsługa prawna firm<br /><span class="text-gold">Wrocław i Dolny Śląsk</span>
       </h1>
-      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">
+      <p class="font-sans text-white opacity-80 text-lg max-w-2xl mb-8 leading-relaxed">
         Stały radca prawny dla Twojej firmy — umowy, windykacja, spory sądowe, RODO.
         Kancelaria Prawna ABW obsługuje przedsiębiorców z Wrocławia i okolic.
       </p>
@@ -124,11 +124,11 @@ const uslugi = [
         </article>
         <aside class="space-y-6">
           <div class="bg-navy rounded-2xl p-6 sticky top-6">
-            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Dla firm</p>
+            <p class="font-sans text-xs text-white opacity-60 uppercase tracking-widest mb-3">Dla firm</p>
             <p class="font-serif text-xl text-white mb-4">Stała obsługa lub jednorazowe zlecenie</p>
             <ul class="space-y-2 mb-6">
               {["Abonament miesięczny", "Wynagrodzenie od sukcesu (windykacja)", "Szybka reakcja — 24h"].map(i => (
-                <li class="flex items-center gap-2 font-sans text-sm text-white/80">
+                <li class="flex items-center gap-2 font-sans text-sm text-white opacity-80">
                   <span class="text-gold">✓</span> {i}
                 </li>
               ))}

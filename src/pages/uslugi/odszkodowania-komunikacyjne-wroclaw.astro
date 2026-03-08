@@ -56,12 +56,12 @@ const zakres = [
   <section class="section bg-navy text-white">
     <div class="container-site max-w-5xl">
       <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white opacity-50">
           <li><a href="/" class="hover:text-white">Strona główna</a></li>
           <li aria-hidden="true">›</li>
           <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
           <li aria-hidden="true">›</li>
-          <li aria-current="page" class="text-white/80">Odszkodowania</li>
+          <li aria-current="page" class="text-white opacity-80">Odszkodowania</li>
         </ol>
       </nav>
       <div class="flex items-center gap-2 mb-4">
@@ -71,7 +71,7 @@ const zakres = [
       <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
         Odszkodowania komunikacyjne<br /><span class="text-gold">Wrocław i okolice</span>
       </h1>
-      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">
+      <p class="font-sans text-white opacity-80 text-lg max-w-2xl mb-8 leading-relaxed">
         Miałeś wypadek? Ubezpieczyciel zaniżył odszkodowanie? Pomożemy uzyskać pełne świadczenie —
         odszkodowanie, zadośćuczynienie i rentę. Działamy na terenie Wrocławia i Dolnego Śląska.
       </p>
@@ -140,11 +140,11 @@ const zakres = [
 
         <aside class="space-y-6">
           <div class="bg-navy rounded-2xl p-6 sticky top-6">
-            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Oceń swoją sprawę</p>
+            <p class="font-sans text-xs text-white opacity-60 uppercase tracking-widest mb-3">Oceń swoją sprawę</p>
             <p class="font-serif text-xl text-white mb-4">Sprawdź czy ubezpieczyciel musiał wypłacić więcej</p>
             <ul class="space-y-2 mb-6">
               {["Bezpłatna analiza decyzji ubezpieczyciela", "Ocena szans na wyższe odszkodowanie", "Bez zaliczek — wynagrodzenie od sukcesu"].map(i => (
-                <li class="flex items-center gap-2 font-sans text-sm text-white/80">
+                <li class="flex items-center gap-2 font-sans text-sm text-white opacity-80">
                   <span class="text-gold">✓</span> {i}
                 </li>
               ))}
@@ -184,7 +184,7 @@ const zakres = [
   <section class="section bg-navy">
     <div class="container-site max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Ubezpieczyciel zaniżył wypłatę?</h2>
-      <p class="font-sans text-white/70 mb-8 max-w-lg mx-auto">
+      <p class="font-sans text-white opacity-70 mb-8 max-w-lg mx-auto">
         Bezpłatnie przeanalizujemy decyzję ubezpieczyciela i powiemy Ci czy masz podstawy do odwołania.
       </p>
       <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">

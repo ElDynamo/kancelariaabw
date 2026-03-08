@@ -56,12 +56,12 @@ const kroki = [
   <section class="section bg-navy text-white">
     <div class="container-site max-w-5xl">
       <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white opacity-50">
           <li><a href="/" class="hover:text-white">Strona główna</a></li>
           <li aria-hidden="true">›</li>
           <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
           <li aria-hidden="true">›</li>
-          <li aria-current="page" class="text-white/80">Upadłość konsumencka</li>
+          <li aria-current="page" class="text-white opacity-80">Upadłość konsumencka</li>
         </ol>
       </nav>
       <div class="flex items-center gap-2 mb-4">
@@ -71,7 +71,7 @@ const kroki = [
       <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
         Upadłość konsumencka<br /><span class="text-gold">Wrocław i okolice</span>
       </h1>
-      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">
+      <p class="font-sans text-white opacity-80 text-lg max-w-2xl mb-8 leading-relaxed">
         Zadłużony? Komornik na koncie? Pomożemy Ci legalnie zacząć od nowa. Prowadzimy sprawy o upadłość
         konsumencką we Wrocławiu i Bielanach Wrocławskich — od analizy sytuacji po postanowienie o oddłużeniu.
       </p>
@@ -97,7 +97,7 @@ const kroki = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {kroki.map(k => (
           <div class="bg-white rounded-2xl p-6 border border-border">
-            <p class="font-serif text-4xl text-gold/30 font-bold mb-3">{k.n}</p>
+            <p class="font-serif text-4xl text-gold opacity-30 font-bold mb-3">{k.n}</p>
             <h3 class="font-serif text-lg text-navy mb-2">{k.title}</h3>
             <p class="font-sans text-sm text-text-muted leading-relaxed">{k.desc}</p>
           </div>
@@ -170,18 +170,18 @@ const kroki = [
         <!-- SIDEBAR -->
         <aside class="space-y-6">
           <div class="bg-navy rounded-2xl p-6 sticky top-6">
-            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Bezpłatna ocena</p>
+            <p class="font-sans text-xs text-white opacity-60 uppercase tracking-widest mb-3">Bezpłatna ocena</p>
             <p class="font-serif text-xl text-white mb-4">Sprawdź czy kwalifikujesz się do upadłości</p>
             <ul class="space-y-2 mb-6">
               {["Analiza Twojego zadłużenia", "Ocena szans na oddłużenie", "Omówienie kolejnych kroków"].map(i => (
-                <li class="flex items-center gap-2 font-sans text-sm text-white/80">
+                <li class="flex items-center gap-2 font-sans text-sm text-white opacity-80">
                   <span class="text-gold">✓</span> {i}
                 </li>
               ))}
             </ul>
             <a href="/kontakt" class="block text-center py-3 px-5 rounded-lg font-semibold text-sm"
               style="background:#c9a84c; color:#0f2540;">Umów rozmowę →</a>
-            <a href="tel:+48609366160" class="block text-center mt-3 font-sans text-sm text-white/70 hover:text-white">
+            <a href="tel:+48609366160" class="block text-center mt-3 font-sans text-sm text-white opacity-70 hover:text-white">
               📞 609 366 160
             </a>
           </div>
@@ -225,7 +225,7 @@ const kroki = [
   <section class="section bg-navy">
     <div class="container-site max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Zacznij od bezpłatnej rozmowy</h2>
-      <p class="font-sans text-white/70 mb-8 max-w-lg mx-auto">
+      <p class="font-sans text-white opacity-70 mb-8 max-w-lg mx-auto">
         Powiemy Ci wprost — czy Twoja sytuacja kwalifikuje się do upadłości i co Cię czeka.
         Bez zobowiązań, bez ukrytych kosztów.
       </p>

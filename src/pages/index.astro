@@ -315,7 +315,7 @@ const faqSchema = {
             <div class="flex items-start gap-3">
               <span class="text-xl" aria-hidden="true">{item.icon}</span>
               <div>
-                <p class="font-sans text-xs text-white/50 uppercase tracking-wide">{item.label}</p>
+                <p class="font-sans text-xs text-white opacity-50 uppercase tracking-wide">{item.label}</p>
                 {item.href
                   ? <a href={item.href} class="font-sans text-sm text-white hover:text-gold transition-colors">{item.value}</a>
                   : <p class="font-sans text-sm text-white">{item.value}</p>
