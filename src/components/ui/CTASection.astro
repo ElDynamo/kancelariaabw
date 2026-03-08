@@ -18,19 +18,26 @@ const {
 } = Astro.props;
 ---
 
-<section class="section bg-off-white border-t border-border/50">
-  <div class="container-site max-w-3xl text-center reveal">
-    <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">{title}</h2>
-    <p class="font-sans text-text-muted text-lg mb-8 max-w-xl mx-auto">
-      {description}
-    </p>
-    <div class="flex flex-wrap gap-4 justify-center">
-      <a href={buttonHref} class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
-        {buttonText}
-      </a>
-      <a href={phoneHref} class="font-sans text-navy border border-navy/30 rounded-lg px-6 py-3.5 hover:bg-navy/5 transition-colors uppercase tracking-wider font-semibold text-sm">
-        {phoneText}
-      </a>
+<section class="py-16 lg:py-24 bg-white relative">
+  <div class="container-site max-w-4xl">
+    <div class="bg-off-white rounded-[2.5rem] p-10 md:p-14 text-center border border-navy/5 shadow-2xl shadow-navy/5 reveal relative overflow-hidden">
+      <!-- decorative elements -->
+      <div class="absolute -top-12 -right-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
+      <div class="absolute -bottom-12 -left-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
+      <div class="relative z-10">
+        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">{title}</h2>
+        <p class="font-sans text-text-muted text-lg mb-8 max-w-xl mx-auto">
+          {description}
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href={buttonHref} class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+            {buttonText}
+          </a>
+          <a href={phoneHref} class="font-sans text-navy bg-white border border-navy/10 shadow-sm rounded-lg px-6 py-3.5 hover:bg-navy/5 transition-colors uppercase tracking-wider font-semibold text-sm">
+            {phoneText}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -122,7 +122,7 @@
 
       <!-- Result -->
       <div class="lg:col-span-5 relative">
-        <div class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
+        <div id="wyniki-kalkulatora" class="bg-navy rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 min-h-[500px] overflow-hidden shadow-xl shadow-navy/10">
           
           <div class="relative z-10">
             <p class="text-[10px] text-gold/80 uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-2">
@@ -180,6 +180,18 @@
       <strong>⚠️ Ważne:</strong> Kalkulator oblicza zachowek zgodnie z <em>Ustawą z dnia 23 kwietnia 1964 r. – Kodeks cywilny (t.j. Dz. U. z 2023 r. poz. 1610 ze zm.)</em>.
       Rzeczywista kwota zależy od m.in. wartości ustalonej przez biegłego, ewentualnych długów spadkowych
       i szczegółowych okoliczności. Wyliczenie ma charakter pomocniczy. Skorzystaj z porady prawnej.
+    </div>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
+      <div>
+        <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Twój zachowek</p>
+        <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none">{{ zachowekFormatted }}</p>
+      </div>
+      <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
+        Szczegóły 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+      </button>
     </div>
   </div>
 </template>
@@ -244,4 +256,8 @@ const dataPrzedawnienia = computed(() => {
   d.setFullYear(d.getFullYear() + 5);
   return d.toLocaleDateString('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' });
 });
+
+const scrollToResults = () => {
+  document.getElementById('wyniki-kalkulatora')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
 </script>

@@ -58,7 +58,7 @@
 
       <!-- Result -->
       <div class="lg:col-span-5 relative">
-        <div :class="['rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 border border-white/10 shadow-xl shadow-navy/10 min-h-[500px] overflow-hidden transition-colors duration-700', statusBg]">
+        <div id="wyniki-kalkulatora" :class="['rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between sticky top-32 border border-white/10 shadow-xl shadow-navy/10 min-h-[500px] overflow-hidden transition-colors duration-700', statusBg]">
           <div class="relative z-10">
             <p class="text-[10px] text-gold/80 uppercase tracking-[0.2em] font-bold mb-4 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
@@ -107,6 +107,18 @@
     <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 mt-6 lg:mt-0">
       <strong>⚠️ Aktualne przepisy:</strong> Kalkulator uwzględnia skracające terminy przedawnienia wprowadzone przez <em>Ustawę z dnia 13 kwietnia 2018 r. o zmianie ustawy – Kodeks cywilny oraz niektórych innych ustaw (Dz. U. z 2018 r. poz. 1104, weszła w życie 9 lipca 2018 r.)</em>.
       W sprawach z udziałem konsumentów, sąd bada przedawnienie z urzędu. Kalkulator ma charakter orientacyjny i nie zastępuje profesjonalnej analizy prawnej.
+    </div>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
+      <div>
+        <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Data przedawnienia</p>
+        <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none">{{ dataPrzedawnieniaFormatted }}</p>
+      </div>
+      <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
+        Szczegóły 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+      </button>
     </div>
   </div>
 </template>
@@ -201,4 +213,8 @@ const podstawaPrawna = computed(() => {
   if (form.value.rodzaj === 'wyrok') return 'KC art. 125 § 1';
   return 'KC art. 118 (nowelizacja 9 VII 2018 r.)';
 });
+
+const scrollToResults = () => {
+  document.getElementById('wyniki-kalkulatora')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
 </script>
