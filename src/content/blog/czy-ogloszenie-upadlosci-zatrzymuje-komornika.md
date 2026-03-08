@@ -1,0 +1,61 @@
+---
+title: "Czy ogłoszenie upadłości zatrzymuje komornika? Co dzieje się z egzekucją"
+description: "Tak — ogłoszenie upadłości konsumenckiej automatycznie wstrzymuje egzekucję komorniczą. Dowiedz się co dzieje się z Twoimi długami i kontem bankowym po złożeniu wniosku."
+publishDate: 2026-01-28
+lastModified: 2026-03-08
+category: "Prawo upadłościowe"
+tags: ["upadłość konsumencka", "komornik", "egzekucja", "zadłużenie"]
+author: "Anna Jarczyńska"
+draft: false
+---
+
+## Komornik a upadłość — co mówi prawo?
+
+To jedno z pierwszych pytań, jakie zadają osoby rozważające ogłoszenie upadłości konsumenckiej: *czy złożenie wniosku o upadłość zatrzyma komornika?*
+
+Odpowiedź brzmi: **tak, ale z ważnym zastrzeżeniem dotyczącym momentu**.
+
+Prawo upadłościowe (ustawa z 28 II 2003 r., Dz.U. 2003 nr 60 poz. 535 ze zm.) w art. 146 stanowi, że z chwilą **ogłoszenia upadłości** wszczęte postępowania egzekucyjne dotyczące wierzytelności wchodzących do masy upadłości ulegają **zawieszeniu z mocy prawa**.
+
+## Dwa etapy — wniosek ≠ ogłoszenie
+
+Wielu dłużników myli złożenie wniosku z ogłoszeniem upadłości. To dwa różne etapy:
+
+1. **Złożenie wniosku** — wniosek trafia do sądu, ale komornik nadal może działać. Ta faza trwa zazwyczaj 1–3 miesiące.
+2. **Ogłoszenie upadłości** — postanowienie sądu o ogłoszeniu upadłości. **Od tej chwili** egzekucja jest zawieszona.
+
+### Czy można przyspieszyć ochronę przed komornikiem?
+
+Tak. Dłużnik może wniosować o **zabezpieczenie majątku** jeszcze przed ogłoszeniem upadłości (art. 38–40 Prawa upadłościowego). Sąd może np. wstrzymać egzekucję lub ustanowić tymczasowego nadzorcę. Wymaga to jednak skutecznego wniosku prawnego — tu nieoceniona jest pomoc radcy prawnego.
+
+## Co dzieje się z kontem bankowym?
+
+Z chwilą ogłoszenia upadłości:
+
+- Bank jest zobowiązany do **zablokowania konta** i przekazania środków syndykowi
+- Syndyk wylicza kwotę wolną od zajęcia (równą pensji minimalnej netto) i zwraca ją dłużnikowi na bieżące utrzymanie
+- Wszelkie przelewy i wypłaty muszą być konsultowane z syndykiem
+
+## Co NIE podlega zawieszeniu przy upadłości?
+
+Nie wszystkie egzekucje są wstrzymywane. Spod zawieszenia wyłączone są:
+
+- Alimenty — egzekucja alimentów jest kontynuowana niezależnie od upadłości
+- Roszczenia pracownicze — wynagrodzenia za pracę są regulowane poza masą upadłości
+- Koszty grzebania
+
+## Po ogłoszeniu upadłości — co z długami?
+
+Egzekucja nie wraca. Po wykonaniu planu spłaty (3 lata) lub w przypadku umorzenia zobowiązań bez planu spłaty — sąd wydaje postanowienie o **oddłużeniu**. Wszystkie umieszczone w wykazie wierzytelności długi zostają umorzone, a komornicy są zobowiązani umorzyć swoje postępowania.
+
+Wyjątek: długi alimentacyjne **nigdy nie podlegają umorzeniu** — nawet przy upadłości.
+
+## Kiedy złożyć wniosek?
+
+Idealny moment to jak najwcześniej — gdy dłużnik przestaje być w stanie regulować swoje zobowiązania w terminie (przewidziany kryminologią prawną stan *niewypłacalności*). Im szybciej, tym mniejsza masa długów i mniejsze ryzyko, że syndyk odkryje niekorzystne dla dłużnika transakcje z ostatnich lat.
+
+Kancelaria Prawna ABW ocenia sytuację dłużnika i przygotowuje wniosek o upadłość konsumencką dla mieszkańców Wrocławia i okolic. [Skontaktuj się z nami](/kontakt) — bezpłatna wstępna ocena sprawy.
+
+---
+
+*Podstawa prawna: art. 146, 38–40 ustawy z 28 II 2003 r. Prawo upadłościowe.*

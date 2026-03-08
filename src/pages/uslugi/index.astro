@@ -2,18 +2,19 @@
 import Layout from '@components/layout/Layout.astro';
 import ServiceCard from '@components/ui/ServiceCard.astro';
 import Button from '@components/ui/Button.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
 
 const services = [
   {
     icon: '⚖️',
     title: 'Prawo rodzinne',
-    description: 'Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi, adopcja.',
+    description: 'Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi.',
     href: '/uslugi/prawo-rodzinne',
   },
   {
     icon: '📜',
     title: 'Prawo cywilne',
-    description: 'Umowy, odszkodowania, nieruchomości, prawo spadkowe, windykacja należności.',
+    description: 'Umowy, roszczenia, prawo spadkowe, windykacja należności.',
     href: '/uslugi/prawo-cywilne',
   },
   {
@@ -23,31 +24,134 @@ const services = [
     href: '/uslugi/prawo-karne',
   },
 ];
+
+const pillarServices = [
+  {
+    icon: '🏦',
+    title: 'Upadłość konsumencka — Wrocław',
+    description: 'Zadłużony? Pomożemy ogłosić upadłość i zacząć od nowa. Zatrzymaj komornika.',
+    href: '/uslugi/upadlosc-konsumencka-wroclaw',
+    badge: 'Najwyższy priorytet',
+  },
+  {
+    icon: '🚗',
+    title: 'Odszkodowania komunikacyjne',
+    description: 'Wypadek drogowy? Ubezpieczyciel zaniżył wypłatę? Uzyskamy pełne odszkodowanie.',
+    href: '/uslugi/odszkodowania-komunikacyjne-wroclaw',
+    badge: null,
+  },
+  {
+    icon: '🏡',
+    title: 'Prawo nieruchomości',
+    description: 'Eksmisje, najem, bezumowne korzystanie z lokalu, zakup i sprzedaż nieruchomości.',
+    href: '/uslugi/prawo-nieruchomosci-wroclaw',
+    badge: null,
+  },
+  {
+    icon: '🏢',
+    title: 'Obsługa prawna firm',
+    description: 'Umowy B2B, windykacja, ochrona przed nieuczciwą konkurencją, RODO.',
+    href: '/uslugi/obsluga-prawna-firm-wroclaw',
+    badge: null,
+  },
+];
+
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+  ]
+};
 ---
 
 <Layout
-  title="Usługi prawne Wrocław — Kancelaria Prawna ABW"
-  description="Kancelaria Prawna ABW oferuje pomoc prawną w sprawach rodzinnych, cywilnych i karnych we Wrocławiu. Sprawdź zakres naszych usług."
+  title="Usługi prawne Wrocław — Radca Prawny Anna Jarczyńska | Kancelaria ABW"
+  description="Kancelaria Prawna ABW oferuje pomoc prawną we Wrocławiu i Bielanach Wrocławskich: upadłość, odszkodowania, prawo rodzinne, nieruchomości, obsługa firm. Tel. 609 366 160."
 >
+  <Fragment slot="head">
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="section bg-navy text-white">
+    <div class="container-site max-w-4xl text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Co oferujemy</span>
+        <span class="h-px w-8 bg-gold"></span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl text-white mb-5">Usługi prawne Wrocław</h1>
+      <p class="font-sans text-white/70 text-lg max-w-2xl mx-auto mb-8">
+        Radca Prawny Anna Jarczyńska świadczy kompleksową pomoc prawną dla osób fizycznych i przedsiębiorców
+        na terenie Wrocławia, Bielan Wrocławskich i Dolnego Śląska.
+      </p>
+    </div>
+  </section>
+
+  <!-- PILLAR PAGES — główne specjalizacje SEO -->
+  <section class="section bg-off-white">
+    <div class="container-site">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Specjalizacje</span>
+      </div>
+      <h2 class="font-serif text-3xl text-navy mb-2">Główne obszary praktyki</h2>
+      <p class="font-sans text-text-muted mb-10">Szczegółowe strony z pełnym opisem procedur, FAQ i podstawami prawnymi.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillarServices.map(s => (
+          <a href={s.href} class="group bg-white rounded-2xl p-7 border border-border hover:border-navy hover:shadow-lg transition-all block">
+            <div class="flex items-start justify-between mb-3">
+              <span class="text-3xl">{s.icon}</span>
+              {s.badge && (
+                <span class="font-sans text-xs px-2 py-1 rounded-full text-gold border border-gold">{s.badge}</span>
+              )}
+            </div>
+            <h3 class="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed mb-4">{s.description}</p>
+            <span class="font-sans text-xs text-navy/60 group-hover:text-gold transition-colors">Dowiedz się więcej →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OGÓLNE OBSZARY PRAWA -->
   <section class="section bg-white">
     <div class="container-site">
-      <div class="text-center mb-14">
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Co oferujemy</span>
-        <h1 class="heading-xl mt-2">Usługi prawne</h1>
-        <p class="text-body max-w-2xl mx-auto mt-4">
-          Świadczymy kompleksową pomoc prawną w trzech kluczowych obszarach prawa. Każda sprawa traktowana jest indywidualnie.
-        </p>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Ogólne obszary</span>
       </div>
+      <h2 class="font-serif text-3xl text-navy mb-10">Pozostałe obszary prawa</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map(s => <ServiceCard {...s} />)}
+        {services.map(s => (
+          <a href={s.href} class="group bg-off-white rounded-2xl p-6 border border-border hover:border-navy transition-all block">
+            <span class="text-2xl block mb-3">{s.icon}</span>
+            <h3 class="font-serif text-lg text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{s.description}</p>
+          </a>
+        ))}
       </div>
-      <div class="mt-16 bg-off-white rounded-3xl p-8 lg:p-12 text-center">
-        <h2 class="heading-md mb-4">Nie wiesz, czy możemy Ci pomóc?</h2>
-        <p class="text-body mb-6 max-w-xl mx-auto">
-          Skontaktuj się z nami, opisz swoją sytuację — bezpłatnie ocenimy, czy i jak możemy Ci pomóc.
-        </p>
-        <Button href="/kontakt" variant="primary" size="lg">Skontaktuj się</Button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-navy">
+    <div class="container-site max-w-3xl text-center">
+      <h2 class="font-serif text-3xl text-white mb-4">Nie wiesz, czy możemy Ci pomóc?</h2>
+      <p class="font-sans text-white/70 mb-8 max-w-xl mx-auto">
+        Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+          Skontaktuj się
+        </a>
+        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">
+          609 366 160
+        </a>
       </div>
     </div>
   </section>
 </Layout>
+

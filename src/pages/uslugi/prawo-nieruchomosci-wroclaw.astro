@@ -1,0 +1,144 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const faqItems = [
+  { q: "Co to jest bezumowne korzystanie z lokalu i jakie grożą za nie sankcje?", a: "Bezumowne korzystanie z nieruchomości polega na zajmowaniu cudzej nieruchomości bez tytułu prawnego (po wygaśnięciu umowy najmu lub bez żadnej umowy). Właściciel może żądać: eksmisji (sądowej), odszkodowania za bezumowne korzystanie w wysokości rynkowego czynszu (art. 225 KC), a jeśli lokator był w złej wierze — odszkodowania podwyższonego." },
+  { q: "Jak eksmitować lokatora, który nie płaci?", a: "Procedura eksmisji obejmuje: wypowiedzenie umowy najmu (min. 1–3 miesiące zależnie od rodzaju umowy) → wezwanie do opróżnienia lokalu → pozew o eksmisję → wyrok eksmisyjny → wykonanie przez komornika. Przy lokatorach z ochroną socjalną (rodziny z dziećmi) sąd może wstrzymać eksmisję do czasu zapewnienia lokalu socjalnego." },
+  { q: "Co sprawdzić przed zakupem nieruchomości?", a: "Przed zakupem należy zweryfikować: pełny odpis z Księgi Wieczystej (dział III i IV — obciążenia, hipoteki), plan zagospodarowania przestrzennego (MPZP) lub decyzję WZ, zaświadczenie o braku zaległości w czynszu, stan prawny działki (służebności, drogi dojazdowe). Radca prawny analizuje dokumentację i wskazuje ryzyka prawne." },
+  { q: "Co to jest służebność drogi koniecznej?", a: "Służebność drogi koniecznej (art. 145 KC) przysługuje właścicielowi nieruchomości niemającej odpowiedniego dostępu do drogi publicznej lub do zabudowań. Ustanawia się ją sądownie lub umownie — wyznacza szlak drogi i wysokość wynagrodzenia dla właściciela gruntu obciążonego." },
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org", "@type": "LegalService",
+  "name": "Prawo nieruchomości Wrocław — Kancelaria ABW",
+  "url": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw",
+  "telephone": "+48609366160",
+  "description": "Obsługa prawna w sprawach nieruchomości we Wrocławiu — najem, eksmisje, zakup, służebności. Radca Prawny Anna Jarczyńska, Bielany Wrocławskie.",
+  "areaServed": ["Wrocław", "Bielany Wrocławskie"]
+};
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+};
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+    { "@type": "ListItem", "position": 3, "name": "Prawo nieruchomości", "item": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw" },
+  ]
+};
+---
+
+<Layout
+  title="Prawo Nieruchomości Wrocław — Najem, Eksmisje, Zakup | Kancelaria ABW"
+  description="Prawo nieruchomości Wrocław — radca prawny Anna Jarczyńska. Eksmisja lokatora, bezumowne korzystanie, umowy najmu, zakup nieruchomości, służebności. Tel. 609 366 160."
+>
+  <Fragment slot="head">
+    <StructuredData schema={serviceSchema} />
+    <StructuredData schema={faqSchema} />
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <section class="section bg-navy text-white">
+    <div class="container-site max-w-5xl">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+          <li><a href="/" class="hover:text-white">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-white/80">Prawo nieruchomości</li>
+        </ol>
+      </nav>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Nieruchomości</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
+        Prawo nieruchomości<br /><span class="text-gold">Wrocław i okolice</span>
+      </h1>
+      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8">
+        Radca Prawny Anna Jarczyńska pomaga właścicielom nieruchomości, deweloperom i najemcom.
+        Eksmisje, umowy najmu, zakup i sprzedaż, służebności — Wrocław, Bielany Wrocławskie.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+          Umów konsultację
+        </a>
+        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">609 366 160</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <article class="lg:col-span-2 prose prose-navy max-w-none">
+          <h2>Zakres obsługi prawnej nieruchomości</h2>
+          <ul>
+            <li><strong>Umowy najmu</strong> — redagowanie, weryfikacja, klauzule ochronne dla właściciela i najemcy</li>
+            <li><strong>Eksmisja lokatorów</strong> — postępowanie od wezwania do opróżnienia lokalu po wykonanie wyroku przez komornika</li>
+            <li><strong>Bezumowne korzystanie z nieruchomości</strong> — roszczenia odszkodowawcze (art. 225 KC)</li>
+            <li><strong>Zakup i sprzedaż nieruchomości</strong> — due diligence prawne, analiza KW, umowa deweloperska</li>
+            <li><strong>Służebności</strong> — ustanowienie, zniesienie, droga konieczna (art. 145 KC)</li>
+            <li><strong>Spory sąsiedzkie</strong> — immisje, naruszenie granic, ochrona posiadania</li>
+          </ul>
+          <h2>Problem nieuczciwy najemca — co zrobić?</h2>
+          <p>
+            Nieuczciwy najemca (niepłacący czynszu, dewastujący lokal, zakłócający spokój) to najczęstszy
+            problem właścicieli nieruchomości we Wrocławiu. Procedura eksmisyjna może trwać od 3 do 18 miesięcy,
+            zależnie od sytuacji lokatora. Kancelaria ABW skraca ten czas przez:
+          </p>
+          <ul>
+            <li>Precyzyjne wypowiedzenie umowy (unikając błędów formalnych)</li>
+            <li>Szybki pozew o opróżnienie lokalu</li>
+            <li>Równoległy pozew o zapłatę zaległego czynszu</li>
+            <li>Wniosek o zabezpieczenie roszczenia (zakaz zbywania składników majątkowych)</li>
+          </ul>
+        </article>
+        <aside>
+          <div class="bg-navy rounded-2xl p-6 sticky top-6">
+            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Nieruchomości</p>
+            <p class="font-serif text-xl text-white mb-4">Lokator nie płaci lub nie wychodzi?</p>
+            <a href="/kontakt" class="block text-center py-3 px-5 rounded-lg font-semibold text-sm" style="background:#c9a84c; color:#0f2540;">
+              Umów pilną konsultację →
+            </a>
+            <div class="mt-4 pt-4 border-t border-white/10">
+              <p class="font-sans text-xs text-white/50 mb-2">Przydatne narzędzia</p>
+              <a href="/narzedzia/przedawnienie-roszczen" class="font-sans text-sm text-white/70 hover:text-white block py-1">→ Kalkulator przedawnienia</a>
+              <a href="/narzedzia/oplaty-sadowe" class="font-sans text-sm text-white/70 hover:text-white block py-1">→ Kalkulator opłat sądowych</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-off-white">
+    <div class="container-site max-w-3xl">
+      <h2 class="font-serif text-3xl text-navy mb-8">Pytania o prawo nieruchomości</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="bg-white rounded-xl border border-border p-5">
+            <summary class="font-sans font-semibold text-navy cursor-pointer list-none flex justify-between items-center">
+              {f.q}<span class="text-gold text-lg ml-4">+</span>
+            </summary>
+            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-navy">
+    <div class="container-site max-w-3xl text-center">
+      <h2 class="font-serif text-3xl text-white mb-4">Problem z nieruchomością?</h2>
+      <p class="font-sans text-white/70 mb-8 max-w-lg mx-auto">Skontaktuj się z nami — szybko ocenimy sytuację prawną i zaproponujemy najlepsze wyjście.</p>
+      <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+        Umów konsultację
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,195 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const faqItems = [
+  { q: "Ile czasu mam na zgłoszenie szkody z OC sprawcy?", a: "Roszczenie z OC sprawcy przedawnia się po 3 latach od dnia, w którym poszkodowany dowiedział się o szkodzie i osobie zobowiązanej do naprawienia szkody. W przypadku szkody wynikłej ze zbrodni lub występku — 20 lat od popełnienia przestępstwa (art. 4421 KC)." },
+  { q: "Co mi przysługuje od ubezpieczyciela sprawcy?", a: "Z polisy OC sprawcy przysługuje: odszkodowanie za uszkodzony pojazd (koszty naprawy lub wartość pojazdu), zwrot kosztów leczenia, zadośćuczynienie za ból i cierpienie, renta (przy trwałym uszczerbku), zwrot utraconych dochodów, koszty dojazdów do lekarzy i rehabilitacji." },
+  { q: "Ubezpieczyciel zaniżył odszkodowanie — co robić?", a: "Masz prawo złożyć odwołanie od decyzji ubezpieczyciela w ciągu 30 dni. Jeśli firma ubezpieczeniowa nie zmieni decyzji, możesz skierować sprawę do Rzecznika Finansowego lub złożyć pozew cywilny. Prawnik może uzyskać nawet 2–5x wyższe odszkodowanie niż wstępna oferta ubezpieczyciela." },
+  { q: "Czym różni się odszkodowanie od zadośćuczynienia?", a: "Odszkodowanie (art. 361 KC) to kompensata konkretnych, wymiernych strat majątkowych (zniszczony samochód, koszty leczenia). Zadośćuczynienie (art. 445 KC) to rekompensata za niematerialne cierpienie — ból, stres, trauma, pogorszenie jakości życia. Oba świadczenia przysługują niezależnie od siebie." },
+  { q: "Czy mogę dochodzić odszkodowania, jeśli sprawca uciekł?", a: "Tak. Jeśli sprawca jest nieznany lub zbiegł, wypłatę gwarantuje Ubezpieczeniowy Fundusz Gwarancyjny (UFG). Warunkiem jest zgłoszenie wypadku na Policję i brak możliwości ustalenia sprawcy." },
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org", "@type": "LegalService",
+  "name": "Odszkodowania komunikacyjne Wrocław — Kancelaria ABW",
+  "url": "https://kancelariaabw.pl/uslugi/odszkodowania-komunikacyjne-wroclaw",
+  "telephone": "+48609366160", "priceRange": "$$",
+  "description": "Dochodzenie odszkodowań komunikacyjnych we Wrocławiu — wypadki drogowe, kolizje, szkody OC. Radca Prawny Anna Jarczyńska. Bielany Wrocławskie.",
+  "areaServed": ["Wrocław", "Bielany Wrocławskie", "Dolny Śląsk"],
+  "provider": { "@type": "Person", "name": "Anna Jarczyńska", "jobTitle": "Radca Prawny" }
+};
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+};
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+    { "@type": "ListItem", "position": 3, "name": "Odszkodowania komunikacyjne", "item": "https://kancelariaabw.pl/uslugi/odszkodowania-komunikacyjne-wroclaw" },
+  ]
+};
+
+const zakres = [
+  { icon: "🚗", title: "Wypadki drogowe", desc: "Odszkodowanie i zadośćuczynienie za wypadek — uszczerbek na zdrowiu, ból i cierpienie, utracone dochody." },
+  { icon: "💰", title: "Szkoda całkowita", desc: "Walka z ubezpieczycielem o należną wartość pojazdu, gdy koszty naprawy przekraczają wartość auta." },
+  { icon: "🏥", title: "Koszty leczenia i rehabilitacji", desc: "Zwrot wydatków na leczenie, rehabilitację, protezy, dostosowanie domu do niepełnosprawności." },
+  { icon: "📋", title: "Renta", desc: "Renta wyrównawcza przy trwałym uszczerbku lub całkowitej niezdolności do pracy (art. 444 § 2 KC)." },
+  { icon: "⚖️", title: "Odwołania od decyzji", desc: "Zakwestionowanie zaniżonych wypłat. Ubezpieczyciele często zaniżają odszkodowania nawet o 50–70%." },
+  { icon: "🛡", title: "UFG i ubezpieczyciel nieznany", desc: "Dochodzenie roszczeń z Ubezpieczeniowego Funduszu Gwarancyjnego, gdy sprawca zbiegł lub jest nieubezpieczony." },
+];
+---
+
+<Layout
+  title="Odszkodowania Komunikacyjne Wrocław — Radca Prawny | Kancelaria ABW"
+  description="Wypadek drogowy, kolizja, ubezpieczyciel zaniżył odszkodowanie? Radca Prawny Anna Jarczyńska — dochodzenie odszkodowań OC we Wrocławiu. Bezpłatna analiza sprawy."
+>
+  <Fragment slot="head">
+    <StructuredData schema={serviceSchema} />
+    <StructuredData schema={faqSchema} />
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="section bg-navy text-white">
+    <div class="container-site max-w-5xl">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+          <li><a href="/" class="hover:text-white">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-white/80">Odszkodowania</li>
+        </ol>
+      </nav>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Prawo cywilne</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
+        Odszkodowania komunikacyjne<br /><span class="text-gold">Wrocław i okolice</span>
+      </h1>
+      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">
+        Miałeś wypadek? Ubezpieczyciel zaniżył odszkodowanie? Pomożemy uzyskać pełne świadczenie —
+        odszkodowanie, zadośćuczynienie i rentę. Działamy na terenie Wrocławia i Dolnego Śląska.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+          Bezpłatna analiza sprawy
+        </a>
+        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">
+          609 366 160
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAKRES -->
+  <section class="section bg-off-white">
+    <div class="container-site max-w-5xl">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Zakres pomocy</span>
+      </div>
+      <h2 class="font-serif text-3xl text-navy mb-10">Co możemy dla Ciebie zrobić?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {zakres.map(z => (
+          <div class="bg-white rounded-2xl p-6 border border-border hover:border-navy transition-colors">
+            <div class="text-3xl mb-3">{z.icon}</div>
+            <h3 class="font-serif text-lg text-navy mb-2">{z.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{z.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTYKUŁ -->
+  <section class="section bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <article class="lg:col-span-2 prose prose-navy max-w-none">
+          <h2>Jak dochodzić odszkodowania po wypadku?</h2>
+          <p>
+            Po wypadku drogowym poszkodowany ma prawo do odszkodowania z polisy OC sprawcy.
+            Teoretycznie wystarczy zgłosić szkodę do ubezpieczyciela. W praktyce towarzystwa
+            ubezpieczeniowe stosują szereg mechanizmów zaniżania świadczeń:
+          </p>
+          <ul>
+            <li>Stosowanie stawek za naprawę niższych od serwisowych</li>
+            <li>Kwalifikowanie pojazdu jako "szkodę całkowitą" przy zawyżaniu wartości rynkowej</li>
+            <li>Kwestionowanie zasadności kosztów leczenia i rehabilitacji</li>
+            <li>Zaniżanie zadośćuczynienia za ból i cierpienie</li>
+          </ul>
+          <p>
+            Kancelaria Prawna ABW przeprowadza <strong>analizę decyzji ubezpieczyciela</strong> pod kątem
+            zgodności z art. 363 KC i orzecznictwem Sądu Najwyższego. W razie stwierdzenia zaniżenia — 
+            składamy odwołanie i w razie potrzeby kierujemy sprawę do sądu.
+          </p>
+          <h2>Zadośćuczynienie — ile możesz uzyskać?</h2>
+          <p>
+            Wysokość zadośćuczynienia za ból i cierpienie nie jest z góry określona przepisami.
+            Sądy biorą pod uwagę: stopień trwałego uszczerbku na zdrowiu (%), dolegliwości bólowe,
+            wiek poszkodowanego, czas leczenia i rehabilitacji, wpływ urazu na życie codzienne
+            i zawodowe. Prawnicy Kancelarii ABW opracowują dokumentację medyczną i społeczną,
+            która maksymalizuje szanse na wysokie zadośćuczynienie.
+          </p>
+        </article>
+
+        <aside class="space-y-6">
+          <div class="bg-navy rounded-2xl p-6 sticky top-6">
+            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Oceń swoją sprawę</p>
+            <p class="font-serif text-xl text-white mb-4">Sprawdź czy ubezpieczyciel musiał wypłacić więcej</p>
+            <ul class="space-y-2 mb-6">
+              {["Bezpłatna analiza decyzji ubezpieczyciela", "Ocena szans na wyższe odszkodowanie", "Bez zaliczek — wynagrodzenie od sukcesu"].map(i => (
+                <li class="flex items-center gap-2 font-sans text-sm text-white/80">
+                  <span class="text-gold">✓</span> {i}
+                </li>
+              ))}
+            </ul>
+            <a href="/kontakt" class="block text-center py-3 px-5 rounded-lg font-semibold text-sm"
+              style="background:#c9a84c; color:#0f2540;">Umów rozmowę →</a>
+          </div>
+          <div class="bg-off-white rounded-2xl p-6 border border-border">
+            <h3 class="font-serif text-base text-navy mb-3">Powiązane artykuły</h3>
+            <ul class="space-y-2 font-sans text-sm">
+              <li><a href="/narzedzia/oplaty-sadowe" class="text-navy hover:text-gold">→ Kalkulator opłat sądowych</a></li>
+              <li><a href="/uslugi/prawo-cywilne" class="text-navy hover:text-gold">→ Prawo cywilne ogólne</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-off-white">
+    <div class="container-site max-w-3xl">
+      <h2 class="font-serif text-3xl text-navy mb-8">Pytania o odszkodowania komunikacyjne</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="bg-white rounded-xl border border-border p-5">
+            <summary class="font-sans font-semibold text-navy cursor-pointer list-none flex justify-between items-center">
+              {f.q}<span class="text-gold text-lg ml-4">+</span>
+            </summary>
+            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-navy">
+    <div class="container-site max-w-3xl text-center">
+      <h2 class="font-serif text-3xl text-white mb-4">Ubezpieczyciel zaniżył wypłatę?</h2>
+      <p class="font-sans text-white/70 mb-8 max-w-lg mx-auto">
+        Bezpłatnie przeanalizujemy decyzję ubezpieczyciela i powiemy Ci czy masz podstawy do odwołania.
+      </p>
+      <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+        Umów bezpłatną konsultację
+      </a>
+    </div>
+  </section>
+</Layout>

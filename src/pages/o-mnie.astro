@@ -7,20 +7,46 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Anna Jarczyńska",
+  "givenName": "Anna",
+  "familyName": "Jarczyńska",
   "jobTitle": "Radca Prawny",
+  "url": "https://kancelariaabw.pl/o-mnie",
+  "identifier": "WR-3019",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Wpis do listy radców prawnych",
+    "credentialCategory": "Licencja zawodowa",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Okręgowa Izba Radców Prawnych we Wrocławiu",
+      "url": "https://oirp.wroclaw.pl"
+    }
+  },
   "memberOf": {
     "@type": "Organization",
-    "name": "Kancelaria Prawna ABW"
+    "name": "Kancelaria Prawna ABW",
+    "url": "https://kancelariaabw.pl"
   },
   "alumniOf": "Okręgowa Izba Radców Prawnych we Wrocławiu",
-  "knowsAbout": ["Prawo rodzinne", "Prawo cywilne", "Prawo karne"],
+  "knowsAbout": [
+    "Prawo rodzinne", "Prawo cywilne", "Prawo karne",
+    "Upadłość konsumencka", "Odszkodowania komunikacyjne",
+    "Prawo nieruchomości", "Obsługa prawna firm",
+    "Prawo pracy", "Ochrona danych osobowych"
+  ],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Wrocław",
+    "streetAddress": "ul. Wiśniowa 3",
+    "addressLocality": "Bielany Wrocławskie",
+    "postalCode": "55-040",
     "addressCountry": "PL"
   },
   "telephone": "+48609366160",
-  "email": "a.jarczynska@kancelariaabw.pl"
+  "email": "a.jarczynska@kancelariaabw.pl",
+  "sameAs": [
+    "https://oirp.wroclaw.pl/lista-radcow-prawnych",
+    "https://lexspace.pl/prawnicy/8991305181-kancelaria-prawna-abw-radca-prawny-anna-jarczynska"
+  ]
 };
 ---
 

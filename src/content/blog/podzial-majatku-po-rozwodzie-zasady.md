@@ -1,0 +1,65 @@
+---
+title: "Podział majątku po rozwodzie — zasady, koszty i najczęstsze problemy"
+description: "Jak przebiega podział majątku po rozwodzie? Kiedy jest sądowy, a kiedy notarialny? Jakie długi wchodzą do masy? Radca Prawny ABW Wrocław wyjaśnia krok po kroku."
+publishDate: 2026-01-15
+lastModified: 2026-03-08
+category: "Prawo rodzinne"
+tags: ["podział majątku", "rozwód", "majątek wspólny", "intercyza"]
+author: "Anna Jarczyńska"
+draft: false
+---
+
+## Co wchodzi do majątku wspólnego małżonków?
+
+Majątek wspólny małżonków obejmuje wszystko, co zostało nabyte w czasie trwania małżeństwa przez oboje małżonków lub przez jednego z nich (art. 31 KRiO). Do majątku wspólnego należą m.in.:
+
+- **Wynagrodzenie za pracę** i dochody z działalności zarobkowej obojga małżonków
+- **Nieruchomości** nabyte wspólnie lub przez jednego z małżonków ze środków z majątku wspólnego
+- **Oszczędności zgromadzone w trakcie małżeństwa** (rachunki bankowe, lokaty)
+- **Środki zgromadzone na OFE i PPK** (proporcjonalnie do okresu małżeństwa)
+
+Do majątku **osobistego** (nie podlegającego podziałowi) należą: majątek sprzed małżeństwa, darowizny i spadki (z wyjątkiem tych przeznaczonych dla obojga małżonków), odszkodowania za uszkodzenie ciała, prawa autorskie.
+
+## Dwa sposoby podziału — umowny i sądowy
+
+### Podział umowny (u notariusza)
+
+Jeśli małżonkowie zgadzają się co do wszystkiego, mogą dokonać podziału majątku **aktem notarialnym**. Koszt aktu notarialnego zależy od wartości dzielonego majątku (stawki taksowe — od 0,1% do 3% wartości).
+
+Podział notarialny jest możliwy już w trakcie separacji lub po orzeczeniu rozwodu przez sąd.
+
+### Podział sądowy
+
+Gdy małżonkowie nie mogą dojść do porozumienia, sprawę rozstrzyga sąd rejonowy (właściwy dla miejsca zamieszkania uczestników). Opłata sądowa wynosi:
+
+- **300 zł** — jeśli wniosek zawiera zgodny projekt podziału
+- **1 000 zł** — jeśli projekt jest sporny lub go brak
+
+Sąd może zlecić biegłego ds. wyceny nieruchomości lub innych składników majątku. Koszt opinii biegłego: 1 000–5 000 zł.
+
+## Jakie długi podlegają podziałowi?
+
+Uwaga: długi z majątku wspólnego (np. kredyt hipoteczny zaciągnięty wspólnie) nie są automatycznie dzielone postanowieniem sądu. Bank nie jest stroną postępowania o podział majątku i nadal może dochodzić spłaty od obojga byłych małżonków. Podział długów wymaga **aneksu do umowy kredytowej lub nowej umowy** z bankiem.
+
+Sąd może jednak przyznać jednemu z małżonków obowiązek spłaty długu wobec współmałżonka — ale nie zwalnia to z obowiązku wobec banku.
+
+## Najczęstsze spory przy podziale majątku
+
+1. **Wycena nieruchomości** — strony często mają rozbieżne oczekiwania co do wartości nieruchomości
+2. **Nakłady z majątku osobistego na wspólny** — np. jeden z małżonków wpłacił darowiznę od rodziców na remont wspólnego mieszkania i chce jej zwrotu
+3. **Ukryte składniki majątku** — rachunki bankowe, kryptowaluty, udziały w spółkach
+4. **Ruchomości** — samochód, biżuteria, wyposażenie domu
+
+## Kiedy warto skorzystać z radcy prawnego?
+
+Podział majątku jest opłacalny bez prawnika tylko przy bardzo prostych sytuacjach (jedno mieszkanie, brak długów, pełna zgoda). W każdym innym przypadku — błędne oświadczenia, pominięte składniki majątku czy niedoszacowane roszczenia mogą kosztować dziesiątki tysięcy złotych.
+
+Kancelaria Prawna ABW w Bielanach Wrocławskich prowadzi postępowania o podział majątku zarówno w trybie umownym (reprezentacja przy akcie notarialnym), jak i sądowym (w Sądzie Rejonowym dla Wrocławia-Krzyków i innych). 
+
+**Skontaktuj się z nami** — ocenimy sytuację prawną i wskażemy najbardziej korzystną ścieżkę podziału.
+
+---
+
+*Podstawa prawna: art. 31–54 KRiO (Kodeks rodzinny i opiekuńczy), art. 210–218 KC (Kodeks cywilny — zniesienie współwłasności).*
+
+*Ostatnia aktualizacja: marzec 2026.*

@@ -1,0 +1,242 @@
+---
+import Layout from '@components/layout/Layout.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const faqItems = [
+  { q: "Kto może ogłosić upadłość konsumencką?", a: "Każda osoba fizyczna nieprowadząca działalności gospodarczej, która jest niewypłacalna — tzn. nie jest w stanie spłacać wymagalnych zobowiązań. Od 2020 r. z procedury mogą skorzystać też byli przedsiębiorcy, jeśli ich zadłużenie pochodzi z czasu prowadzenia firmy." },
+  { q: "Czy ogłoszenie upadłości zatrzymuje komornika?", a: "Tak. Z chwilą ogłoszenia upadłości przez sąd wszelkie postępowania egzekucyjne (komornicze) prowadzone przeciwko dłużnikowi zostają zawieszone z mocy prawa, a następnie umorzone. To jeden z kluczowych efektów ochronnych procedury." },
+  { q: "Jak długo trwa upadłość konsumencka?", a: "Standardowe postępowanie trwa 12–36 miesięcy od ogłoszenia upadłości. Sąd ustala plan spłaty (lub umarza długi bez planu przy braku majątku). Po wykonaniu planu dłużnik zostaje oddłużony — wszystkie pozostałe zobowiązania są umarzane." },
+  { q: "Czy mogę zachować mieszkanie przy upadłości?", a: "Tak, w wielu przypadkach. Jeśli dłużnik jest właścicielem nieruchomości, syndyk ją sprzedaje, ale sąd może przyznać dłużnikowi kwotę na wynajem mieszkania przez 12–24 miesiące. Przy małej wartości nieruchomości lub gdy jest obciążona hipoteką, dłużnik może de facto pozostać w lokalu." },
+  { q: "Ile kosztuje złożenie wniosku o upadłość?", a: "Opłata sądowa od wniosku dłużnika wynosi 30 zł. To jedyna obowiązkowa opłata na etapie składania wniosku. Koszty wynagrodzenia syndyka pokrywane są z masy upadłości." },
+  { q: "Czy upadłość wpływa na alimenty?", a: "Nie. Zobowiązania alimentacyjne nie podlegają umorzeniu w postępowaniu upadłościowym — dłużnik musi je nadal regulować. Syndyk wyodrębnia środki na alimenty z bieżących dochodów dłużnika zgodnie z przepisami prawa rodzinnego." },
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org", "@type": "LegalService",
+  "name": "Upadłość konsumencka Wrocław — Kancelaria Prawna ABW",
+  "url": "https://kancelariaabw.pl/uslugi/upadlosc-konsumencka-wroclaw",
+  "telephone": "+48609366160",
+  "priceRange": "$$",
+  "description": "Kompleksowa pomoc prawna przy upadłości konsumenckiej we Wrocławiu i Bielanach Wrocławskich. Radca prawny Anna Jarczyńska — oddłużanie, wnioski, reprezentacja przed sądem.",
+  "areaServed": ["Wrocław", "Bielany Wrocławskie", "Dolny Śląsk"],
+  "provider": { "@type": "Person", "name": "Anna Jarczyńska", "jobTitle": "Radca Prawny" }
+};
+const faqSchema = {
+  "@context": "https://schema.org", "@type": "FAQPage",
+  "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+};
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+    { "@type": "ListItem", "position": 3, "name": "Upadłość konsumencka Wrocław", "item": "https://kancelariaabw.pl/uslugi/upadlosc-konsumencka-wroclaw" },
+  ]
+};
+
+const kroki = [
+  { n: "01", title: "Analiza sytuacji", desc: "Ocena zdolności do ogłoszenia upadłości, weryfikacja zobowiązań, masy majątkowej i historii zadłużenia." },
+  { n: "02", title: "Przygotowanie wniosku", desc: "Sporządzenie kompletnego wniosku do sądu rejonowego z wykazem wierzycieli, majątku i dochodów." },
+  { n: "03", title: "Postępowanie sądowe", desc: "Reprezentacja przed sądem, komunikacja z syndykiem, ochrona przed egzekucją komorniczą." },
+  { n: "04", title: "Oddłużenie", desc: "Wykonanie planu spłaty i uzyskanie postanowienia o umorzeniu pozostałych zobowiązań." },
+];
+---
+
+<Layout
+  title="Upadłość Konsumencka Wrocław 2025 — Radca Prawny | Kancelaria ABW"
+  description="Upadłość konsumencka Wrocław — kompleksowa pomoc prawna. Zatrzymaj komornika, oddłuż się. Radca Prawny Anna Jarczyńska, Bielany Wrocławskie. Bezpłatna wstępna ocena sprawy."
+>
+  <Fragment slot="head">
+    <StructuredData schema={serviceSchema} />
+    <StructuredData schema={faqSchema} />
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="section bg-navy text-white">
+    <div class="container-site max-w-5xl">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 font-sans text-sm text-white/50">
+          <li><a href="/" class="hover:text-white">Strona główna</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
+          <li aria-hidden="true">›</li>
+          <li aria-current="page" class="text-white/80">Upadłość konsumencka</li>
+        </ol>
+      </nav>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Prawo upadłościowe</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
+        Upadłość konsumencka<br /><span class="text-gold">Wrocław i okolice</span>
+      </h1>
+      <p class="font-sans text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">
+        Zadłużony? Komornik na koncie? Pomożemy Ci legalnie zacząć od nowa. Prowadzimy sprawy o upadłość
+        konsumencką we Wrocławiu i Bielanach Wrocławskich — od analizy sytuacji po postanowienie o oddłużeniu.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+          Bezpłatna wstępna ocena sprawy
+        </a>
+        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">
+          609 366 160
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KROKI -->
+  <section class="section bg-off-white">
+    <div class="container-site max-w-5xl">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">Jak działamy</span>
+      </div>
+      <h2 class="font-serif text-3xl text-navy mb-10">Proces upadłości krok po kroku</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {kroki.map(k => (
+          <div class="bg-white rounded-2xl p-6 border border-border">
+            <p class="font-serif text-4xl text-gold/30 font-bold mb-3">{k.n}</p>
+            <h3 class="font-serif text-lg text-navy mb-2">{k.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{k.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TREŚĆ -->
+  <section class="section bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <article class="lg:col-span-2 prose prose-navy max-w-none">
+          <h2>Czym jest upadłość konsumencka?</h2>
+          <p>
+            Upadłość konsumencka (zwana też bankructwem konsumenckim) to sądowe postępowanie, które pozwala
+            osobom fizycznym uwolnić się od długów, które są niemożliwe do spłaty. Od reformy z 2020 r.
+            (ustawa z 24 marca 2020 r., Dz.U. 2020 poz. 695) procedura jest znacznie uproszczona i dostępna
+            dla szerszego grona dłużników.
+          </p>
+          <p>
+            Kancelaria Prawna ABW w Bielanach Wrocławskich specjalizuje się w kompleksowej obsłudze
+            postępowań upadłościowych — zarówno przed Sądem Rejonowym dla Wrocławia-Fabrycznej,
+            jak i przed Sądem Rejonowym w Świdnicy (dla mieszkańców powiatu świdnickiego).
+          </p>
+
+          <h2>Kto może skorzystać z upadłości konsumenckiej?</h2>
+          <p>
+            Z postępowania może skorzystać:
+          </p>
+          <ul>
+            <li>Każda <strong>osoba fizyczna nieprowadząca działalności gospodarczej</strong>, która jest niewypłacalna</li>
+            <li><strong>Byli przedsiębiorcy</strong> — od 2020 r. mogą ogłaszać upadłość na zasadach konsumenckich</li>
+            <li>Osoby zadłużone z tytułu kredytów, pożyczek, alimentów (poza umorzeniem), ZUS, US</li>
+          </ul>
+          <p>
+            Nie ma dolnej granicy zadłużenia — wystarczy, że dłużnik nie jest w stanie regulować
+            swoich zobowiązań w terminie (<em>stan niewypłacalności</em>, art. 11 Prawa upadłościowego).
+          </p>
+
+          <h2>Skutki ogłoszenia upadłości</h2>
+          <p>
+            Z chwilą ogłoszenia upadłości przez sąd natychmiast następują:
+          </p>
+          <ul>
+            <li>🛡 <strong>Zawieszenie egzekucji komorniczej</strong> — wszystkich postępowań wobec dłużnika</li>
+            <li>📋 <strong>Przejęcie majątku przez syndyka</strong> — syndyk zarządza masą upadłości</li>
+            <li>💳 <strong>Zakaz spłacania indywidualnych wierzycieli</strong> — wszystkie zobowiązania przechodzą na syndyka</li>
+            <li>⏱ <strong>Ustalenie planu spłaty</strong> na 36 miesięcy (lub krócej)</li>
+          </ul>
+          <p>
+            Po wykonaniu planu spłaty sąd wydaje postanowienie o <strong>umorzeniu wszystkich pozostałych
+            zobowiązań</strong>. Dłużnik legalnie zaczyna życie bez długów.
+          </p>
+
+          <h2>Dlaczego warto skorzystać z pomocy radcy prawnego?</h2>
+          <p>
+            Wniosek o upadłość konsumencką liczy zazwyczaj kilkanaście stron i wymaga dokładnego
+            wskazania: wszystkich wierzycieli (z kwotami), majątku dłużnika, sytuacji rodzinnej i zawodowej
+            oraz okoliczności powstania zadłużenia. Błąd formalny skutkuje zwrotem wniosku, a niekiedy
+            <strong>oddaleniem sprawy z powodu winy dłużnika</strong> — co blokuje upadłość na 10 lat.
+          </p>
+          <p>
+            Radca prawny Anna Jarczyńska pomaga: sporządzić kompletny wniosek, skompletować dokumentację,
+            reprezentować dłużnika przed sądem i syndykiem, a w razie potrzeby bronić przed próbami
+            oddalenia wniosku.
+          </p>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="space-y-6">
+          <div class="bg-navy rounded-2xl p-6 sticky top-6">
+            <p class="font-sans text-xs text-white/60 uppercase tracking-widest mb-3">Bezpłatna ocena</p>
+            <p class="font-serif text-xl text-white mb-4">Sprawdź czy kwalifikujesz się do upadłości</p>
+            <ul class="space-y-2 mb-6">
+              {["Analiza Twojego zadłużenia", "Ocena szans na oddłużenie", "Omówienie kolejnych kroków"].map(i => (
+                <li class="flex items-center gap-2 font-sans text-sm text-white/80">
+                  <span class="text-gold">✓</span> {i}
+                </li>
+              ))}
+            </ul>
+            <a href="/kontakt" class="block text-center py-3 px-5 rounded-lg font-semibold text-sm"
+              style="background:#c9a84c; color:#0f2540;">Umów rozmowę →</a>
+            <a href="tel:+48609366160" class="block text-center mt-3 font-sans text-sm text-white/70 hover:text-white">
+              📞 609 366 160
+            </a>
+          </div>
+
+          <div class="bg-off-white rounded-2xl p-6 border border-border">
+            <h3 class="font-serif text-base text-navy mb-3">Powiązane narzędzia</h3>
+            <ul class="space-y-2 font-sans text-sm">
+              <li><a href="/narzedzia/oplaty-sadowe" class="text-navy hover:text-gold transition-colors">→ Kalkulator opłat sądowych</a></li>
+              <li><a href="/narzedzia/przedawnienie-roszczen" class="text-navy hover:text-gold transition-colors">→ Kalkulator przedawnienia</a></li>
+              <li><a href="/narzedzia/koszty-rozwodu" class="text-navy hover:text-gold transition-colors">→ Kalkulator kosztów sprawy</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-off-white">
+    <div class="container-site max-w-3xl">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="h-px w-8 bg-gold"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-gold">FAQ</span>
+      </div>
+      <h2 class="font-serif text-3xl text-navy mb-8">Najczęstsze pytania o upadłość konsumencką</h2>
+      <div class="space-y-4">
+        {faqItems.map(f => (
+          <details class="bg-white rounded-xl border border-border p-5 group">
+            <summary class="font-sans font-semibold text-navy cursor-pointer list-none flex justify-between items-center">
+              {f.q}
+              <span class="text-gold text-lg ml-4">+</span>
+            </summary>
+            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA KOŃCOWE -->
+  <section class="section bg-navy">
+    <div class="container-site max-w-3xl text-center">
+      <h2 class="font-serif text-3xl text-white mb-4">Zacznij od bezpłatnej rozmowy</h2>
+      <p class="font-sans text-white/70 mb-8 max-w-lg mx-auto">
+        Powiemy Ci wprost — czy Twoja sytuacja kwalifikuje się do upadłości i co Cię czeka.
+        Bez zobowiązań, bez ukrytych kosztów.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
+          Skontaktuj się z kancelarią
+        </a>
+        <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">
+          Zadzwoń: 609 366 160
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
