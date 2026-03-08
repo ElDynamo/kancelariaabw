@@ -64,5 +64,39 @@ const {
       <slot />
     </main>
     <Footer />
+
+    <!-- Lightweight Scroll Animations -->
+    <script>
+      function initScrollAnimations() {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              // Optionally stop observing once animated to play only once
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+          observer.observe(el);
+        });
+      }
+
+      // Astro View Transitions support
+      document.addEventListener('astro:page-load', initScrollAnimations);
+      // Fallback for first load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+      } else {
+        initScrollAnimations();
+      }
+    </script>
   </body>
 </html>

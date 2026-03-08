@@ -34,22 +34,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--color-navy);
 }
 
 /* Utility classes */
 .btn-primary {
-  @apply bg-navy text-white font-sans text-sm uppercase tracking-wider
-         px-6 py-3 rounded-lg transition-colors duration-200
-         hover:bg-navy-dark focus:outline-none focus:ring-2 focus:ring-gold;
+  @apply bg-navy text-white font-sans text-sm uppercase tracking-wider px-6 py-3 rounded-lg transition-colors duration-200 hover:bg-navy-dark focus:outline-none focus:ring-2 focus:ring-gold;
 }
 
 .btn-outline {
-  @apply border-2 border-navy text-navy font-sans text-sm uppercase tracking-wider
-         px-6 py-3 rounded-lg transition-colors duration-200
-         hover:bg-navy hover:text-white;
+  @apply border-2 border-navy text-navy font-sans text-sm uppercase tracking-wider px-6 py-3 rounded-lg transition-colors duration-200 hover:bg-navy hover:text-white;
 }
 
 .section {
@@ -115,4 +116,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .prose hr {
   @apply border-border my-12;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes for staggered animations */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
 }

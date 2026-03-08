@@ -106,7 +106,7 @@ const breadcrumb = {
       <p class="font-sans text-text-muted mb-10">Szczegółowe strony z pełnym opisem procedur, FAQ i podstawami prawnymi.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {pillarServices.map(s => (
-          <a href={s.href} class="group bg-white rounded-2xl p-7 border border-border hover:border-navy hover:shadow-lg transition-all block">
+          <a href={s.href} class="group bg-white rounded-2xl p-7 border border-border reveal delay-100 hover:border-navy hover:shadow-lg transition-all block">
             <div class="flex items-start justify-between mb-4">
               <div class="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-white transition-all">
                 <Fragment set:html={s.icon} />
@@ -134,7 +134,7 @@ const breadcrumb = {
       <h2 class="font-serif text-3xl text-navy mb-10">Pozostałe obszary prawa</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map(s => (
-          <a href={s.href} class="group bg-off-white rounded-2xl p-6 border border-border hover:border-navy transition-all block">
+          <a href={s.href} class="group bg-off-white rounded-2xl p-6 border border-border reveal delay-200 hover:border-navy transition-all block">
             <div class="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center text-navy mb-4 group-hover:bg-navy group-hover:text-white transition-colors"><Fragment set:html={s.icon} /></div>
             <h3 class="font-serif text-lg text-navy mb-2 group-hover:text-gold transition-colors">{s.title}</h3>
             <p class="font-sans text-sm text-text-muted leading-relaxed">{s.description}</p>
