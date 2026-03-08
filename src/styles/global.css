@@ -75,3 +75,44 @@ h1, h2, h3, h4, h5, h6 {
 .text-body {
   @apply font-sans text-base text-text-muted leading-relaxed;
 }
+
+/* Global Typography for articles and calculators */
+.prose {
+  @apply text-text-muted text-base leading-relaxed;
+}
+
+.prose h2 {
+  @apply font-serif text-3xl lg:text-4xl text-navy mt-14 mb-6 leading-tight;
+}
+
+.prose h3 {
+  @apply font-serif text-2xl lg:text-3xl text-navy mt-10 mb-4 leading-snug;
+}
+
+.prose p {
+  @apply mb-6;
+}
+
+.prose ul {
+  @apply space-y-3 my-6 pl-6 list-disc marker:text-gold;
+}
+
+.prose ol {
+  @apply space-y-3 my-6 pl-6 list-decimal marker:text-gold marker:font-bold;
+}
+
+.prose li {
+  @apply pl-1 text-text-muted;
+}
+
+.prose strong {
+  @apply text-navy font-semibold;
+}
+
+.prose a {
+  @apply text-gold underline underline-offset-4 decoration-gold/40 hover:decoration-gold hover:text-navy transition-all;
+}
+
+.prose hr {
+  @apply border-border my-12;
+}
