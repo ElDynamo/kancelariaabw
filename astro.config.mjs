@@ -8,7 +8,6 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 import node from '@astrojs/node';
 import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 export default defineConfig({
     site: 'https://kancelariaabw.pl',
@@ -29,7 +28,6 @@ export default defineConfig({
     markdown: {
         rehypePlugins: [
             rehypeSlug,
-            [rehypeAutolinkHeadings, { behavior: 'wrap' }],
         ],
     },
 });
