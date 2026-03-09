@@ -1,48 +1,38 @@
 ---
+import { getEntry, render } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 
-const faqItems = [
-  { q: "Czym różni się obsługa prawna a doraźna pomoc prawnika?", a: "Obsługa prawna (abonament) to stały dostęp do radcy prawnego — opiniowanie umów, konsultacje, pisma. Doraźna pomoc to jednorazowe zlecenie (pozew, umowa, porada). Dla firm zatrudniających powyżej 3–5 pracowników abonament jest zdecydowanie korzystniejszy kosztowo." },
-  { q: "Co obejmuje obsługa prawna firmy?", a: "Standardowy zakres: opiniowanie i redagowanie umów, weryfikacja kontrahentów, obsługa sporów z klientami i dostawcami, windykacja należności, doradztwo w zakresie prawa pracy, ochrona przed nieuczciwą konkurencją, RODO." },
-  { q: "Jak chronić firmę przed nieuczciwą konkurencją?", a: "Ustawa z 16 IV 1993 r. o zwalczaniu nieuczciwej konkurencji chroni przed: skopiowaniem oznaczeń firmy, kradzieżą tajemnicy przedsiębiorstwa, nierzetelną reklamą. Radca prawny pomaga zabezpieczyć prawa, wezwać do zaprzestania naruszeń i dochodzić odszkodowania." },
-  { q: "Jak odzyskać należności od kontrahenta?", a: "Etapy windykacji: wezwanie do zapłaty → postępowanie nakazowe (szybkie, 75% opłaty sądowej) → wszczęcie egzekucji komorniczej. Radca prawny może też złożyć wniosek o zabezpieczenie roszczenia — zamrożenie rachunku dłużnika jeszcze przed wyrokiem." },
-];
+const serviceEntry = await getEntry('uslugi', 'obsluga-prawna-firm-wroclaw');
+const data = serviceEntry?.data;
+const renderResult = serviceEntry ? await render(serviceEntry) : null;
+const Content = renderResult ? renderResult.Content : null;
 
 const serviceSchema = {
   "@context": "https://schema.org", "@type": "LegalService",
   "name": "Obsługa prawna firm Wrocław — Kancelaria ABW",
   "url": "https://kancelariaabw.pl/uslugi/obsluga-prawna-firm-wroclaw",
   "telephone": "+48609366160",
-  "description": "Obsługa prawna przedsiębiorstw we Wrocławiu — umowy, windykacja, ochrona przed nieuczciwą konkurencją, RODO. Radca Prawny Anna Jarczyńska, Bielany Wrocławskie.",
+  "description": data?.seoDescription || "Obsługa prawna przedsiębiorstw we Wrocławiu",
   "areaServed": ["Wrocław", "Bielany Wrocławskie", "Dolny Śląsk"],
 };
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
-  "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }))
+  "mainEntity": (data?.faq || []).map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
 };
 const breadcrumb = {
   "@context": "https://schema.org", "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
     { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
-    { "@type": "ListItem", "position": 3, "name": "Obsługa prawna firm", "item": "https://kancelariaabw.pl/uslugi/obsluga-prawna-firm-wroclaw" },
+    { "@type": "ListItem", "position": 3, "name": data?.heroTitle || "Obsługa prawna firm", "item": "https://kancelariaabw.pl/uslugi/obsluga-prawna-firm-wroclaw" },
   ]
 };
-
-const uslugi = [
-  { icon: "📝", title: "Umowy i kontrakty", desc: "Redagowanie, opiniowanie i negocjowanie umów B2B, umów o dzieło, zlecenie, NDA, umów deweloperskich." },
-  { icon: "⚖️", title: "Windykacja należności", desc: "Wezwania do zapłaty, nakazy zapłaty, zabezpieczenie wierzytelności, egzekucja komornicza." },
-  { icon: "🔒", title: "Ochrona przed nieuczciwą konkurencją", desc: "Naruszenia znaku towarowego, kradzież tajemnicy firmy, nieuczciwa reklama — ochrona i dochodzenie roszczeń." },
-  { icon: "🛡", title: "RODO i ochrona danych", desc: "Audyt RODO, polityki prywatności, klauzule informacyjne, umowy powierzenia danych osobowych." },
-  { icon: "👷", title: "Prawo pracy", desc: "Regulaminy pracy, umowy z pracownikami, zwolnienia, odprawy, spory z pracownikami i PIP." },
-  { icon: "🏢", title: "Prawo spółek", desc: "Zakładanie i restrukturyzacja spółek, uchwały zarządu, odpowiedzialność członków zarządu (art. 299 KSH)." },
-];
 ---
 
 <Layout
-  title="Obsługa Prawna Firm Wrocław — Radca Prawny | Kancelaria ABW"
-  description="Obsługa prawna firm i przedsiębiorców we Wrocławiu. Umowy, windykacja, ochrona przed nieuczciwą konkurencją, RODO. Kancelaria Prawna ABW — Bielany Wrocławskie. Tel. 609 366 160."
+  title={data?.title || "Obsługa Prawna Firm Wrocław"}
+  description={data?.seoDescription || ""}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -59,7 +49,7 @@ const uslugi = [
             <li aria-hidden="true">›</li>
             <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
             <li aria-hidden="true">›</li>
-            <li aria-current="page" class="text-white opacity-80">Obsługa firm</li>
+            <li aria-current="page" class="text-white opacity-80">{data?.heroTitle}</li>
           </ol>
         </nav>
         <div class="flex items-center gap-2 mb-4">
@@ -67,10 +57,10 @@ const uslugi = [
           <span class="font-sans text-xs uppercase tracking-widest text-gold">Prawo gospodarcze</span>
         </div>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-5xl text-white mb-6 leading-tight">
-          Obsługa prawna firm<br /><span class="text-gold">Wrocław i Dolny Śląsk</span>
+          {data?.heroTitle}<br /><span class="text-gold">{data?.heroSubtitle}</span>
         </h1>
         <p class="font-sans text-white opacity-80 text-lg max-w-xl mb-8 leading-relaxed">
-          Stały radca prawny dla Twojej firmy — umowy, windykacja, spory sądowe, RODO. Kancelaria Prawna ABW obsługuje przedsiębiorców z Wrocławia i okolic.
+          {data?.heroDescription}
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
@@ -96,7 +86,7 @@ const uslugi = [
     <div class="container-site max-w-5xl">
       <h2 class="font-serif text-3xl text-navy mb-10">Zakres obsługi prawnej firm</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {uslugi.map(u => (
+        {(data?.features || []).map(u => (
           <div class="bg-white rounded-2xl p-6 border border-border hover:border-navy transition-colors">
             <div class="text-3xl mb-3">{u.icon}</div>
             <h3 class="font-serif text-lg text-navy mb-2">{u.title}</h3>
@@ -111,25 +101,7 @@ const uslugi = [
     <div class="container-site max-w-5xl">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <article class="lg:col-span-2 prose prose-navy max-w-none">
-          <h2>Dlaczego Twoja firma potrzebuje radcy prawnego?</h2>
-          <p>
-            Polska gospodarka generuje rocznie ponad 650 tysięcy spraw sądowych między przedsiębiorcami.
-            Większości z nich można uniknąć dzięki prawidłowo skonstruowanym umowom i szybkiej reakcji
-            na pierwsze sygnały problemu. Stała obsługa prawna to inwestycja, nie koszt.
-          </p>
-          <p>
-            Kancelaria Prawna ABW obsługuje firmy z różnych branż na terenie Wrocławia, Bielan
-            Wrocławskich i całego powiatu wrocławskiego. Oferujemy abonamentowe modele współpracy
-            dopasowane do wielkości i potrzeb przedsiębiorstwa.
-          </p>
-          <h2>Ochrona przed nieuczciwą konkurencją</h2>
-          <p>
-            Ustawa o zwalczaniu nieuczciwej konkurencji (UZNK, Dz.U. 1993 nr 47) chroni przed
-            szerokim katalogiem naruszeń: nielegalnym przejęciem klientów, kopiowaniem oznaczeń,
-            szpiegostwem gospodarczym czy nierzetelną reklamą porównawczą. Przy stwierdzeniu naruszenia
-            możliwe jest złożenie pozwu o: zaprzestanie naruszeń, odszkodowanie, złożenie oświadczenia
-            prostującego w prasie.
-          </p>
+          {Content && <Content />}
         </article>
         <aside class="space-y-6">
           <div class="bg-navy rounded-2xl p-6 sticky top-6">
@@ -155,12 +127,12 @@ const uslugi = [
     <div class="container-site max-w-3xl">
       <h2 class="font-serif text-3xl text-navy mb-8">Pytania o obsługę prawną firm</h2>
       <div class="space-y-4">
-        {faqItems.map(f => (
+        {(data?.faq || []).map(f => (
           <details class="bg-white rounded-xl border border-border p-5">
             <summary class="font-sans font-semibold text-navy cursor-pointer list-none flex justify-between items-center">
-              {f.q}<span class="text-gold text-lg ml-4">+</span>
+              {f.question}<span class="text-gold text-lg ml-4">+</span>
             </summary>
-            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.a}</p>
+            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.answer}</p>
           </details>
         ))}
       </div>

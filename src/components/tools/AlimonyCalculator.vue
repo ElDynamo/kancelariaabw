@@ -121,7 +121,7 @@
               
               <div class="bg-white/5 rounded-2xl p-6 border border-white/5 backdrop-blur-sm mb-6">
               <p class="text-[10px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-2">Szacunkowe alimenty</p>
-              <p class="text-4xl lg:text-5xl font-sans text-gold font-bold tracking-tight tabular-nums whitespace-nowrap">{{ alimentyMin }}–{{ alimentyMax }}</p>
+              <p class="text-3xl lg:text-4xl font-sans text-gold font-bold tracking-tight tabular-nums">{{ alimentyMin }} – {{ alimentyMax }}</p>
             </div>
               
               <div class="bg-white/5 rounded-2xl p-5 border border-white/5 backdrop-blur-sm">
@@ -159,7 +159,7 @@
       <div v-show="showSticky" class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-md px-6 py-4 shadow-[0_-10px_40px_rgba(15,37,64,0.3)] z-50 flex items-center justify-between border-t border-white/10">
         <div>
           <p class="text-[9px] text-white/50 uppercase tracking-[0.15em] font-semibold mb-0.5">Szacunkowe alimenty</p>
-          <p class="text-xl font-sans text-gold font-bold tracking-tight leading-none tabular-nums whitespace-nowrap">{{ alimentyMin }}–{{ alimentyMax }}</p>
+          <p class="text-lg font-sans text-gold font-bold tracking-tight leading-none tabular-nums">{{ alimentyMin }} – {{ alimentyMax }}</p>
         </div>
         <button @click="scrollToResults" class="bg-gold text-navy px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider flex items-center gap-2 active:scale-95 transition-transform shadow-lg shadow-gold/20">
           Wyniki

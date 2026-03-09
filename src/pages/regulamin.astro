@@ -1,73 +1,29 @@
 ---
 import Layout from '@components/layout/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('legal', 'termsofservice');
+if (!entry) throw new Error("Missing termsOfService content in Keystatic.");
+const { Content } = await entry.render();
 ---
 
 <Layout
-  title="Regulamin — Kancelaria Prawna ABW"
-  description="Regulamin świadczenia usług drogą elektroniczną Kancelarii Prawnej ABW zgodny z Ustawą o świadczeniu usług drogą elektroniczną."
+  title={`${entry.data.title} — Kancelaria Prawna ABW`}
+  description={`Dokument prawny: ${entry.data.title} Kancelarii Prawnej ABW.`}
 >
   <article class="section bg-white">
     <div class="container-site max-w-3xl">
-      <div class="flex items-center gap-2 mb-4">
+      <div class="flex items-center gap-2 mb-4 reveal">
         <span class="h-px w-8 bg-gold"></span>
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Dokumenty prawne</span>
       </div>
-      <h1 class="heading-xl mb-2">Regulamin</h1>
-      <p class="font-sans text-sm text-text-muted mb-12">
-        Regulamin świadczenia usług drogą elektroniczną zgodny z Ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz.U. 2002 Nr 144, poz. 1204 ze zm.)
+      <h1 class="heading-xl mb-2 reveal delay-100">{entry.data.title}</h1>
+      <p class="font-sans text-sm text-text-muted mb-12 reveal delay-200">
+        {entry.data.lastUpdated}
       </p>
 
-      <div class="space-y-8 font-sans text-text [&_h2]:font-serif [&_h2]:text-navy [&_h2]:text-2xl [&_h2]:mt-8 [&_h2]:mb-3">
-
-        <section>
-          <h2>§1. Postanowienia ogólne</h2>
-          <p class="text-body">Niniejszy regulamin określa zasady korzystania z serwisu internetowego dostępnego pod adresem kancelariaabw.pl (dalej: „Serwis"), prowadzonego przez Annę Jarczyńską, prowadzącą działalność pod firmą Kancelaria Prawna ABW z siedzibą we Wrocławiu (dalej: „Usługodawca").</p>
-        </section>
-
-        <section>
-          <h2>§2. Rodzaje świadczonych usług</h2>
-          <p class="text-body">Za pośrednictwem Serwisu świadczone są następujące usługi drogą elektroniczną:</p>
-          <ul class="list-disc pl-6 space-y-2 text-body">
-            <li>udostępnianie informacji o ofercie kancelarii,</li>
-            <li>obsługa formularza kontaktowego,</li>
-            <li>dostęp do treści bloga prawniczego.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>§3. Wymagania techniczne</h2>
-          <p class="text-body">Do korzystania z Serwisu niezbędne jest: urządzenie z dostępem do Internetu, przeglądarka internetowa obsługująca HTML5 i CSS3, aktywny adres e-mail (w przypadku korzystania z formularza kontaktowego).</p>
-        </section>
-
-        <section>
-          <h2>§4. Zasady korzystania z Serwisu</h2>
-          <p class="text-body">Użytkownik zobowiązuje się do korzystania z Serwisu zgodnie z prawem, niniejszym Regulaminem i dobrymi obyczajami. Zakazane jest dostarczanie treści bezprawnych oraz działania mogące zakłócić działanie Serwisu.</p>
-        </section>
-
-        <section>
-          <h2>§5. Formularz kontaktowy</h2>
-          <p class="text-body">Korzystanie z formularza kontaktowego jest dobrowolne. Wysłanie wiadomości przez formularz nie jest równoznaczne z nawiązaniem stosunku prawnego (umowy o świadczenie pomocy prawnej). Odpowiedź na zapytanie nastąpi w ciągu 3 dni roboczych.</p>
-        </section>
-
-        <section>
-          <h2>§6. Odpowiedzialność</h2>
-          <p class="text-body">Treści zamieszczone w Serwisie mają charakter wyłącznie informacyjny i nie stanowią porady prawnej. Usługodawca nie ponosi odpowiedzialności za decyzje podjęte na podstawie informacji zawartych w Serwisie bez uprzedniej konsultacji prawnej.</p>
-        </section>
-
-        <section>
-          <h2>§7. Własność intelektualna</h2>
-          <p class="text-body">Wszelkie treści dostępne w Serwisie, w tym teksty, grafiki i projekt strony, są chronione prawem autorskim i stanowią własność Usługodawcy. Kopiowanie bez zgody jest zabronione.</p>
-        </section>
-
-        <section>
-          <h2>§8. Postanowienia końcowe</h2>
-          <p class="text-body">Regulamin wchodzi w życie z dniem publikacji. Usługodawca zastrzega prawo do zmiany regulaminu z powiadomieniem użytkowników poprzez publikację nowej wersji w Serwisie. W sprawach nieuregulowanych zastosowanie mają przepisy prawa polskiego, w szczególności Kodeksu cywilnego i Ustawy o świadczeniu usług drogą elektroniczną.</p>
-        </section>
-
-        <section>
-          <h2>§9. Kontakt</h2>
-          <p class="text-body">Kontakt z Usługodawcą: <a href="mailto:a.jarczynska@kancelariaabw.pl" class="text-gold hover:underline">a.jarczynska@kancelariaabw.pl</a>, tel. 609 366 160.</p>
-        </section>
+      <div class="space-y-6 font-sans text-text [&_h2]:font-serif [&_h2]:text-navy [&_h2]:text-2xl [&_h2]:mt-10 [&_h2]:mb-4 prose-p:text-body prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2 prose-ul:text-body prose-a:text-gold hover:prose-a:underline reveal delay-300">
+        <Content />
       </div>
     </div>
   </article>

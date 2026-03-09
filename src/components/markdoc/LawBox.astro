@@ -1,0 +1,29 @@
+---
+interface Props {
+  sygnatura: string;
+}
+const { sygnatura } = Astro.props;
+---
+
+<div class="my-8 border-l-4 border-gold bg-amber-50 rounded-r-xl p-6 shadow-sm relative overflow-hidden group">
+  <div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
+    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+      <path d="M12 8v4" />
+      <path d="M12 16h.01" />
+    </svg>
+  </div>
+  
+  <p class="font-sans text-xs uppercase tracking-widest text-[#0f2540] opacity-60 mb-3 font-semibold flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+    Podstawa Prawna
+  </p>
+  
+  <blockquote class="font-serif text-[#0f2540] text-lg leading-relaxed m-0 relative z-10 italic">
+    <slot />
+  </blockquote>
+  
+  <p class="font-sans text-sm font-bold text-gold mt-4 text-right">
+    — {sygnatura}
+  </p>
+</div>

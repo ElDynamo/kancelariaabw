@@ -1,13 +1,19 @@
 ---
 // Komponent do użycia na stronach blogowych — pokazuje autora z linkiem do /o-mnie
 interface Props {
-  author?: string;
+  author?: {
+    name: string;
+    role: string;
+    bio: string;
+    photo?: string | null;
+    linkedin?: string | null;
+  };
   publishDate?: Date | string;
   lastModified?: Date | string;
   readingTime?: number;
 }
 const {
-  author = "Anna Jarczyńska",
+  author,
   publishDate,
   lastModified,
   readingTime,
@@ -19,24 +25,32 @@ function formatDate(d: Date | string | undefined) {
 }
 ---
 
-<div class="not-prose flex items-center gap-4 py-4 border-y border-border my-6">
-  <a href="/o-mnie" class="shrink-0">
-    <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center text-gold font-serif text-lg font-bold">
-      AJ
-    </div>
-  </a>
+<div class="not-prose flex items-start sm:items-center gap-4 py-6 border-y border-border my-6">
+  <div class="shrink-0">
+    {author?.photo ? (
+      <img src={author.photo} alt={author?.name} class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-gold/30 shadow-sm" />
+    ) : (
+      <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-navy flex items-center justify-center text-gold font-serif text-lg font-bold shadow-sm">
+        {author?.name?.substring(0,2).toUpperCase() || 'AJ'}
+      </div>
+    )}
+  </div>
   <div class="flex-1">
-    <p class="font-sans text-sm font-semibold text-navy">
-      <a href="/o-mnie" class="hover:text-gold transition-colors">{author}</a>
-      <span class="font-normal text-text-muted ml-1">— Radca Prawny, nr wpisu OIRP WR-3019</span>
+    <p class="font-sans text-base font-semibold text-navy flex items-center gap-2">
+      <span>{author?.name || 'Autor Nieznany'}</span>
+      {author?.linkedin && (
+        <a href={author.linkedin} target="_blank" rel="noopener noreferrer" class="text-[#0077b5] hover:text-navy transition-colors" aria-label="Profil LinkedIn">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      )}
     </p>
+    <p class="font-sans text-xs text-text-muted mt-0.5">{author?.role || 'Ekspert'}</p>
+    <p class="font-sans text-xs sm:text-sm text-text-muted mt-2 italic leading-relaxed border-l-2 border-gold/30 pl-3">"{author?.bio || 'Brak opisu biograficznego.'}"</p>
     <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 font-sans text-xs text-text-muted">
       {publishDate && <span>Opublikowano: {formatDate(publishDate)}</span>}
       {lastModified && publishDate !== lastModified && <span>Aktualizacja: {formatDate(lastModified)}</span>}
       {readingTime && <span>Czas czytania: ok. {readingTime} min</span>}
     </div>
+    </div>
   </div>
-  <a href="/o-mnie" class="hidden sm:block font-sans text-xs text-navy opacity-60 hover:text-navy transition-colors border border-border rounded-lg px-3 py-2 whitespace-nowrap">
-    Profil radcy →
-  </a>
 </div>

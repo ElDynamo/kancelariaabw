@@ -1,0 +1,50 @@
+{
+  "phone": "609 366 160",
+  "email": "a.jarczynska@kancelariaabw.pl",
+  "hours": "Pon.–Pt., 9:00–17:00",
+  "locations": "Wrocław · Bielany Wrocławskie",
+  "headerNav": [
+    {
+      "href": "/",
+      "label": "Strona główna"
+    },
+    {
+      "href": "/uslugi",
+      "label": "Usługi"
+    },
+    {
+      "href": "/cennik",
+      "label": "Cennik"
+    },
+    {
+      "href": "/blog",
+      "label": "Blog"
+    },
+    {
+      "href": "/narzedzia",
+      "label": "Narzędzia"
+    },
+    {
+      "href": "/o-mnie",
+      "label": "O mnie"
+    },
+    {
+      "href": "/kontakt",
+      "label": "Kontakt"
+    }
+  ],
+  "footerNav": [
+    {
+      "label": "Polityka prywatności",
+      "href": "/polityka-prywatnosci"
+    },
+    {
+      "label": "Regulamin",
+      "href": "/regulamin"
+    },
+    {
+      "label": "Przetwarzanie danych",
+      "href": "/przetwarzanie-danych"
+    }
+  ]
+}

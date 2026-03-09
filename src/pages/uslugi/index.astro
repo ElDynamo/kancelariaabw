@@ -1,60 +1,25 @@
 ---
+import { getCollection, getEntry } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import ServiceCard from '@components/ui/ServiceCard.astro';
 import Button from '@components/ui/Button.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 import CTASection from '@components/ui/CTASection.astro';
 
-const mainServices = [
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 9l9-6 9 6M6 12l-3 6h6l-3-6zm12 0l-3 6h6l-3-6z"/></svg>`,
-    title: 'Prawo rodzinne',
-    description: 'Rozwód, alimenty, podział majątku, władza rodzicielska, kontakty z dziećmi.',
-    href: '/uslugi/prawo-rodzinne',
-    badge: 'Główna specjalizacja',
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
-    title: 'Prawo cywilne',
-    description: 'Umowy, roszczenia, prawo spadkowe, windykacja należności.',
-    href: '/uslugi/prawo-cywilne',
-    badge: null,
-  },
-  {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-    title: 'Prawo karne',
-    description: 'Obrona w sprawach karnych i karnoskarbowych, reprezentacja pokrzywdzonych.',
-    href: '/uslugi/prawo-karne',
-    badge: null,
-  },
-];
+const uiEntry = await getEntry('singletons', 'servicesIndex');
+const uiData = uiEntry?.data;
 
-const additionalServices = [
-  {
-    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>`,
-    title: 'Upadłość konsumencka',
-    description: 'Zadłużony? Pomożemy ogłosić upadłość i zacząć od nowa. Zatrzymaj komornika.',
-    href: '/uslugi/upadlosc-konsumencka-wroclaw',
-  },
-  {
-    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
-    title: 'Odszkodowania',
-    description: 'Wypadek drogowy? Ubezpieczyciel zaniżył wypłatę? Uzyskamy pełne odszkodowanie.',
-    href: '/uslugi/odszkodowania-komunikacyjne-wroclaw',
-  },
-  {
-    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-    title: 'Prawo nieruchomości',
-    description: 'Eksmisje, najem, bezumowne korzystanie z lokalu, zakup i sprzedaż nieruchomości.',
-    href: '/uslugi/prawo-nieruchomosci-wroclaw',
-  },
-  {
-    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
-    title: 'Obsługa prawna firm',
-    description: 'Umowy B2B, windykacja, ochrona przed nieuczciwą konkurencją, RODO.',
-    href: '/uslugi/obsluga-prawna-firm-wroclaw',
-  },
-];
+// Fetch dynamic collection
+const allServices = await getCollection('uslugi');
+
+// Podział na główne i poboczne
+const mainSlugs = ['prawo-rodzinne', 'prawo-cywilne', 'prawo-karne'];
+const mainServicesRaw = allServices.filter(s => mainSlugs.includes(s.slug));
+const additionalServicesRaw = allServices.filter(s => !mainSlugs.includes(s.slug));
+
+// Sortowanie żeby zachować ustaloną kolejność głównych
+const mainServices = mainServicesRaw.sort((a, b) => mainSlugs.indexOf(a.slug) - mainSlugs.indexOf(b.slug));
+const additionalServices = additionalServicesRaw;
 
 const breadcrumb = {
   "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -84,11 +49,11 @@ const breadcrumb = {
         <span class="h-px w-12 bg-gold/50"></span>
       </div>
       <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-8 reveal delay-100">
-        Kompleksowe wsparcie<br/>
-        <span class="text-gold italic font-light">prawne dla Ciebie i Twojej firmy</span>
+        {uiData?.hero?.title || "Kompleksowe wsparcie"}<br/>
+        <span class="text-gold italic font-light">{uiData?.hero?.subtitle || "prawne dla Ciebie i Twojej firmy"}</span>
       </h1>
       <p class="font-sans text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto reveal delay-200">
-        Rozumiemy, że każda sprawa to dla Ciebie priorytet. Prowadzimy Cię przez gąszcz przepisów z pełnym profesjonalizmem, dyskrecją i celnością w działaniu.
+        {uiData?.hero?.description || "Rozumiemy, że każda sprawa to dla Ciebie priorytet. Prowadzimy Cię przez gąszcz przepisów z pełnym profesjonalizmem, dyskrecją i celnością w działaniu."}
       </p>
     </div>
   </section>
@@ -102,18 +67,18 @@ const breadcrumb = {
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
-        {mainServices.map((s) => (
-          <a href={s.href} class="group bg-white p-8 md:p-10 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-center text-center">
+        {mainServices.map((s, index) => (
+          <a href={`/uslugi/${s.slug}`} class="group bg-white p-8 md:p-10 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-center text-center">
             <div class="flex flex-col items-center mb-6">
               <div class="w-16 h-16 rounded-full bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold transition-colors duration-500 mb-4">
-                <Fragment set:html={s.icon} />
+                <Fragment set:html={s.data.features?.[0]?.icon || '⚖️'} />
               </div>
-              {s.badge && (
-                <span class="inline-flex font-sans text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-gold/30 text-gold rounded-full whitespace-nowrap">{s.badge}</span>
+              {index === 0 && (
+                <span class="inline-flex font-sans text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-gold/30 text-gold rounded-full whitespace-nowrap">Główna specjalizacja</span>
               )}
             </div>
-            <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-gold transition-colors duration-500">{s.title}</h3>
-            <p class="font-sans text-base text-text-muted leading-relaxed mb-8">{s.description}</p>
+            <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-gold transition-colors duration-500">{s.data.hero?.title}</h3>
+            <p class="font-sans text-base text-text-muted leading-relaxed mb-8">{s.data.seo?.description}</p>
             <div class="flex items-center text-sm font-sans uppercase tracking-[0.2em] text-navy group-hover:text-gold transition-colors mt-auto">
               <span class="mr-3">Więcej informacji</span>
               <span class="w-8 h-px bg-current transform origin-left transition-transform duration-500 group-hover:scale-x-150"></span>
@@ -139,17 +104,37 @@ const breadcrumb = {
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 reveal delay-200">
         {additionalServices.map(s => (
-          <a href={s.href} class="group p-6 border border-border/50 bg-off-white hover:bg-white hover:border-gold/50 transition-all duration-500 flex flex-col items-center text-center">
-            <div class="w-12 h-12 text-navy/80 mb-5 group-hover:text-gold transition-colors duration-500">
-               <Fragment set:html={s.icon} />
+          <a href={`/uslugi/${s.slug}`} class="group p-6 border border-border/50 bg-off-white hover:bg-white hover:border-gold/50 transition-all duration-500 flex flex-col items-center text-center">
+            <div class="w-12 h-12 text-navy/80 mb-5 group-hover:text-gold transition-colors duration-500 text-3xl">
+               <Fragment set:html={s.data.features?.[0]?.icon || '📝'} />
             </div>
-            <h3 class="font-serif text-lg md:text-xl text-navy mb-3 group-hover:text-gold transition-colors duration-500">{s.title}</h3>
-            <p class="font-sans text-sm text-text-muted leading-relaxed">{s.description}</p>
+            <h3 class="font-serif text-lg md:text-xl text-navy mb-3 group-hover:text-gold transition-colors duration-500">{s.data.hero?.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{s.data.seo?.description}</p>
           </a>
         ))}
       </div>
     </div>
   </section>
+
+  <!-- FAQ / Q&A -->
+  {(uiData?.faq && uiData.faq.length > 0) && (
+    <section class="section bg-off-white border-t border-border" aria-labelledby="faq-heading">
+      <div class="container-site">
+        <div class="text-center mb-14 reveal">
+          <span class="font-sans text-xs uppercase tracking-widest text-gold">Masz pytania?</span>
+          <h2 id="faq-heading" class="heading-lg mt-2">Często zadawane pytania</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 reveal delay-100 max-w-5xl mx-auto">
+          {uiData.faq.map((item) => (
+            <article class="border-l-2 border-gold pl-5 space-y-2">
+              <h3 class="font-serif text-xl text-navy leading-snug">{item.question}</h3>
+              <p class="font-sans text-sm text-text-muted leading-relaxed">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- CTA -->
   <CTASection />

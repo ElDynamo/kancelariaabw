@@ -1,12 +1,18 @@
 ---
+import { getEntry, render } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import CTASection from '@components/ui/CTASection.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 
+const serviceEntry = await getEntry('uslugi', 'prawo-karne');
+const data = serviceEntry?.data;
+const renderResult = serviceEntry ? await render(serviceEntry) : null;
+const Content = renderResult ? renderResult.Content : null;
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Prawo karne Wrocław",
+  "name": data?.title || "Prawo karne Wrocław",
   "provider": { "@type": "LegalService", "name": "Kancelaria Prawna ABW", "telephone": "+48609366160" },
   "serviceType": "Legal Services",
   "areaServed": "Wrocław"
@@ -18,23 +24,14 @@ const breadcrumb = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
     { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
-    { "@type": "ListItem", "position": 3, "name": "Prawo karne", "item": "https://kancelariaabw.pl/uslugi/prawo-karne" },
+    { "@type": "ListItem", "position": 3, "name": data?.heroTitle || "Prawo karne", "item": "https://kancelariaabw.pl/uslugi/prawo-karne" },
   ]
 };
-
-const scopeOfWork = [
-  { title: 'Obrona w postępowaniu karnym', desc: 'Reprezentacja podejrzanego i oskarżonego na etapie postępowania przygotowawczego i przed sądem we wszystkich instancjach.' },
-  { title: 'Reprezentacja pokrzywdzonych', desc: 'Aktywna ochrona interesów ofiar przestępstw — występowanie w charakterze oskarżyciela posiłkowego oraz dochodzenie roszczeń w drodze powództwa cywilnego.' },
-  { title: 'Sprawy karnoskarbowe', desc: 'Skuteczna obrona w zawiłych postępowaniach dotyczących przestępstw i wykroczeń skarbowych.' },
-  { title: 'Wykroczenia', desc: 'Profesjonalna reprezentacja w sprawach o wykroczenia przed sądem oraz organami administracyjnymi.' },
-  { title: 'Alternatywne rozwiązania', desc: 'Starania o warunkowe umorzenie postępowania, dobrowolne poddanie się karze lub zawieszenie wykonania kary.' },
-  { title: 'Etap wykonawczy', desc: 'Sporządzanie wniosków o odroczenie kary, przerwę w wykonaniu kary oraz warunkowe przedterminowe zwolnienie.' },
-];
 ---
 
 <Layout
-  title="Prawo karne Wrocław — Obrona w sprawach karnych"
-  description="Kancelaria Prawna ABW — obrona w sprawach karnych i karnoskarbowych we Wrocławiu. Reprezentacja podejrzanych i pokrzywdzonych. Tel: 609 366 160."
+  title={data?.title || "Prawo karne Wrocław — Obrona w sprawach karnych"}
+  description={data?.seoDescription || ""}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -51,7 +48,7 @@ const scopeOfWork = [
             <li aria-hidden="true">›</li>
             <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
             <li aria-hidden="true">›</li>
-            <li aria-current="page" class="text-white opacity-80">Prawo karne</li>
+            <li aria-current="page" class="text-white opacity-80">{data?.heroTitle}</li>
           </ol>
         </nav>
         <div class="flex items-center gap-2 mb-4">
@@ -59,10 +56,10 @@ const scopeOfWork = [
           <span class="font-sans text-xs uppercase tracking-widest text-gold">Obrona i reprezentacja</span>
         </div>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-5xl text-white mb-6 leading-tight">
-          Prawo karne<br /><span class="text-gold">Wrocław i okolice</span>
+          {data?.heroTitle}<br /><span class="text-gold">{data?.heroSubtitle}</span>
         </h1>
         <p class="font-sans text-white opacity-80 text-lg max-w-xl mb-8 leading-relaxed">
-          W obliczu zarzutów karnych kluczowe jest natychmiastowe działanie i chłodna analiza. Zapewniamy profesjonalną pomoc na każdym etapie — od pierwszego przesłuchania po prawomocny wyrok.
+          {data?.heroDescription}
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
@@ -127,7 +124,7 @@ const scopeOfWork = [
           <h2 class="font-serif text-3xl md:text-4xl text-navy mb-12">Zakres ochrony prawnej</h2>
           
           <div class="flex flex-col gap-12">
-            {scopeOfWork.map((item, index) => (
+            {(data?.features || []).map((item, index) => (
               <div class="relative pl-8 md:pl-12 border-l border-border/50 group hover:border-gold/50 transition-colors duration-500">
                 <span class="absolute left-0 top-0 -translate-x-1/2 text-gold font-serif text-sm px-1 leading-none bg-white">
                   {String(index + 1).padStart(2, '0')}
@@ -139,14 +136,8 @@ const scopeOfWork = [
           </div>
 
           <div class="mt-20 pt-12 border-t border-border/50">
-             <h2 class="font-serif text-3xl text-navy mb-6">Jak pracujemy?</h2>
-             <div class="prose prose-lg max-w-none text-text-muted">
-               <p>
-                 Każda sprawa karna wymaga indywidualnej, dopracowanej strategii obrończej. Pracę zawsze rozpoczynamy od <strong>szczegółowej analizy akt sprawy</strong> oraz rzetelnej, szczerej rozmowy z Klientem.
-               </p>
-               <p>
-                 Nie obiecujemy niemożliwego, ale gwarantujemy pełne zaangażowanie, poszukiwanie najkorzystniejszych rozwiązań prawnych (takich jak warunkowe umorzenie postępowania) oraz bezkompromisową walkę o Twoje prawa przed organami ścigania i sądem.
-               </p>
+             <div class="prose prose-lg max-w-none prose-navy">
+               {Content && <Content />}
              </div>
           </div>
 

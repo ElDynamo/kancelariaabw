@@ -1,0 +1,7 @@
+{
+  "title": "Kalkulator przedawnienia",
+  "desc": "Kiedy dług się przedawnia? Oblicz datę z uwzględnieniem reguły 31 XII i przerwania biegu.",
+  "fraza": "kiedy przedawnia się dług",
+  "icon": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>",
+  "image": "/tools/limitation_graphic_pl_1772990335361.png"
+}

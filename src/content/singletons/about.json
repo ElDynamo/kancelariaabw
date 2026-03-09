@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "Anna Jarczyńska",
+    "subtitle": "Radca Prawny",
+    "description": "",
+    "image": null
+  },
+  "aboutParagraphs": "Jestem radcą prawnym wpisanym na listę radców prawnych Okręgowej Izby Radców Prawnych we Wrocławiu pod numerem WR-3019. Swoją działalność prawniczą prowadzę od 2015 roku, koncentrując się na sprawach z zakresu prawa rodzinnego, cywilnego i karnego.\n\nWierzę, że każdy klient zasługuje na indywidualne podejście i rzetelną informację o swojej sprawie. Moim celem jest nie tylko skuteczna reprezentacja przed sądem, ale również kompleksowe poradnictwo prawne, które pozwala moim klientom podejmować świadome decyzje.\n\nProwadzę kancelarię w dwóch lokalizacjach: we Wrocławiu oraz w Bielanach Wrocławskich, co pozwala mi być bliżej klientów z różnych części miasta i okolic.",
+  "quote": {
+    "text": "Każda sprawa jest dla mnie ważna, a każdy klient zasługuje na pełne zaangażowanie i uczciwą informację o swojej sytuacji prawnej.",
+    "author": "Anna Jarczyńska"
+  }
+}

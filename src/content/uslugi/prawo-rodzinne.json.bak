@@ -1,0 +1,34 @@
+{
+    "title": "Prawo rodzinne Wrocław — Rozwód, Alimenty, Podział majątku",
+    "seoDescription": "Radca Prawny Anna Jarczyńska — pomoc prawna w sprawach rodzinnych we Wrocławiu. Rozwód, alimenty, podział majątku, władza rodzicielska. Zadzwoń: 609 366 160.",
+    "heroTitle": "Prawo rodzinne",
+    "heroSubtitle": "Wrocław i okolice",
+    "heroDescription": "Sprawy rodzinne są jednymi z najbardziej delikatnych. Radca Prawny Anna Jarczyńska oferuje profesjonalne wsparcie, pełną dyskrecję i zrozumienie w tych wymagających momentach.",
+    "heroImage": "/photos/hero_prawo_rodzinne_sq.png",
+    "features": [
+        {
+            "title": "Rozwód",
+            "desc": "Prowadzenie spraw o rozwód — zarówno bez orzekania o winie, jak i z orzekaniem. Reprezentacja przed sądem okręgowym."
+        },
+        {
+            "title": "Alimenty",
+            "desc": "Ustalenie, podwyższenie lub obniżenie alimentów. Egzekucja alimentów z pomocą komornika."
+        },
+        {
+            "title": "Podział majątku",
+            "desc": "Podział majątku wspólnego małżonków — sądowy i umowny. Doradztwo w zakresie podziału nieruchomości i innych składników."
+        },
+        {
+            "title": "Władza rodzicielska",
+            "desc": "Ustalenie miejsca zamieszkania dziecka, ograniczenie lub pozbawienie władzy rodzicielskiej."
+        },
+        {
+            "title": "Kontakty z dziećmi",
+            "desc": "Ustalenie i egzekwowanie kontaktów rodzica z dzieckiem po rozstaniu."
+        },
+        {
+            "title": "Separacja",
+            "desc": "Orzeczenie separacji jako alternatywa dla rozwodu przy czasowych trudnościach małżeńskich."
+        }
+    ]
+}

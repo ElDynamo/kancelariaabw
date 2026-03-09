@@ -1,7 +1,11 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 import Button from '@components/ui/Button.astro';
+
+const aboutEntry = await getEntry('singletons', 'about');
+const data = aboutEntry?.data;
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -61,22 +65,18 @@ const personSchema = {
   <!-- Hero sekcja -->
   <section class="section bg-off-white" aria-labelledby="about-heading">
     <div class="container-site grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-      <!-- Tekst -->
       <div class="space-y-6 reveal">
         <div class="flex items-center gap-2">
           <span class="h-px w-8 bg-gold"></span>
           <span class="font-sans text-xs uppercase tracking-widest text-gold">O mnie</span>
         </div>
-        <h1 id="about-heading" class="heading-xl">Anna Jarczyńska<br/><span class="text-gold">Radca Prawny</span></h1>
-        <p class="text-body">
-          Jestem radcą prawnym wpisanym na listę radców prawnych Okręgowej Izby Radców Prawnych we Wrocławiu pod numerem WR-3019. Swoją działalność prawniczą prowadzę od 2015 roku, koncentrując się na sprawach z zakresu prawa rodzinnego, cywilnego i karnego.
-        </p>
-        <p class="text-body">
-          Wierzę, że każdy klient zasługuje na indywidualne podejście i rzetelną informację o swojej sprawie. Moim celem jest nie tylko skuteczna reprezentacja przed sądem, ale również kompleksowe poradnictwo prawne, które pozwala moim klientom podejmować świadome decyzje.
-        </p>
-        <p class="text-body">
-          Prowadzę kancelarię w dwóch lokalizacjach: we Wrocławiu oraz w Bielanach Wrocławskich, co pozwala mi być bliżej klientów z różnych części miasta i okolic.
-        </p>
+        <h1 id="about-heading" class="heading-xl">{data?.hero?.title || "Anna Jarczyńska"}<br/><span class="text-gold">{data?.hero?.subtitle || "Radca Prawny"}</span></h1>
+        
+        {/* Obsługa Rich-text (Złamane paragrafy z Markdoc w Keystatic) */}
+        {(data?.aboutParagraphs ? data.aboutParagraphs.split('\n\n') : []).filter(p => p.trim() !== '').map((p: string) => (
+          <p class="text-body" set:html={p.replace(/\n/g, '<br/>')}></p>
+        ))}
+        
         <Button href="/kontakt" variant="primary">Umów spotkanie</Button>
       </div>
       <!-- Zdjęcie + Dane zawodowe -->
@@ -120,9 +120,9 @@ const personSchema = {
         </div>
         <div class="bg-off-white rounded-3xl p-8 border border-border reveal delay-400">
           <p class="font-serif text-navy text-lg italic leading-relaxed">
-            „Każda sprawa jest dla mnie ważna, a każdy klient zasługuje na pełne zaangażowanie i uczciwą informację o swojej sytuacji prawnej."
+            „{data?.quote?.text}"
           </p>
-          <p class="font-sans text-text-muted text-sm mt-4">— Anna Jarczyńska</p>
+          <p class="font-sans text-text-muted text-sm mt-4">— {data?.quote?.author}</p>
         </div>
       </div>
     </div>

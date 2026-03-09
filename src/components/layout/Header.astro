@@ -1,5 +1,8 @@
 ---
-const navLinks = [
+import { getEntry } from 'astro:content';
+
+const contactEntry = await getEntry('singletons', 'contact');
+const navLinks = contactEntry?.data?.headerNav || [
   { href: '/', label: 'Strona główna' },
   { href: '/uslugi', label: 'Usługi' },
   { href: '/cennik', label: 'Cennik' },
@@ -11,6 +14,56 @@ const navLinks = [
 
 const currentPath = Astro.url.pathname;
 ---
+
+<div id="cms-preview-banner" class="hidden bg-[#0f2540] text-gold w-full px-4 py-2 items-center justify-between z-[60] relative font-sans text-xs border-b border-gold/30">
+  <div class="flex items-center gap-3">
+    <span class="animate-pulse w-2 h-2 rounded-full bg-red-500"></span>
+    <span class="font-bold tracking-widest uppercase">Tryb Podglądu CMS</span>
+    <span class="hidden md:inline pl-3 border-l border-white/20 text-white/70">Szkice są aktualnie widoczne.</span>
+  </div>
+  <div class="flex items-center gap-2">
+    <a href="/api/exit-preview" class="px-3 py-1 bg-white/10 hover:bg-white/20 text-white rounded transition-colors text-[10px] uppercase font-bold tracking-wider">
+      Zakończ
+    </a>
+    <button id="cmsDeployBtn" class="px-3 py-1 bg-gold text-[#0f2540] hover:bg-gold/90 rounded transition-colors text-[10px] uppercase font-bold tracking-wider flex items-center gap-1">
+      Publikuj zmiany
+    </button>
+  </div>
+</div>
+
+<script>
+  // Sprawdzenie na żywo ciasteczka preview=true (Klient-side rendering panelu admina)
+  if (document.cookie.includes('preview=true')) {
+    const banner = document.getElementById('cms-preview-banner');
+    if (banner) {
+      banner.classList.remove('hidden');
+      banner.classList.add('flex');
+    }
+  }
+
+  const btn = document.getElementById('cmsDeployBtn');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      btn.textContent = 'Trwa...';
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+      try {
+        const res = await fetch('/api/build', { method: 'POST' });
+        if (res.ok) {
+          alert("Publikacja rozpoczęta! Zmiany pojawią się za około 30 sekund.");
+          btn.textContent = 'Opublikowano';
+        } else {
+          alert("Błąd integracji z systemem budowania.");
+          btn.textContent = 'Błąd';
+        }
+      } catch(e) {
+        alert("Błąd połączenia.");
+        btn.textContent = 'Publikuj zmiany';
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    });
+  }
+</script>
+
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
   <div class="container-site">
     <nav class="flex items-center justify-between h-16 lg:h-20" aria-label="Nawigacja główna">

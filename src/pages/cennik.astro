@@ -1,6 +1,10 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import Button from '@components/ui/Button.astro';
+
+const pricingEntry = await getEntry('singletons', 'pricing');
+const data = pricingEntry?.data;
 ---
 
 <Layout
@@ -13,20 +17,12 @@ import Button from '@components/ui/Button.astro';
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Transparentność</span>
         <h1 class="heading-xl mt-2">Cennik</h1>
         <p class="text-body max-w-2xl mx-auto mt-4">
-          Wierzę w przejrzyste zasady współpracy. Poniżej znajdziesz orientacyjne stawki — ostateczny koszt ustalamy indywidualnie po zapoznaniu się ze sprawą.
+          {data?.hero?.description}
         </p>
       </div>
 
       <div class="space-y-3 mb-14 reveal delay-100">
-        {[
-          { service: 'Porada prawna (1 godzina)', price: 'od 200 zł', note: '' },
-          { service: 'Analiza dokumentów', price: 'od 250 zł', note: '' },
-          { service: 'Sporządzenie pisma procesowego', price: 'od 400 zł', note: 'zależnie od stopnia skomplikowania' },
-          { service: 'Sporządzenie umowy', price: 'od 500 zł', note: '' },
-          { service: 'Zastępstwo procesowe (sprawa cywilna)', price: 'od 1 500 zł', note: 'wynagrodzenie + koszty' },
-          { service: 'Prowadzenie sprawy o rozwód', price: 'od 2 000 zł', note: 'zależnie od rodzaju sprawy' },
-          { service: 'Obrona w postępowaniu karnym', price: 'indywidualnie', note: 'wycena po zapoznaniu ze sprawą' },
-        ].map(item => (
+        {(data?.pricingList || []).map(item => (
           <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-off-white rounded-xl px-6 py-4 border border-border gap-2">
             <div>
               <p class="font-sans text-base text-navy">{item.service}</p>
@@ -40,11 +36,9 @@ import Button from '@components/ui/Button.astro';
       <div class="bg-off-white rounded-3xl p-8 border border-border mb-8 reveal delay-200">
         <h2 class="font-serif text-xl text-navy mb-4">Ważne informacje</h2>
         <ul class="space-y-3 font-sans text-sm text-text-muted">
-          <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> Podane ceny są cenami netto — do kwot należy doliczyć podatek VAT 23%.</li>
-          <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> Ostateczne wynagrodzenie jest ustalane indywidualnie po ocenie sprawy.</li>
-          <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> Możliwe jest rozliczenie ryczałtowe lub godzinowe — zależnie od preferencji klienta.</li>
-          <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> W sprawach o odszkodowanie możliwe jest wynagrodzenie success fee (procent od uzyskanej kwoty).</li>
-          <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> Pierwsza rozmowa telefoniczna jest bezpłatna.</li>
+          {(data?.importantInfo || []).map(info => (
+            <li class="flex gap-3"><span class="text-gold mt-0.5">●</span> {info}</li>
+          ))}
         </ul>
       </div>
 

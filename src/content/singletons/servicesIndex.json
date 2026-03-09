@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "title": "Kompleksowe wsparcie",
+    "subtitle": "prawne dla Ciebie i Twojej firmy",
+    "description": "Rozumiemy, że każda sprawa to dla Ciebie priorytet. Prowadzimy Cię przez gąszcz przepisów z pełnym profesjonalizmem, dyskrecją i celnością w działaniu.",
+    "image": null
+  },
+  "faq": [
+    {
+      "question": "W jakich dziedzinach prawa specjalizuje się Kancelaria?",
+      "answer": "Naszą główną specjalizacją jest prawo rodzinne (rozwody, alimenty), cywilne oraz karne. Pomagamy również kompleksowo w zakresie upadłości konsumenckiej, obsługi prawnej firm IT/B2B oraz sprawach nieruchomości."
+    },
+    {
+      "question": "Czy świadczycie Państwo porady prawne online?",
+      "answer": "Tak, prowadzimy doradztwo online we wszystkich dziedzinach naszej praktyki. W przypadku rozpraw sądowych również zapewniamy kompleksową obsługę i ewentualne zdalne formy kontaktu, jeśli sąd na to zezwoli."
+    },
+    {
+      "question": "Od czego zacząć, jeśli chcę zlecić Wam sprawę?",
+      "answer": "Najlepiej rozpocząć od nawiązania kontaktu telefonicznego w celu umówienia wstępnej konsultacji (w kancelarii lub online). Przeanalizujemy dokumenty i opracujemy optymalną strategię przed podjęciem formalnych działań."
+    }
+  ]
+}

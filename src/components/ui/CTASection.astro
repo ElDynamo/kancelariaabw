@@ -1,21 +1,25 @@
 ---
+import { getEntry } from 'astro:content';
+
 interface Props {
   title?: string;
   description?: string;
   buttonText?: string;
   buttonHref?: string;
-  phoneText?: string;
-  phoneHref?: string;
 }
+
+const contactEntry = await getEntry('singletons', 'contact');
+const contactData = contactEntry?.data;
 
 const {
   title = "Nie wiesz, czy możemy Ci pomóc?",
   description = "Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.",
   buttonText = "Skontaktuj się",
   buttonHref = "/kontakt",
-  phoneText = "609 366 160",
-  phoneHref = "tel:+48609366160"
 } = Astro.props;
+
+const phoneText = contactData?.phone || "609 366 160";
+const phoneHref = `tel:${phoneText.replace(/\s+/g, '')}`;
 ---
 
 <section class="py-16 lg:py-24 bg-white relative">

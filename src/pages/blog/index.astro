@@ -1,11 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 import Button from '@components/ui/Button.astro';
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const posts = allPosts.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+export const prerender = false;
+
+// Sprawdzenie ciasteczka podglądu (tryb roboczy redaktora CMS)
+const hasPreviewCookie = Astro.request.headers.get('cookie')?.includes('preview=true');
+
+const allPostsUrl = await getCollection('blog', ({ data }) => {
+  if (hasPreviewCookie) return true; // Edytor widzi wszystko, nawet szkice.
+  return data.draft !== true; // Klienci widzą tylko opublikowane
+});
+
+// Sortowanie według najnowszych
+const posts = allPostsUrl.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const blogIndexEntry = await getEntry('singletons', 'blogIndex');
+const hero = blogIndexEntry?.data?.hero || { title: 'Blog prawniczy', description: 'Porady z życia wzięte.' };
 
 const categoryColors: Record<string, string> = {
   'Prawo rodzinne': 'bg-blue-50 text-blue-700',
@@ -39,9 +52,9 @@ const blogSchema = {
     <div class="container-site">
       <div class="text-center mb-14 reveal">
         <span class="font-sans text-xs uppercase tracking-widest text-gold">Wiedza i porady</span>
-        <h1 class="heading-xl mt-2">Blog prawniczy</h1>
+        <h1 class="heading-xl mt-2">{hero.title}</h1>
         <p class="text-body max-w-2xl mx-auto mt-4">
-          Praktyczne artykuły o polskim prawie. Piszę przystępnie o sprawach, które dotykają codziennego życia.
+          {hero.description}
         </p>
       </div>
 

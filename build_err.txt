@@ -1,0 +1,19 @@
+$ astro build
+[2m11:02:44[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
+[33m[1m11:02:44[22m [WARN] [router][39m The route "/api/keystatic/[...params]" is defined in both "src/pages/api/keystatic/[...params].ts" and "node_modules/@keystatic/astro/internal/keystatic-api.js" using SSR mode. A dynamic SSR route cannot be defined more than once.
+[33m[1m11:02:44[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
+[33m[1m11:02:44[22m [WARN] [router][39m The route "/keystatic/[...params]" is defined in both "src/pages/keystatic/[...params].astro" and "node_modules/@keystatic/astro/internal/keystatic-astro-page.astro" using SSR mode. A dynamic SSR route cannot be defined more than once.
+[33m[1m11:02:44[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
+[2m11:02:44[22m [34m[content][39m Syncing content
+[2m11:02:44[22m [34m[content][39m Content config changed
+[2m11:02:44[22m [34m[content][39m Clearing content store
+bad indentation of a mapping entry
+  Location:
+    C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\content\legal\privacyPolicy.md:2:34
+  Stack trace:
+    at generateError (file:///C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/node_modules/js-yaml/dist/js-yaml.mjs:1289:10)
+    at readBlockMapping (file:///C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/node_modules/js-yaml/dist/js-yaml.mjs:2278:7)
+    at readDocument (file:///C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/node_modules/js-yaml/dist/js-yaml.mjs:2721:3)
+    at load$1 (file:///C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/node_modules/js-yaml/dist/js-yaml.mjs:2810:19)
+    at safeParseFrontmatter (file:///C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/node_modules/astro/dist/content/utils.js:347:12)
+error: script "build" exited with code 1

@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "description": "Wierzę w przejrzyste zasady współpracy. Poniżej znajdziesz orientacyjne stawki — ostateczny koszt ustalamy indywidualnie po zapoznaniu się ze sprawą.",
+    "title": "",
+    "subtitle": "",
+    "image": null
+  },
+  "pricingList": [
+    {
+      "service": "Porada prawna (1 godzina)",
+      "price": "od 200 zł",
+      "note": ""
+    },
+    {
+      "service": "Analiza dokumentów",
+      "price": "od 250 zł",
+      "note": ""
+    },
+    {
+      "service": "Sporządzenie pisma procesowego",
+      "price": "od 400 zł",
+      "note": "zależnie od stopnia skomplikowania"
+    },
+    {
+      "service": "Sporządzenie umowy",
+      "price": "od 500 zł",
+      "note": ""
+    },
+    {
+      "service": "Zastępstwo procesowe (sprawa cywilna)",
+      "price": "od 1 500 zł",
+      "note": "wynagrodzenie + koszty"
+    },
+    {
+      "service": "Prowadzenie sprawy o rozwód",
+      "price": "od 2 000 zł",
+      "note": "zależnie od rodzaju sprawy"
+    },
+    {
+      "service": "Obrona w postępowaniu karnym",
+      "price": "indywidualnie",
+      "note": "wycena po zapoznaniu ze sprawą"
+    }
+  ],
+  "importantInfo": [
+    "Podane ceny są cenami netto — do kwot należy doliczyć podatek VAT 23%.",
+    "Ostateczne wynagrodzenie jest ustalane indywidualnie po ocenie sprawy.",
+    "Możliwe jest rozliczenie ryczałtowe lub godzinowe — zależnie od preferencji klienta.",
+    "W sprawach o odszkodowanie możliwe jest wynagrodzenie success fee (procent od uzyskanej kwoty).",
+    "Pierwsza rozmowa telefoniczna jest bezpłatna."
+  ]
+}

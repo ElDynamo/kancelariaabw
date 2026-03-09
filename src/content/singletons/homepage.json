@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Radca Prawny",
+    "subtitle": "we Wrocławiu",
+    "description": "Anna Jarczyńska — doświadczona radca prawna z wpisem WR-3019. Skuteczna pomoc prawna w sprawach rodzinnych, cywilnych i karnych.",
+    "image": null
+  },
+  "about": {
+    "description1": "Radca prawny z wpisem nr WR-3019, wpisana na listę radców prawnych OIRP we Wrocławiu. Specjalizuję się w prawie rodzinnym, cywilnym i karnym. Każdemu klientowi zapewniam rzetelną pomoc prawną opartą na wzajemnym zaufaniu i pełnym zaangażowaniu.",
+    "description2": "Prowadzę kancelarię w dwóch lokalizacjach: we Wrocławiu i w Bielanach Wrocławskich."
+  },
+  "faq": [
+    {
+      "question": "Jak umówić pierwszą konsultację?",
+      "answer": "Pierwszą konsultację możesz umówić telefonicznie pod numerem 609 366 160 lub przez formularz kontaktowy na stronie. Odpowiem na Twoje pytania i ustalimy dogodny termin spotkania."
+    },
+    {
+      "question": "Ile kosztuje porada prawna?",
+      "answer": "Koszt porady prawnej zależy od stopnia skomplikowania sprawy i przewidywanego nakładu pracy. Pierwsze spotkanie służy ocenie sprawy i ustaleniu warunków współpracy. Szczegółowe stawki znajdziesz w zakładce Cennik."
+    },
+    {
+      "question": "Czy prowadzisz sprawy z całej Polski?",
+      "answer": "Prowadzę sprawy przede wszystkim przed sądami w okręgu wrocławskim. W sprawach o charakterze doradczym i dokumentacyjnym mogę reprezentować klientów z całej Polski, w tym zdalnie."
+    },
+    {
+      "question": "Jak przebiega sprawa o rozwód?",
+      "answer": "Sprawa o rozwód zaczyna się od złożenia pozwu w sądzie okręgowym. Czas trwania postępowania zależy od tego, czy obie strony zgadzają się co do rozstania i podziału majątku. Przy bezkonfliktowym rozwodzie może to być kilka miesięcy, przy spornym — rok lub dłużej. W każdym przypadku towarzyszę klientowi na każdym etapie."
+    },
+    {
+      "question": "Czy mogę uzyskać pomoc prawną zdalnie?",
+      "answer": "Tak. Oferuję konsultacje online poprzez wideorozmowy dla klientów, którzy nie mogą przybyć osobiście. Dokumenty można przesyłać drogą elektroniczną."
+    }
+  ]
+}

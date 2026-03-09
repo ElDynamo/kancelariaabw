@@ -1,11 +1,16 @@
 ---
+import { getEntry } from 'astro:content';
+
+const contactEntry = await getEntry('singletons', 'contact');
+const contactData = contactEntry?.data;
+
 const services = [
   { label: 'Prawo rodzinne', href: '/uslugi/prawo-rodzinne' },
   { label: 'Prawo cywilne', href: '/uslugi/prawo-cywilne' },
   { label: 'Prawo karne', href: '/uslugi/prawo-karne' },
 ];
 
-const legal = [
+const legal = contactData?.footerNav || [
   { label: 'Polityka prywatności', href: '/polityka-prywatnosci' },
   { label: 'Regulamin', href: '/regulamin' },
   { label: 'Przetwarzanie danych', href: '/przetwarzanie-danych' },
@@ -44,20 +49,19 @@ const legal = [
         <address class="not-italic space-y-4">
           <div>
             <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Telefon</p>
-            <a href="tel:+48609366160" class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors">
-              609 366 160
+            <a href={`tel:${contactData?.phone?.replace(/\s+/g, '')}`} class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors">
+              {contactData?.phone || '609 366 160'}
             </a>
           </div>
           <div>
             <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Email</p>
-            <a href="mailto:a.jarczynska@kancelariaabw.pl" class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors break-all">
-              a.jarczynska@kancelariaabw.pl
+            <a href={`mailto:${contactData?.email}`} class="font-sans text-sm text-white opacity-80 hover:text-gold transition-colors break-all">
+              {contactData?.email || 'a.jarczynska@kancelariaabw.pl'}
             </a>
           </div>
           <div>
             <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Lokalizacje</p>
-            <p class="font-sans text-sm text-white opacity-80">Wrocław</p>
-            <p class="font-sans text-sm text-white opacity-80">Bielany Wrocławskie</p>
+            <p class="font-sans text-sm text-white opacity-80">{contactData?.locations}</p>
           </div>
           <div>
             <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1">Godziny pracy</p>

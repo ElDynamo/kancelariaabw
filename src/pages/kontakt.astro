@@ -1,15 +1,19 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 import ContactForm from '@components/forms/ContactForm.vue';
 import Map from '@components/forms/Map.vue';
 
+const contactEntry = await getEntry('singletons', 'contact');
+const data = contactEntry?.data;
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LegalService", "LocalBusiness"],
   "name": "Kancelaria Prawna ABW",
-  "telephone": "+48609366160",
-  "email": "a.jarczynska@kancelariaabw.pl",
+  "telephone": data?.phone || "+48609366160",
+  "email": data?.email || "a.jarczynska@kancelariaabw.pl",
   "address": { "@type": "PostalAddress", "addressLocality": "Wrocław", "addressCountry": "PL" },
   "geo": { "@type": "GeoCoordinates", "latitude": 51.1079, "longitude": 17.0385 },
   "openingHours": "Mo-Fr 09:00-17:00"
@@ -39,19 +43,19 @@ const localBusinessSchema = {
             <dl class="space-y-5">
               <div>
                 <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1">Telefon</dt>
-                <dd><a href="tel:+48609366160" class="font-serif text-xl text-navy hover:text-gold transition-colors">609 366 160</a></dd>
+                <dd><a href={`tel:${data?.phone?.replace(/\s+/g, '')}`} class="font-serif text-xl text-navy hover:text-gold transition-colors">{data?.phone}</a></dd>
               </div>
               <div>
                 <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1">Email</dt>
-                <dd><a href="mailto:a.jarczynska@kancelariaabw.pl" class="font-sans text-base text-navy hover:text-gold transition-colors">a.jarczynska@kancelariaabw.pl</a></dd>
+                <dd><a href={`mailto:${data?.email}`} class="font-sans text-base text-navy hover:text-gold transition-colors">{data?.email}</a></dd>
               </div>
               <div>
                 <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1">Godziny pracy</dt>
-                <dd class="font-sans text-sm text-navy">Pon.–Pt., 9:00–17:00</dd>
+                <dd class="font-sans text-sm text-navy">{data?.hours}</dd>
               </div>
               <div>
                 <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1">Lokalizacje</dt>
-                <dd class="font-sans text-sm text-navy">Wrocław · Bielany Wrocławskie</dd>
+                <dd class="font-sans text-sm text-navy">{data?.locations}</dd>
               </div>
             </dl>
           </div>
