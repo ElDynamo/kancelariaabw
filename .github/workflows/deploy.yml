@@ -23,8 +23,6 @@ jobs:
       - name: Build Astro project
         run: bun run build
         env:
-          # Jeżeli klucz Resend jest też używany podczas budowy, podajemy go tu.
-          # Dla bezpieczeństwa powinien być w secretach.
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
       - name: Copy files to VPS via SCP
@@ -32,8 +30,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
-          password: ${{ secrets.VPS_PASSWORD }}
-          # Kopiujemy katalog dist oraz pliki konfiguracyjne do uruchomienia
+          key: ${{ secrets.VPS_SSH_KEY }}
           source: "dist/,ecosystem.config.cjs,package.json"
           target: "/var/www/kancelariaabw"
           strip_components: 0
@@ -43,9 +40,8 @@ jobs:
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
-          password: ${{ secrets.VPS_PASSWORD }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             cd /var/www/kancelariaabw
-            # Wymagany PM2 zainstalowany globalnie u użytkownika ubuntu
             pm2 start ecosystem.config.cjs || pm2 restart kancelaria-abw
             pm2 save
