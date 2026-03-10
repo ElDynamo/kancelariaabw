@@ -32,8 +32,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "dist/,ecosystem.config.cjs,package.json"
-          target: "/var/www/kancelariaabw"
+          target: "/var/www/strona-prawnicza"
           strip_components: 0
+          overwrite: true
 
       - name: Restart PM2 on VPS
         uses: appleboy/ssh-action@v1.0.3
@@ -42,6 +43,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /var/www/kancelariaabw
-            pm2 start ecosystem.config.cjs || pm2 restart kancelaria-abw
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            export PATH="$HOME/.bun/bin:$PATH"
+            cd /var/www/strona-prawnicza
+            pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
             pm2 save
