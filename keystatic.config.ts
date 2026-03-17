@@ -15,11 +15,6 @@ const heroSchema = fields.object({
     title: fields.text({ label: 'Tytuł główny' }),
     subtitle: fields.text({ label: 'Podtytuł (Opcjonalnie)' }),
     description: fields.text({ label: 'Krótki opis', multiline: true }),
-    image: fields.image({
-        label: 'Zdjęcie w tle (opcjonalnie)',
-        directory: 'public/photos',
-        publicPath: '/photos/'
-    })
 }, { label: 'Sekcja wyświetlana u góry strony (Hero)' });
 
 const faqSchema = fields.array(
@@ -74,7 +69,7 @@ export default config({
         navigation: {
             'Globalne Ustawienia': ['contact'],
             'Strony Statyczne': ['homepage', 'about', 'pricing', 'servicesIndex', 'blogIndex', 'toolsIndex'],
-            'Strony Prawne': ['privacyPolicy', 'termsOfService'],
+            'Strony Prawne': ['privacyPolicy', 'termsOfService', 'dataProcessing'],
             'Baza Treści': ['services', 'blog', 'toolsInfo', 'authors'],
             'Zarządzanie Stroną': ['deployPage']
         }
@@ -201,6 +196,16 @@ export default config({
             schema: {
                 title: fields.text({ label: 'Tytuł główny', defaultValue: 'Regulamin' }),
                 lastUpdated: fields.text({ label: 'Podtytuł', defaultValue: 'Regulamin świadczenia usług drogą elektroniczną...' }),
+                content: fields.markdoc({ label: 'Treść dokumentu', extension: 'mdoc', components: customComponents as any }),
+            }
+        }),
+        dataProcessing: singleton({
+            label: 'Przetwarzanie danych (RODO)',
+            path: 'src/content/legal/dataProcessing',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.text({ label: 'Tytuł główny', defaultValue: 'Przetwarzanie danych osobowych' }),
+                lastUpdated: fields.text({ label: 'Podtytuł', defaultValue: 'Klauzula informacyjna zgodna z art. 13 RODO' }),
                 content: fields.markdoc({ label: 'Treść dokumentu', extension: 'mdoc', components: customComponents as any }),
             }
         })
