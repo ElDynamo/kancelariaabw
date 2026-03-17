@@ -38,7 +38,6 @@ const uslugi = defineCollection({
             title: z.string().optional().nullable(),
             subtitle: z.string().optional().nullable(),
             description: z.string().optional().nullable(),
-            image: z.string().optional().nullable()
         }).optional(),
         features: z.array(z.object({
             icon: z.string().optional(),
@@ -82,7 +81,6 @@ const singletons = defineCollection({
             title: z.string().optional().nullable(),
             subtitle: z.string().optional().nullable(),
             description: z.string().optional().nullable(),
-            image: z.string().optional().nullable()
         }).optional(),
         about: z.object({
             description1: z.string().optional(),
