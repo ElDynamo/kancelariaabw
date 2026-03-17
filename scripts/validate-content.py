@@ -101,6 +101,38 @@ for f in required_legal:
     if not os.path.exists(path):
         errors.append(f"  Missing required legal doc: {f}")
 
+# --- Validate no disallowed frontmatter keys ---
+print("Validating frontmatter keys...")
+BLOG_ALLOWED_KEYS = {"title", "publishDate", "author", "category", "relatedService",
+                     "description", "ogImage", "tags", "draft"}
+USLUGI_ALLOWED_KEYS = {"title", "seo", "hero", "features", "faq", "steps"}
+
+def check_mdx_keys(dir_path, allowed_keys, collection_name):
+    if not os.path.exists(dir_path):
+        return
+    for fname in sorted(os.listdir(dir_path)):
+        if not fname.endswith(".mdx"):
+            continue
+        path = os.path.join(dir_path, fname)
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+        import re as _re
+        match = _re.match(r'^---\s*\n(.*?)\n---', content, _re.DOTALL)
+        if not match:
+            continue
+        try:
+            import yaml as _yaml
+            data = _yaml.safe_load(match.group(1))
+            if data:
+                extra = set(data.keys()) - allowed_keys
+                if extra:
+                    errors.append(f"  {collection_name}/{fname}: disallowed keys: {extra}")
+        except Exception:
+            pass
+
+check_mdx_keys("src/content/blog", BLOG_ALLOWED_KEYS, "blog")
+check_mdx_keys("src/content/uslugi", USLUGI_ALLOWED_KEYS, "uslugi")
+
 # --- Report ---
 if errors:
     print(f"\n❌ {len(errors)} content validation error(s) found:")

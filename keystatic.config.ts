@@ -186,7 +186,7 @@ export default config({
             schema: {
                 title: fields.text({ label: 'Tytuł główny', defaultValue: 'Polityka prywatności' }),
                 lastUpdated: fields.text({ label: 'Podtytuł (np. data aktualizacji)', defaultValue: 'Ostatnia aktualizacja: marzec 2026' }),
-                content: fields.markdoc({ label: 'Treść dokumentu', extension: 'mdoc', components: customComponents as any }),
+                content: fields.mdx({ label: 'Treść dokumentu' }),
             }
         }),
         termsOfService: singleton({
@@ -196,7 +196,7 @@ export default config({
             schema: {
                 title: fields.text({ label: 'Tytuł główny', defaultValue: 'Regulamin' }),
                 lastUpdated: fields.text({ label: 'Podtytuł', defaultValue: 'Regulamin świadczenia usług drogą elektroniczną...' }),
-                content: fields.markdoc({ label: 'Treść dokumentu', extension: 'mdoc', components: customComponents as any }),
+                content: fields.mdx({ label: 'Treść dokumentu' }),
             }
         }),
         dataProcessing: singleton({
