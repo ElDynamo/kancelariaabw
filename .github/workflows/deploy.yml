@@ -12,29 +12,17 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Build Astro project
-        run: bun run build
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-
-      - name: Copy files to VPS via SCP
+      - name: Copy project files to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "dist/,ecosystem.config.cjs,package.json,bun.lock"
+          source: "src/,tina/,public/,package.json,bun.lock,astro.config.mjs,tsconfig.json,ecosystem.config.cjs,deploy/"
           target: "/var/www/strona-prawnicza"
           strip_components: 0
           overwrite: true
+          rm: false
 
       - name: Install dependencies and restart on VPS
         uses: appleboy/ssh-action@v1.0.3
@@ -48,5 +36,8 @@ jobs:
             export PATH="$HOME/.bun/bin:$PATH"
             cd /var/www/strona-prawnicza
             bun install
+            # Update nginx config for TinaCMS admin
+            sudo cp deploy/nginx-kancelariaabw.conf /etc/nginx/sites-available/kancelariaabw.conf
+            sudo nginx -t && sudo systemctl reload nginx
             pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
             pm2 save
