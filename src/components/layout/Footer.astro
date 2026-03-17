@@ -1,8 +1,8 @@
 ---
-import { client } from '../../../tina/__generated__/client';
+import { getEntry } from 'astro:content';
 
-const response = await client.queries.contact({ relativePath: 'contact.json' });
-const contactData = response.data.contact;
+const contactEntry = await getEntry('singletons', 'contact');
+const contactData = contactEntry?.data;
 
 const services = [
   { label: 'Prawo rodzinne', href: '/uslugi/prawo-rodzinne' },
@@ -10,7 +10,7 @@ const services = [
   { label: 'Prawo karne', href: '/uslugi/prawo-karne' },
 ];
 
-const legal = contactData.footerNav || [
+const legal = contactData?.footerNav || [
   { label: 'Polityka prywatności', href: '/polityka-prywatnosci' },
   { label: 'Regulamin', href: '/regulamin' },
   { label: 'Przetwarzanie danych', href: '/przetwarzanie-danych' },
@@ -79,9 +79,9 @@ const legal = contactData.footerNav || [
       </p>
       <nav aria-label="Linki prawne">
         <ul class="flex gap-6" role="list">
-          {legal.map((l: any) => (
+          {legal.map(l => (
             <li>
-              <a href={l.href} class="font-sans text-xs text-white opacity-40 hover:text-gold transition-colors">
+              <a href={l.href} class="font-sans text-xs text-white opacity-40 hover:text-white opacity-70 transition-colors">
                 {l.label}
               </a>
             </li>

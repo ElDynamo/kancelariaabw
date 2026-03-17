@@ -1,0 +1,142 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '@components/layout/Layout.astro';
+import ServiceCard from '@components/ui/ServiceCard.astro';
+import Button from '@components/ui/Button.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+import CTASection from '@components/ui/CTASection.astro';
+
+const uiEntry = await getEntry('singletons', 'servicesIndex');
+const uiData = uiEntry?.data;
+
+// Fetch dynamic collection
+const allServices = await getCollection('uslugi');
+
+// Podział na główne i poboczne
+const mainSlugs = ['prawo-rodzinne', 'prawo-cywilne', 'prawo-karne'];
+const mainServicesRaw = allServices.filter(s => mainSlugs.includes(s.slug));
+const additionalServicesRaw = allServices.filter(s => !mainSlugs.includes(s.slug));
+
+// Sortowanie żeby zachować ustaloną kolejność głównych
+const mainServices = mainServicesRaw.sort((a, b) => mainSlugs.indexOf(a.slug) - mainSlugs.indexOf(b.slug));
+const additionalServices = additionalServicesRaw;
+
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+  ]
+};
+---
+
+<Layout
+  title="Usługi prawne Wrocław — Radca Prawny Anna Jarczyńska | Kancelaria ABW"
+  description="Kancelaria Prawna ABW oferuje pomoc prawną we Wrocławiu i Bielanach Wrocławskich: upadłość, odszkodowania, prawo rodzinne, nieruchomości, obsługa firm. Tel. 609 366 160."
+>
+  <Fragment slot="head">
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="py-24 lg:py-32 bg-navy text-white text-center relative overflow-hidden">
+    <!-- Subtle gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-dark/50 to-transparent pointer-events-none"></div>
+    <div class="container-site relative z-10 max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-4 mb-8 reveal">
+        <span class="h-px w-12 bg-gold/50"></span>
+        <span class="font-sans text-xs uppercase tracking-[0.2em] text-gold">Obszary Praktyki</span>
+        <span class="h-px w-12 bg-gold/50"></span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-8 reveal delay-100">
+        {uiData?.hero?.title || "Kompleksowe wsparcie"}<br/>
+        <span class="text-gold italic font-light">{uiData?.hero?.subtitle || "prawne dla Ciebie i Twojej firmy"}</span>
+      </h1>
+      <p class="font-sans text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto reveal delay-200">
+        {uiData?.hero?.description || "Rozumiemy, że każda sprawa to dla Ciebie priorytet. Prowadzimy Cię przez gąszcz przepisów z pełnym profesjonalizmem, dyskrecją i celnością w działaniu."}
+      </p>
+    </div>
+  </section>
+
+  <!-- PILLAR PAGES — główne specjalizacje SEO -->
+  <section class="py-20 lg:py-32 bg-off-white">
+    <div class="container-site max-w-6xl">
+      <div class="text-center mb-16 md:mb-24 reveal">
+        <h2 class="font-serif text-4xl lg:text-5xl text-navy mb-6">Nasze główne specjalizacje</h2>
+        <p class="font-sans text-text-muted text-lg max-w-2xl mx-auto">Obszary, w których zdobyliśmy największe doświadczenie, dając naszym klientom poczucie bezpieczeństwa na sali rozpraw i w życiu codziennym.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+        {mainServices.map((s, index) => (
+          <a href={`/uslugi/${s.slug}`} class="group bg-white p-8 md:p-10 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-center text-center">
+            <div class="flex flex-col items-center mb-6">
+              <div class="w-16 h-16 rounded-full bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold transition-colors duration-500 mb-4">
+                <Fragment set:html={s.data.features?.[0]?.icon || '⚖️'} />
+              </div>
+              {index === 0 && (
+                <span class="inline-flex font-sans text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-gold/30 text-gold rounded-full whitespace-nowrap">Główna specjalizacja</span>
+              )}
+            </div>
+            <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-gold transition-colors duration-500">{s.data.hero?.title}</h3>
+            <p class="font-sans text-base text-text-muted leading-relaxed mb-8">{s.data.seo?.description}</p>
+            <div class="flex items-center text-sm font-sans uppercase tracking-[0.2em] text-navy group-hover:text-gold transition-colors mt-auto">
+              <span class="mr-3">Więcej informacji</span>
+              <span class="w-8 h-px bg-current transform origin-left transition-transform duration-500 group-hover:scale-x-150"></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OGÓLNE OBSZARY PRAWA -->
+  <section class="py-20 lg:py-32 bg-white">
+    <div class="container-site max-w-6xl">
+      <div class="text-center mb-16 md:mb-24 reveal">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <span class="h-px w-8 bg-gold/50"></span>
+          <span class="font-sans text-xs uppercase tracking-[0.2em] text-gold">Uzupełniająco</span>
+          <span class="h-px w-8 bg-gold/50"></span>
+        </div>
+        <h2 class="font-serif text-3xl lg:text-4xl text-navy mb-6">Pozostałe dziedziny prawa</h2>
+        <p class="font-sans text-text-muted text-lg max-w-2xl mx-auto">Kompleksowa reprezentacja i doradztwo prawne w szerokim spektrum spraw, od negocjacji po postępowania przed organami.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 reveal delay-200">
+        {additionalServices.map(s => (
+          <a href={`/uslugi/${s.slug}`} class="group p-6 border border-border/50 bg-off-white hover:bg-white hover:border-gold/50 transition-all duration-500 flex flex-col items-center text-center">
+            <div class="w-12 h-12 text-navy/80 mb-5 group-hover:text-gold transition-colors duration-500 text-3xl">
+               <Fragment set:html={s.data.features?.[0]?.icon || '📝'} />
+            </div>
+            <h3 class="font-serif text-lg md:text-xl text-navy mb-3 group-hover:text-gold transition-colors duration-500">{s.data.hero?.title}</h3>
+            <p class="font-sans text-sm text-text-muted leading-relaxed">{s.data.seo?.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / Q&A -->
+  {(uiData?.faq && uiData.faq.length > 0) && (
+    <section class="section bg-off-white border-t border-border" aria-labelledby="faq-heading">
+      <div class="container-site">
+        <div class="text-center mb-14 reveal">
+          <span class="font-sans text-xs uppercase tracking-widest text-gold">Masz pytania?</span>
+          <h2 id="faq-heading" class="heading-lg mt-2">Często zadawane pytania</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 reveal delay-100 max-w-5xl mx-auto">
+          {uiData.faq.map((item) => (
+            <article class="border-l-2 border-gold pl-5 space-y-2">
+              <h3 class="font-serif text-xl text-navy leading-snug">{item.question}</h3>
+              <p class="font-sans text-sm text-text-muted leading-relaxed">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <CTASection />
+</Layout>
+

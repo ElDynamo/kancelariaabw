@@ -12,19 +12,30 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Copy project files to VPS via SCP
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Build Astro
+        run: bun run build
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+
+      - name: Copy built files to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "src/,tina/,public/,package.json,bun.lock,astro.config.mjs,tsconfig.json,ecosystem.config.cjs,deploy/"
+          source: "dist/,package.json,bun.lock,ecosystem.config.cjs,deploy/"
           target: "/var/www/strona-prawnicza"
           strip_components: 0
           overwrite: true
           rm: false
 
-      - name: Install dependencies and restart on VPS
+      - name: Deploy and restart on VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_IP }}
@@ -35,11 +46,11 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH="$HOME/.bun/bin:$PATH"
             cd /var/www/strona-prawnicza
-            bun install
-            # Update nginx config for TinaCMS admin
+            bun install --production
+            # Update nginx config
             sudo cp deploy/nginx-kancelariaabw.conf /etc/nginx/sites-available/kancelariaabw.conf
             sudo nginx -t && sudo systemctl reload nginx
-            # Force restart with new config (delete old process first)
+            # Restart Astro server
             pm2 delete kancelaria-abw 2>/dev/null || true
             pm2 start ecosystem.config.cjs
             pm2 save

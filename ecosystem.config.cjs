@@ -2,19 +2,15 @@ module.exports = {
     apps: [
         {
             name: "kancelaria-abw",
-            script: "npm",
-            args: "run dev",
+            script: "./dist/server/entry.mjs",
             cwd: "/var/www/strona-prawnicza",
             env: {
-                NODE_ENV: "development",
+                NODE_ENV: "production",
                 PORT: 4321,
                 HOST: "0.0.0.0",
             },
-            // Restart on crash, but don't loop
             max_restarts: 10,
             restart_delay: 5000,
-            // Important: don't watch files (TinaCMS writes to them)
-            watch: false,
         },
     ],
 };
