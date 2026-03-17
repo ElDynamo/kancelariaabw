@@ -39,5 +39,7 @@ jobs:
             # Update nginx config for TinaCMS admin
             sudo cp deploy/nginx-kancelariaabw.conf /etc/nginx/sites-available/kancelariaabw.conf
             sudo nginx -t && sudo systemctl reload nginx
-            pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
+            # Force restart with new config (delete old process first)
+            pm2 delete kancelaria-abw 2>/dev/null || true
+            pm2 start ecosystem.config.cjs
             pm2 save
