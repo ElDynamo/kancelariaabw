@@ -12,31 +12,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Build Astro project
-        run: bun run build
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-
-      - name: Copy files to VPS via SCP
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.VPS_IP }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          source: "dist/,ecosystem.config.cjs,package.json,bun.lock"
-          target: "/var/www/strona-prawnicza"
-          strip_components: 0
-          overwrite: true
-
-      - name: Install dependencies and restart on VPS
+      - name: Deploy and build on VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_IP }}
@@ -46,7 +22,41 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH="$HOME/.bun/bin:$PATH"
-            cd /var/www/strona-prawnicza
+            
+            PROJECT_DIR="/var/www/strona-prawnicza"
+            
+            # First-time setup: clone repo if not a git repo
+            if [ ! -d "$PROJECT_DIR/.git" ]; then
+              echo "Initial clone..."
+              rm -rf "$PROJECT_DIR"
+              git clone https://github.com/ElDynamo/kancelariaabw.git "$PROJECT_DIR"
+              cd "$PROJECT_DIR"
+            else
+              cd "$PROJECT_DIR"
+              
+              # Backup client-edited content before pull
+              BACKUP_NAME="content-backup-$(date +%Y%m%d_%H%M%S)"
+              cp -r src/content "/tmp/$BACKUP_NAME" 2>/dev/null || true
+              echo "Content backed up to /tmp/$BACKUP_NAME"
+              
+              # Pull latest code
+              git fetch origin master
+              git checkout master
+              git reset --hard origin/master
+              
+              # Restore client content over git version
+              if [ -d "/tmp/$BACKUP_NAME" ]; then
+                cp -rf "/tmp/$BACKUP_NAME"/* src/content/
+                echo "Client content restored"
+              fi
+            fi
+            
+            # Install and build
             bun install
+            RESEND_API_KEY=${{ secrets.RESEND_API_KEY }} bun run build
+            
+            # Restart server
             pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
             pm2 save
+            
+            echo "Deploy complete!"

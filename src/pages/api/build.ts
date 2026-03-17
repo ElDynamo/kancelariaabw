@@ -6,13 +6,6 @@ const execAsync = promisify(exec);
 
 export const POST: APIRoute = async ({ request }) => {
     try {
-        // Proste zabezpieczenie - tylko żądania POST z odpowiednim Auth (jeśli skonfigurujemy Nginx)
-        // lub chociażby sprawdzające pochodzenie z panelu CMS.
-        // Aby nie zablokować serwera na czas budowania, używamy procesu w tle 
-        // lub czekamy na wynik, jeśli to krótkie. Astro build może zająć 10-20 sekund.
-
-        // Zwracamy od razu odpowiedź 202 Accepted, by nie trzymać przeglądarki klienta
-        // na długim timeoutcie, a build puszczamy asynchronicznie.
         const isProduction = process.env.NODE_ENV === 'production';
         if (!isProduction) {
             return new Response(JSON.stringify({ message: "Build trigger ignored in development mode." }), {
@@ -21,13 +14,25 @@ export const POST: APIRoute = async ({ request }) => {
             });
         }
 
-        execAsync('bun run build').catch(error => {
+        // Run build + PM2 restart in background
+        const projectDir = process.env.PROJECT_DIR || '/var/www/strona-prawnicza';
+        const buildCmd = [
+            `cd ${projectDir}`,
+            // Backup content before rebuild (safety net)
+            `cp -r src/content /tmp/content-backup-$(date +%Y%m%d_%H%M%S) 2>/dev/null || true`,
+            // Build
+            `bun run build`,
+            // Restart PM2
+            `pm2 restart kancelaria-abw`
+        ].join(' && ');
+
+        execAsync(buildCmd).catch(error => {
             console.error("[CMS BUILD ERROR]:", error);
         });
 
         return new Response(JSON.stringify({
             success: true,
-            message: "Proces budowania został pomyślnie rozpoczęty w tle. Strona zaktualizuje się w ciągu ok. 15-30 sekund."
+            message: "Publikacja rozpoczęta! Zmiany pojawią się na stronie w ciągu ok. 30 sekund."
         }), {
             status: 202,
             headers: { 'Content-Type': 'application/json' }
