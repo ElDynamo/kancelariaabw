@@ -254,10 +254,8 @@ export default config({
                     }),
                     { label: 'Kroki / Etapy działania (opcjonalne)', itemLabel: props => props.fields.title.value }
                 ),
-                content: fields.markdoc({
+                content: fields.mdx({
                     label: 'Rozszerzony Opis Usługi (Główna Treść)',
-                    extension: 'mdoc',
-                    components: customComponents as any
                 }),
             }
         }),
@@ -321,10 +319,8 @@ export default config({
                     label: 'Szkic (ukryj przed publikacją)',
                     defaultValue: false,
                 }),
-                content: fields.markdoc({
+                content: fields.mdx({
                     label: 'Treść artykułu',
-                    extension: 'mdoc',
-                    components: customComponents as any
                 }),
             },
         }),
