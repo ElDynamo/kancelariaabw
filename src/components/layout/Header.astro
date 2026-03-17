@@ -1,8 +1,9 @@
 ---
-import { getEntry } from 'astro:content';
+import { client } from '../../../tina/__generated__/client';
 
-const contactEntry = await getEntry('singletons', 'contact');
-const navLinks = contactEntry?.data?.headerNav || [
+const response = await client.queries.contact({ relativePath: 'contact.json' });
+const contactData = response.data.contact;
+const navLinks = contactData.headerNav || [
   { href: '/', label: 'Strona główna' },
   { href: '/uslugi', label: 'Usługi' },
   { href: '/cennik', label: 'Cennik' },
@@ -76,7 +77,7 @@ const currentPath = Astro.url.pathname;
 
       <!-- Desktop Nav -->
       <ul class="hidden lg:flex items-center gap-8" role="list">
-        {navLinks.map(link => (
+        {navLinks.map((link: any) => (
           <li>
             <a
               href={link.href}
@@ -121,7 +122,7 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="hidden lg:hidden border-t border-border bg-white" role="navigation" aria-label="Menu mobilne">
     <ul class="container-site py-4 flex flex-col gap-4" role="list">
-      {navLinks.map(link => (
+      {navLinks.map((link: any) => (
         <li>
           <a
             href={link.href}

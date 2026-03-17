@@ -1,0 +1,240 @@
+fragment ContactParts on Contact {
+  __typename
+  phone
+  email
+  hours
+  locations
+  headerNav {
+    __typename
+    label
+    href
+  }
+  footerNav {
+    __typename
+    label
+    href
+  }
+}
+
+fragment HomepageParts on Homepage {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+  about {
+    __typename
+    description1
+    description2
+  }
+  faq {
+    __typename
+    question
+    answer
+  }
+}
+
+fragment PricingParts on Pricing {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+  pricingList {
+    __typename
+    service
+    price
+    note
+  }
+  importantInfo
+}
+
+fragment AboutParts on About {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+  aboutParagraphs
+  quote {
+    __typename
+    text
+    author
+  }
+}
+
+fragment ToolsIndexParts on ToolsIndex {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+}
+
+fragment ServicesIndexParts on ServicesIndex {
+  __typename
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+  faq {
+    __typename
+    question
+    answer
+  }
+}
+
+fragment ServicesParts on Services {
+  __typename
+  title
+  seo {
+    __typename
+    description
+    ogImage
+  }
+  hero {
+    __typename
+    title
+    subtitle
+    description
+    image
+  }
+  features {
+    __typename
+    icon
+    title
+    desc
+  }
+  steps {
+    __typename
+    title
+    desc
+  }
+  faq {
+    __typename
+    question
+    answer
+  }
+  body
+}
+
+fragment PostParts on Post {
+  __typename
+  title
+  publishDate
+  author {
+    ... on Author {
+      __typename
+      name
+      role
+      bio
+      linkedin
+      photo
+    }
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+  }
+  category
+  relatedService {
+    ... on Services {
+      __typename
+      title
+      seo {
+        __typename
+        description
+        ogImage
+      }
+      hero {
+        __typename
+        title
+        subtitle
+        description
+        image
+      }
+      features {
+        __typename
+        icon
+        title
+        desc
+      }
+      steps {
+        __typename
+        title
+        desc
+      }
+      faq {
+        __typename
+        question
+        answer
+      }
+      body
+    }
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+  }
+  description
+  ogImage
+  tags
+  draft
+  body
+}
+
+fragment AuthorParts on Author {
+  __typename
+  name
+  role
+  bio
+  linkedin
+  photo
+}
+
+fragment ToolsInfoParts on ToolsInfo {
+  __typename
+  title
+  desc
+  fraza
+  icon
+  image
+}
+
+fragment LegalpagesParts on Legalpages {
+  __typename
+  title
+  lastUpdated
+  body
+}
