@@ -13,29 +13,30 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: bun install
 
-      - name: Build Astro
+      - name: Build Astro project
         run: bun run build
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
-      - name: Copy built files to VPS
+      - name: Copy files to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_IP }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "dist/,package.json,bun.lock,ecosystem.config.cjs,deploy/"
+          source: "dist/,ecosystem.config.cjs,package.json,bun.lock"
           target: "/var/www/strona-prawnicza"
           strip_components: 0
           overwrite: true
-          rm: false
 
-      - name: Deploy and restart on VPS
+      - name: Install dependencies and restart on VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_IP }}
@@ -46,11 +47,6 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH="$HOME/.bun/bin:$PATH"
             cd /var/www/strona-prawnicza
-            bun install --production
-            # Update nginx config
-            sudo cp deploy/nginx-kancelariaabw.conf /etc/nginx/sites-available/kancelariaabw.conf
-            sudo nginx -t && sudo systemctl reload nginx
-            # Restart Astro server
-            pm2 delete kancelaria-abw 2>/dev/null || true
-            pm2 start ecosystem.config.cjs
+            bun install
+            pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
             pm2 save

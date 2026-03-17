@@ -1,0 +1,344 @@
+import { config, fields, collection, singleton, component } from '@keystatic/core';
+
+// --- WSP├ôLNE SCHEMATY (DRY) ---
+const seoSchema = fields.object({
+    description: fields.text({ label: 'Opis SEO / Meta Description', multiline: true }),
+    ogImage: fields.image({
+        label: 'Zdj─Öcie OpenGraph (Karta dla Facebook/LinkedIn)',
+        directory: 'public/photos',
+        publicPath: '/photos/',
+        description: 'Zalecane wymiary: 1200x630. Rozszerzenie wep, jpg lub png.'
+    })
+}, { label: 'Baza SEO', description: 'Metadane strony dla wyszukiwarek' });
+
+const heroSchema = fields.object({
+    title: fields.text({ label: 'Tytu┼é g┼é├│wny' }),
+    subtitle: fields.text({ label: 'Podtytu┼é (Opcjonalnie)' }),
+    description: fields.text({ label: 'Kr├│tki opis', multiline: true }),
+    image: fields.image({
+        label: 'Zdj─Öcie w tle (opcjonalnie)',
+        directory: 'public/photos',
+        publicPath: '/photos/'
+    })
+}, { label: 'Sekcja wy┼øwietlana u g├│ry strony (Hero)' });
+
+const faqSchema = fields.array(
+    fields.object({
+        question: fields.text({ label: 'Pytanie' }),
+        answer: fields.text({ label: 'Odpowied┼║', multiline: true })
+    }),
+    { label: 'Cz─Östo zadawane pytania (FAQ)', itemLabel: props => props.fields.question.value }
+);
+
+// --- MARKDOC CUSTOM BLOCKS ---
+const customComponents = {
+    lawBox: component({
+        label: 'Ramka Prawna (Cytat z ustawy)',
+        schema: {
+            sygnatura: fields.text({ label: 'Podstawa Prawna (np. Art. 4 Kodeksu cywilnego)' })
+        },
+        preview: (props) => null
+    }),
+    alertBox: component({
+        label: 'Wa┼╝ny Komunikat (Alert)',
+        schema: {
+            title: fields.text({ label: 'Tytu┼é komunikatu', defaultValue: 'Wa┼╝na informacja' }),
+            type: fields.select({
+                label: 'Typ komunikatu',
+                options: [
+                    { label: 'Informacja (Niebieski)', value: 'info' },
+                    { label: 'Ostrze┼╝enie (Czerwony)', value: 'warning' },
+                    { label: 'Sukces (Zielony)', value: 'success' }
+                ],
+                defaultValue: 'info'
+            })
+        },
+        preview: (props) => null
+    }),
+    ctaButton: component({
+        label: 'Przycisk CTA',
+        schema: {
+            text: fields.text({ label: 'Napis w przycisku', defaultValue: 'Dowiedz si─Ö wi─Öcej' }),
+            href: fields.text({ label: 'Link (URL)' }),
+            center: fields.checkbox({ label: 'Wy┼ørodkuj na stronie' })
+        },
+        preview: (props) => null
+    })
+};
+
+export default config({
+    storage: {
+        kind: 'local',
+    },
+    ui: {
+        navigation: {
+            'Globalne Ustawienia': ['contact'],
+            'Strony Statyczne': ['homepage', 'about', 'pricing', 'servicesIndex', 'blogIndex', 'toolsIndex'],
+            'Strony Prawne': ['privacyPolicy', 'termsOfService'],
+            'Baza Tre┼øci': ['services', 'blog', 'toolsInfo', 'authors'],
+            'Zarz─àdzanie Stron─à': ['deployPage']
+        }
+    },
+    singletons: {
+        deployPage: singleton({
+            label: 'Aktualizacja Strony (Deploy)',
+            path: 'src/content/singletons/deployPage',
+            format: { data: 'json' },
+            schema: {
+                instruction: fields.text({
+                    label: 'Instrukcja',
+                    defaultValue: 'Klikni─Öcie poni┼╝szego przycisku spowoduje kompilacj─Ö nowo dodanych tre┼øci i opublikowanie ich na ┼ørodowisku produkcyjnym.',
+                    multiline: true
+                }),
+                deployUrl: fields.url({
+                    label: 'Adres wyzwalacza (Webhook URL)',
+                    defaultValue: '/api/build',
+                    validation: { isRequired: true }
+                })
+            }
+        }),
+        homepage: singleton({
+            label: 'Strona G┼é├│wna (Wizyt├│wka)',
+            path: 'src/content/singletons/homepage',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+                about: fields.object({
+                    description1: fields.text({ label: 'O mnie - Paragraf 1', multiline: true }),
+                    description2: fields.text({ label: 'O mnie - Paragraf 2', multiline: true }),
+                }, { label: 'Sekcja O Mnie' }),
+                faq: faqSchema
+            }
+        }),
+        about: singleton({
+            label: 'O mnie (Podstrona)',
+            path: 'src/content/singletons/about',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+                aboutParagraphs: fields.text({ label: 'Tre┼ø─ç (Akapity opisowe)', description: 'G┼é├│wny tekst ┼╝yciorysu.', multiline: true }),
+                quote: fields.object({
+                    text: fields.text({ label: 'Tre┼ø─ç cytatu', multiline: true }),
+                    author: fields.text({ label: 'Autor cytatu' })
+                }, { label: 'Z┼éoty Cytat' })
+            }
+        }),
+        pricing: singleton({
+            label: 'Cennik (Podstrona)',
+            path: 'src/content/singletons/pricing',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+                pricingList: fields.array(
+                    fields.object({
+                        service: fields.text({ label: 'Nazwa us┼éugi' }),
+                        price: fields.text({ label: 'Cena/Stawka' }),
+                        note: fields.text({ label: 'Dodatkowa uwaga (opcjonalnie)' })
+                    }),
+                    { label: 'Pozycje w cenniku', itemLabel: props => props.fields.service.value }
+                ),
+                importantInfo: fields.array(fields.text({ label: 'Punkt informacyjny' }), { label: 'Wa┼╝ne informacje (Wypunktowanie)', itemLabel: props => props.value })
+            }
+        }),
+        contact: singleton({
+            label: 'Kontakt i Globalne',
+            path: 'src/content/singletons/contact',
+            format: { data: 'json' },
+            schema: {
+                phone: fields.text({ label: 'Numer telefonu' }),
+                email: fields.text({ label: 'Adres e-mail' }),
+                hours: fields.text({ label: 'Godziny pracy' }),
+                locations: fields.text({ label: 'Lokalizacje' }),
+                headerNav: fields.array(fields.object({
+                    label: fields.text({ label: 'Etykieta' }),
+                    href: fields.text({ label: 'Odno┼ønik (URL)' }),
+                }), { label: 'Pasek Nawigacji (Header)', itemLabel: props => props.fields.label.value }),
+                footerNav: fields.array(fields.object({
+                    label: fields.text({ label: 'Etykieta' }),
+                    href: fields.text({ label: 'Odno┼ønik (URL)' }),
+                }), { label: 'Przydatne Linki Prawne (Stopka)', itemLabel: props => props.fields.label.value })
+            }
+        }),
+        servicesIndex: singleton({
+            label: 'Us┼éugi Prawne (Zbiorcza)',
+            path: 'src/content/singletons/servicesIndex',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+                faq: faqSchema
+            }
+        }),
+        blogIndex: singleton({
+            label: 'Blog (Strona zbiorcza)',
+            path: 'src/content/singletons/blogIndex',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+            }
+        }),
+        toolsIndex: singleton({
+            label: 'Narz─Ödzia (Strona zbiorcza)',
+            path: 'src/content/singletons/toolsIndex',
+            format: { data: 'json' },
+            schema: {
+                hero: heroSchema,
+            }
+        }),
+        privacyPolicy: singleton({
+            label: 'Polityka prywatno┼øci',
+            path: 'src/content/legal/privacyPolicy',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.text({ label: 'Tytu┼é g┼é├│wny', defaultValue: 'Polityka prywatno┼øci' }),
+                lastUpdated: fields.text({ label: 'Podtytu┼é (np. data aktualizacji)', defaultValue: 'Ostatnia aktualizacja: marzec 2026' }),
+                content: fields.markdoc({ label: 'Tre┼ø─ç dokumentu', extension: 'mdoc', components: customComponents as any }),
+            }
+        }),
+        termsOfService: singleton({
+            label: 'Regulamin',
+            path: 'src/content/legal/termsOfService',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.text({ label: 'Tytu┼é g┼é├│wny', defaultValue: 'Regulamin' }),
+                lastUpdated: fields.text({ label: 'Podtytu┼é', defaultValue: 'Regulamin ┼øwiadczenia us┼éug drog─à elektroniczn─à...' }),
+                content: fields.markdoc({ label: 'Tre┼ø─ç dokumentu', extension: 'mdoc', components: customComponents as any }),
+            }
+        })
+    },
+    collections: {
+        authors: collection({
+            label: 'Redakcja (Autorzy)',
+            slugField: 'name',
+            path: 'src/content/authors/*',
+            format: { data: 'json' },
+            schema: {
+                name: fields.slug({ name: { label: 'Imi─Ö i Nazwisko' } }),
+                role: fields.text({ label: 'Stanowisko / Tytu┼é (np. Radca Prawny)' }),
+                bio: fields.text({ label: 'Kr├│tki Biogram', multiline: true }),
+                linkedin: fields.url({ label: 'Link do profilu LinkedIn (Opcjonalnie)' }),
+                photo: fields.image({
+                    label: 'Zdj─Öcie profilowe',
+                    directory: 'public/authors',
+                    publicPath: '/authors/'
+                })
+            }
+        }),
+        services: collection({
+            label: 'Us┼éugi Prawne',
+            slugField: 'title',
+            previewUrl: '/uslugi/{slug}',
+            path: 'src/content/uslugi/*',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.slug({ name: { label: 'Nazwa SEO (np. Prawo rodzinne Wroc┼éaw)' } }),
+                seo: seoSchema,
+                hero: heroSchema,
+                features: fields.array(
+                    fields.object({
+                        icon: fields.text({ label: 'Ikona (Emoji)', description: 'Opcjonalna ikona.' }),
+                        title: fields.text({ label: 'Tytu┼é cechy/us┼éugi' }),
+                        desc: fields.text({ label: 'Opis', multiline: true })
+                    }),
+                    { label: 'Cechy / Zakres prac (opcjonalne)', itemLabel: props => props.fields.title.value }
+                ),
+                faq: faqSchema,
+                steps: fields.array(
+                    fields.object({
+                        title: fields.text({ label: 'Tytu┼é kroku' }),
+                        desc: fields.text({ label: 'Opis kroku', multiline: true })
+                    }),
+                    { label: 'Kroki / Etapy dzia┼éania (opcjonalne)', itemLabel: props => props.fields.title.value }
+                ),
+                content: fields.markdoc({
+                    label: 'Rozszerzony Opis Us┼éugi (G┼é├│wna Tre┼ø─ç)',
+                    extension: 'mdoc',
+                    components: customComponents as any
+                }),
+            }
+        }),
+        blog: collection({
+            label: 'Blog (Artyku┼éy Prawnicze)',
+            slugField: 'title',
+            previewUrl: '/blog/{slug}',
+            path: 'src/content/blog/*',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.slug({
+                    name: {
+                        label: 'Tytu┼é artyku┼éu',
+                        description: 'Zalecane s┼éowa kluczowe (H1)',
+                    },
+                }),
+                publishDate: fields.date({
+                    label: 'Data publikacji',
+                }),
+                author: fields.relationship({
+                    label: 'Autor',
+                    collection: 'authors',
+                    validation: { isRequired: true }
+                }),
+                category: fields.select({
+                    label: 'Kategoria',
+                    options: [
+                        { label: 'Prawo rodzinne', value: 'Prawo rodzinne' },
+                        { label: 'Prawo cywilne', value: 'Prawo cywilne' },
+                        { label: 'Prawo karne', value: 'Prawo karne' },
+                        { label: 'Prawo nieruchomo┼øci', value: 'Prawo nieruchomo┼øci' },
+                        { label: 'Prawo upad┼éo┼øciowe', value: 'Prawo upad┼éo┼øciowe' },
+                        { label: 'Odszkodowania', value: 'Odszkodowania' },
+                        { label: 'Prawo gospodarcze', value: 'Prawo gospodarcze' },
+                        { label: 'Porady og├│lne', value: 'Porady og├│lne' },
+                    ],
+                    defaultValue: 'Prawo rodzinne',
+                }),
+                relatedService: fields.relationship({
+                    label: 'Powi─àzana Us┼éuga (Cross-Selling CTA)',
+                    collection: 'services',
+                    description: 'Wybierz stron─Ö z ofert─à, do jakiej d─à┼╝y ten artyku┼é.',
+                }),
+                description: fields.text({
+                    label: 'Kr├│tki opis (SEO Description / do listingu)',
+                    multiline: true,
+                }),
+                ogImage: fields.image({
+                    label: 'Zdj─Öcie artyku┼éu (OpenGraph SEO)',
+                    directory: 'public/photos',
+                    publicPath: '/photos/'
+                }),
+                tags: fields.array(
+                    fields.text({ label: 'Tag' }),
+                    {
+                        label: 'Tagi',
+                        itemLabel: props => props.value
+                    }
+                ),
+                draft: fields.checkbox({
+                    label: 'Szkic (ukryj przed publikacj─à)',
+                    defaultValue: false,
+                }),
+                content: fields.markdoc({
+                    label: 'Tre┼ø─ç artyku┼éu',
+                    extension: 'mdoc',
+                    components: customComponents as any
+                }),
+            },
+        }),
+        toolsInfo: collection({
+            label: 'Karty Kalkulator├│w',
+            slugField: 'title',
+            path: 'src/content/toolsInfo/*',
+            format: { data: 'json' },
+            schema: {
+                title: fields.slug({ name: { label: 'Tytu┼é kalkulatora', description: 'np. "Kalkulator koszt├│w rozwodu"' } }),
+                desc: fields.text({ label: 'Kr├│tki opis', multiline: true }),
+                fraza: fields.text({ label: 'Wyr├│┼╝niony tag / fraza (np. "ile kosztuje rozw├│d")' }),
+                icon: fields.text({ label: 'Kod SVG (ikona, klasa text-gold)', multiline: true }),
+                image: fields.image({
+                    label: 'Grafika reklamowa dla kalkulatora',
+                    directory: 'public/tools',
+                    publicPath: '/tools/'
+                })
+            }
+        })
+    },
+});
