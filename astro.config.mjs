@@ -19,9 +19,8 @@ export default defineConfig({
     security: {
         checkOrigin: false
     },
-    // Astro 5.18: output:'static' = dawny 'hybrid'
-    // Strony statyczne domyślnie, API endpoint z prerender=false działa serwerowo
-    output: 'static',
+    // Astro 5: output:'server' dla pełnego wsparcia SSR wymaganych przez Keystatic.
+    output: 'server',
     adapter: node({ mode: 'standalone' }),
     integrations: [react(), keystatic(), vue(), sitemap(), mdx(), icon(), // MUST be last
     compress(), markdoc()],
@@ -29,7 +28,7 @@ export default defineConfig({
         plugins: [
             tailwindcss(),
             // Wstrzykuje przycisk "← Admin" do interfejsu Keystatic
-            {
+            /*{
                 name: 'inject-admin-button',
                 transformIndexHtml: {
                     order: 'post',
@@ -44,7 +43,7 @@ export default defineConfig({
                         return html;
                     }
                 }
-            }
+            }*/
         ],
     },
     markdown: {
