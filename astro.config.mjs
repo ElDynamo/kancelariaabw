@@ -16,6 +16,9 @@ import markdoc from '@astrojs/markdoc';
 
 export default defineConfig({
     site: 'https://kancelariaabw.pl',
+    security: {
+        checkOrigin: false
+    },
     // Astro 5.18: output:'static' = dawny 'hybrid'
     // Strony statyczne domyślnie, API endpoint z prerender=false działa serwerowo
     output: 'static',
