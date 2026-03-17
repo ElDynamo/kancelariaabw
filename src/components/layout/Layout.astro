@@ -65,6 +65,31 @@ const {
     </main>
     <Footer />
 
+    <!-- Floating Admin Button — widoczny tylko z ciasteczkiem admin=true -->
+    <a
+      id="admin-fab"
+      href="/keystatic"
+      class="hidden fixed bottom-6 right-6 z-50 bg-navy text-white px-5 py-3 rounded-full shadow-lg hover:bg-gold hover:text-navy transition-all duration-300 font-sans text-sm font-semibold tracking-wide items-center gap-2 group"
+      aria-label="Otwórz panel administracyjny"
+    >
+      <span class="text-lg group-hover:rotate-12 transition-transform">✏️</span>
+      <span>Edytuj stronę</span>
+    </a>
+
+    <script>
+      // Pokaż FAB jeśli ciasteczko admin=true lub jesteśmy na localhost (dev)
+      (function() {
+        const fab = document.getElementById('admin-fab');
+        if (!fab) return;
+        const isAdmin = document.cookie.includes('admin=true');
+        const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+        if (isAdmin || isDev) {
+          fab.classList.remove('hidden');
+          fab.classList.add('flex');
+        }
+      })();
+    </script>
+
     <!-- Lightweight Scroll Animations -->
     <script>
       function initScrollAnimations() {
