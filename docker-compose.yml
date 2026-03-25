@@ -14,14 +14,12 @@ services:
       - PORT=4321
       - RESEND_API_KEY=${RESEND_API_KEY}
     volumes:
-      # Persist CMS-edited content across rebuilds and container restarts
-      - content-data:/app/src/content
+      # Bind mount — content directly from git repo on VPS.
+      # git pull updates are immediately visible, CMS edits persist on VPS filesystem.
+      - /var/www/strona-prawnicza/src/content:/app/src/content
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:4321/').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 15s
-
-volumes:
-  content-data:
