@@ -14,16 +14,14 @@ export const POST: APIRoute = async ({ request }) => {
             });
         }
 
-        // Run build + PM2 restart in background
+        // Run build + Docker restart in background
         const projectDir = process.env.PROJECT_DIR || '/var/www/strona-prawnicza';
         const buildCmd = [
             `cd ${projectDir}`,
             // Backup content before rebuild (safety net)
             `cp -r src/content /tmp/content-backup-$(date +%Y%m%d_%H%M%S) 2>/dev/null || true`,
-            // Build
-            `bun run build`,
-            // Restart PM2
-            `pm2 restart kancelaria-abw`
+            // Rebuild and restart Docker container
+            `docker compose up -d --build --force-recreate`
         ].join(' && ');
 
         execAsync(buildCmd).catch(error => {

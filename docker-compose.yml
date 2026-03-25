@@ -1,0 +1,27 @@
+services:
+  kancelaria:
+    build:
+      context: .
+      args:
+        RESEND_API_KEY: ${RESEND_API_KEY}
+    container_name: kancelaria-abw
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4321:4321"
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=4321
+      - RESEND_API_KEY=${RESEND_API_KEY}
+    volumes:
+      # Persist CMS-edited content across rebuilds
+      - content-data:/app/dist/content
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:4321/').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  content-data:

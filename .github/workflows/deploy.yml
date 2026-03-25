@@ -19,10 +19,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            export PATH="$HOME/.bun/bin:$PATH"
-            
             PROJECT_DIR="/var/www/strona-prawnicza"
             
             # First-time setup: clone repo if not a git repo
@@ -36,7 +32,8 @@ jobs:
               
               # Backup client-edited content before pull
               BACKUP_NAME="content-backup-$(date +%Y%m%d_%H%M%S)"
-              cp -r src/content "/tmp/$BACKUP_NAME" 2>/dev/null || true
+              mkdir -p "/tmp/$BACKUP_NAME"
+              cp -a src/content/. "/tmp/$BACKUP_NAME/" 2>/dev/null || true
               echo "Content backed up to /tmp/$BACKUP_NAME"
               
               # Pull latest code
@@ -46,17 +43,27 @@ jobs:
               
               # Restore client content over git version
               if [ -d "/tmp/$BACKUP_NAME" ]; then
-                cp -rf "/tmp/$BACKUP_NAME"/* src/content/
+                cp -a "/tmp/$BACKUP_NAME/." src/content/
                 echo "Client content restored"
               fi
             fi
             
-            # Install and build
-            bun install
-            RESEND_API_KEY=${{ secrets.RESEND_API_KEY }} bun run build
+            # Write .env for Docker Compose
+            echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env
+
+            # Stop old PM2 process if it exists (one-time migration)
+            pm2 stop kancelaria-abw 2>/dev/null || true
+            pm2 delete kancelaria-abw 2>/dev/null || true
             
-            # Restart server
-            pm2 restart kancelaria-abw || pm2 start ecosystem.config.cjs
-            pm2 save
+            # Build and restart with Docker
+            docker compose up -d --build --force-recreate
             
-            echo "Deploy complete!"
+            # Wait and verify
+            sleep 5
+            if docker compose ps | grep -q "running"; then
+              echo "✅ Deploy complete! Container is running."
+            else
+              echo "❌ Container failed to start. Logs:"
+              docker compose logs --tail=30
+              exit 1
+            fi

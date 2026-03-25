@@ -1,0 +1,17 @@
+node_modules
+dist
+.git
+.github
+.scratch
+.vscode
+.astro
+.agents
+*.tar.gz
+*.log
+build_err*.txt
+build_debug.txt
+error.log
+playwright-report
+test-results
+tests
+docs
