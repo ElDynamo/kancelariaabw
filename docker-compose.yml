@@ -14,8 +14,8 @@ services:
       - PORT=4321
       - RESEND_API_KEY=${RESEND_API_KEY}
     volumes:
-      # Persist CMS-edited content across rebuilds
-      - content-data:/app/dist/content
+      # Persist CMS-edited content across rebuilds and container restarts
+      - content-data:/app/src/content
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:4321/').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
       interval: 30s
