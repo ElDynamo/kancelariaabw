@@ -1,0 +1,34 @@
+---
+import Button from '@components/ui/Button.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+}
+
+const {
+  title,
+  description,
+  ctaText = 'Umów konsultację',
+  ctaHref = '/kontakt',
+  secondaryText,
+  secondaryHref,
+} = Astro.props;
+---
+
+<div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
+  <h2 class="font-serif text-2xl text-white mb-3">{title}</h2>
+  <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">
+    {description}
+  </p>
+  <div class="flex flex-wrap gap-3 justify-center">
+    <Button href={ctaHref} variant="gold">{ctaText}</Button>
+    {secondaryText && secondaryHref && (
+      <Button href={secondaryHref} variant="outline-white">{secondaryText}</Button>
+    )}
+  </div>
+</div>

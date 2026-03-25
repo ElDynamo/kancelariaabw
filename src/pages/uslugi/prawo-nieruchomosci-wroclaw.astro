@@ -1,6 +1,9 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Layout from '@components/layout/Layout.astro';
+import ServiceHero from '@components/ui/ServiceHero.astro';
+import FAQAccordion from '@components/ui/FAQAccordion.astro';
+import Button from '@components/ui/Button.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
 
 const serviceEntry = await getEntry('uslugi', 'prawo-nieruchomosci-wroclaw');
@@ -14,7 +17,7 @@ const serviceSchema = {
   "url": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw",
   "telephone": "+48609366160",
   "description": data?.seoDescription || "Obsługa prawna w sprawach nieruchomości we Wrocławiu",
-  "areaServed": ["Wrocław", "Bielany Wrocławskie"]
+  "areaServed": ["Wrocław", "Dolny Śląsk"]
 };
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
@@ -40,45 +43,15 @@ const breadcrumb = {
     <StructuredData schema={breadcrumb} />
   </Fragment>
 
-  <section class="section bg-navy text-white overflow-hidden">
-    <div class="container-site grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div class="reveal">
-        <nav aria-label="Breadcrumb" class="mb-8">
-          <ol class="flex items-center gap-2 font-sans text-sm text-white opacity-50">
-            <li><a href="/" class="hover:text-white">Strona główna</a></li>
-            <li aria-hidden="true">›</li>
-            <li><a href="/uslugi" class="hover:text-white">Usługi</a></li>
-            <li aria-hidden="true">›</li>
-            <li aria-current="page" class="text-white opacity-80">{data?.heroTitle}</li>
-          </ol>
-        </nav>
-        <div class="flex items-center gap-2 mb-4">
-          <span class="h-px w-8 bg-gold"></span>
-          <span class="font-sans text-xs uppercase tracking-widest text-gold">Nieruchomości</span>
-        </div>
-        <h1 class="font-serif text-4xl md:text-5xl lg:text-5xl text-white mb-6 leading-tight">
-          {data?.heroTitle}<br /><span class="text-gold">{data?.heroSubtitle}</span>
-        </h1>
-        <p class="font-sans text-white opacity-80 text-lg max-w-xl mb-8">
-          {data?.heroDescription}
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
-            Umów konsultację
-          </a>
-          <a href="tel:+48609366160" class="font-sans text-white border border-white/30 rounded-lg px-6 py-3.5 hover:bg-white/10 transition-colors">609 366 160</a>
-        </div>
-      </div>
-      <div class="relative reveal delay-200 hidden lg:block">
-        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative border border-white/10">
-          <img src="/photos/hero_nieruchomosci_1772972108703.png" alt="Prawo nieruchomości radca prawny" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" />
-          <div class="absolute inset-0 bg-navy/20 mix-blend-multiply"></div>
-        </div>
-        <div class="absolute -bottom-6 -left-6 w-32 h-32 border border-gold/30 rounded-full -z-10"></div>
-        <div class="absolute -top-6 -right-6 w-24 h-24 border border-gold/30 rounded-full -z-10"></div>
-      </div>
-    </div>
-  </section>
+  <ServiceHero
+    title={data?.heroTitle}
+    subtitle={data?.heroSubtitle}
+    description={data?.heroDescription}
+    label="Nieruchomości"
+    ctaText="Umów konsultację"
+    image="/photos/hero_nieruchomosci_1772972108703.png"
+    imageAlt="Prawo nieruchomości radca prawny"
+  />
 
   <section class="section bg-white">
     <div class="container-site max-w-5xl">
@@ -90,9 +63,7 @@ const breadcrumb = {
           <div class="bg-navy rounded-2xl p-6 sticky top-6">
             <p class="font-sans text-xs text-white opacity-60 uppercase tracking-widest mb-3">Nieruchomości</p>
             <p class="font-serif text-xl text-white mb-4">Lokator nie płaci lub nie wychodzi?</p>
-            <a href="/kontakt" class="block text-center py-3 px-5 rounded-lg font-semibold text-sm" style="background:#c9a84c; color:#0f2540;">
-              Umów pilną konsultację →
-            </a>
+            <Button href="/kontakt" variant="gold" class="w-full justify-center">Umów pilną konsultację →</Button>
             <div class="mt-4 pt-4 border-t border-white/10">
               <p class="font-sans text-xs text-white opacity-50 mb-2">Przydatne narzędzia</p>
               <a href="/narzedzia/przedawnienie-roszczen" class="font-sans text-sm text-white opacity-70 hover:text-white block py-1">→ Kalkulator przedawnienia</a>
@@ -104,29 +75,13 @@ const breadcrumb = {
     </div>
   </section>
 
-  <section class="section bg-off-white">
-    <div class="container-site max-w-3xl">
-      <h2 class="font-serif text-3xl text-navy mb-8">Pytania o prawo nieruchomości</h2>
-      <div class="space-y-4">
-        {data?.faq && data.faq.map(f => (
-          <details class="bg-white rounded-xl border border-border p-5">
-            <summary class="font-sans font-semibold text-navy cursor-pointer list-none flex justify-between items-center">
-              {f.question}<span class="text-gold text-lg ml-4">+</span>
-            </summary>
-            <p class="font-sans text-text-muted text-sm mt-3 leading-relaxed">{f.answer}</p>
-          </details>
-        ))}
-      </div>
-    </div>
-  </section>
+  <FAQAccordion items={data?.faq || []} title="Pytania o prawo nieruchomości" />
 
   <section class="section bg-navy">
     <div class="container-site max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Problem z nieruchomością?</h2>
       <p class="font-sans text-white opacity-70 mb-8 max-w-lg mx-auto">Skontaktuj się z nami — szybko ocenimy sytuację prawną i zaproponujemy najlepsze wyjście.</p>
-      <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
-        Umów konsultację
-      </a>
+      <Button href="/kontakt" variant="gold" size="lg">Umów konsultację</Button>
     </div>
   </section>
 </Layout>

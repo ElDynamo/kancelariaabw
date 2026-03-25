@@ -1,0 +1,583 @@
+deploy	Set up job	﻿2026-03-25T19:44:40.0897635Z Current runner version: '2.332.0'
+deploy	Set up job	2026-03-25T19:44:40.0923594Z ##[group]Runner Image Provisioner
+deploy	Set up job	2026-03-25T19:44:40.0924819Z Hosted Compute Agent
+deploy	Set up job	2026-03-25T19:44:40.0925558Z Version: 20260213.493
+deploy	Set up job	2026-03-25T19:44:40.0926265Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+deploy	Set up job	2026-03-25T19:44:40.0927187Z Build Date: 2026-02-13T00:28:41Z
+deploy	Set up job	2026-03-25T19:44:40.0927952Z Worker ID: {3700b310-5085-4647-83a9-cbd1db4675fc}
+deploy	Set up job	2026-03-25T19:44:40.0928791Z Azure Region: westus
+deploy	Set up job	2026-03-25T19:44:40.0929447Z ##[endgroup]
+deploy	Set up job	2026-03-25T19:44:40.0931043Z ##[group]Operating System
+deploy	Set up job	2026-03-25T19:44:40.0931759Z Ubuntu
+deploy	Set up job	2026-03-25T19:44:40.0932323Z 24.04.3
+deploy	Set up job	2026-03-25T19:44:40.0933000Z LTS
+deploy	Set up job	2026-03-25T19:44:40.0933553Z ##[endgroup]
+deploy	Set up job	2026-03-25T19:44:40.0934495Z ##[group]Runner Image
+deploy	Set up job	2026-03-25T19:44:40.0935444Z Image: ***-24.04
+deploy	Set up job	2026-03-25T19:44:40.0936048Z Version: 20260309.50.1
+deploy	Set up job	2026-03-25T19:44:40.0937398Z Included Software: https://github.com/actions/runner-images/blob/***24/20260309.50/images/***/Ubuntu2404-Readme.md
+deploy	Set up job	2026-03-25T19:44:40.0939397Z Image Release: https://github.com/actions/runner-images/releases/tag/***24%2F20260309.50
+deploy	Set up job	2026-03-25T19:44:40.0940481Z ##[endgroup]
+deploy	Set up job	2026-03-25T19:44:40.0941909Z ##[group]GITHUB_TOKEN Permissions
+deploy	Set up job	2026-03-25T19:44:40.0943818Z Contents: read
+deploy	Set up job	2026-03-25T19:44:40.0944802Z Metadata: read
+deploy	Set up job	2026-03-25T19:44:40.0945408Z Packages: read
+deploy	Set up job	2026-03-25T19:44:40.0946366Z ##[endgroup]
+deploy	Set up job	2026-03-25T19:44:40.0948713Z Secret source: Actions
+deploy	Set up job	2026-03-25T19:44:40.0949628Z Prepare workflow directory
+deploy	Set up job	2026-03-25T19:44:40.1272744Z Prepare all required actions
+deploy	Set up job	2026-03-25T19:44:40.1310573Z Getting action download info
+deploy	Set up job	2026-03-25T19:44:40.6145615Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+deploy	Set up job	2026-03-25T19:44:40.7688155Z Download action repository 'appleboy/ssh-action@v1.0.3' (SHA:029f5b4aeeeb58fdfe1410a5d17f967dacf36262)
+deploy	Set up job	2026-03-25T19:44:41.3676061Z Complete job name: deploy
+deploy	Build appleboy/ssh-action@v1.0.3	﻿2026-03-25T19:44:41.4165825Z ##[group]Build container for action use: '/home/runner/work/_actions/appleboy/ssh-action/v1.0.3/Dockerfile'.
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:41.4223792Z ##[command]/usr/bin/docker build -t e6e493:dc3415d96619447d8b103f95704a4807 -f "/home/runner/work/_actions/appleboy/ssh-action/v1.0.3/Dockerfile" "/home/runner/work/_actions/appleboy/ssh-action/v1.0.3"
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0911158Z #0 building with "default" instance using docker driver
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0912822Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0913676Z #1 [internal] load build definition from Dockerfile
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0916139Z #1 transferring dockerfile: 149B done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0917893Z #1 DONE 0.0s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0918669Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:42.0919422Z #2 [internal] load metadata for ghcr.io/appleboy/drone-ssh:1.7.3
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.2785365Z #2 DONE 1.3s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4404945Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4405746Z #3 [internal] load .dockerignore
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4406732Z #3 transferring context: 2B done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4407297Z #3 DONE 0.0s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4407724Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4407939Z #4 [internal] load build context
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4408533Z #4 transferring context: 108B done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4409112Z #4 DONE 0.0s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4409381Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4410148Z #5 [1/2] FROM ghcr.io/appleboy/drone-ssh:1.7.3@sha256:179cbd253771007f2ebcaf7a3860afe059207351de1f3378efafac93bd310158
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4412005Z #5 resolve ghcr.io/appleboy/drone-ssh:1.7.3@sha256:179cbd253771007f2ebcaf7a3860afe059207351de1f3378efafac93bd310158 done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4413630Z #5 sha256:179cbd253771007f2ebcaf7a3860afe059207351de1f3378efafac93bd310158 2.38kB / 2.38kB done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4415174Z #5 sha256:1a52f94820e830bc9734623deb03bbafa6a248fba19cdc2e5605c70d90d91441 1.24kB / 1.24kB done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4416351Z #5 sha256:c4781b8d012b16b6c7468dc9104fad0a63f2a8815b2af8b7176bb544253ea8c7 3.86kB / 3.86kB done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4417553Z #5 sha256:1207c741d8c9b028d98c4006013f9de959da3c55f85b91ed5e4583438a0112ca 0B / 3.38MB 0.1s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4418691Z #5 sha256:654aaee5654be60f81172539ecd74485cf8bbe2e9137bab0d429862c31c676f6 0B / 284.83kB 0.1s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.4420282Z #5 sha256:7e20f48a19643465f486f59127b8f4e0f4114bedc8bd5260fb4f92d5fda95f1c 0B / 1.20kB 0.1s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.5879266Z #5 sha256:1207c741d8c9b028d98c4006013f9de959da3c55f85b91ed5e4583438a0112ca 3.38MB / 3.38MB 0.1s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.5885629Z #5 sha256:7e20f48a19643465f486f59127b8f4e0f4114bedc8bd5260fb4f92d5fda95f1c 1.20kB / 1.20kB 0.2s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.5887133Z #5 extracting sha256:1207c741d8c9b028d98c4006013f9de959da3c55f85b91ed5e4583438a0112ca 0.1s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.5888473Z #5 sha256:066e5b821e26d8313055e0314c056e6c297847bcf963e5df10e7aa03107f2246 0B / 125B 0.2s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.7400625Z #5 sha256:654aaee5654be60f81172539ecd74485cf8bbe2e9137bab0d429862c31c676f6 284.83kB / 284.83kB 0.4s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:43.7403310Z #5 sha256:066e5b821e26d8313055e0314c056e6c297847bcf963e5df10e7aa03107f2246 125B / 125B 0.4s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.1869493Z #5 extracting sha256:654aaee5654be60f81172539ecd74485cf8bbe2e9137bab0d429862c31c676f6
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.3432845Z #5 sha256:654aaee5654be60f81172539ecd74485cf8bbe2e9137bab0d429862c31c676f6 284.83kB / 284.83kB 0.8s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.3434510Z #5 sha256:7e20f48a19643465f486f59127b8f4e0f4114bedc8bd5260fb4f92d5fda95f1c 1.20kB / 1.20kB 0.8s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.3435848Z #5 sha256:066e5b821e26d8313055e0314c056e6c297847bcf963e5df10e7aa03107f2246 125B / 125B 0.8s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.3437064Z #5 extracting sha256:654aaee5654be60f81172539ecd74485cf8bbe2e9137bab0d429862c31c676f6 0.0s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.3438331Z #5 sha256:47353a6f9201a145b687290e5ae0278ac269faf4bb61bee3e9246c37a8d74277 0B / 2.44MB 1.0s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.5402114Z #5 sha256:47353a6f9201a145b687290e5ae0278ac269faf4bb61bee3e9246c37a8d74277 2.44MB / 2.44MB 1.2s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:44.9906125Z #5 sha256:47353a6f9201a145b687290e5ae0278ac269faf4bb61bee3e9246c37a8d74277 2.44MB / 2.44MB 1.4s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.0338025Z #5 extracting sha256:7e20f48a19643465f486f59127b8f4e0f4114bedc8bd5260fb4f92d5fda95f1c
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1345458Z #5 extracting sha256:7e20f48a19643465f486f59127b8f4e0f4114bedc8bd5260fb4f92d5fda95f1c done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1347238Z #5 extracting sha256:066e5b821e26d8313055e0314c056e6c297847bcf963e5df10e7aa03107f2246 done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1349298Z #5 extracting sha256:47353a6f9201a145b687290e5ae0278ac269faf4bb61bee3e9246c37a8d74277 0.0s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1350753Z #5 DONE 1.8s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1351167Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1351526Z #6 [2/2] COPY entrypoint.sh /bin/entrypoint.sh
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1352401Z #6 DONE 0.0s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1352751Z 
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1353034Z #7 exporting to image
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:45.1353699Z #7 exporting layers
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:46.0058270Z #7 exporting layers 0.9s done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:46.0269356Z #7 writing image sha256:e5b33d088ca0a6816e035a8a621453545bbd7e972d5b5961df1eaca4c570d539 done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:46.0271050Z #7 naming to docker.io/library/e6e493:dc3415d96619447d8b103f95704a4807 done
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:46.0272305Z #7 DONE 0.9s
+deploy	Build appleboy/ssh-action@v1.0.3	2026-03-25T19:44:46.0353976Z ##[endgroup]
+deploy	Checkout Code	﻿2026-03-25T19:44:46.0657850Z ##[group]Run actions/checkout@v4
+deploy	Checkout Code	2026-03-25T19:44:46.0658542Z with:
+deploy	Checkout Code	2026-03-25T19:44:46.0658821Z   repository: ElDynamo/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:46.0659523Z   token: ***
+deploy	Checkout Code	2026-03-25T19:44:46.0659776Z   ssh-strict: true
+deploy	Checkout Code	2026-03-25T19:44:46.0660020Z   ssh-user: git
+deploy	Checkout Code	2026-03-25T19:44:46.0660275Z   persist-credentials: true
+deploy	Checkout Code	2026-03-25T19:44:46.0660553Z   clean: true
+deploy	Checkout Code	2026-03-25T19:44:46.0660805Z   sparse-checkout-cone-mode: true
+deploy	Checkout Code	2026-03-25T19:44:46.0661147Z   fetch-depth: 1
+deploy	Checkout Code	2026-03-25T19:44:46.0661391Z   fetch-tags: false
+deploy	Checkout Code	2026-03-25T19:44:46.0661638Z   show-progress: true
+deploy	Checkout Code	2026-03-25T19:44:46.0661896Z   lfs: false
+deploy	Checkout Code	2026-03-25T19:44:46.0662154Z   submodules: false
+deploy	Checkout Code	2026-03-25T19:44:46.0662421Z   set-safe-directory: true
+deploy	Checkout Code	2026-03-25T19:44:46.0662939Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:46.1832874Z Syncing repository: ElDynamo/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:46.1835631Z ##[group]Getting Git version info
+deploy	Checkout Code	2026-03-25T19:44:46.1836437Z Working directory is '/home/runner/work/kancelariaabw/kancelariaabw'
+deploy	Checkout Code	2026-03-25T19:44:46.1838077Z [command]/usr/bin/git version
+deploy	Checkout Code	2026-03-25T19:44:46.1838612Z git version 2.53.0
+deploy	Checkout Code	2026-03-25T19:44:46.1862467Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:46.1886871Z Temporarily overriding HOME='/home/runner/work/_temp/b63a2b8f-c0e1-4b85-9f65-d771994db59c' before making global git config changes
+deploy	Checkout Code	2026-03-25T19:44:46.1888440Z Adding repository directory to the temporary git global config as a safe directory
+deploy	Checkout Code	2026-03-25T19:44:46.1893491Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kancelariaabw/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:46.1931626Z Deleting the contents of '/home/runner/work/kancelariaabw/kancelariaabw'
+deploy	Checkout Code	2026-03-25T19:44:46.1935508Z ##[group]Initializing the repository
+deploy	Checkout Code	2026-03-25T19:44:46.1940283Z [command]/usr/bin/git init /home/runner/work/kancelariaabw/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:46.2048733Z hint: Using 'master' as the name for the initial branch. This default branch name
+deploy	Checkout Code	2026-03-25T19:44:46.2050116Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+deploy	Checkout Code	2026-03-25T19:44:46.2050929Z hint: to use in all of your new repositories, which will suppress this warning,
+deploy	Checkout Code	2026-03-25T19:44:46.2051525Z hint: call:
+deploy	Checkout Code	2026-03-25T19:44:46.2051916Z hint:
+deploy	Checkout Code	2026-03-25T19:44:46.2052354Z hint: 	git config --global init.defaultBranch <name>
+deploy	Checkout Code	2026-03-25T19:44:46.2052833Z hint:
+deploy	Checkout Code	2026-03-25T19:44:46.2053284Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+deploy	Checkout Code	2026-03-25T19:44:46.2054047Z hint: 'development'. The just-created branch can be renamed via this command:
+deploy	Checkout Code	2026-03-25T19:44:46.2055054Z hint:
+deploy	Checkout Code	2026-03-25T19:44:46.2055360Z hint: 	git branch -m <name>
+deploy	Checkout Code	2026-03-25T19:44:46.2055704Z hint:
+deploy	Checkout Code	2026-03-25T19:44:46.2056184Z hint: Disable this message with "git config set advice.defaultBranchName false"
+deploy	Checkout Code	2026-03-25T19:44:46.2058673Z Initialized empty Git repository in /home/runner/work/kancelariaabw/kancelariaabw/.git/
+deploy	Checkout Code	2026-03-25T19:44:46.2071169Z [command]/usr/bin/git remote add origin https://github.com/ElDynamo/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:46.2106684Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:46.2107653Z ##[group]Disabling automatic garbage collection
+deploy	Checkout Code	2026-03-25T19:44:46.2111726Z [command]/usr/bin/git config --local gc.auto 0
+deploy	Checkout Code	2026-03-25T19:44:46.2141934Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:46.2142751Z ##[group]Setting up auth
+deploy	Checkout Code	2026-03-25T19:44:46.2149836Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy	Checkout Code	2026-03-25T19:44:46.2182661Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy	Checkout Code	2026-03-25T19:44:46.2547282Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy	Checkout Code	2026-03-25T19:44:46.2579783Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy	Checkout Code	2026-03-25T19:44:46.2821670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy	Checkout Code	2026-03-25T19:44:46.2857615Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy	Checkout Code	2026-03-25T19:44:46.3101057Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+deploy	Checkout Code	2026-03-25T19:44:46.3138368Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:46.3139224Z ##[group]Fetching the repository
+deploy	Checkout Code	2026-03-25T19:44:46.3147621Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +37a68fa84256d9573c8e260248acffdec5739588:refs/remotes/origin/master
+deploy	Checkout Code	2026-03-25T19:44:47.3132735Z From https://github.com/ElDynamo/kancelariaabw
+deploy	Checkout Code	2026-03-25T19:44:47.3134425Z  * [new ref]         37a68fa84256d9573c8e260248acffdec5739588 -> origin/master
+deploy	Checkout Code	2026-03-25T19:44:47.3170510Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:47.3171465Z ##[group]Determining the checkout info
+deploy	Checkout Code	2026-03-25T19:44:47.3173479Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:47.3179255Z [command]/usr/bin/git sparse-checkout disable
+deploy	Checkout Code	2026-03-25T19:44:47.3222938Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+deploy	Checkout Code	2026-03-25T19:44:47.3250825Z ##[group]Checking out the ref
+deploy	Checkout Code	2026-03-25T19:44:47.3255041Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+deploy	Checkout Code	2026-03-25T19:44:47.3834638Z Reset branch 'master'
+deploy	Checkout Code	2026-03-25T19:44:47.3835414Z branch 'master' set up to track 'origin/master'.
+deploy	Checkout Code	2026-03-25T19:44:47.3853323Z ##[endgroup]
+deploy	Checkout Code	2026-03-25T19:44:47.3895900Z [command]/usr/bin/git log -1 --format=%H
+deploy	Checkout Code	2026-03-25T19:44:47.3920544Z 37a68fa84256d9573c8e260248acffdec5739588
+deploy	Deploy and build on VPS	﻿2026-03-25T19:44:47.4258305Z ##[group]Run appleboy/ssh-action@v1.0.3
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4258668Z with:
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4259022Z   host: ***
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4259234Z   username: ***
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4261075Z   key: ***
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4265722Z   script: PROJECT_DIR="/var/www/strona-prawnicza"
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	# First-time setup: clone repo if not a git repo
+deploy	Deploy and build on VPS	if [ ! -d "$PROJECT_DIR/.git" ]; then
+deploy	Deploy and build on VPS	  echo "Initial clone..."
+deploy	Deploy and build on VPS	  rm -rf "$PROJECT_DIR"
+deploy	Deploy and build on VPS	  git clone https://github.com/ElDynamo/kancelariaabw.git "$PROJECT_DIR"
+deploy	Deploy and build on VPS	  cd "$PROJECT_DIR"
+deploy	Deploy and build on VPS	else
+deploy	Deploy and build on VPS	  cd "$PROJECT_DIR"
+deploy	Deploy and build on VPS	  
+deploy	Deploy and build on VPS	  # Backup client-edited content before pull
+deploy	Deploy and build on VPS	  BACKUP_NAME="content-backup-$(date +%Y%m%d_%H%M%S)"
+deploy	Deploy and build on VPS	  mkdir -p "/tmp/$BACKUP_NAME"
+deploy	Deploy and build on VPS	  cp -a src/content/. "/tmp/$BACKUP_NAME/" 2>/dev/null || true
+deploy	Deploy and build on VPS	  echo "Content backed up to /tmp/$BACKUP_NAME"
+deploy	Deploy and build on VPS	  
+deploy	Deploy and build on VPS	  # Pull latest code
+deploy	Deploy and build on VPS	  git fetch origin master
+deploy	Deploy and build on VPS	  git checkout master
+deploy	Deploy and build on VPS	  git reset --hard origin/master
+deploy	Deploy and build on VPS	  
+deploy	Deploy and build on VPS	  # Restore client content over git version
+deploy	Deploy and build on VPS	  if [ -d "/tmp/$BACKUP_NAME" ]; then
+deploy	Deploy and build on VPS	    cp -a "/tmp/$BACKUP_NAME/." src/content/
+deploy	Deploy and build on VPS	    echo "Client content restored"
+deploy	Deploy and build on VPS	  fi
+deploy	Deploy and build on VPS	fi
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	# Write .env for Docker Compose
+deploy	Deploy and build on VPS	echo "RESEND_API_KEY=" > .env
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	# Stop old PM2 process if it exists (one-time migration)
+deploy	Deploy and build on VPS	pm2 stop kancelaria-abw 2>/dev/null || true
+deploy	Deploy and build on VPS	pm2 delete kancelaria-abw 2>/dev/null || true
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	# Build and restart with Docker
+deploy	Deploy and build on VPS	docker compose up -d --build --force-recreate
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	# Wait and verify
+deploy	Deploy and build on VPS	sleep 5
+deploy	Deploy and build on VPS	if docker compose ps | grep -q "running"; then
+deploy	Deploy and build on VPS	  echo "✅ Deploy complete! Container is running."
+deploy	Deploy and build on VPS	else
+deploy	Deploy and build on VPS	  echo "❌ Container failed to start. Logs:"
+deploy	Deploy and build on VPS	  docker compose logs --tail=30
+deploy	Deploy and build on VPS	  exit 1
+deploy	Deploy and build on VPS	fi
+deploy	Deploy and build on VPS	
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4270425Z   port: 22
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4270620Z   timeout: 30s
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4270822Z   command_timeout: 10m
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4271041Z   proxy_port: 22
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4271256Z   proxy_timeout: 30s
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4271476Z ##[endgroup]
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.4379387Z ##[command]/usr/bin/docker run --name e6e493dc3415d96619447d8b103f95704a4807_0ee377 --label e6e493 --workdir /github/workspace --rm -e "INPUT_HOST" -e "INPUT_USERNAME" -e "INPUT_KEY" -e "INPUT_SCRIPT" -e "INPUT_PORT" -e "INPUT_PASSPHRASE" -e "INPUT_PASSWORD" -e "INPUT_SYNC" -e "INPUT_USE_INSECURE_CIPHER" -e "INPUT_CIPHER" -e "INPUT_TIMEOUT" -e "INPUT_COMMAND_TIMEOUT" -e "INPUT_KEY_PATH" -e "INPUT_FINGERPRINT" -e "INPUT_PROXY_HOST" -e "INPUT_PROXY_PORT" -e "INPUT_PROXY_USERNAME" -e "INPUT_PROXY_PASSWORD" -e "INPUT_PROXY_PASSPHRASE" -e "INPUT_PROXY_TIMEOUT" -e "INPUT_PROXY_KEY" -e "INPUT_PROXY_KEY_PATH" -e "INPUT_PROXY_FINGERPRINT" -e "INPUT_PROXY_CIPHER" -e "INPUT_PROXY_USE_INSECURE_CIPHER" -e "INPUT_SCRIPT_STOP" -e "INPUT_ENVS" -e "INPUT_ENVS_FORMAT" -e "INPUT_DEBUG" -e "INPUT_ALLENVS" -e "INPUT_REQUEST_PTY" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/kancelariaabw/kancelariaabw":"/github/workspace" e6e493:dc3415d96619447d8b103f95704a4807
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6668833Z ======CMD======
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6670405Z PROJECT_DIR="/var/www/strona-prawnicza"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6670998Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6672870Z # First-time setup: clone repo if not a git repo
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6673734Z if [ ! -d "$PROJECT_DIR/.git" ]; then
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6676027Z   echo "Initial clone..."
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6676536Z   rm -rf "$PROJECT_DIR"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6677297Z   git clone https://github.com/ElDynamo/kancelariaabw.git "$PROJECT_DIR"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6678083Z   cd "$PROJECT_DIR"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6678492Z else
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6678847Z   cd "$PROJECT_DIR"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6679244Z   
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6679650Z   # Backup client-edited content before pull
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6680341Z   BACKUP_NAME="content-backup-$(date +%Y%m%d_%H%M%S)"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6680959Z   mkdir -p "/tmp/$BACKUP_NAME"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6681574Z   cp -a src/content/. "/tmp/$BACKUP_NAME/" 2>/dev/null || true
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6682204Z   echo "Content backed up to /tmp/$BACKUP_NAME"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6682722Z   
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6683102Z   # Pull latest code
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6683513Z   git fetch origin master
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6684002Z   git checkout master
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6684658Z   git reset --hard origin/master
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6685087Z   
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6685437Z   # Restore client content over git version
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6686001Z   if [ -d "/tmp/$BACKUP_NAME" ]; then
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6686556Z     cp -a "/tmp/$BACKUP_NAME/." src/content/
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6687104Z     echo "Client content restored"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6687563Z   fi
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6687877Z fi
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6688058Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6688248Z # Write .env for Docker Compose
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6688731Z echo "RESEND_API_KEY=" > .env
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6689037Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6689287Z # Stop old PM2 process if it exists (one-time migration)
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6689921Z pm2 stop kancelaria-abw 2>/dev/null || true
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6690516Z pm2 delete kancelaria-abw 2>/dev/null || true
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6690908Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6691100Z # Build and restart with Docker
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6691651Z docker compose up -d --build --force-recreate
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6692058Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6692232Z # Wait and verify
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6692611Z sleep 5
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6693030Z if docker compose ps | grep -q "running"; then
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6693945Z   echo "✅ Deploy complete! Container is running."
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6694704Z else
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6695203Z   echo "❌ Container failed to start. Logs:"
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6695757Z   docker compose logs --tail=30
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6696211Z   exit 1
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6696539Z fi
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6696727Z 
+deploy	Deploy and build on VPS	2026-03-25T19:44:47.6696875Z ======END======
+deploy	Deploy and build on VPS	2026-03-25T19:44:49.7606117Z out: Content backed up to /tmp/content-backup-20260325_194449
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.2902564Z err: From https://github.com/ElDynamo/kancelariaabw
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.2903745Z err:  * branch            master     -> FETCH_HEAD
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.3097474Z err:    4fc1718..37a68fa  master     -> origin/master
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5203538Z err: Already on 'master'
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5207836Z out: M	ecosystem.config.cjs
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5209002Z out: M	nginx-kancelariaabw.conf
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5210625Z out: M	package.json
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5211337Z out: M	public/favicon.svg
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5211909Z out: M	public/robots.txt
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5212739Z out: Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5213748Z out:   (use "git pull" to update your local branch)
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5397406Z out: HEAD is now at 37a68fa feat(deploy): dockerize Astro SSR — replace PM2 with Docker Compose
+deploy	Deploy and build on VPS	2026-03-25T19:44:50.5455497Z out: Client content restored
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.0139966Z err:  Image strona-prawnicza-kancelaria Building 
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.0914543Z out: #1 [internal] load local bake definitions
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.1982423Z out: #1 reading from stdin 590B done
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.1983074Z out: #1 DONE 0.0s
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.1983692Z out: #2 [internal] load build definition from Dockerfile
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.1984605Z out: #2 transferring dockerfile:
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.3839576Z out: #2 transferring dockerfile: 671B done
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.3840422Z out: #2 DONE 0.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:51.3841232Z out: #3 [internal] load metadata for docker.io/library/node:22-slim
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.5077815Z out: #3 ...
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.5078595Z out: #4 [internal] load metadata for docker.io/oven/bun:1
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.5079459Z out: #4 DONE 1.3s
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.6465549Z out: #3 [internal] load metadata for docker.io/library/node:22-slim
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.6466258Z out: #3 DONE 1.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.6466632Z out: #5 [internal] load .dockerignore
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.6467199Z out: #5 transferring context:
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7465461Z out: #5 transferring context: 203B done
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7466507Z out: #5 DONE 0.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7467733Z out: #6 [runtime 1/5] FROM docker.io/library/node:22-slim@sha256:80fdb3f57c815e1b638d221f30a826823467c4a56c8f6a8d7aa091cd9b1675ea
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7469365Z out: #6 resolve docker.io/library/node:22-slim@sha256:80fdb3f57c815e1b638d221f30a826823467c4a56c8f6a8d7aa091cd9b1675ea 0.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7470440Z out: #6 DONE 0.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7471303Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:44:52.7472754Z out: #7 resolve docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7 0.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.0092645Z out: #7 ...
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.0093170Z out: #8 [internal] load build context
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.0093759Z out: #8 transferring context: 12.10MB 0.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.0094518Z out: #8 DONE 0.3s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.1597588Z out: #6 [runtime 1/5] FROM docker.io/library/node:22-slim@sha256:80fdb3f57c815e1b638d221f30a826823467c4a56c8f6a8d7aa091cd9b1675ea
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.2424660Z out: #6 DONE 0.6s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.2426051Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.3556939Z out: #7 DONE 0.7s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.3558461Z out: #6 [runtime 1/5] FROM docker.io/library/node:22-slim@sha256:80fdb3f57c815e1b638d221f30a826823467c4a56c8f6a8d7aa091cd9b1675ea
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.4637296Z out: #6 sha256:93f73fef6895aa5cfc0d4c21d29ab9f1a469fe36be478b68965c9a219cbcad96 0B / 1.71MB 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.4638911Z out: #6 sha256:71ff01535b69cedc0a8573f143aa48be03c4d32a5070b443596441eef19fbe6d 0B / 447B 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.4640452Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 0B / 49.84MB 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.5877262Z out: #6 sha256:7723618b139f747dbb585f9a357b6f4bad37e18969badd36995d7295695d11dd 0B / 3.31kB 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.6977926Z out: #6 sha256:93f73fef6895aa5cfc0d4c21d29ab9f1a469fe36be478b68965c9a219cbcad96 1.71MB / 1.71MB 0.3s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.6979978Z out: #6 sha256:71ff01535b69cedc0a8573f143aa48be03c4d32a5070b443596441eef19fbe6d 447B / 447B 0.4s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.8316622Z out: #6 sha256:7723618b139f747dbb585f9a357b6f4bad37e18969badd36995d7295695d11dd 3.31kB / 3.31kB 0.5s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.8318613Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 0B / 28.24MB 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:44:53.9403967Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 5.24MB / 49.84MB 0.6s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.0635735Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 8.39MB / 49.84MB 0.8s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.2144503Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 11.53MB / 49.84MB 0.9s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.2145983Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 3.15MB / 28.24MB 0.5s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.3639780Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 5.24MB / 28.24MB 0.6s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.6638105Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 15.73MB / 49.84MB 1.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.6639649Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 7.34MB / 28.24MB 0.9s
+deploy	Deploy and build on VPS	2026-03-25T19:44:54.8138945Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 9.44MB / 28.24MB 1.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.1146505Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 19.92MB / 49.84MB 1.8s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.1148140Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 11.53MB / 28.24MB 1.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.4139182Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 23.07MB / 49.84MB 2.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.4142101Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 14.68MB / 28.24MB 1.7s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.7137112Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 26.21MB / 49.84MB 2.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.7139005Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 16.78MB / 28.24MB 2.0s
+deploy	Deploy and build on VPS	2026-03-25T19:44:55.8637785Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 18.87MB / 28.24MB 2.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.0147019Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 29.36MB / 49.84MB 2.7s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.1644812Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 22.02MB / 28.24MB 2.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.3139536Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 32.51MB / 49.84MB 3.0s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.4634014Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 25.17MB / 28.24MB 2.7s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.6136694Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 35.65MB / 49.84MB 3.3s
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.7637808Z out: #6 sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 28.24MB / 28.24MB 3.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.7639018Z out: #6 extracting sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e
+deploy	Deploy and build on VPS	2026-03-25T19:44:56.9142045Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 39.85MB / 49.84MB 3.6s
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.2137286Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 44.04MB / 49.84MB 3.9s
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.3642813Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 47.19MB / 49.84MB 4.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.5137814Z out: #6 extracting sha256:6db0909c4473287ed4d1f950d26b8bc5b7b4206d365a0e7740cb89e46979153e 0.7s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.5139665Z out: #6 extracting sha256:7723618b139f747dbb585f9a357b6f4bad37e18969badd36995d7295695d11dd 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.6643927Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 49.84MB / 49.84MB 4.4s
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.9859051Z out: #6 sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 49.84MB / 49.84MB 4.5s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:57.9860764Z out: #6 extracting sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8604716Z out: #6 extracting sha256:eb2c6bc01a10394071f6bf5c4b1f13f2fc01bf5e67699ebd9f6cad7c6614e316 1.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8605698Z out: #6 DONE 6.1s
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8606583Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8607946Z out: #7 sha256:e0a8e14ee07a3335f115a78f9795d9679a3e29df87ac82277e709e09f343513b 138B / 138B 0.2s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8609259Z out: #7 sha256:b1b2b9bb5e4219683f23338914c88c6ed481ea7beef47e2428241ae09de695c9 3.40kB / 3.40kB 0.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8610556Z out: #7 sha256:e3452f101463c0d2ced20a33e884b4905738fc23b5f489391576078a97f64c56 184B / 184B 0.2s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8612202Z out: #7 sha256:0d9ada4f8e197c264e8e2c9fa4fe0b84f4e40f3cd271d30ee2932f58604bbfd4 39.09MB / 39.09MB 3.8s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8613099Z out: #7 sha256:8f6ad858d0a46fa8ee628532c70b8dc82d06179d543b0b09ec19fc03d4c5b373 49.30MB / 49.30MB 3.9s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8613805Z out: #7 sha256:52cf652074edd33da4645671fb62b2a70adc3e5614763bacae1b4f5d66205a33 296B / 296B 0.2s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.8614766Z out: #7 extracting sha256:8f6ad858d0a46fa8ee628532c70b8dc82d06179d543b0b09ec19fc03d4c5b373
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.9942135Z out: #7 ...
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.9943597Z out: #6 [runtime 1/5] FROM docker.io/library/node:22-slim@sha256:80fdb3f57c815e1b638d221f30a826823467c4a56c8f6a8d7aa091cd9b1675ea
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.9945581Z out: #6 extracting sha256:93f73fef6895aa5cfc0d4c21d29ab9f1a469fe36be478b68965c9a219cbcad96 0.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.9946874Z out: #6 extracting sha256:71ff01535b69cedc0a8573f143aa48be03c4d32a5070b443596441eef19fbe6d 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:44:58.9947778Z out: #6 DONE 6.3s
+deploy	Deploy and build on VPS	2026-03-25T19:44:59.1495852Z out: #9 [runtime 2/5] WORKDIR /app
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.0503250Z out: #9 ...
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.0504560Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.0505950Z out: #7 extracting sha256:8f6ad858d0a46fa8ee628532c70b8dc82d06179d543b0b09ec19fc03d4c5b373 1.8s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.0507246Z out: #7 extracting sha256:52cf652074edd33da4645671fb62b2a70adc3e5614763bacae1b4f5d66205a33 0.2s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.0508122Z out: #7 DONE 7.3s
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.2010745Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.2012991Z out: #7 extracting sha256:0d9ada4f8e197c264e8e2c9fa4fe0b84f4e40f3cd271d30ee2932f58604bbfd4
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.3246756Z out: #7 ...
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.3247686Z out: #9 [runtime 2/5] WORKDIR /app
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.3248815Z out: #9 DONE 1.3s
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.4749490Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.5606287Z out: #7 extracting sha256:0d9ada4f8e197c264e8e2c9fa4fe0b84f4e40f3cd271d30ee2932f58604bbfd4 0.5s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.5607773Z out: #7 DONE 7.8s
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.6678296Z out: #7 [builder 1/6] FROM docker.io/oven/bun:1@sha256:0733e50325078969732ebe3b15ce4c4be5082f18c4ac1a0f0ca4839c2e4e42a7
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.6680079Z out: #7 extracting sha256:e3452f101463c0d2ced20a33e884b4905738fc23b5f489391576078a97f64c56 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.6681641Z out: #7 extracting sha256:b1b2b9bb5e4219683f23338914c88c6ed481ea7beef47e2428241ae09de695c9 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.6683184Z out: #7 extracting sha256:e0a8e14ee07a3335f115a78f9795d9679a3e29df87ac82277e709e09f343513b 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.6684481Z out: #7 DONE 7.9s
+deploy	Deploy and build on VPS	2026-03-25T19:45:00.8224401Z out: #10 [builder 2/6] WORKDIR /app
+deploy	Deploy and build on VPS	2026-03-25T19:45:01.0131611Z out: #10 DONE 0.3s
+deploy	Deploy and build on VPS	2026-03-25T19:45:01.1282168Z out: #11 [builder 3/6] COPY package.json bun.lock ./
+deploy	Deploy and build on VPS	2026-03-25T19:45:01.1283276Z out: #11 DONE 0.1s
+deploy	Deploy and build on VPS	2026-03-25T19:45:01.2850852Z out: #12 [builder 4/6] RUN bun install --frozen-lockfile
+deploy	Deploy and build on VPS	2026-03-25T19:45:01.3630598Z out: #12 0.228 bun install v1.3.11 (af24e281)
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3465579Z out: #12 4.208 
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3466414Z out: #12 4.208 + @axe-core/playwright@4.11.1
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3466857Z out: #12 4.208 + @lhci/cli@0.15.1
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3467144Z out: #12 4.208 + @playwright/test@1.58.2
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3467449Z out: #12 4.208 + @types/leaflet@1.9.21
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3467725Z out: #12 4.208 + @types/node@25.3.5
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3467997Z out: #12 4.208 + typescript@5.9.3
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3468263Z out: #12 4.208 + @astrojs/check@0.9.6
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3468536Z out: #12 4.208 + @astrojs/markdoc@0.15.10
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3468822Z out: #12 4.208 + @astrojs/mdx@4.3.13
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3469082Z out: #12 4.208 + @astrojs/node@9.5.4
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3469496Z out: #12 4.208 + @astrojs/react@4.4.2
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3469762Z out: #12 4.208 + @astrojs/sitemap@3.7.0
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3470035Z out: #12 4.208 + @astrojs/vue@5.1.4
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3470293Z out: #12 4.208 + @keystatic/astro@5.0.6
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3470559Z out: #12 4.208 + @keystatic/core@0.5.48
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3470847Z out: #12 4.208 + @tailwindcss/vite@4.2.1
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3471137Z out: #12 4.208 + astro@5.18.0
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3471387Z out: #12 4.208 + astro-compress@2.3.9
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3471654Z out: #12 4.208 + astro-icon@1.1.5
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3471917Z out: #12 4.208 + leaflet@1.9.4
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3472160Z out: #12 4.208 + react@19.2.4
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3472408Z out: #12 4.208 + react-dom@19.2.4
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3472719Z out: #12 4.208 + rehype-autolink-headings@7.1.0
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3473274Z out: #12 4.208 + rehype-slug@6.0.0
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3473784Z out: #12 4.208 + remark-reading-time@2.0.2
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3475838Z out: #12 4.208 + resend@6.9.3
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3476292Z out: #12 4.208 + sharp@0.34.5
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3476706Z out: #12 4.208 + tailwindcss@4.2.1
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3477083Z out: #12 4.208 + vue@3.5.29
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3477310Z out: #12 4.208 
+deploy	Deploy and build on VPS	2026-03-25T19:45:05.3477547Z out: #12 4.208 1148 packages installed [3.98s]
+deploy	Deploy and build on VPS	2026-03-25T19:45:06.7994048Z out: #12 DONE 5.7s
+deploy	Deploy and build on VPS	2026-03-25T19:45:06.9559441Z out: #13 [builder 5/6] COPY . .
+deploy	Deploy and build on VPS	2026-03-25T19:45:07.8464710Z out: #13 DONE 1.0s
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.0027423Z out: #14 [builder 6/6] RUN bun run build
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.0906704Z out: #14 0.238 $ astro build
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.5128697Z out: #14 0.661 ▶ Astro collects anonymous usage data.
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.5129699Z out: #14 0.661   This information helps us improve Astro.
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.5130628Z out: #14 0.661   Run "astro telemetry disable" to opt-out.
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.5131515Z out: #14 0.661   https://astro.build/telemetry
+deploy	Deploy and build on VPS	2026-03-25T19:45:08.5132218Z out: #14 0.661 
+deploy	Deploy and build on VPS	2026-03-25T19:45:09.3987983Z out: #14 1.547 19:45:09 [@astrojs/node] Enabling sessions with filesystem storage
+deploy	Deploy and build on VPS	2026-03-25T19:45:09.8966277Z out: #14 2.044 19:45:09 [content] Syncing content
+deploy	Deploy and build on VPS	2026-03-25T19:45:09.9969047Z out: #14 2.145 19:45:09 [content] Synced content
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1506187Z out: #14 2.145 19:45:09 [types] Generated 552ms
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1507138Z out: #14 2.146 19:45:09 [build] output: "server"
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1508013Z out: #14 2.146 19:45:09 [build] mode: "server"
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1508856Z out: #14 2.146 19:45:09 [build] directory: /app/dist/
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1509761Z out: #14 2.146 19:45:09 [build] adapter: @astrojs/node
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1510679Z out: #14 2.146 19:45:09 [build] Collecting build info...
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1511915Z out: #14 2.146 19:45:09 [build] ✓ Completed in 602ms.
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.1512870Z out: #14 2.148 19:45:09 [build] Building server entrypoints...
+deploy	Deploy and build on VPS	2026-03-25T19:45:10.8371963Z out: #14 2.985 19:45:10 [WARN] [router] getStaticPaths() ignored in dynamic page /src/pages/uslugi/[slug].astro. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+deploy	Deploy and build on VPS	2026-03-25T19:45:12.4706691Z out: #14 4.618 19:45:12 [vite] ✓ built in 2.40s
+deploy	Deploy and build on VPS	2026-03-25T19:45:12.6299105Z out: #14 4.618 19:45:12 [build] ✓ Completed in 2.47s.
+deploy	Deploy and build on VPS	2026-03-25T19:45:12.6299769Z out: #14 4.618 
+deploy	Deploy and build on VPS	2026-03-25T19:45:12.6300165Z out: #14 4.618  building client (vite) 
+deploy	Deploy and build on VPS	2026-03-25T19:45:12.6301043Z out: #14 4.627 19:45:12 [vite] transforming...
+deploy	Deploy and build on VPS	2026-03-25T19:45:20.3253888Z out: #14 12.47 19:45:20 [vite] ✓ 1493 modules transformed.
+deploy	Deploy and build on VPS	2026-03-25T19:45:20.9269935Z out: #14 13.07 19:45:20 [vite] rendering chunks...
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.6868561Z out: #14 13.83 19:45:21 [vite] computing gzip size...
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8095050Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/_plugin-vue_export-helper.DlAUqK2U.js         0.09 kB │ gzip:   0.10 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8096735Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/_commonjsHelpers.Cpj98o6Y.js                  0.24 kB │ gzip:   0.18 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8098528Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/client.DObzDSAb.js                            1.05 kB │ gzip:   0.64 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8099959Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/Map.DotKpA_6.js                               3.35 kB │ gzip:   1.70 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8101376Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/ContactForm.CGubp_i9.js                       7.25 kB │ gzip:   2.63 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8102599Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/CourtFeesCalculator.imm_tdAd.js              11.30 kB │ gzip:   4.39 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8103794Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/index.CDShDo_-.js                            12.17 kB │ gzip:   4.41 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8105194Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/StatuteLimitationsCalculator.BVYnqfcV.js     12.46 kB │ gzip:   4.88 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8106420Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/DivorceCalculator.6Z_E-6Rq.js                12.76 kB │ gzip:   4.27 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8107635Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/runtime-dom.esm-bundler.CQWtQZrn.js          12.90 kB │ gzip:   5.59 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8108837Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/AlimonyCalculator.BHdJ0zzS.js                13.45 kB │ gzip:   4.65 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8110047Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/InheritanceCalculator.DDSup089.js            13.68 kB │ gzip:   4.48 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8111274Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/runtime-core.esm-bundler.B5W_0PlG.js         68.18 kB │ gzip:  26.93 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8112290Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/leaflet-src.BcflbDBd.js                     150.06 kB │ gzip:  43.59 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8113231Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/client.bN7z2C-U.js                          182.74 kB │ gzip:  57.63 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8114290Z out: #14 13.91 19:45:21 [vite] dist/client/_astro/keystatic-page.C3NXSOXZ.js                2,767.83 kB │ gzip: 863.80 kB
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8114915Z out: #14 13.91 19:45:21 [WARN] [vite] 
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8115368Z out: #14 13.91 (!) Some chunks are larger than 500 kB after minification. Consider:
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8115961Z out: #14 13.91 - Using dynamic import() to code-split the application
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8119057Z out: #14 13.91 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8120106Z out: #14 13.91 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8120764Z out: #14 13.91 19:45:21 [vite] ✓ built in 9.29s
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8121106Z out: #14 13.96 
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.8121370Z out: #14 13.96  prerendering static routes 
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9726695Z out: #14 13.96 19:45:21 ✓ Completed in 39ms.
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9727717Z out: #14 13.96 
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9728324Z out: #14 13.96 19:45:21 [build] Rearranging server assets...
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9729433Z out: #14 13.98 19:45:21 [@astrojs/sitemap] `sitemap-index.xml` created at `dist/client`
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9730652Z out: #14 14.12 (-516 Bytes)	0.76% reduction in //dist/client/_astro/_slug_.DyqnkkiG.css
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9731850Z out: #14 14.12 (-28 Bytes)	0.18% reduction in //dist/client/_astro/kontakt.CIGW-MKW.css
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9733384Z out: #14 14.12 (-26 Bytes)	0.39% reduction in //dist/client/_astro/admin.fYPmKA4u.css
+deploy	Deploy and build on VPS	2026-03-25T19:45:21.9735217Z out: #14 14.12 ✓ Successfully compressed a total of 3 CSS files for 570 Bytes.
+deploy	Deploy and build on VPS	2026-03-25T19:45:24.8451933Z out: #14 16.99 19:45:24 [build] Waiting for integration "astro-compress", hook "astro:build:done"...
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.5678396Z out: #14 18.72 (-221.77 KB)	49.84% reduction in //dist/client/tools/divorce_cost_graphic_pl_1772990272156.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7464687Z out: #14 18.74 (-390.01 KB)	68.77% reduction in //dist/client/tools/inheritance_graphic_1772990018203.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7465923Z out: #14 18.74 (-413.32 KB)	62.48% reduction in //dist/client/photos/hero_prawo_cywilne_1772972039071.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7467334Z out: #14 18.74 (-291.51 KB)	59.74% reduction in //dist/client/tools/court_fees_graphic_pl_1772990300994.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7468489Z out: #14 18.74 (-226.62 KB)	49.77% reduction in //dist/client/tools/limitation_graphic_pl_1772990335361.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7469633Z out: #14 18.74 (-343.29 KB)	59.41% reduction in //dist/client/tools/limitation_graphic_1772990033304.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7470711Z out: #14 18.74 (-349.01 KB)	66.30% reduction in //dist/client/photos/hero_upadlosc_1772972068920.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7471822Z out: #14 18.74 (-380.17 KB)	67.28% reduction in //dist/client/tools/inheritance_graphic_pl_1772990320132.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7472957Z out: #14 18.74 (-431.28 KB)	68.69% reduction in //dist/client/photos/hero_obsluga_firm_1772972083263.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7474048Z out: #14 18.74 (-386.23 KB)	66.79% reduction in //dist/client/tools/court_fees_graphic_1772990003994.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7475142Z out: #14 18.74 (-474.93 KB)	66.02% reduction in //dist/client/photos/hero_odszkodowania_1772972097118.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7475939Z out: #14 18.74 (-287.92 KB)	53.84% reduction in //dist/client/photos/hero_prawo_karne_1772972023278.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7476717Z out: #14 18.74 (-373.12 KB)	61.99% reduction in //dist/client/tools/alimony_graphic_pl_1772990288262.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7477637Z out: #14 18.74 (-309.03 KB)	64.97% reduction in //dist/client/tools/divorce_cost_graphic_1772989969949.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:26.7478533Z out: #14 18.74 (-447.13 KB)	72.18% reduction in //dist/client/photos/hero_prawo_rodzinne_sq.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:27.5419305Z out: #14 19.69 (-426.79 KB)	66.37% reduction in //dist/client/photos/hero_nieruchomosci_1772972108703.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:27.7009293Z out: #14 19.85 (-393.64 KB)	65.30% reduction in //dist/client/photos/hero_prawo_rodzinne_1772972055043.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:27.8724697Z out: #14 19.87 (-412.05 KB)	60.79% reduction in //dist/client/tools/alimony_graphic_1772989989523.png
+deploy	Deploy and build on VPS	2026-03-25T19:45:27.8726653Z out: #14 19.87 ✓ Successfully compressed a total of 18 Image files for 6.4 MB.
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.6090007Z out: #14 31.76 (-448 Bytes)	0.30% reduction in //dist/client/_astro/leaflet-src.BcflbDBd.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8354734Z out: #14 31.76 (-854 Bytes)	1.25% reduction in //dist/client/_astro/runtime-core.esm-bundler.B5W_0PlG.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8356185Z out: #14 31.76 (-165 Bytes)	1.28% reduction in //dist/client/_astro/runtime-dom.esm-bundler.CQWtQZrn.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8357342Z out: #14 31.76 (-2.27 KB)	1.27% reduction in //dist/client/_astro/client.bN7z2C-U.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8358334Z out: #14 31.76 (-534 Bytes)	4.39% reduction in //dist/client/_astro/index.CDShDo_-.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8359198Z out: #14 31.76 (-1 Bytes)	0.09% reduction in //dist/client/_astro/client.DObzDSAb.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8360081Z out: #14 31.76 (-66 Bytes)	0.48% reduction in //dist/client/_astro/InheritanceCalculator.DDSup089.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8361015Z out: #14 31.76 (-7 Bytes)	0.10% reduction in //dist/client/_astro/ContactForm.CGubp_i9.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8361932Z out: #14 31.76 (-112 Bytes)	0.99% reduction in //dist/client/_astro/CourtFeesCalculator.imm_tdAd.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8362980Z out: #14 31.76 (-67 Bytes)	0.54% reduction in //dist/client/_astro/StatuteLimitationsCalculator.BVYnqfcV.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8364455Z out: #14 31.76 (-71 Bytes)	0.53% reduction in //dist/client/_astro/AlimonyCalculator.BHdJ0zzS.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8365479Z out: #14 31.76 (-1 Bytes)	1.10% reduction in //dist/client/_astro/_plugin-vue_export-helper.DlAUqK2U.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8366449Z out: #14 31.76 (-1 Bytes)	0.42% reduction in //dist/client/_astro/_commonjsHelpers.Cpj98o6Y.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8367365Z out: #14 31.76 (-73 Bytes)	0.57% reduction in //dist/client/_astro/DivorceCalculator.6Z_E-6Rq.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8368269Z out: #14 31.76 (-21.24 KB)	0.79% reduction in //dist/client/_astro/keystatic-page.C3NXSOXZ.js
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8369600Z out: #14 31.76 ✓ Successfully compressed a total of 15 JavaScript files for 25.86 KB.
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8370273Z out: #14 31.83 (-29 Bytes)	10.78% reduction in //dist/client/favicon.svg
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8371151Z out: #14 31.83 ✓ Successfully compressed a total of 1 SVG file for 29 Bytes.
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8371808Z out: #14 31.83 19:45:39 [build] Server built in 30.29s
+deploy	Deploy and build on VPS	2026-03-25T19:45:39.8372338Z out: #14 31.83 19:45:39 [build] Complete!
+deploy	Deploy and build on VPS	2026-03-25T19:45:40.0473173Z out: #14 DONE 32.2s
+deploy	Deploy and build on VPS	2026-03-25T19:45:41.6300802Z out: #15 [runtime 3/5] COPY --from=builder /app/dist ./dist
+deploy	Deploy and build on VPS	2026-03-25T19:45:41.7899296Z out: #15 DONE 0.2s
+deploy	Deploy and build on VPS	2026-03-25T19:45:50.1908183Z out: #16 [runtime 4/5] COPY --from=builder /app/node_modules ./node_modules
+deploy	Deploy and build on VPS	2026-03-25T19:45:58.6885148Z out: #16 DONE 8.5s
+deploy	Deploy and build on VPS	2026-03-25T19:45:58.8465654Z out: #17 [runtime 5/5] COPY --from=builder /app/package.json ./
+deploy	Deploy and build on VPS	2026-03-25T19:45:59.4049035Z out: #17 DONE 0.7s
+deploy	Deploy and build on VPS	2026-03-25T19:45:59.5992465Z out: #18 exporting to image
+deploy	Deploy and build on VPS	2026-03-25T19:45:59.5993192Z out: #18 exporting layers
+deploy	Deploy and build on VPS	2026-03-25T19:46:17.8430319Z out: #18 exporting layers 18.4s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:17.9815014Z out: #18 exporting manifest sha256:e039a0ca340cc5ea97b37177b224aadb771c2eb5e6a59b60e7499bf5e99dabc9 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:17.9816908Z out: #18 exporting config sha256:b90603a278ccdbf203e59b61b56b96579c910f30e2fc437b3080ed0c9f041825 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:17.9818792Z out: #18 exporting attestation manifest sha256:e50a018dfa7e95d34ad8094d0d40bc547dec85faf47eff924467fb270d51115b 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:17.9820631Z out: #18 exporting manifest list sha256:eb15488faf7f115ded07fc0aa1fe378c730067ceb540564a61bf8c2d7a33d4da
+deploy	Deploy and build on VPS	2026-03-25T19:46:18.1616318Z out: #18 exporting manifest list sha256:eb15488faf7f115ded07fc0aa1fe378c730067ceb540564a61bf8c2d7a33d4da 0.0s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:18.1617578Z out: #18 naming to docker.io/library/strona-prawnicza-kancelaria:latest done
+deploy	Deploy and build on VPS	2026-03-25T19:46:18.1618413Z out: #18 unpacking to docker.io/library/strona-prawnicza-kancelaria:latest
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.0685192Z out: #18 unpacking to docker.io/library/strona-prawnicza-kancelaria:latest 9.1s done
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.2418049Z out: #18 DONE 27.6s
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.3158841Z out: #19 resolving provenance for metadata file
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.3339204Z err:  Image strona-prawnicza-kancelaria Built 
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.3339980Z out: #19 DONE 0.0s
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.3369880Z err:  Network strona-prawnicza_default Creating 
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.4034534Z err:  Network strona-prawnicza_default Created 
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.4041858Z err:  Volume strona-prawnicza_content-data Creating 
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.4123108Z err:  Volume strona-prawnicza_content-data Created 
+deploy	Deploy and build on VPS	2026-03-25T19:46:27.4132716Z err:  Container kancelaria-abw Creating 
+deploy	Deploy and build on VPS	2026-03-25T19:46:28.2583328Z err:  Container kancelaria-abw Created 
+deploy	Deploy and build on VPS	2026-03-25T19:46:28.2654975Z err:  Container kancelaria-abw Starting 
+deploy	Deploy and build on VPS	2026-03-25T19:46:28.4923819Z err:  Container kancelaria-abw Started 
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.5887546Z out: ❌ Container failed to start. Logs:
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.6739104Z out: kancelaria-abw  | 19:46:28 [@astrojs/node] Server listening on 
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.6739993Z out: kancelaria-abw  |   local: http://localhost:4321 	
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.6740717Z out: kancelaria-abw  |   network: http://172.21.0.2:4321
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.6741312Z out: kancelaria-abw  | 
+deploy	Deploy and build on VPS	2026-03-25T19:46:33.6783871Z 2026/03/25 19:46:33 Process exited with status 1
+deploy	Post Checkout Code	﻿2026-03-25T19:46:33.7611486Z Post job cleanup.
+deploy	Post Checkout Code	2026-03-25T19:46:33.8583005Z [command]/usr/bin/git version
+deploy	Post Checkout Code	2026-03-25T19:46:33.8622147Z git version 2.53.0
+deploy	Post Checkout Code	2026-03-25T19:46:33.8667339Z Temporarily overriding HOME='/home/runner/work/_temp/f00cb7c7-06cd-4670-a3a9-73f3d8d6821e' before making global git config changes
+deploy	Post Checkout Code	2026-03-25T19:46:33.8668739Z Adding repository directory to the temporary git global config as a safe directory
+deploy	Post Checkout Code	2026-03-25T19:46:33.8682230Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kancelariaabw/kancelariaabw
+deploy	Post Checkout Code	2026-03-25T19:46:33.8720685Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy	Post Checkout Code	2026-03-25T19:46:33.8756551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy	Post Checkout Code	2026-03-25T19:46:33.9007850Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy	Post Checkout Code	2026-03-25T19:46:33.9031919Z http.https://github.com/.extraheader
+deploy	Post Checkout Code	2026-03-25T19:46:33.9045565Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+deploy	Post Checkout Code	2026-03-25T19:46:33.9077851Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy	Post Checkout Code	2026-03-25T19:46:33.9317304Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy	Post Checkout Code	2026-03-25T19:46:33.9349963Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy	Complete job	﻿2026-03-25T19:46:33.9712208Z Cleaning up orphan processes
+deploy	Complete job	2026-03-25T19:46:34.0026628Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

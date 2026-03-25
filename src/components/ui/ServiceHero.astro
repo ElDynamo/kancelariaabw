@@ -1,0 +1,76 @@
+---
+import Breadcrumb from '@components/ui/Breadcrumb.astro';
+import SectionLabel from '@components/ui/SectionLabel.astro';
+import Button from '@components/ui/Button.astro';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  label?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  image?: string;
+  imageAlt?: string;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  label = 'Usługi prawne',
+  ctaText = 'Umów konsultację',
+  ctaHref = '/kontakt',
+  image,
+  imageAlt = title,
+  breadcrumbs = [
+    { label: 'Strona główna', href: '/' },
+    { label: 'Usługi', href: '/uslugi' },
+    { label: title },
+  ],
+} = Astro.props;
+---
+
+<section class="section bg-navy text-white overflow-hidden">
+  <div class="container-site grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="reveal">
+      <Breadcrumb items={breadcrumbs} variant="dark" />
+      <SectionLabel text={label} class="mb-4" />
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-5xl text-white mb-6 leading-tight">
+        {title}<br />{subtitle && <span class="text-gold">{subtitle}</span>}
+      </h1>
+      {description && (
+        <p class="font-sans text-white opacity-80 text-lg max-w-xl mb-8 leading-relaxed">
+          {description}
+        </p>
+      )}
+      <div class="flex flex-wrap gap-4">
+        <Button href={ctaHref} variant="gold" size="lg">{ctaText}</Button>
+        <Button href="tel:+48609366160" variant="outline-white" size="lg">609 366 160</Button>
+      </div>
+    </div>
+    {image && (
+      <div class="relative reveal delay-200 hidden lg:block">
+        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative border border-white/10">
+          <img
+            src={image}
+            alt={imageAlt}
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="absolute inset-0 bg-navy/20 mix-blend-multiply"></div>
+        </div>
+        <!-- Decorative circles -->
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 border border-gold/30 rounded-full -z-10"></div>
+        <div class="absolute -top-6 -right-6 w-24 h-24 border border-gold/30 rounded-full -z-10"></div>
+      </div>
+    )}
+  </div>
+</section>

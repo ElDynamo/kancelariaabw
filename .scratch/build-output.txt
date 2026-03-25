@@ -1,95 +1,93 @@
 $ astro build
-[2m21:14:11[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
-[2m21:14:12[22m [34m[content][39m Syncing content
-[2m21:14:12[22m [34m[content][39m Content config changed
-[2m21:14:12[22m [34m[content][39m Clearing content store
-[2m21:14:12[22m [34m[content][39m Synced content
-[2m21:14:12[22m [34m[types][39m Generated [2m215ms[22m
-[2m21:14:12[22m [34m[build][39m output: [34m"server"[39m
-[2m21:14:12[22m [34m[build][39m mode: [34m"server"[39m
-[2m21:14:12[22m [34m[build][39m directory: [34mC:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\dist\[39m
-[2m21:14:12[22m [34m[build][39m adapter: [32m@astrojs/node[39m
-[2m21:14:12[22m [34m[build][39m Collecting build info...
-[2m21:14:12[22m [34m[build][39m [32mÔ£ô Completed in 257ms.[39m
-[2m21:14:12[22m [34m[build][39m Building server entrypoints...
-[33m[1m21:14:12[22m [WARN] [router][39m getStaticPaths() ignored in dynamic page [1m/src/pages/uslugi/[slug].astro[22m. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
-[2m21:14:13[22m [34m[vite][39m [32mÔ£ô built in 1.22s[39m
-[2m21:14:13[22m [34m[build][39m [32mÔ£ô Completed in 1.24s.[39m
+[2m21:26:40[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
+[2m21:26:40[22m [34m[content][39m Syncing content
+[2m21:26:40[22m [34m[content][39m Synced content
+[2m21:26:40[22m [34m[types][39m Generated [2m290ms[22m
+[2m21:26:40[22m [34m[build][39m output: [34m"server"[39m
+[2m21:26:40[22m [34m[build][39m mode: [34m"server"[39m
+[2m21:26:40[22m [34m[build][39m directory: [34mC:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\dist\[39m
+[2m21:26:40[22m [34m[build][39m adapter: [32m@astrojs/node[39m
+[2m21:26:40[22m [34m[build][39m Collecting build info...
+[2m21:26:40[22m [34m[build][39m [32mÔ£ô Completed in 347ms.[39m
+[2m21:26:40[22m [34m[build][39m Building server entrypoints...
+[33m[1m21:26:41[22m [WARN] [router][39m getStaticPaths() ignored in dynamic page [1m/src/pages/uslugi/[slug].astro[22m. Add `export const prerender = true;` to prerender the page as static HTML during the build process.
+[2m21:26:42[22m [34m[vite][39m [32mÔ£ô built in 1.24s[39m
+[2m21:26:42[22m [34m[build][39m [32mÔ£ô Completed in 1.27s.[39m
 
 [42m[30m building client (vite) [39m[49m
-[2m21:14:13[22m [34m[vite][39m transforming...
-[2m21:14:17[22m [34m[vite][39m [32mÔ£ô[39m 1569 modules transformed.
-[2m21:14:17[22m [34m[vite][39m rendering chunks...
-[2m21:14:18[22m [34m[vite][39m computing gzip size...
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/_plugin-vue_export-helper.DlAUqK2U.js     [39m[1m[2m    0.09 kB[22m[1m[22m[2m Ôöé gzip:   0.10 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/_commonjsHelpers.Cpj98o6Y.js              [39m[1m[2m    0.24 kB[22m[1m[22m[2m Ôöé gzip:   0.18 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/client.CYN0r6w_.js                        [39m[1m[2m    1.05 kB[22m[1m[22m[2m Ôöé gzip:   0.64 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Map.CF0obtmC.js                           [39m[1m[2m    3.35 kB[22m[1m[22m[2m Ôöé gzip:   1.70 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/ContactForm.0DNxpkdp.js                   [39m[1m[2m    7.25 kB[22m[1m[22m[2m Ôöé gzip:   2.63 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/CourtFeesCalculator.CP8zNsE6.js           [39m[1m[2m   11.29 kB[22m[1m[22m[2m Ôöé gzip:   4.38 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/index.CDShDo_-.js                         [39m[1m[2m   12.17 kB[22m[1m[22m[2m Ôöé gzip:   4.41 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/StatuteLimitationsCalculator.BI1X8xKz.js  [39m[1m[2m   12.46 kB[22m[1m[22m[2m Ôöé gzip:   4.88 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/DivorceCalculator.CSya8qVX.js             [39m[1m[2m   12.75 kB[22m[1m[22m[2m Ôöé gzip:   4.26 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/runtime-dom.esm-bundler.D2GGJTNj.js       [39m[1m[2m   12.90 kB[22m[1m[22m[2m Ôöé gzip:   5.59 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/AlimonyCalculator.CF25zpTR.js             [39m[1m[2m   13.45 kB[22m[1m[22m[2m Ôöé gzip:   4.64 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/InheritanceCalculator.70njeCnq.js         [39m[1m[2m   13.68 kB[22m[1m[22m[2m Ôöé gzip:   4.48 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/runtime-core.esm-bundler.Cagtf8xS.js      [39m[1m[2m   68.18 kB[22m[1m[22m[2m Ôöé gzip:  26.93 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/leaflet-src.BcflbDBd.js                   [39m[1m[2m  150.06 kB[22m[1m[22m[2m Ôöé gzip:  43.60 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/client.bN7z2C-U.js                        [39m[1m[2m  182.74 kB[22m[1m[22m[2m Ôöé gzip:  57.62 kB[22m
-[2m21:14:18[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/keystatic-page.BXt274n8.js                [39m[1m[33m2,795.19 kB[39m[22m[2m Ôöé gzip: 865.76 kB[22m
-[33m[1m21:14:18[22m [WARN] [vite][39m [33m
+[2m21:26:42[22m [34m[vite][39m transforming...
+[2m21:26:46[22m [34m[vite][39m [32mÔ£ô[39m 1570 modules transformed.
+[2m21:26:46[22m [34m[vite][39m rendering chunks...
+[2m21:26:47[22m [34m[vite][39m computing gzip size...
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/_plugin-vue_export-helper.DlAUqK2U.js     [39m[1m[2m    0.09 kB[22m[1m[22m[2m Ôöé gzip:   0.10 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/_commonjsHelpers.Cpj98o6Y.js              [39m[1m[2m    0.24 kB[22m[1m[22m[2m Ôöé gzip:   0.18 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/client.CYN0r6w_.js                        [39m[1m[2m    1.05 kB[22m[1m[22m[2m Ôöé gzip:   0.64 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Map.CF0obtmC.js                           [39m[1m[2m    3.35 kB[22m[1m[22m[2m Ôöé gzip:   1.70 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/ContactForm.0DNxpkdp.js                   [39m[1m[2m    7.25 kB[22m[1m[22m[2m Ôöé gzip:   2.63 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/CourtFeesCalculator.CP8zNsE6.js           [39m[1m[2m   11.29 kB[22m[1m[22m[2m Ôöé gzip:   4.38 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/index.CDShDo_-.js                         [39m[1m[2m   12.17 kB[22m[1m[22m[2m Ôöé gzip:   4.41 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/StatuteLimitationsCalculator.BI1X8xKz.js  [39m[1m[2m   12.46 kB[22m[1m[22m[2m Ôöé gzip:   4.88 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/DivorceCalculator.CSya8qVX.js             [39m[1m[2m   12.75 kB[22m[1m[22m[2m Ôöé gzip:   4.26 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/runtime-dom.esm-bundler.D2GGJTNj.js       [39m[1m[2m   12.90 kB[22m[1m[22m[2m Ôöé gzip:   5.59 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/AlimonyCalculator.CF25zpTR.js             [39m[1m[2m   13.45 kB[22m[1m[22m[2m Ôöé gzip:   4.64 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/InheritanceCalculator.70njeCnq.js         [39m[1m[2m   13.68 kB[22m[1m[22m[2m Ôöé gzip:   4.48 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/runtime-core.esm-bundler.Cagtf8xS.js      [39m[1m[2m   68.18 kB[22m[1m[22m[2m Ôöé gzip:  26.93 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/leaflet-src.BcflbDBd.js                   [39m[1m[2m  150.06 kB[22m[1m[22m[2m Ôöé gzip:  43.60 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/client.bN7z2C-U.js                        [39m[1m[2m  182.74 kB[22m[1m[22m[2m Ôöé gzip:  57.62 kB[22m
+[2m21:26:47[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/keystatic-page.BXt274n8.js                [39m[1m[33m2,795.19 kB[39m[22m[2m Ôöé gzip: 865.76 kB[22m
+[33m[1m21:26:47[22m [WARN] [vite][39m [33m
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
-[2m21:14:18[22m [34m[vite][39m [32mÔ£ô built in 5.21s[39m
+[2m21:26:47[22m [34m[vite][39m [32mÔ£ô built in 5.26s[39m
 
 [42m[30m prerendering static routes [39m[49m
-[2m21:14:18[22m [32mÔ£ô Completed in 45ms.
+[2m21:26:47[22m [32mÔ£ô Completed in 25ms.
 [39m
-[2m21:14:18[22m [34m[build][39m Rearranging server assets...
-[2m21:14:18[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist\client`
+[2m21:26:47[22m [34m[build][39m Rearranging server assets...
+[2m21:26:47[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist\client`
 (-26 Bytes)	0.39% reduction in /dist/client/_astro/admin.fYPmKA4u.css
-(-580 Bytes)	0.82% reduction in /dist/client/_astro/_slug_.Cxc9sYF0.css
+(-584 Bytes)	0.82% reduction in /dist/client/_astro/_slug_.BLWdsod5.css
 (-28 Bytes)	0.18% reduction in /dist/client/_astro/kontakt.CIGW-MKW.css
-Ô£ôÔÇüSuccessfully compressed a total of 3 CSS files for 634 Bytes.
+Ô£ôÔÇüSuccessfully compressed a total of 3 CSS files for 638 Bytes.
 (-413.32 KB)	62.48% reduction in /dist/client/photos/hero_prawo_cywilne_1772972039071.png
 (-475.09 KB)	66.04% reduction in /dist/client/photos/hero_odszkodowania_1772972097118.png
-(-431.28 KB)	68.68% reduction in /dist/client/photos/hero_obsluga_firm_1772972083263.png
 (-426.79 KB)	66.37% reduction in /dist/client/photos/hero_nieruchomosci_1772972108703.png
-(-287.58 KB)	53.78% reduction in /dist/client/photos/hero_prawo_karne_1772972023278.png
 (-393.64 KB)	65.30% reduction in /dist/client/photos/hero_prawo_rodzinne_1772972055043.png
+(-431.28 KB)	68.68% reduction in /dist/client/photos/hero_obsluga_firm_1772972083263.png
 (-349.02 KB)	66.30% reduction in /dist/client/photos/hero_upadlosc_1772972068920.png
+(-287.58 KB)	53.78% reduction in /dist/client/photos/hero_prawo_karne_1772972023278.png
 (-447.12 KB)	72.18% reduction in /dist/client/photos/hero_prawo_rodzinne_sq.png
 (-373.12 KB)	61.99% reduction in /dist/client/tools/alimony_graphic_pl_1772990288262.png
 (-412.05 KB)	60.78% reduction in /dist/client/tools/alimony_graphic_1772989989523.png
 (-386.23 KB)	66.79% reduction in /dist/client/tools/court_fees_graphic_1772990003994.png
-(-221.77 KB)	49.84% reduction in /dist/client/tools/divorce_cost_graphic_pl_1772990272156.png
 (-291.51 KB)	59.74% reduction in /dist/client/tools/court_fees_graphic_pl_1772990300994.png
+(-221.77 KB)	49.84% reduction in /dist/client/tools/divorce_cost_graphic_pl_1772990272156.png
 (-309.02 KB)	64.97% reduction in /dist/client/tools/divorce_cost_graphic_1772989969949.png
 (-390 KB)	68.77% reduction in /dist/client/tools/inheritance_graphic_1772990018203.png
-(-226.62 KB)	49.77% reduction in /dist/client/tools/limitation_graphic_pl_1772990335361.png
 (-380.17 KB)	67.28% reduction in /dist/client/tools/inheritance_graphic_pl_1772990320132.png
 (-343.29 KB)	59.41% reduction in /dist/client/tools/limitation_graphic_1772990033304.png
+(-226.62 KB)	49.77% reduction in /dist/client/tools/limitation_graphic_pl_1772990335361.png
 Ô£ôÔÇüSuccessfully compressed a total of 18 Image files for 6.4 MB.
-(-1 Bytes)	0.09% reduction in /dist/client/_astro/client.CYN0r6w_.js
 (-71 Bytes)	0.53% reduction in /dist/client/_astro/AlimonyCalculator.CF25zpTR.js
-(-112 Bytes)	0.99% reduction in /dist/client/_astro/CourtFeesCalculator.CP8zNsE6.js
-(-73 Bytes)	0.57% reduction in /dist/client/_astro/DivorceCalculator.CSya8qVX.js
-(-448 Bytes)	0.30% reduction in /dist/client/_astro/leaflet-src.BcflbDBd.js
-[2m21:14:25[22m [34m[build][39m Waiting for integration [1m"astro-compress"[22m, hook [1m"astro:build:done"[22m...
+(-1 Bytes)	0.09% reduction in /dist/client/_astro/client.CYN0r6w_.js
 (-534 Bytes)	4.39% reduction in /dist/client/_astro/index.CDShDo_-.js
+(-112 Bytes)	0.99% reduction in /dist/client/_astro/CourtFeesCalculator.CP8zNsE6.js
 (-7 Bytes)	0.10% reduction in /dist/client/_astro/ContactForm.0DNxpkdp.js
 (-165 Bytes)	1.28% reduction in /dist/client/_astro/runtime-dom.esm-bundler.D2GGJTNj.js
 (-66 Bytes)	0.48% reduction in /dist/client/_astro/InheritanceCalculator.70njeCnq.js
-(-2.27 KB)	1.27% reduction in /dist/client/_astro/client.bN7z2C-U.js
-(-67 Bytes)	0.54% reduction in /dist/client/_astro/StatuteLimitationsCalculator.BI1X8xKz.js
-(-1 Bytes)	0.42% reduction in /dist/client/_astro/_commonjsHelpers.Cpj98o6Y.js
 (-854 Bytes)	1.25% reduction in /dist/client/_astro/runtime-core.esm-bundler.Cagtf8xS.js
+(-73 Bytes)	0.57% reduction in /dist/client/_astro/DivorceCalculator.CSya8qVX.js
+(-448 Bytes)	0.30% reduction in /dist/client/_astro/leaflet-src.BcflbDBd.js
+(-67 Bytes)	0.54% reduction in /dist/client/_astro/StatuteLimitationsCalculator.BI1X8xKz.js
 (-1 Bytes)	1.10% reduction in /dist/client/_astro/_plugin-vue_export-helper.DlAUqK2U.js
+(-1 Bytes)	0.42% reduction in /dist/client/_astro/_commonjsHelpers.Cpj98o6Y.js
+[2m21:26:54[22m [34m[build][39m Waiting for integration [1m"astro-compress"[22m, hook [1m"astro:build:done"[22m...
+(-2.27 KB)	1.27% reduction in /dist/client/_astro/client.bN7z2C-U.js
 (-21.3 KB)	0.78% reduction in /dist/client/_astro/keystatic-page.BXt274n8.js
 Ô£ôÔÇüSuccessfully compressed a total of 15 JavaScript files for 25.92 KB.
 (-33 Bytes)	12.09% reduction in /dist/client/favicon.svg
 Ô£ôÔÇüSuccessfully compressed a total of 1 SVG file for 33 Bytes.
-[2m21:14:25[22m [34m[build][39m Server built in [1m13.73s[22m
-[2m21:14:25[22m [34m[build][39m [1mComplete![22m
+[2m21:26:54[22m [34m[build][39m Server built in [1m13.63s[22m
+[2m21:26:54[22m [34m[build][39m [1mComplete![22m

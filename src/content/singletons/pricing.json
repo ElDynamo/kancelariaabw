@@ -7,18 +7,18 @@
   "pricingList": [
     {
       "service": "Porada prawna (1 godzina)",
-      "price": "od 200 zł",
+      "price": "300 zł",
       "note": ""
     },
     {
       "service": "Analiza dokumentów",
-      "price": "od 250 zł",
+      "price": "300 zł",
       "note": ""
     },
     {
       "service": "Sporządzenie pisma procesowego",
-      "price": "od 400 zł",
-      "note": "zależnie od stopnia skomplikowania"
+      "price": "450 zł",
+      "note": ""
     },
     {
       "service": "Sporządzenie umowy",
@@ -27,13 +27,13 @@
     },
     {
       "service": "Zastępstwo procesowe (sprawa cywilna)",
-      "price": "od 1 500 zł",
+      "price": "3 000 zł",
       "note": "wynagrodzenie + koszty"
     },
     {
       "service": "Prowadzenie sprawy o rozwód",
-      "price": "od 2 000 zł",
-      "note": "zależnie od rodzaju sprawy"
+      "price": "4 000 zł",
+      "note": ""
     },
     {
       "service": "Obrona w postępowaniu karnym",

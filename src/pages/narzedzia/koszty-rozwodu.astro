@@ -1,6 +1,10 @@
 ---
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
+import Breadcrumb from '@components/ui/Breadcrumb.astro';
+import SectionLabel from '@components/ui/SectionLabel.astro';
+import FAQAccordion from '@components/ui/FAQAccordion.astro';
+import ToolCTA from '@components/ui/ToolCTA.astro';
 import DivorceCalculator from '@components/tools/DivorceCalculator.vue';
 
 const breadcrumbSchema = {
@@ -29,33 +33,20 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Ile kosztuje pozew o rozwód?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Opłata sądowa od pozwu o rozwód wynosi 600 zł (art. 26 ust. 1 pkt 1 UKSC). Przy orzeczeniu bez winy sąd zwraca 300 zł (art. 79 UKSC). Do tego dochodzą koszty prawnika — od 3 000 zł za sprawę prostą." }
-    },
-    {
-      "@type": "Question",
-      "name": "Czy można odzyskać opłatę sądową za rozwód?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tak — przy wyroku orzekającym rozwód bez orzekania o winie sąd zwraca połowę opłaty sądowej, czyli 300 zł (art. 79 ust. 1 pkt 1 UKSC). Zwrot następuje automatycznie po uprawomocnieniu." }
-    },
-    {
-      "@type": "Question",
-      "name": "Ile trwa sprawa o rozwód?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Przy rozwodzie bez orzekania o winie i bez dzieci — 2 do 4 miesięcy. Ze sporem o opiekę nad dziećmi — 8 do 24 miesięcy." }
-    },
-    {
-      "@type": "Question",
-      "name": "Czy mediacja obniża koszty rozwodu?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tak. Mediacja może skrócić postępowanie i obniżyć koszty. Przy ugodzie w toku mediacji sąd może zwrócić 3/4 opłaty sądowej (art. 79 ust. 1 pkt 2 UKSC)." }
-    },
-    {
-      "@type": "Question",
-      "name": "Jak uniknąć orzekania o winie?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Obie strony muszą złożyć zgodny wniosek o divorce bez orzekania o winie. Sąd wówczas pomija badanie winy. To szybsza i tańsza ścieżka." }
-    }
+    { "@type": "Question", "name": "Ile kosztuje pozew o rozwód?", "acceptedAnswer": { "@type": "Answer", "text": "Opłata sądowa od pozwu o rozwód wynosi 600 zł (art. 26 ust. 1 pkt 1 UKSC). Przy orzeczeniu bez winy sąd zwraca 300 zł (art. 79 UKSC). Do tego dochodzą koszty prawnika — od 3 000 zł za sprawę prostą." } },
+    { "@type": "Question", "name": "Czy można odzyskać opłatę sądową za rozwód?", "acceptedAnswer": { "@type": "Answer", "text": "Tak — przy wyroku orzekającym rozwód bez orzekania o winie sąd zwraca połowę opłaty sądowej, czyli 300 zł (art. 79 ust. 1 pkt 1 UKSC). Zwrot następuje automatycznie po uprawomocnieniu." } },
+    { "@type": "Question", "name": "Ile trwa sprawa o rozwód?", "acceptedAnswer": { "@type": "Answer", "text": "Przy rozwodzie bez orzekania o winie i bez dzieci — 2 do 4 miesięcy. Ze sporem o opiekę nad dziećmi — 8 do 24 miesięcy." } },
+    { "@type": "Question", "name": "Czy mediacja obniża koszty rozwodu?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. Mediacja może skrócić postępowanie i obniżyć koszty. Przy ugodzie w toku mediacji sąd może zwrócić 3/4 opłaty sądowej (art. 79 ust. 1 pkt 2 UKSC)." } },
+    { "@type": "Question", "name": "Jak uniknąć orzekania o winie?", "acceptedAnswer": { "@type": "Answer", "text": "Obie strony muszą złożyć zgodny wniosek o divorce bez orzekania o winie. Sąd wówczas pomija badanie winy. To szybsza i tańsza ścieżka." } }
   ]
 };
+
+const pageFaqItems = [
+  { question: 'Czy mogę złożyć pozew o rozwód bez prawnika?', answer: 'Tak, nie ma obowiązku posiadania pełnomocnika. Jednak przy sporze o majątek lub dzieci profesjonalna pomoc znacznie zwiększa szanse na korzystny wyrok.' },
+  { question: 'Kiedy sąd nie orzeka o winie?', answer: 'Na zgodny wniosek obu małżonków, złożony w toku postępowania. Sąd pomija badanie winy i orzeka wyłącznie fakt rozpadu pożycia.' },
+  { question: 'Czy koszty można rozłożyć?', answer: 'Opłatę sądową płaci się przy składaniu pozwu. Honorarium prawnika często można negocjować — możliwa jest zaliczka + rozliczenie po sprawie.' },
+  { question: 'Co jeśli nie stać mnie na opłatę?', answer: 'Możesz złożyć wniosek o zwolnienie z kosztów sądowych (art. 102 UKSC). Sąd bada sytuację majątkową i może zwolnić w całości lub częściowo.' },
+];
 ---
 
 <Layout
@@ -71,22 +62,13 @@ const faqSchema = {
   <section class="section bg-white">
     <div class="container-site max-w-5xl">
 
-      <!-- Breadcrumb -->
-      <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 font-sans text-sm text-text-muted">
-          <li><a href="/" class="hover:text-navy">Strona główna</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="/narzedzia" class="hover:text-navy">Narzędzia prawne</a></li>
-          <li aria-hidden="true">›</li>
-          <li aria-current="page" class="text-navy">Kalkulator kosztów rozwodu</li>
-        </ol>
-      </nav>
+      <Breadcrumb items={[
+        { label: 'Strona główna', href: '/' },
+        { label: 'Narzędzia prawne', href: '/narzedzia' },
+        { label: 'Kalkulator kosztów rozwodu' },
+      ]} />
 
-      <!-- Header -->
-      <div class="flex items-center gap-2 mb-4 reveal">
-        <span class="h-px w-8 bg-gold"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
-      </div>
+      <SectionLabel text="Narzędzia prawne" class="mb-4 reveal" />
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
         <div class="reveal delay-100">
@@ -161,38 +143,14 @@ const faqSchema = {
         </p>
       </article>
 
-      <!-- FAQ -->
-      <section class="mt-12 reveal" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" class="font-serif text-2xl text-navy mb-6">Często zadawane pytania</h2>
-        <div class="space-y-4">
-          {[
-            { q: 'Czy mogę złożyć pozew o rozwód bez prawnika?', a: 'Tak, nie ma obowiązku posiadania pełnomocnika. Jednak przy sporze o majątek lub dzieci profesjonalna pomoc znacznie zwiększa szanse na korzystny wyrok.' },
-            { q: 'Kiedy sąd nie orzeka o winie?', a: 'Na zgodny wniosek obu małżonków, złożony w toku postępowania. Sąd pomija badanie winy i orzeka wyłącznie fakt rozpadu pożycia.' },
-            { q: 'Czy koszty można rozłożyć?', a: 'Opłatę sądową płaci się przy składaniu pozwu. Honorarium prawnika często można negocjować — możliwa jest zaliczka + rozliczenie po sprawie.' },
-            { q: 'Co jeśli nie stać mnie na opłatę?', a: 'Możesz złożyć wniosek o zwolnienie z kosztów sądowych (art. 102 UKSC). Sąd bada sytuację majątkową i może zwolnić w całości lub częściowo.' },
-          ].map(item => (
-            <details class="border border-border rounded-xl p-5 group">
-              <summary class="cursor-pointer font-sans font-semibold text-navy flex justify-between items-center list-none">
-                {item.q}
-                <span class="text-gold text-xl ml-4">+</span>
-              </summary>
-              <p class="mt-3 font-sans text-text-muted text-sm leading-relaxed">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <FAQAccordion items={pageFaqItems} title="Często zadawane pytania" class="!bg-transparent !py-0 mt-12" />
 
-      <!-- CTA -->
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
-        <h2 class="font-serif text-2xl text-white mb-3">Nie wiesz ile zapłacisz w swojej sprawie?</h2>
-        <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">
-          Każda sprawa o rozwód jest inna. Umów bezpłatną rozmowę wstępną — ocenimy Twoją sytuację i podamy konkretny kosztorys.
-        </p>
-        <div class="flex flex-wrap gap-3 justify-center">
-          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540;">Umów konsultację</a>
-          <a href="tel:+48609366160" class="inline-block px-5 py-2.5 font-sans font-semibold text-sm uppercase tracking-wide rounded-lg border-2 border-white/60 text-white hover:bg-white/10 transition-colors">609 366 160</a>
-        </div>
-      </div>
+      <ToolCTA
+        title="Nie wiesz ile zapłacisz w swojej sprawie?"
+        description="Każda sprawa o rozwód jest inna. Umów bezpłatną rozmowę wstępną — ocenimy Twoją sytuację i podamy konkretny kosztorys."
+        secondaryText="609 366 160"
+        secondaryHref="tel:+48609366160"
+      />
 
     </div>
   </section>

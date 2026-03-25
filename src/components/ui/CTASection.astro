@@ -1,11 +1,13 @@
 ---
 import { getEntry } from 'astro:content';
+import Button from '@components/ui/Button.astro';
 
 interface Props {
   title?: string;
   description?: string;
   buttonText?: string;
   buttonHref?: string;
+  variant?: 'light' | 'dark';
 }
 
 const contactEntry = await getEntry('singletons', 'contact');
@@ -16,32 +18,75 @@ const {
   description = "Opisz swoją sytuację — bezpłatnie ocenimy zakres możliwej pomocy prawnej.",
   buttonText = "Skontaktuj się",
   buttonHref = "/kontakt",
+  variant = 'light',
 } = Astro.props;
 
 const phoneText = contactData?.phone || "609 366 160";
 const phoneHref = `tel:${phoneText.replace(/\s+/g, '')}`;
 ---
 
-<section class="py-16 lg:py-24 bg-white relative">
-  <div class="container-site max-w-4xl">
-    <div class="bg-off-white rounded-[2.5rem] p-10 md:p-14 text-center border border-navy/5 shadow-2xl shadow-navy/5 reveal relative overflow-hidden">
-      <!-- decorative elements -->
-      <div class="absolute -top-12 -right-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
-      <div class="absolute -bottom-12 -left-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
-      <div class="relative z-10">
-        <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">{title}</h2>
-        <p class="font-sans text-text-muted text-lg mb-8 max-w-xl mx-auto">
-          {description}
-        </p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a href={buttonHref} class="btn-primary" style="background:#c9a84c; color:#0f2540; font-size:1rem; padding: 0.875rem 2rem;">
-            {buttonText}
-          </a>
-          <a href={phoneHref} class="font-sans text-navy bg-white border border-navy/10 shadow-sm rounded-lg px-6 py-3.5 hover:bg-navy/5 transition-colors uppercase tracking-wider font-semibold text-sm">
-            {phoneText}
-          </a>
+{variant === 'dark' ? (
+  <section class="section" aria-labelledby="cta-heading"
+    style="background: linear-gradient(135deg, #0f2540 0%, #1a3a5c 50%, #0f2540 100%);">
+    <div class="container-site">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: text -->
+        <div class="space-y-4 reveal">
+          <span class="font-sans text-xs uppercase tracking-widest text-gold">Gotowi na działanie</span>
+          <h2 id="cta-heading" class="font-serif text-3xl lg:text-4xl text-gold leading-tight">
+            {title}
+          </h2>
+          <p class="font-sans text-white text-base leading-relaxed max-w-lg opacity-90">
+            {description}
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <Button href={buttonHref} variant="gold" size="lg">{buttonText}</Button>
+            <Button href={phoneHref} variant="outline-white" size="lg">{phoneText}</Button>
+          </div>
+        </div>
+        <!-- Right: contact card -->
+        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 space-y-5 reveal delay-200">
+          <p class="font-sans text-xs uppercase tracking-widest text-gold">Dane kontaktowe</p>
+          {[
+            { icon: '📞', label: 'Telefon', value: phoneText, href: phoneHref },
+            { icon: '✉️', label: 'Email', value: contactData?.email || 'a.jarczynska@kancelariaabw.pl', href: `mailto:${contactData?.email || 'a.jarczynska@kancelariaabw.pl'}` },
+            { icon: '🕐', label: 'Godziny', value: contactData?.hours || 'Pon.–Pt., 9:00–17:00', href: null },
+            { icon: '📍', label: 'Lokalizacje', value: contactData?.locations || 'Wrocław · Bielany Wrocławskie', href: null },
+          ].map(item => (
+            <div class="flex items-start gap-3">
+              <span class="text-xl" aria-hidden="true">{item.icon}</span>
+              <div>
+                <p class="font-sans text-xs text-white opacity-50 uppercase tracking-wide">{item.label}</p>
+                {item.href
+                  ? <a href={item.href} class="font-sans text-sm text-white hover:text-gold transition-colors">{item.value}</a>
+                  : <p class="font-sans text-sm text-white">{item.value}</p>
+                }
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+) : (
+  <section class="py-16 lg:py-24 bg-white relative">
+    <div class="container-site max-w-4xl">
+      <div class="bg-off-white rounded-[2.5rem] p-10 md:p-14 text-center border border-navy/5 shadow-2xl shadow-navy/5 reveal relative overflow-hidden">
+        <!-- decorative elements -->
+        <div class="absolute -top-12 -right-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
+        <div class="absolute -bottom-12 -left-12 w-40 h-40 border border-gold/20 rounded-full -z-0"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-4">{title}</h2>
+          <p class="font-sans text-text-muted text-lg mb-8 max-w-xl mx-auto">
+            {description}
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <Button href={buttonHref} variant="gold" size="lg">{buttonText}</Button>
+            <Button href={phoneHref} variant="primary">{phoneText}</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+

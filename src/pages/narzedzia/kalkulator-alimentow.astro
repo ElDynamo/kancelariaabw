@@ -1,6 +1,10 @@
 ---
 import Layout from '@components/layout/Layout.astro';
 import StructuredData from '@components/seo/StructuredData.astro';
+import Breadcrumb from '@components/ui/Breadcrumb.astro';
+import SectionLabel from '@components/ui/SectionLabel.astro';
+import FAQAccordion from '@components/ui/FAQAccordion.astro';
+import ToolCTA from '@components/ui/ToolCTA.astro';
 import AlimonyCalculator from '@components/tools/AlimonyCalculator.vue';
 
 const breadcrumbSchema = {
@@ -35,6 +39,12 @@ const faqSchema = {
     { "@type": "Question", "name": "Co jeśli zobowiązany nie płaci alimentów?", "acceptedAnswer": { "@type": "Answer", "text": "Można złożyć wniosek do komornika sądowego. Jeśli egzekucja jest bezskuteczna i dochód rodziny nie przekracza 900 zł/os., dziecko może ubiegać się o świadczenie z Funduszu Alimentacyjnego (do 1 000 zł/mies. od X 2024)." } }
   ]
 };
+
+const pageFaqItems = [
+  { question: 'Czy można żądać alimentów wstecz?', answer: 'W praktyce sądy zasądzają alimenty od dnia złożenia pozwu. Wyjątkowo możliwe jest zasądzenie za wcześniejszy okres, jeśli powód udowodni zaległe, niezaspokojone potrzeby.' },
+  { question: 'Jak często można żądać podwyższenia alimentów?', answer: 'Nie ma minimalnego odstępu czasowego. Wniosek jest uzasadniony gdy nastąpi zmiana stosunków — wzrost potrzeb dziecka lub poprawa sytuacji zobowiązanego (art. 138 KRiO).' },
+  { question: 'Czy student może dostać alimenty?', answer: 'Tak — obowiązek alimentacyjny nie wygasa automatycznie z chwilą ukończenia 18 lat. Trwa, dopóki dziecko (student) nie jest w stanie się samodzielnie utrzymać.' },
+];
 ---
 
 <Layout
@@ -50,20 +60,13 @@ const faqSchema = {
   <section class="section bg-white">
     <div class="container-site max-w-5xl">
 
-      <nav aria-label="Breadcrumb" class="mb-8">
-        <ol class="flex items-center gap-2 font-sans text-sm text-text-muted">
-          <li><a href="/" class="hover:text-navy">Strona główna</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="/narzedzia" class="hover:text-navy">Narzędzia prawne</a></li>
-          <li aria-hidden="true">›</li>
-          <li aria-current="page" class="text-navy">Kalkulator alimentów</li>
-        </ol>
-      </nav>
+      <Breadcrumb items={[
+        { label: 'Strona główna', href: '/' },
+        { label: 'Narzędzia prawne', href: '/narzedzia' },
+        { label: 'Kalkulator alimentów' },
+      ]} />
 
-      <div class="flex items-center gap-2 mb-4 reveal">
-        <span class="h-px w-8 bg-gold"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Narzędzia prawne</span>
-      </div>
+      <SectionLabel text="Narzędzia prawne" class="mb-4 reveal" />
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
         <div class="reveal delay-100">
@@ -122,34 +125,14 @@ const faqSchema = {
         </p>
       </article>
 
-      <section class="mt-12 reveal" aria-labelledby="faq-alimony">
-        <h2 id="faq-alimony" class="font-serif text-2xl text-navy mb-6">Często zadawane pytania</h2>
-        <div class="space-y-4">
-          {[
-            { q: 'Czy można żądać alimentów wstecz?', a: 'W praktyce sądy zasądzają alimenty od dnia złożenia pozwu. Wyjątkowo możliwe jest zasądzenie za wcześniejszy okres, jeśli powód udowodni zaległe, niezaspokojone potrzeby.' },
-            { q: 'Jak często można żądać podwyższenia alimentów?', a: 'Nie ma minimalnego odstępu czasowego. Wniosek jest uzasadniony gdy nastąpi zmiana stosunków — wzrost potrzeb dziecka lub poprawa sytuacji zobowiązanego (art. 138 KRiO).' },
-            { q: 'Czy student może dostać alimenty?', a: 'Tak — obowiązek alimentacyjny nie wygasa automatycznie z chwilą ukończenia 18 lat. Trwa, dopóki dziecko (student) nie jest w stanie się samodzielnie utrzymać.' },
-          ].map(item => (
-            <details class="border border-border rounded-xl p-5">
-              <summary class="cursor-pointer font-sans font-semibold text-navy list-none flex justify-between">
-                {item.q} <span class="text-gold">+</span>
-              </summary>
-              <p class="mt-3 font-sans text-text-muted text-sm leading-relaxed">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <FAQAccordion items={pageFaqItems} title="Często zadawane pytania" class="!bg-transparent !py-0 mt-12" />
 
-      <div class="mt-12 bg-navy rounded-3xl p-8 text-center reveal delay-200">
-        <h2 class="font-serif text-2xl text-white mb-3">Potrzebujesz pomocy w sprawie alimentacyjnej?</h2>
-        <p class="font-sans text-white opacity-80 mb-6 max-w-lg mx-auto">
-          Sprawy o alimenty wymagają precyzyjnego udokumentowania potrzeb dziecka i możliwości drugiej strony.
-        </p>
-        <div class="flex flex-wrap gap-3 justify-center">
-          <a href="/kontakt" class="btn-primary" style="background:#c9a84c; color:#0f2540;">Umów konsultację</a>
-          <a href="/uslugi/prawo-rodzinne" class="inline-block px-5 py-2.5 font-sans font-semibold text-sm uppercase tracking-wide rounded-lg border-2 border-white/60 text-white hover:bg-white/10 transition-colors">Prawo rodzinne</a>
-        </div>
-      </div>
+      <ToolCTA
+        title="Potrzebujesz pomocy w sprawie alimentacyjnej?"
+        description="Sprawy o alimenty wymagają precyzyjnego udokumentowania potrzeb dziecka i możliwości drugiej strony."
+        secondaryText="Prawo rodzinne"
+        secondaryHref="/uslugi/prawo-rodzinne"
+      />
 
     </div>
   </section>
