@@ -30,22 +30,10 @@ jobs:
             else
               cd "$PROJECT_DIR"
               
-              # Backup client-edited content before pull
-              BACKUP_NAME="content-backup-$(date +%Y%m%d_%H%M%S)"
-              mkdir -p "/tmp/$BACKUP_NAME"
-              cp -a src/content/. "/tmp/$BACKUP_NAME/" 2>/dev/null || true
-              echo "Content backed up to /tmp/$BACKUP_NAME"
-              
               # Pull latest code
               git fetch origin master
               git checkout master
               git reset --hard origin/master
-              
-              # Restore client content over git version
-              if [ -d "/tmp/$BACKUP_NAME" ]; then
-                cp -a "/tmp/$BACKUP_NAME/." src/content/
-                echo "Client content restored"
-              fi
             fi
             
             # Write .env for Docker Compose
