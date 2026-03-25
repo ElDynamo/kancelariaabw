@@ -7,6 +7,20 @@ const ALL_LINKS = [
     { path: '/blog', label: 'Blog' },
     { path: '/o-mnie', label: 'O mnie' },
     { path: '/kontakt', label: 'Kontakt' },
+    { path: '/narzedzia', label: 'Narzędzia' },
+    // Strony usług
+    { path: '/uslugi/prawo-rodzinne', label: 'Prawo rodzinne' },
+    { path: '/uslugi/prawo-cywilne', label: 'Prawo cywilne' },
+    { path: '/uslugi/prawo-karne', label: 'Prawo karne' },
+    { path: '/uslugi/prawo-gospodarcze', label: 'Prawo gospodarcze' },
+    { path: '/uslugi/upadlosc-konsumencka-wroclaw', label: 'Upadłość konsumencka' },
+    { path: '/uslugi/prawo-nieruchomosci-wroclaw', label: 'Prawo nieruchomości' },
+    { path: '/uslugi/obsluga-prawna-firm-wroclaw', label: 'Obsługa firm' },
+    { path: '/uslugi/odszkodowania-komunikacyjne-wroclaw', label: 'Odszkodowania' },
+    // Strony prawne
+    { path: '/polityka-prywatnosci', label: 'Polityka prywatności' },
+    { path: '/regulamin', label: 'Regulamin' },
+    { path: '/przetwarzanie-danych', label: 'Przetwarzanie danych' },
 ];
 
 test.describe('Nawigacja', () => {

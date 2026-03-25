@@ -1,0 +1,119 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '@components/layout/Layout.astro';
+import ServiceHero from '@components/ui/ServiceHero.astro';
+import CTASection from '@components/ui/CTASection.astro';
+import StructuredData from '@components/seo/StructuredData.astro';
+
+const serviceEntry = await getEntry('uslugi', 'prawo-gospodarcze');
+const data = serviceEntry?.data;
+const renderResult = serviceEntry ? await render(serviceEntry) : null;
+const Content = renderResult ? renderResult.Content : null;
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": data?.title || "Prawo gospodarcze Wrocław",
+  "provider": { "@type": "LegalService", "name": "Kancelaria Prawna ABW", "telephone": "+48609366160" },
+  "serviceType": "Legal Services",
+  "areaServed": ["Wrocław", "Dolny Śląsk"]
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
+    { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
+    { "@type": "ListItem", "position": 3, "name": "Prawo gospodarcze", "item": "https://kancelariaabw.pl/uslugi/prawo-gospodarcze" },
+  ]
+};
+---
+
+<Layout
+  title={data?.title || "Prawo gospodarcze Wrocław — Obsługa Prawna Firm"}
+  description={data?.seoDescription || "Obsługa prawna firm i przedsiębiorców we Wrocławiu. Rejestracja spółek, umowy, windykacja, RODO."}
+>
+  <Fragment slot="head">
+    <StructuredData schema={serviceSchema} />
+    <StructuredData schema={breadcrumb} />
+  </Fragment>
+
+  <ServiceHero
+    title={data?.hero?.title || "Prawo gospodarcze"}
+    subtitle={data?.hero?.subtitle}
+    description={data?.hero?.description}
+    label="Obsługa prawna firm"
+    ctaText="Umów konsultację"
+    image="/photos/hero_obsluga_firm_1772972083263.png"
+    imageAlt="Obsługa prawna przedsiębiorców Wrocław"
+  />
+
+  <!-- CONTENT GRID -->
+  <section class="py-20 lg:py-32 bg-white">
+    <div class="container-site max-w-5xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        
+        <!-- SIDEBAR -->
+        <div class="lg:col-span-4 reveal">
+          <div class="sticky top-32">
+            <h2 class="font-serif text-2xl text-navy mb-6">Dla kogo?</h2>
+            <ul class="flex flex-col gap-4 font-sans text-sm text-text-muted border-b border-border/50 pb-8 mb-8">
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-1">―</span>
+                <span>Właściciele jednoosobowych działalności gospodarczych.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-1">―</span>
+                <span>Spółki z o.o., jawne i komandytowe.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-1">―</span>
+                <span>Przedsiębiorcy wchodzący w spory z kontrahentami.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-gold mt-1">―</span>
+                <span>Firmy potrzebujące stałej obsługi prawnej.</span>
+              </li>
+            </ul>
+
+            <div class="bg-off-white p-8 border border-border/50">
+               <h3 class="font-serif text-xl text-navy mb-4">Porozmawiajmy o Twojej firmie</h3>
+               <p class="font-sans text-sm text-text-muted mb-6">Pierwsza rozmowa telefoniczna jest bezpłatna — ocenimy sprawę i zaproponujemy optymalną formę współpracy.</p>
+               <a href="tel:+48609366160" class="inline-flex font-sans text-sm text-navy uppercase tracking-widest border-b border-navy pb-1 hover:text-gold hover:border-gold transition-colors">
+                  Zadzwoń: 609 366 160
+               </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="lg:col-span-8 reveal delay-200">
+          <h2 class="font-serif text-3xl md:text-4xl text-navy mb-12">Zakres obsługi prawnej</h2>
+          
+          <div class="flex flex-col gap-12">
+            {(data?.features || []).map((item, index) => (
+              <div class="relative pl-8 md:pl-12 border-l border-border/50 group hover:border-gold/50 transition-colors duration-500">
+                <span class="absolute left-0 top-0 -translate-x-1/2 text-gold font-serif text-sm px-1 leading-none bg-white">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 class="font-serif text-2xl text-navy mb-3">{item.title}</h3>
+                <p class="font-sans text-base text-text-muted leading-relaxed max-w-xl">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-20 pt-12 border-t border-border/50">
+             <div class="prose prose-lg max-w-none prose-navy">
+               {Content && <Content />}
+             </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Layout>
