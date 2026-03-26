@@ -64,22 +64,33 @@ const breadcrumb = {
         <p class="font-sans text-text-muted text-lg max-w-2xl mx-auto">Obszary, w których zdobyliśmy największe doświadczenie, dając naszym klientom poczucie bezpieczeństwa na sali rozpraw i w życiu codziennym.</p>
       </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-        {mainServices.map((s, index) => (
-          <a href={`/uslugi/${s.slug}`} class="group bg-white p-8 md:p-10 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-center text-center">
-            <div class="flex flex-col items-center mb-6">
-              <div class="w-16 h-16 rounded-full bg-navy/5 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold transition-colors duration-500 mb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {mainServices.map((s) => (
+          <a href={`/uslugi/${s.slug}`} class="group bg-white p-8 md:p-12 border border-border/50 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-xl hover:border-gold/50 transition-all duration-500 reveal flex flex-col items-start relative overflow-hidden">
+            <!-- Dekoracyjna linia gradientowa -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold/0 via-gold/50 to-gold/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center"></div>
+            
+            <div class="flex w-full items-start gap-5 md:gap-6 mb-8">
+              <div class="w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl bg-off-white border border-border/50 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold group-hover:border-navy transition-all duration-500 text-2xl shadow-sm">
                 <Fragment set:html={s.data.features?.[0]?.icon || '⚖️'} />
               </div>
-              {index === 0 && (
-                <span class="inline-flex font-sans text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-gold/30 text-gold rounded-full whitespace-nowrap">Główna specjalizacja</span>
-              )}
+              <div class="pt-1 md:pt-2">
+                <h3 class="font-serif text-2xl md:text-3xl text-navy group-hover:text-gold transition-colors duration-500 leading-tight">{s.data.hero?.title}</h3>
+              </div>
             </div>
-            <h3 class="font-serif text-2xl md:text-3xl text-navy mb-4 group-hover:text-gold transition-colors duration-500">{s.data.hero?.title}</h3>
-            <p class="font-sans text-base text-text-muted leading-relaxed mb-8">{s.data.seo?.description}</p>
-            <div class="flex items-center text-sm font-sans uppercase tracking-[0.2em] text-navy group-hover:text-gold transition-colors mt-auto">
-              <span class="mr-3">Więcej informacji</span>
-              <span class="w-8 h-px bg-current transform origin-left transition-transform duration-500 group-hover:scale-x-150"></span>
+            
+            <p class="font-sans text-base md:text-lg text-text-muted leading-relaxed mb-10 flex-grow pr-0 md:pr-4">
+              {s.data.seo?.description}
+            </p>
+            
+            <div class="flex items-center text-sm font-sans uppercase tracking-[0.2em] text-navy group-hover:text-gold transition-colors mt-auto w-full">
+              <span class="mr-4 font-medium tracking-widest">Szczegóły</span>
+              <span class="flex-grow h-px bg-border/50 group-hover:bg-gold/20 transition-colors duration-500 relative">
+                <span class="absolute inset-y-0 left-0 h-full bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out origin-left"></span>
+              </span>
+              <svg class="w-5 h-5 ml-4 transform group-hover:translate-x-2 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </div>
           </a>
         ))}
