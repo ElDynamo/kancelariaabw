@@ -64,7 +64,7 @@ test.describe('Nawigacja', () => {
     test('Blog — linki "Przeczytaj artykuł" prowadza do postów', async ({ page }) => {
         await page.goto('/blog');
         const firstCardLink = page.locator('article a').first();
-        await firstCardLink.click();
+        await firstCardLink.click({ force: true });
         // Powinniśmy być na /blog/[slug]
         expect(page.url()).toContain('/blog/');
         const h1 = page.locator('h1');
