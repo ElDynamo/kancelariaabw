@@ -1,0 +1,1068 @@
+{
+  "config": {
+    "configFile": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\playwright.config.ts",
+    "rootDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 10
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 10
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 10
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 10
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 10,
+    "webServer": {
+      "command": "bun run dev",
+      "url": "http://localhost:4321",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "accessibility\\axe.spec.ts",
+      "file": "accessibility/axe.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Accessibility — WCAG 2.1 AA",
+          "file": "accessibility/axe.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "/ — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1683,
+                      "error": {
+                        "message": "Error: WCAG violations on /:\n\n[SERIOUS] aria-hidden-focus: Ensure aria-hidden elements are not focusable nor contain focusable elements\n  → <a href=\"/uslugi/prawo-rodzinne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-cywilne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-karne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-gospodarcze\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n---\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"91:79\">Kancelaria Prawna</span>\n  → <h1 id=\"hero-heading\" class=\"heading-xl\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"93:50\">\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"95:35\">we Wrocławiu</span>\n  → <p class=\"text-body text-lg max-w-lg\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"97:47\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <a href=\"/uslugi\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"106:54\">10+</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"107:82\">lat doświadczenia</p>\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"110:54\">100%</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"111:82\">zaangażowania</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                        "stack": "Error: WCAG violations on /:\n\n[SERIOUS] aria-hidden-focus: Ensure aria-hidden elements are not focusable nor contain focusable elements\n  → <a href=\"/uslugi/prawo-rodzinne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-cywilne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-karne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-gospodarcze\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n---\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"91:79\">Kancelaria Prawna</span>\n  → <h1 id=\"hero-heading\" class=\"heading-xl\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"93:50\">\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"95:35\">we Wrocławiu</span>\n  → <p class=\"text-body text-lg max-w-lg\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"97:47\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <a href=\"/uslugi\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"106:54\">10+</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"107:82\">lat doświadczenia</p>\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"110:54\">100%</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"111:82\">zaangażowania</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /:\n\n[SERIOUS] aria-hidden-focus: Ensure aria-hidden elements are not focusable nor contain focusable elements\n  → <a href=\"/uslugi/prawo-rodzinne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-cywilne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-karne\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n  → <a href=\"/uslugi/prawo-gospodarcze\" class=\"absolute inset-0 z-10\" aria-hidden=\"true\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro\" data-astro-source-loc=\"32:72\">\n---\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"91:79\">Kancelaria Prawna</span>\n  → <h1 id=\"hero-heading\" class=\"heading-xl\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"93:50\">\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"95:35\">we Wrocławiu</span>\n  → <p class=\"text-body text-lg max-w-lg\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"97:47\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <a href=\"/uslugi\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"106:54\">10+</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"107:82\">lat doświadczenia</p>\n  → <p class=\"font-serif text-3xl text-navy\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"110:54\">100%</p>\n  → <p class=\"font-sans text-xs text-text-muted uppercase tracking-wide\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro\" data-astro-source-loc=\"111:82\">zaangażowania</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.457Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-3748b--AA-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-3748b--AA-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-43a67ea8689dc1a1ab13",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/o-mnie — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 1593,
+                      "error": {
+                        "message": "Error: WCAG violations on /o-mnie:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/o-mnie\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> O mnie </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"71:79\">O mnie</span>\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"73:120\">Radca Prawny</span>\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /o-mnie:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/o-mnie\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> O mnie </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"71:79\">O mnie</span>\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"73:120\">Radca Prawny</span>\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /o-mnie:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/o-mnie\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> O mnie </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"71:79\">O mnie</span>\n  → <span class=\"text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"73:120\">Radca Prawny</span>\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <p class=\"text-body\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro\" data-astro-source-loc=\"77:12\">\n  → <a href=\"/kontakt\" class=\"inline-flex items-ce...\" data-astro-source-fi...=\"C:/MyFiles/Programmi...\" data-astro-source-lo...=\"29:2\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.489Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-4f076-nie-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-4f076-nie-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-341e2d1f6d52d0ee2bb2",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/uslugi — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1748,
+                      "error": {
+                        "message": "Error: WCAG violations on /uslugi:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/uslugi\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Usługi </a>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /uslugi:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/uslugi\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Usługi </a>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /uslugi:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/uslugi\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Usługi </a>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.475Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-8fb45-ugi-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-8fb45-ugi-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-0c371b9e86dcfa2b618e",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/uslugi/prawo-rodzinne — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 2425,
+                      "error": {
+                        "message": "Error: WCAG violations on /uslugi/prawo-rodzinne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo rodzinne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /uslugi/prawo-rodzinne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo rodzinne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /uslugi/prawo-rodzinne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo rodzinne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.506Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-c293a-nne-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-c293a-nne-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-7cd3f896843a4f48fe76",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/uslugi/prawo-cywilne — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 2400,
+                      "error": {
+                        "message": "Error: WCAG violations on /uslugi/prawo-cywilne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo cywilne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /uslugi/prawo-cywilne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo cywilne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /uslugi/prawo-cywilne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo cywilne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.506Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-1cccc-lne-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-1cccc-lne-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-f70efe2a74d6cb33abac",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/uslugi/prawo-karne — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "failed",
+                      "duration": 2917,
+                      "error": {
+                        "message": "Error: WCAG violations on /uslugi/prawo-karne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo karne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /uslugi/prawo-karne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo karne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /uslugi/prawo-karne:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Strona główna</a>\n  → <a href=\"/uslugi\" class=\"hover:text-white\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"32:52\">Usługi</a>\n  → <span aria-current=\"page\" class=\"text-white opacity-80\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro\" data-astro-source-loc=\"34:60\">Prawo karne</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.490Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-2907a-rne-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-2907a-rne-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-60a1e6a277ac0c690d23",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/cennik — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "failed",
+                      "duration": 1497,
+                      "error": {
+                        "message": "Error: WCAG violations on /cennik:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/cennik\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Cennik </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"17:77\">Transparentność</span>\n  → <h1 class=\"heading-xl mt-2\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"18:37\">Cennik</h1>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"19:53\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /cennik:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/cennik\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Cennik </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"17:77\">Transparentność</span>\n  → <h1 class=\"heading-xl mt-2\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"18:37\">Cennik</h1>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"19:53\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /cennik:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/cennik\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Cennik </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"17:77\">Transparentność</span>\n  → <h1 class=\"heading-xl mt-2\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"18:37\">Cennik</h1>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro\" data-astro-source-loc=\"19:53\">\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.473Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-0b01c-nik-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-0b01c-nik-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-b90326537e37ef799936",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/kontakt — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "failed",
+                      "duration": 2206,
+                      "error": {
+                        "message": "Error: WCAG violations on /kontakt:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/kontakt\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"34:77\">Jesteśmy do dyspozycji</span>\n  → <h2 class=\"font-sans text-xs uppercase tracking-widest text-gold mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"42:84\">Dane kancelarii</h2>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"45:92\">Telefon</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"49:92\">Email</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"53:92\">Godziny pracy</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"57:92\">Lokalizacje</dt>\n  → <h2 class=\"font-serif text-2xl text-navy mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"71:58\">Napisz do nas</h2>\n  → <label for=\"contact-name\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Imię i nazwisko <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-name\" value=\"\" type=\"text\" required=\"\" autocomplete=\"name\" placeholder=\"Jan Kowalski\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-email\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Email <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-email\" value=\"\" type=\"email\" required=\"\" autocomplete=\"email\" placeholder=\"jan@example.com\" class=\"w-full border border...\">\n  → <label for=\"contact-phone\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Telefon <span class=\"text-text-muted font-normal\">(opcjonalnie)</span></label>\n  → <span class=\"text-text-muted font-normal\">(opcjonalnie)</span>\n  → <input id=\"contact-phone\" value=\"\" type=\"tel\" autocomplete=\"tel\" placeholder=\"+48 600 000 000\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-subject\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Temat sprawy <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <select id=\"contact-subject\" required=\"\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-message\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Wiadomość <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <textarea id=\"contact-message\" required=\"\" rows=\"5\" placeholder=\"Opisz pokrótce swoją...\" class=\"w-full border border...\">\n  → <label for=\"contact-consent\" class=\"font-sans text-xs text-text-muted leading-relaxed cursor-pointer\">\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n  → <span>Wyślij wiadomość</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n---\n\n[SERIOUS] link-in-text-block: Ensure links are distinguished from surrounding text in a way that does not rely on color\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
+                        "stack": "Error: WCAG violations on /kontakt:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/kontakt\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"34:77\">Jesteśmy do dyspozycji</span>\n  → <h2 class=\"font-sans text-xs uppercase tracking-widest text-gold mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"42:84\">Dane kancelarii</h2>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"45:92\">Telefon</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"49:92\">Email</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"53:92\">Godziny pracy</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"57:92\">Lokalizacje</dt>\n  → <h2 class=\"font-serif text-2xl text-navy mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"71:58\">Napisz do nas</h2>\n  → <label for=\"contact-name\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Imię i nazwisko <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-name\" value=\"\" type=\"text\" required=\"\" autocomplete=\"name\" placeholder=\"Jan Kowalski\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-email\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Email <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-email\" value=\"\" type=\"email\" required=\"\" autocomplete=\"email\" placeholder=\"jan@example.com\" class=\"w-full border border...\">\n  → <label for=\"contact-phone\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Telefon <span class=\"text-text-muted font-normal\">(opcjonalnie)</span></label>\n  → <span class=\"text-text-muted font-normal\">(opcjonalnie)</span>\n  → <input id=\"contact-phone\" value=\"\" type=\"tel\" autocomplete=\"tel\" placeholder=\"+48 600 000 000\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-subject\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Temat sprawy <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <select id=\"contact-subject\" required=\"\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-message\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Wiadomość <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <textarea id=\"contact-message\" required=\"\" rows=\"5\" placeholder=\"Opisz pokrótce swoją...\" class=\"w-full border border...\">\n  → <label for=\"contact-consent\" class=\"font-sans text-xs text-text-muted leading-relaxed cursor-pointer\">\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n  → <span>Wyślij wiadomość</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n---\n\n[SERIOUS] link-in-text-block: Ensure links are distinguished from surrounding text in a way that does not rely on color\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /kontakt:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/kontakt\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\">\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"34:77\">Jesteśmy do dyspozycji</span>\n  → <h2 class=\"font-sans text-xs uppercase tracking-widest text-gold mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"42:84\">Dane kancelarii</h2>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"45:92\">Telefon</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"49:92\">Email</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"53:92\">Godziny pracy</dt>\n  → <dt class=\"font-sans text-xs text-text-muted uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"57:92\">Lokalizacje</dt>\n  → <h2 class=\"font-serif text-2xl text-navy mb-6\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro\" data-astro-source-loc=\"71:58\">Napisz do nas</h2>\n  → <label for=\"contact-name\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Imię i nazwisko <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-name\" value=\"\" type=\"text\" required=\"\" autocomplete=\"name\" placeholder=\"Jan Kowalski\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-email\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Email <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <input id=\"contact-email\" value=\"\" type=\"email\" required=\"\" autocomplete=\"email\" placeholder=\"jan@example.com\" class=\"w-full border border...\">\n  → <label for=\"contact-phone\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Telefon <span class=\"text-text-muted font-normal\">(opcjonalnie)</span></label>\n  → <span class=\"text-text-muted font-normal\">(opcjonalnie)</span>\n  → <input id=\"contact-phone\" value=\"\" type=\"tel\" autocomplete=\"tel\" placeholder=\"+48 600 000 000\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-subject\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Temat sprawy <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <select id=\"contact-subject\" required=\"\" class=\"w-full border border-border rounded-lg px-4 py-2.5 font-sans text-sm text-navy focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent disabled:opacity-50 bg-white\">\n  → <label for=\"contact-message\" class=\"block font-sans text-sm text-navy mb-1 font-medium\"> Wiadomość <span class=\"text-gold\" aria-label=\"wymagane\">*</span></label>\n  → <textarea id=\"contact-message\" required=\"\" rows=\"5\" placeholder=\"Opisz pokrótce swoją...\" class=\"w-full border border...\">\n  → <label for=\"contact-consent\" class=\"font-sans text-xs text-text-muted leading-relaxed cursor-pointer\">\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n  → <span>Wyślij wiadomość</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n---\n\n[SERIOUS] link-in-text-block: Ensure links are distinguished from surrounding text in a way that does not rely on color\n  → <a href=\"/przetwarzanie-danych\" class=\"text-gold hover:underline\" target=\"_blank\">klauzulą informacyjną</a>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.538Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-b0b8b-akt-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-b0b8b-akt-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-15b8310cf87e2a50bd63",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/blog — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "failed",
+                      "duration": 1866,
+                      "error": {
+                        "message": "Error: WCAG violations on /blog:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/blog\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Blog </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"54:77\">Wiedza i porady</span>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"56:53\"> Praktyczne artykuły o polskim prawie. Piszę przystępnie o sprawach, które dotykają codziennego życia. </p>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-red-50 text-red-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo karne </span>\n  → <time datetime=\"2026-03-05T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 5 marca 2026 </time>\n  → <a href=\"/blog/jazda-po-alkoholu-konsekwencje-prawne\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Co grozi za jazdę po alkoholu? Prawo karne drogowe w Polsce </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 lutego 2026 </time>\n  → <a href=\"/blog/alimenty-na-dziecko-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Alimenty na dziecko — jak je uzyskać i w jakiej wysokości? </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-green-50 text-green-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo cywilne </span>\n  → <time datetime=\"2026-02-20T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 20 lutego 2026 </time>\n  → <a href=\"/blog/bezumowne-korzystanie-z-lokalu-odszkodowanie\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 lutego 2026 </time>\n  → <a href=\"/blog/jak-przebiega-rozwod-w-polsce\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Jak przebiega sprawa o rozwód w Polsce? Przewodnik krok po kroku </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Odszkodowania </span>\n  → <time datetime=\"2026-02-10T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 10 lutego 2026 </time>\n  → <a href=\"/blog/odszkodowanie-z-oc-sprawcy-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo upadłościowe </span>\n  → <time datetime=\"2026-01-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 stycznia 2026 </time>\n  → <a href=\"/blog/czy-ogloszenie-upadlosci-zatrzymuje-komornika\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-01-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 stycznia 2026 </time>\n  → <a href=\"/blog/podzial-majatku-po-rozwodzie-zasady\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Podział majątku po rozwodzie — zasady, koszty i najczęstsze problemy </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /blog:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/blog\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Blog </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"54:77\">Wiedza i porady</span>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"56:53\"> Praktyczne artykuły o polskim prawie. Piszę przystępnie o sprawach, które dotykają codziennego życia. </p>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-red-50 text-red-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo karne </span>\n  → <time datetime=\"2026-03-05T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 5 marca 2026 </time>\n  → <a href=\"/blog/jazda-po-alkoholu-konsekwencje-prawne\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Co grozi za jazdę po alkoholu? Prawo karne drogowe w Polsce </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 lutego 2026 </time>\n  → <a href=\"/blog/alimenty-na-dziecko-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Alimenty na dziecko — jak je uzyskać i w jakiej wysokości? </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-green-50 text-green-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo cywilne </span>\n  → <time datetime=\"2026-02-20T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 20 lutego 2026 </time>\n  → <a href=\"/blog/bezumowne-korzystanie-z-lokalu-odszkodowanie\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 lutego 2026 </time>\n  → <a href=\"/blog/jak-przebiega-rozwod-w-polsce\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Jak przebiega sprawa o rozwód w Polsce? Przewodnik krok po kroku </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Odszkodowania </span>\n  → <time datetime=\"2026-02-10T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 10 lutego 2026 </time>\n  → <a href=\"/blog/odszkodowanie-z-oc-sprawcy-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo upadłościowe </span>\n  → <time datetime=\"2026-01-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 stycznia 2026 </time>\n  → <a href=\"/blog/czy-ogloszenie-upadlosci-zatrzymuje-komornika\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-01-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 stycznia 2026 </time>\n  → <a href=\"/blog/podzial-majatku-po-rozwodzie-zasady\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Podział majątku po rozwodzie — zasady, koszty i najczęstsze problemy </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /blog:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <a href=\"/blog\" class=\"font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium\" aria-current=\"page\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro\" data-astro-source-loc=\"90:14\"> Blog </a>\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"54:77\">Wiedza i porady</span>\n  → <p class=\"text-body max-w-2xl mx-auto mt-4\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"56:53\"> Praktyczne artykuły o polskim prawie. Piszę przystępnie o sprawach, które dotykają codziennego życia. </p>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-red-50 text-red-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo karne </span>\n  → <time datetime=\"2026-03-05T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 5 marca 2026 </time>\n  → <a href=\"/blog/jazda-po-alkoholu-konsekwencje-prawne\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Co grozi za jazdę po alkoholu? Prawo karne drogowe w Polsce </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 lutego 2026 </time>\n  → <a href=\"/blog/alimenty-na-dziecko-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Alimenty na dziecko — jak je uzyskać i w jakiej wysokości? </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-green-50 text-green-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo cywilne </span>\n  → <time datetime=\"2026-02-20T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 20 lutego 2026 </time>\n  → <a href=\"/blog/bezumowne-korzystanie-z-lokalu-odszkodowanie\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-02-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 lutego 2026 </time>\n  → <a href=\"/blog/jak-przebiega-rozwod-w-polsce\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Jak przebiega sprawa o rozwód w Polsce? Przewodnik krok po kroku </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Odszkodowania </span>\n  → <time datetime=\"2026-02-10T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 10 lutego 2026 </time>\n  → <a href=\"/blog/odszkodowanie-z-oc-sprawcy-jak-uzyskac\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-gray-100 text-gray-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo upadłościowe </span>\n  → <time datetime=\"2026-01-28T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 28 stycznia 2026 </time>\n  → <a href=\"/blog/czy-ogloszenie-upadlosci-zatrzymuje-komornika\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\">\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <span class=\"font-sans text-xs px-2 py-1 rounded-full inline-block bg-blue-50 text-blue-700\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"66:159\"> Prawo rodzinne </span>\n  → <time datetime=\"2026-01-15T00:00:00.000Z\" class=\"font-sans text-xs text-text-muted\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"75:16\"> 15 stycznia 2026 </time>\n  → <a href=\"/blog/podzial-majatku-po-rozwodzie-zasady\" class=\"after:absolute after:inset-0\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"79:85\"> Podział majątku po rozwodzie — zasady, koszty i najczęstsze problemy </a>\n  → <p class=\"font-sans text-sm text-text-muted leading-relaxed line-clamp-3\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"83:89\">\n  → <span class=\"font-sans text-xs text-gold uppercase tracking-wider\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro\" data-astro-source-loc=\"87:84\">\nPrzeczytaj artykuł →\n</span>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.490Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-636c3-log-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-636c3-log-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-68780fcfc815ede01c0e",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/polityka-prywatnosci — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "failed",
+                      "duration": 2037,
+                      "error": {
+                        "message": "Error: WCAG violations on /polityka-prywatnosci:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"18:77\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"21:75\"> Ostatnia aktualizacja: marzec 2026 </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /polityka-prywatnosci:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"18:77\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"21:75\"> Ostatnia aktualizacja: marzec 2026 </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /polityka-prywatnosci:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"18:77\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro\" data-astro-source-loc=\"21:75\"> Ostatnia aktualizacja: marzec 2026 </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"51:93\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"57:93\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"63:93\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"67:93\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\" data-astro-source-file=\"C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro\" data-astro-source-loc=\"77:58\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:17.538Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-6e7eb-sci-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-6e7eb-sci-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-4ebd95d46d9a56eb83ef",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "/regulamin — brak naruszeń WCAG AA",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 6,
+                      "status": "failed",
+                      "duration": 1167,
+                      "error": {
+                        "message": "Error: WCAG violations on /regulamin:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\"> Regulamin świadczenia usług drogą elektroniczną zgodny z Ustawą z dnia 18 lipca 2002 r... </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: WCAG violations on /regulamin:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\"> Regulamin świadczenia usług drogą elektroniczną zgodny z Ustawą z dnia 18 lipca 2002 r... </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98",
+                        "location": {
+                          "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                          "column": 98,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m                     v\u001b[33m.\u001b[39mnodes\u001b[33m.\u001b[39mmap(n \u001b[33m=>\u001b[39m \u001b[32m`  → ${n.html}`\u001b[39m)\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n'\u001b[39m)\n \u001b[90m 32 |\u001b[39m                 )\u001b[33m.\u001b[39mjoin(\u001b[32m'\\n---\\n'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 expect\u001b[33m.\u001b[39msoft(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m \u001b[32m`WCAG violations on ${path}:\\n${report}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m             }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m             expect(results\u001b[33m.\u001b[39mviolations\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 98,
+                            "line": 33
+                          },
+                          "message": "Error: WCAG violations on /regulamin:\n\n[SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\n  → <span class=\"font-sans text-xs uppercase tracking-widest text-gold\">Dokumenty prawne</span>\n  → <p class=\"font-sans text-sm text-text-muted mb-12 reveal delay-200 active\"> Regulamin świadczenia usług drogą elektroniczną zgodny z Ustawą z dnia 18 lipca 2002 r... </p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Telefon</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Email</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Lokalizacje</p>\n  → <p class=\"font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1\">Godziny pracy</p>\n  → <p class=\"font-sans text-xs text-white opacity-40\">\n© 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.\n</p>\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  31 |                     v.nodes.map(n => `  → ${n.html}`).join('\\n')\n  32 |                 ).join('\\n---\\n');\n> 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\\n${report}`).toBe(0);\n     |                                                                                                  ^\n  34 |             }\n  35 |\n  36 |             expect(results.violations.length).toBe(0);\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:33:98"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                            "column": 47,
+                            "line": 36
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |             }\n  35 |\n> 36 |             expect(results.violations.length).toBe(0);\n     |                                               ^\n  37 |         });\n  38 |     }\n  39 |\n    at C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts:36:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:20.459Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-90208-min-—-brak-naruszeń-WCAG-AA-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\test-results\\accessibility-axe-Accessib-90208-min-—-brak-naruszeń-WCAG-AA-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\MyFiles\\ProgrammingProjects\\MamaWiki\\kancelariaabw\\tests\\accessibility\\axe.spec.ts",
+                        "column": 98,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-c63f2a83b485bac724a1",
+              "file": "accessibility/axe.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "Formularz kontaktowy — pola mają etykiety (for/id matching)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 778,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:20.524Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-dca13a4c897b180759ec",
+              "file": "accessibility/axe.spec.ts",
+              "line": 40,
+              "column": 5
+            },
+            {
+              "title": "Nawigacja — linki mają teksty (no icon-only links)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 836,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:20.524Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-e22adb97693d775469d5",
+              "file": "accessibility/axe.spec.ts",
+              "line": 57,
+              "column": 5
+            },
+            {
+              "title": "Obrazy mają alt attribute",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 783,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-26T10:08:20.538Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c298edd00b176cde2295-516daf2dd61641b2826d",
+              "file": "accessibility/axe.spec.ts",
+              "line": 71,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-26T10:08:13.489Z",
+    "duration": 8358.426,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}

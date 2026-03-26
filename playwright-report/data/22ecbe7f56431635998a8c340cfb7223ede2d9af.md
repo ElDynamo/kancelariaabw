@@ -1,0 +1,185 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Nawigacja główna" [ref=e4]:
+      - link "Kancelaria Prawna ABW — strona główna" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Kancelaria Prawna ABW
+        - generic [ref=e7]: Radca Prawny Anna Jarczyńska
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Strona główna" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Usługi" [ref=e12] [cursor=pointer]:
+            - /url: /uslugi
+        - listitem [ref=e13]:
+          - link "Cennik" [ref=e14] [cursor=pointer]:
+            - /url: /cennik
+        - listitem [ref=e15]:
+          - link "Blog" [ref=e16] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e17]:
+          - link "Narzędzia" [ref=e18] [cursor=pointer]:
+            - /url: /narzedzia
+        - listitem [ref=e19]:
+          - link "O mnie" [ref=e20] [cursor=pointer]:
+            - /url: /o-mnie
+        - listitem [ref=e21]:
+          - link "Kontakt" [ref=e22] [cursor=pointer]:
+            - /url: /kontakt
+      - link "Umów konsultację prawną" [ref=e23] [cursor=pointer]:
+        - /url: /kontakt
+        - text: Umów konsultację
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - text: Jesteśmy do dyspozycji
+        - heading "Kontakt" [level=1] [ref=e28]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - heading "Dane kancelarii" [level=2] [ref=e32]
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - term [ref=e35]: Telefon
+                - definition [ref=e36]:
+                  - link "609 366 160" [ref=e37] [cursor=pointer]:
+                    - /url: tel:609366160
+              - generic [ref=e38]:
+                - term [ref=e39]: Email
+                - definition [ref=e40]:
+                  - link "a.jarczynska@kancelariaabw.pl" [ref=e41] [cursor=pointer]:
+                    - /url: mailto:a.jarczynska@kancelariaabw.pl
+              - generic [ref=e42]:
+                - term [ref=e43]: Godziny pracy
+                - definition [ref=e44]: Pon.–Pt., 9:00–17:00
+              - generic [ref=e45]:
+                - term [ref=e46]: Lokalizacje
+                - definition [ref=e47]: Wrocław, ul. Szkolna 7bh
+          - region "Mapa lokalizacji kancelarii we Wrocławiu" [ref=e50]:
+            - button "Marker" [ref=e51] [cursor=pointer]
+            - generic:
+              - generic [ref=e52]:
+                - button "Zoom in" [ref=e53] [cursor=pointer]: +
+                - button "Zoom out" [ref=e54] [cursor=pointer]: −
+              - generic [ref=e55]:
+                - link "Leaflet" [ref=e56] [cursor=pointer]:
+                  - /url: https://leafletjs.com
+                  - img [ref=e57]
+                  - text: Leaflet
+                - text: "| ©"
+                - link "OpenStreetMap" [ref=e61] [cursor=pointer]:
+                  - /url: https://www.openstreetmap.org/copyright
+        - generic [ref=e62]:
+          - heading "Napisz do nas" [level=2] [ref=e63]
+          - form "Formularz kontaktowy" [ref=e66]:
+            - generic [ref=e67]:
+              - text: Strona (nie wypełniaj)
+              - textbox [ref=e68]
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - generic [ref=e71]: Imię i nazwisko *
+                - textbox "Imię i nazwisko wymagane" [ref=e72]:
+                  - /placeholder: Jan Kowalski
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - generic [ref=e75]: Email *
+                  - textbox "Email wymagane" [ref=e76]:
+                    - /placeholder: jan@example.com
+                - generic [ref=e77]:
+                  - generic [ref=e78]: Telefon (opcjonalnie)
+                  - textbox "Telefon (opcjonalnie)" [ref=e79]:
+                    - /placeholder: +48 600 000 000
+              - generic [ref=e80]:
+                - generic [ref=e81]: Temat sprawy *
+                - combobox "Temat sprawy wymagane" [ref=e82]:
+                  - option "Wybierz temat..." [disabled] [selected]
+                  - option "Prawo rodzinne"
+                  - option "Prawo cywilne"
+                  - option "Prawo karne"
+                  - option "Inne"
+              - generic [ref=e83]:
+                - generic [ref=e84]: Wiadomość *
+                - textbox "Wiadomość wymagane" [ref=e85]:
+                  - /placeholder: Opisz pokrótce swoją sprawę...
+              - generic [ref=e86]:
+                - checkbox "Wyrażam zgodę na przetwarzanie moich danych osobowych przez Kancelarię Prawną ABW w celu udzielenia odpowiedzi na zapytanie, zgodnie z klauzulą informacyjną. wymagane" [ref=e87] [cursor=pointer]
+                - generic [ref=e88] [cursor=pointer]:
+                  - text: Wyrażam zgodę na przetwarzanie moich danych osobowych przez Kancelarię Prawną ABW w celu udzielenia odpowiedzi na zapytanie, zgodnie z
+                  - link "klauzulą informacyjną" [ref=e89]:
+                    - /url: /przetwarzanie-danych
+                  - text: . *
+              - button "Wyślij wiadomość" [ref=e90]:
+                - generic [ref=e91]: Wyślij wiadomość
+  - contentinfo [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: Kancelaria Prawna ABW
+          - paragraph [ref=e97]: Radca Prawny Anna Jarczyńska
+          - paragraph [ref=e98]: Profesjonalna pomoc prawna we Wrocławiu. Prawo rodzinne, cywilne i karne.
+        - generic [ref=e99]:
+          - heading "Usługi" [level=2] [ref=e100]
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - link "Prawo rodzinne" [ref=e103] [cursor=pointer]:
+                - /url: /uslugi/prawo-rodzinne
+            - listitem [ref=e104]:
+              - link "Prawo cywilne" [ref=e105] [cursor=pointer]:
+                - /url: /uslugi/prawo-cywilne
+            - listitem [ref=e106]:
+              - link "Prawo karne" [ref=e107] [cursor=pointer]:
+                - /url: /uslugi/prawo-karne
+        - generic [ref=e108]:
+          - heading "Kontakt" [level=2] [ref=e109]
+          - generic [ref=e110]:
+            - generic [ref=e111]:
+              - paragraph [ref=e112]: Telefon
+              - link "609 366 160" [ref=e113] [cursor=pointer]:
+                - /url: tel:609366160
+            - generic [ref=e114]:
+              - paragraph [ref=e115]: Email
+              - link "a.jarczynska@kancelariaabw.pl" [ref=e116] [cursor=pointer]:
+                - /url: mailto:a.jarczynska@kancelariaabw.pl
+            - generic [ref=e117]:
+              - paragraph [ref=e118]: Lokalizacje
+              - paragraph [ref=e119]: Wrocław, ul. Szkolna 7bh
+            - generic [ref=e120]:
+              - paragraph [ref=e121]: Godziny pracy
+              - paragraph [ref=e122]: Pon.–Pt., 9:00–17:00
+      - generic [ref=e123]:
+        - paragraph [ref=e124]: © 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrzeżone.
+        - navigation "Linki prawne" [ref=e125]:
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - link "Polityka prywatności" [ref=e128] [cursor=pointer]:
+                - /url: /polityka-prywatnosci
+            - listitem [ref=e129]:
+              - link "Regulamin" [ref=e130] [cursor=pointer]:
+                - /url: /regulamin
+            - listitem [ref=e131]:
+              - link "Przetwarzanie danych" [ref=e132] [cursor=pointer]:
+                - /url: /przetwarzanie-danych
+  - link "Otwórz panel administracyjny" [ref=e133] [cursor=pointer]:
+    - /url: /keystatic
+    - generic [ref=e134]: ✏️
+    - generic [ref=e135]: Edytuj stronę
+  - generic [ref=e138]:
+    - button "Menu" [ref=e139]:
+      - img [ref=e141]
+      - generic: Menu
+    - button "Inspect" [ref=e145]:
+      - img [ref=e147]
+      - generic: Inspect
+    - button "Audit" [ref=e149]:
+      - generic [ref=e150]:
+        - img [ref=e151]
+        - img [ref=e154]
+      - generic: Audit
+    - button "Settings" [ref=e157]:
+      - img [ref=e159]
+      - generic: Settings
+```

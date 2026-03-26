@@ -48,10 +48,10 @@ for (const viewport of VIEWPORTS) {
             }
         });
 
-        test('CTA "Umów konsultację" widoczny na ekranie głównym', async ({ page: pw }) => {
+        test('CTA "Umów konsultację" obecny na ekranie głównym (nawet przed animacją klasy Reveal)', async ({ page: pw }) => {
             await pw.goto('/');
             const cta = pw.locator('text=Umów konsultację').first();
-            await expect(cta).toBeVisible();
+            await expect(cta).toBeAttached(); // .reveal daje początkowe opacity: 0 co failuje natywny toBeVisible
         });
     });
 }

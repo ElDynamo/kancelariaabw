@@ -1,8 +1,0 @@
-[2m21:32:24[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
-[33m[1m21:32:24[22m [WARN] [router][39m The route "/api/keystatic/[...params]" is defined in both "src/pages/api/keystatic/[...params].ts" and "node_modules/@keystatic/astro/internal/keystatic-api.js" using SSR mode. A dynamic SSR route cannot be defined more than once.
-[33m[1m21:32:24[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
-[33m[1m21:32:24[22m [WARN] [router][39m The route "/keystatic/[...params]" is defined in both "src/pages/keystatic/[...params].astro" and "node_modules/@keystatic/astro/internal/keystatic-astro-page.astro" using SSR mode. A dynamic SSR route cannot be defined more than once.
-[33m[1m21:32:24[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
-[2m21:32:24[22m [34m[content][39m Syncing content
-[2m21:32:24[22m [34m[content][39m Synced content
-[2m21:32:24[22m [34m[types][39m Generated [2m202ms[22m

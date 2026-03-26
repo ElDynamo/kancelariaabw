@@ -246,29 +246,29 @@ const error = Astro.url.searchParams.get('error');
     window.location.href = '/admin';
   });
 
-  const btn = document.getElementById('deployBtn');
+  const btn = document.getElementById('deployBtn') as HTMLButtonElement | null;
   const status = document.getElementById('deployStatus');
   btn?.addEventListener('click', async () => {
-    btn.disabled = true;
+    if (btn) btn.disabled = true;
     btn.textContent = '⏳ Trwa...';
-    status.textContent = 'Łączenie z serwerem...';
+    if (status) status.textContent = 'Łączenie z serwerem...';
     try {
       const res = await fetch('/api/build', { method: 'POST' });
       if (res.ok) {
         btn.textContent = '✅ Gotowe!';
-        status.textContent = 'Zmiany pojawią się za ~30 sekund.';
+        if (status) status.textContent = 'Zmiany pojawią się za ~30 sekund.';
         setTimeout(() => {
-          btn.disabled = false;
+          if (btn) btn.disabled = false;
           btn.textContent = 'Opublikuj teraz';
-          status.textContent = '';
+          if (status) status.textContent = '';
         }, 10000);
       } else {
         throw new Error();
       }
     } catch {
       btn.textContent = '❌ Błąd — spróbuj ponownie';
-      btn.disabled = false;
-      status.textContent = 'Sprawdź czy serwer jest uruchomiony.';
+      if (btn) btn.disabled = false;
+      if (status) status.textContent = 'Sprawdź czy serwer jest uruchomiony.';
     }
   });
 </script>

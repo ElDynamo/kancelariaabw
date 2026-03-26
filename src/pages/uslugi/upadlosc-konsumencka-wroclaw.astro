@@ -18,7 +18,7 @@ const serviceSchema = {
   "url": "https://kancelariaabw.pl/uslugi/upadlosc-konsumencka-wroclaw",
   "telephone": "+48609366160",
   "priceRange": "$$",
-  "description": data?.seoDescription || "Kompleksowa pomoc prawna przy upadłości konsumenckiej we Wrocławiu",
+  "description": data?.seo?.description || "Kompleksowa pomoc prawna przy upadłości konsumenckiej we Wrocławiu",
   "areaServed": ["Wrocław", "Dolny Śląsk"],
   "provider": { "@type": "Person", "name": "Anna Jarczyńska", "jobTitle": "Radca Prawny" }
 };
@@ -31,14 +31,14 @@ const breadcrumb = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
     { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
-    { "@type": "ListItem", "position": 3, "name": data?.heroTitle || "Upadłość konsumencka", "item": "https://kancelariaabw.pl/uslugi/upadlosc-konsumencka-wroclaw" },
+    { "@type": "ListItem", "position": 3, "name": data?.hero?.title || "Upadłość konsumencka", "item": "https://kancelariaabw.pl/uslugi/upadlosc-konsumencka-wroclaw" },
   ]
 };
 ---
 
 <Layout
   title={data?.title || "Upadłość Konsumencka Wrocław 2025"}
-  description={data?.seoDescription || ""}
+  description={data?.seo?.description || ""}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -47,9 +47,9 @@ const breadcrumb = {
   </Fragment>
 
   <ServiceHero
-    title={data?.heroTitle}
-    subtitle={data?.heroSubtitle}
-    description={data?.heroDescription}
+    title={data?.hero?.title || ""}
+    subtitle={data?.hero?.subtitle || undefined}
+    description={data?.hero?.description || undefined}
     label="Prawo upadłościowe"
     ctaText="Bezpłatna wstępna ocena"
     image="/photos/hero_upadlosc_1772972068920.png"
@@ -58,7 +58,7 @@ const breadcrumb = {
 
   <!-- KROKI -->
   <section class="section bg-off-white">
-    <div class="container-site max-w-5xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-5xl">
       <SectionLabel text="Jak działamy" class="mb-3" />
       <h2 class="font-serif text-3xl text-navy mb-10">Proces upadłości krok po kroku</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -75,7 +75,7 @@ const breadcrumb = {
 
   <!-- TREŚĆ -->
   <section class="section bg-white">
-    <div class="container-site max-w-5xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-5xl">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <article class="lg:col-span-2 prose prose-navy max-w-none">
           {Content && <Content />}
@@ -116,7 +116,7 @@ const breadcrumb = {
 
   <!-- CTA KOŃCOWE -->
   <section class="section bg-navy">
-    <div class="container-site max-w-3xl text-center">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Zacznij od bezpłatnej rozmowy</h2>
       <p class="font-sans text-white opacity-70 mb-8 max-w-lg mx-auto">
         Powiemy Ci wprost — czy Twoja sytuacja kwalifikuje się do upadłości i co Cię czeka.

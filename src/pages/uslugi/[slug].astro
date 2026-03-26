@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+export const prerender = true;
 import Layout from '@components/layout/Layout.astro';
 import ServiceHero from '@components/ui/ServiceHero.astro';
 import CTASection from '@components/ui/CTASection.astro';
@@ -56,7 +57,7 @@ const breadcrumb = {
 <Layout
   title={data.title}
   description={data.seo?.description || ''}
-  image={data.seo?.ogImage || data.hero?.image || undefined}
+  image={data.seo?.ogImage || undefined}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -64,15 +65,15 @@ const breadcrumb = {
   </Fragment>
 
   <ServiceHero
-    title={data.hero?.title}
-    subtitle={data.hero?.subtitle}
-    description={data.hero?.description}
-    image={data.hero?.image}
-    imageAlt={data.hero?.title}
+    title={data.hero?.title || ""}
+    subtitle={data.hero?.subtitle || undefined}
+    description={data.hero?.description || undefined}
+    
+    imageAlt={data.hero?.title || undefined}
   />
 
   <section class="section bg-white pt-10">
-    <div class="container-site max-w-4xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-4xl">
       {data.features && data.features.length > 0 && (
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           {data.features.map(item => (

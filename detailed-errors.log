@@ -1,0 +1,49 @@
+[WebServer] $ astro dev
+
+Running 100 tests using 2 workers
+
+  Ô£ÿ    1 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ / ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    2 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /o-mnie ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    3 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    4 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-rodzinne ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    5 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-cywilne ÔÇö brak narusze┼ä WCAG AA (1.1s)
+  Ô£ÿ    6 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-karne ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    7 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /cennik ÔÇö brak narusze┼ä WCAG AA (1.1s)
+  Ô£ÿ    8 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /kontakt ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ    9 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /blog ÔÇö brak narusze┼ä WCAG AA (1.2s)
+  Ô£ÿ   10 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /polityka-prywatnosci ÔÇö brak narusze┼ä WCAG AA (1.1s)
+  Ô£ô   12 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:40:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Formularz kontaktowy ÔÇö pola maj─à etykiety (for/id matching) (749ms)
+  Ô£ÿ   11 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /regulamin ÔÇö brak narusze┼ä WCAG AA (1.1s)
+  Ô£ô   13 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:57:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Nawigacja ÔÇö linki maj─à teksty (no icon-only links) (723ms)
+Crawler wyodr─Öbni┼é 16 unikalnych link├│w wewn─Ötrznych ze strony g┼é├│wnej do przetestowania: [
+  [32m'/api/exit-preview'[39m,
+  [32m'/'[39m,
+  [32m'/uslugi'[39m,
+  [32m'/cennik'[39m,
+  [32m'/blog'[39m,
+  [32m'/narzedzia'[39m,
+  [32m'/o-mnie'[39m,
+  [32m'/kontakt'[39m,
+  [32m'/uslugi/prawo-rodzinne'[39m,
+  [32m'/uslugi/prawo-cywilne'[39m,
+  [32m'/uslugi/prawo-karne'[39m,
+  [32m'/uslugi/prawo-gospodarcze'[39m,
+  [32m'/polityka-prywatnosci'[39m,
+  [32m'/regulamin'[39m,
+  [32m'/przetwarzanie-danych'[39m,
+  [32m'/keystatic'[39m
+]
+  Ô£ô   15 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:71:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Obrazy maj─à alt attribute (734ms)
+  Ô£ô   14 [chromium] ÔÇ║ tests\crawler.spec.ts:7:3 ÔÇ║ Globalny Crawler Link├│w Wewn─Ötrznych ÔÇ║ Przechodzi przez wszystkie wewn─Ötrzne linki ze strony g┼é├│wnej (kod statusu 200, brak b┼é─Öd├│w) (1.3s)
+  Ô£ô   16 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:12:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz renderuje si─Ö z wymaganymi polami (2.0s)
+  Ô£ô   17 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:20:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö puste pola pokazuj─à b┼é─àd (2.0s)
+  Ô£ô   18 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:28:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö z┼éy format email (2.1s)
+  Ô£ô   19 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:41:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Honeypot ÔÇö pole ukryte klas─à sr-only (2.0s)
+  Ô£ô   20 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:51:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz z poprawnymi danymi pokazuje loading state (2.2s)
+  Ô£ô   21 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:70:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Sukces state ÔÇö wy┼øwietla si─Ö po udanym wys┼éaniu (2.2s)
+  Ô£ô   23 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:36:5 ÔÇ║ Nawigacja ÔÇ║ Logo prowadzi do strony g┼é├│wnej (798ms)
+  Ô£ô   22 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:27:5 ÔÇ║ Nawigacja ÔÇ║ Wszystkie linki w nawigacji prowadz─à do istniej─àcych stron (1.6s)
+  Ô£ô   24 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:43:5 ÔÇ║ Nawigacja ÔÇ║ CTA "Um├│w konsultacj─Ö" prowadzi do /kontakt (777ms)
+  Ô£ô   25 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:51:5 ÔÇ║ Nawigacja ÔÇ║ Linki w footer prowadz─à poprawnie (prawne) (694ms)
+  Ô£ô   27 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:74:5 ÔÇ║ Nawigacja ÔÇ║ Breadcrumby na podstronach dzia┼éaj─à (745ms)
+  Ô£ô   28 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Strona g┼é├│wna [/] renderuje si─Ö bez overflow (669ms)

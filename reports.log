@@ -1,0 +1,1722 @@
+[WebServer] $ astro dev
+
+Running 100 tests using 10 workers
+
+[WebServer] 10:55:36 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+[WebServer] 10:55:36 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ    1 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-rodzinne ÔÇö brak narusze┼ä WCAG AA (1.0s)
+  Ô£ÿ    6 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-cywilne ÔÇö brak narusze┼ä WCAG AA (869ms)
+  Ô£ô   11 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:40:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Formularz kontaktowy ÔÇö pola maj─à etykiety (for/id matching) (2.1s)
+  Ô£ÿ    7 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /cennik ÔÇö brak narusze┼ä WCAG AA (4.7s)
+  Ô£ÿ    8 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /polityka-prywatnosci ÔÇö brak narusze┼ä WCAG AA (4.7s)
+  Ô£ÿ   12 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /regulamin ÔÇö brak narusze┼ä WCAG AA (3.0s)
+  Ô£ÿ    9 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /blog ÔÇö brak narusze┼ä WCAG AA (4.7s)
+  Ô£ÿ    4 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ / ÔÇö brak narusze┼ä WCAG AA (4.9s)
+  Ô£ÿ    5 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi ÔÇö brak narusze┼ä WCAG AA (4.8s)
+  Ô£ÿ    2 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /o-mnie ÔÇö brak narusze┼ä WCAG AA (4.9s)
+  Ô£ÿ   10 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /kontakt ÔÇö brak narusze┼ä WCAG AA (4.9s)
+  Ô£ÿ    3 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-karne ÔÇö brak narusze┼ä WCAG AA (4.9s)
+  Ô£ô   13 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:57:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Nawigacja ÔÇö linki maj─à teksty (no icon-only links) (1.3s)
+  Ô£ô   14 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:36:5 ÔÇ║ Nawigacja ÔÇ║ Logo prowadzi do strony g┼é├│wnej (942ms)
+  Ô£ô   19 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:10:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz renderuje si─Ö z wymaganymi polami (967ms)
+  Ô£ô   23 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:43:5 ÔÇ║ Nawigacja ÔÇ║ CTA "Um├│w konsultacj─Ö" prowadzi do /kontakt (1.0s)
+  Ô£ô   18 [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:71:5 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ Obrazy maj─à alt attribute (1.0s)
+Crawler wyodr─Öbni┼é 16 unikalnych link├│w wewn─Ötrznych ze strony g┼é├│wnej do przetestowania: [
+  [32m'/api/exit-preview'[39m,
+  [32m'/'[39m,
+  [32m'/uslugi'[39m,
+  [32m'/cennik'[39m,
+  [32m'/blog'[39m,
+  [32m'/narzedzia'[39m,
+  [32m'/o-mnie'[39m,
+  [32m'/kontakt'[39m,
+  [32m'/uslugi/prawo-rodzinne'[39m,
+  [32m'/uslugi/prawo-cywilne'[39m,
+  [32m'/uslugi/prawo-karne'[39m,
+  [32m'/uslugi/prawo-gospodarcze'[39m,
+  [32m'/polityka-prywatnosci'[39m,
+  [32m'/regulamin'[39m,
+  [32m'/przetwarzanie-danych'[39m,
+  [32m'/keystatic'[39m
+]
+  Ô£ÿ   21 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:39:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Honeypot ÔÇö pole ukryte (position:absolute) (943ms)
+[WebServer] 10:55:43 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+[WebServer] 10:55:44 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ   16 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:27:5 ÔÇ║ Nawigacja ÔÇ║ Wszystkie linki w nawigacji prowadz─à do istniej─àcych stron (1.9s)
+  Ô£ô   26 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:51:5 ÔÇ║ Nawigacja ÔÇ║ Linki w footer prowadz─à poprawnie (prawne) (921ms)
+[WebServer] 10:55:44 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+[WebServer] 10:55:44 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ   15 [chromium] ÔÇ║ tests\crawler.spec.ts:7:3 ÔÇ║ Globalny Crawler Link├│w Wewn─Ötrznych ÔÇ║ Przechodzi przez wszystkie wewn─Ötrzne linki ze strony g┼é├│wnej (kod statusu 200, brak b┼é─Öd├│w) (2.8s)
+  Ô£ô   28 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Us┼éugi [/uslugi] renderuje si─Ö bez overflow (773ms)
+[WebServer] 10:55:45 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   29 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Strona g┼é├│wna [/] renderuje si─Ö bez overflow (733ms)
+  Ô£ô   31 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ O mnie [/o-mnie] renderuje si─Ö bez overflow (709ms)
+  Ô£ô   32 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo karne [/uslugi/prawo-karne] renderuje si─Ö bez overflow (663ms)
+[WebServer] 10:55:46 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   34 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Cennik [/cennik] renderuje si─Ö bez overflow (668ms)
+  Ô£ô   35 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Kontakt [/kontakt] renderuje si─Ö bez overflow (659ms)
+  Ô£ô   36 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Blog [/blog] renderuje si─Ö bez overflow (659ms)
+  Ô£ô   37 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Polityka prywatno┼øci [/polityka-prywatnosci] renderuje si─Ö bez overflow (662ms)
+  Ô£ô   38 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Regulamin [/regulamin] renderuje si─Ö bez overflow (661ms)
+  Ô£ô   39 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Przetwarzanie danych [/przetwarzanie-danych] renderuje si─Ö bez overflow (644ms)
+  Ô£ô   40 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:43:9 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Nawigacja hamburger widoczna na mobile (678ms)
+  Ô£ÿ   27 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:74:5 ÔÇ║ Nawigacja ÔÇ║ Breadcrumby na podstronach dzia┼éaj─à (5.5s)
+  Ô£ô   42 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Strona g┼é├│wna [/] renderuje si─Ö bez overflow (691ms)
+  Ô£ô   43 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Us┼éugi [/uslugi] renderuje si─Ö bez overflow (714ms)
+[WebServer] 10:55:50 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   44 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ O mnie [/o-mnie] renderuje si─Ö bez overflow (717ms)
+  Ô£ÿ   30 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow (5.4s)
+[WebServer] 10:55:50 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ   33 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow (5.5s)
+  Ô£ô   47 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo karne [/uslugi/prawo-karne] renderuje si─Ö bez overflow (720ms)
+  Ô£ô   48 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Kontakt [/kontakt] renderuje si─Ö bez overflow (717ms)
+  Ô£ô   49 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Cennik [/cennik] renderuje si─Ö bez overflow (692ms)
+  Ô£ô   50 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Blog [/blog] renderuje si─Ö bez overflow (682ms)
+  Ô£ô   51 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Polityka prywatno┼øci [/polityka-prywatnosci] renderuje si─Ö bez overflow (687ms)
+  Ô£ÿ   41 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym (5.7s)
+  Ô£ô   52 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Regulamin [/regulamin] renderuje si─Ö bez overflow (672ms)
+  Ô£ô   53 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Przetwarzanie danych [/przetwarzanie-danych] renderuje si─Ö bez overflow (677ms)
+  Ô£ô   56 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:43:9 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Nawigacja hamburger widoczna na mobile (94ms)
+  Ô£ô   55 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Strona g┼é├│wna [/] renderuje si─Ö bez overflow (704ms)
+  Ô£ÿ   45 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow (5.4s)
+  Ô£ô   57 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ O mnie [/o-mnie] renderuje si─Ö bez overflow (726ms)
+  Ô£ÿ   46 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow (5.4s)
+[WebServer] 10:55:55 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+[WebServer] 10:55:56 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   61 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo karne [/uslugi/prawo-karne] renderuje si─Ö bez overflow (715ms)
+  Ô£ô   62 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Cennik [/cennik] renderuje si─Ö bez overflow (676ms)
+  Ô£ô   63 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Kontakt [/kontakt] renderuje si─Ö bez overflow (718ms)
+  Ô£ô   64 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Blog [/blog] renderuje si─Ö bez overflow (706ms)
+  Ô£ô   58 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Us┼éugi [/uslugi] renderuje si─Ö bez overflow (4.6s)
+  Ô£ÿ   54 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym (5.7s)
+  Ô£ô   65 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Polityka prywatno┼øci [/polityka-prywatnosci] renderuje si─Ö bez overflow (687ms)
+  Ô£ô   66 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Regulamin [/regulamin] renderuje si─Ö bez overflow (674ms)
+  Ô£ô   67 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:43:9 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Nawigacja hamburger widoczna na mobile (74ms)
+  Ô£ô   68 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym (709ms)
+  Ô£ô   69 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Strona g┼é├│wna [/] renderuje si─Ö bez overflow (723ms)
+  Ô£ÿ   59 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow (5.4s)
+  Ô£ô   70 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Przetwarzanie danych [/przetwarzanie-danych] renderuje si─Ö bez overflow (694ms)
+[WebServer] 10:56:01 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   71 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ O mnie [/o-mnie] renderuje si─Ö bez overflow (744ms)
+  Ô£ÿ   60 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow (5.5s)
+  Ô£ô   72 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Us┼éugi [/uslugi] renderuje si─Ö bez overflow (782ms)
+[WebServer] 10:56:02 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ô   74 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo karne [/uslugi/prawo-karne] renderuje si─Ö bez overflow (749ms)
+  Ô£ô   76 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Kontakt [/kontakt] renderuje si─Ö bez overflow (801ms)
+  Ô£ô   77 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Blog [/blog] renderuje si─Ö bez overflow (741ms)
+  Ô£ô   78 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Cennik [/cennik] renderuje si─Ö bez overflow (729ms)
+  Ô£ô   79 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Polityka prywatno┼øci [/polityka-prywatnosci] renderuje si─Ö bez overflow (737ms)
+  Ô£ô   82 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:43:9 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Nawigacja hamburger widoczna na mobile (97ms)
+  Ô£ô   80 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Regulamin [/regulamin] renderuje si─Ö bez overflow (688ms)
+  Ô£ô   81 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Przetwarzanie danych [/przetwarzanie-danych] renderuje si─Ö bez overflow (702ms)
+  Ô£ô   83 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym (723ms)
+  Ô£ÿ   84 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ / ÔÇö ma title i description (735ms)
+  Ô£ÿ   85 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /o-mnie ÔÇö ma title i description (728ms)
+  Ô£ÿ   86 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi ÔÇö ma title i description (761ms)
+[WebServer] 10:56:05 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ   87 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-rodzinne ÔÇö ma title i description (416ms)
+[WebServer] 10:56:05 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ   88 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-cywilne ÔÇö ma title i description (428ms)
+  Ô£ÿ   89 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-karne ÔÇö ma title i description (729ms)
+  Ô£ÿ   73 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow (5.5s)
+  Ô£ÿ   75 [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow (5.5s)
+  Ô£ÿ   90 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /cennik ÔÇö ma title i description (753ms)
+  Ô£ÿ   91 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /kontakt ÔÇö ma title i description (732ms)
+  Ô£ÿ   92 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /blog ÔÇö ma title i description (776ms)
+  Ô£ÿ   93 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /polityka-prywatnosci ÔÇö ma title i description (773ms)
+  Ô£ÿ   94 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /regulamin ÔÇö ma title i description (743ms)
+  Ô£ÿ   95 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /przetwarzanie-danych ÔÇö ma title i description (828ms)
+  Ô£ô   96 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:50:5 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ Strona g┼é├│wna ÔÇö OG tags kompletne (795ms)
+  Ô£ô   97 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:62:5 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ Blog post ÔÇö OG type=article (813ms)
+  Ô£ô   98 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:70:5 ÔÇ║ SEO ÔÇö JSON-LD Structured Data ÔÇ║ Strona g┼é├│wna ÔÇö zawiera LegalService i FAQPage (739ms)
+[WebServer] 10:56:10 [ERROR] Cannot read properties of undefined (reading 'data')
+[WebServer]   Stack trace:
+[WebServer]     at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\src\pages\uslugi\[slug].astro:28:22
+[WebServer]     [...] See full stack trace in the browser, or rerun with --verbose.
+  Ô£ÿ  100 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:92:5 ÔÇ║ SEO ÔÇö JSON-LD Structured Data ÔÇ║ Strona us┼éugi ÔÇö zawiera BreadcrumbList (437ms)
+  Ô£ô   99 [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:82:5 ÔÇ║ SEO ÔÇö JSON-LD Structured Data ÔÇ║ Blog post ÔÇö zawiera BlogPosting schema (771ms)
+  Ô£ô   20 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:18:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö puste pola pokazuj─à b┼é─àd (28.9s)
+  Ô£ÿ   17 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:26:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö z┼éy format email (30.1s)
+  Ô£ÿ   24 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:67:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Sukces state ÔÇö wy┼øwietla si─Ö po udanym wys┼éaniu (30.1s)
+  Ô£ÿ   22 [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:48:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz z poprawnymi danymi pokazuje loading state (30.1s)
+  Ô£ÿ   25 [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:64:5 ÔÇ║ Nawigacja ÔÇ║ Blog ÔÇö linki "Przeczytaj artyku┼é" prowadza do post├│w (30.1s)
+
+
+  1) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ / ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /:
+
+    [SERIOUS] aria-hidden-focus: Ensure aria-hidden elements are not focusable nor contain focusable elements
+      ÔåÆ <a href="/uslugi/prawo-rodzinne" class="absolute inset-0 z-10" aria-hidden="true" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro" data-astro-source-loc="32:72">
+      ÔåÆ <a href="/uslugi/prawo-cywilne" class="absolute inset-0 z-10" aria-hidden="true" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro" data-astro-source-loc="32:72">
+      ÔåÆ <a href="/uslugi/prawo-karne" class="absolute inset-0 z-10" aria-hidden="true" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro" data-astro-source-loc="32:72">
+      ÔåÆ <a href="/uslugi/prawo-gospodarcze" class="absolute inset-0 z-10" aria-hidden="true" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/ServiceCard.astro" data-astro-source-loc="32:72">
+    ---
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14">
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro" data-astro-source-loc="91:79">Kancelaria Prawna</span>
+      ÔåÆ <span class="text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/index.astro" data-astro-source-loc="95:35">we Wroc┼éawiu</span>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m2[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m2[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-3748b--AA-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-3748b--AA-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  2) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /o-mnie ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /o-mnie:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/o-mnie" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14"> O mnie </a>
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="71:79">O mnie</span>
+      ÔåÆ <span class="text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="73:120">Radca Prawny</span>
+      ÔåÆ <p class="text-body" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="77:12">
+      ÔåÆ <p class="text-body" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="77:12">
+      ÔåÆ <p class="text-body" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="77:12">
+      ÔåÆ <p class="font-sans text-xs text-text-muted uppercase tracking-wide" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/o-mnie.astro" data-astro-source-loc="98:82">Radca Prawny</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-4f076-nie-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-4f076-nie-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  3) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /uslugi:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/uslugi" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14"> Us┼éugi </a>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-8fb45-ugi-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-8fb45-ugi-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  4) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-rodzinne ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /uslugi/prawo-rodzinne:
+
+    [SERIOUS] html-has-lang: Ensure every HTML document has a lang attribute
+      ÔåÆ <html><head><title>TypeError</title><script type="module" src="/@vite/client"></script></head><body></body></html>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-c293a-nne-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  5) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-cywilne ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /uslugi/prawo-cywilne:
+
+    [SERIOUS] html-has-lang: Ensure every HTML document has a lang attribute
+      ÔåÆ <html><head><title>TypeError</title><script type="module" src="/@vite/client"></script></head><body></body></html>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-1cccc-lne-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  6) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-karne ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /uslugi/prawo-karne:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/" class="hover:text-white" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro" data-astro-source-loc="32:52">Strona g┼é├│wna</a>
+      ÔåÆ <a href="/uslugi" class="hover:text-white" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro" data-astro-source-loc="32:52">Us┼éugi</a>
+      ÔåÆ <span aria-current="page" class="text-white opacity-80" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/ui/Breadcrumb.astro" data-astro-source-loc="34:60">Prawo karne</span>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-2907a-rne-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-2907a-rne-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  7) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /cennik ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /cennik:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/cennik" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14"> Cennik </a>
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="17:77">Transparentno┼ø─ç</span>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">300 z┼é</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">300 z┼é</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">450 z┼é</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">od 500 z┼é</p>
+      ÔåÆ <p class="font-sans text-xs text-text-muted mt-0.5" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="29:81">wynagrodzenie + koszty</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">3 000 z┼é</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">4 000 z┼é</p>
+      ÔåÆ <p class="font-sans text-xs text-text-muted mt-0.5" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="29:81">wycena po zapoznaniu ze spraw─à</p>
+      ÔåÆ <p class="font-serif text-lg text-gold font-normal whitespace-nowrap" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/cennik.astro" data-astro-source-loc="31:83">indywidualnie</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-0b01c-nik-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-0b01c-nik-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  8) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /kontakt ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /kontakt:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/kontakt" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14">
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="34:77">Jeste┼ømy do dyspozycji</span>
+      ÔåÆ <h2 class="font-sans text-xs uppercase tracking-widest text-gold mb-6" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="42:84">Dane kancelarii</h2>
+      ÔåÆ <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="45:92">Telefon</dt>
+      ÔåÆ <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="49:92">Email</dt>
+      ÔåÆ <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="53:92">Godziny pracy</dt>
+      ÔåÆ <dt class="font-sans text-xs text-text-muted uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/kontakt.astro" data-astro-source-loc="57:92">Lokalizacje</dt>
+      ÔåÆ <span class="text-text-muted font-normal">(opcjonalnie)</span>
+      ÔåÆ <label for="contact-consent" class="font-sans text-xs text-text-muted leading-relaxed cursor-pointer">
+      ÔåÆ <a href="/przetwarzanie-danych" class="text-gold hover:underline" target="_blank">klauzul─à informacyjn─à</a>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+    ---
+
+    [SERIOUS] link-in-text-block: Ensure links are distinguished from surrounding text in a way that does not rely on color
+      ÔåÆ <a href="/przetwarzanie-danych" class="text-gold hover:underline" target="_blank">klauzul─à informacyjn─à</a>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m2[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m2[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-b0b8b-akt-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-b0b8b-akt-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  9) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /blog ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /blog:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <a href="/blog" class="font-sans text-xs uppercase tracking-widest transition-colors duration-200 text-gold font-medium" aria-current="page" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Header.astro" data-astro-source-loc="90:14"> Blog </a>
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="54:77">Wiedza i porady</span>
+      ÔåÆ <p class="text-body max-w-2xl mx-auto mt-4" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="56:53"> Praktyczne artyku┼éy o polskim prawie. Pisz─Ö przyst─Öpnie o sprawach, kt├│re dotykaj─à codziennego ┼╝ycia. </p>
+      ÔåÆ <time datetime="2026-03-05T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 5 marca 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <time datetime="2026-02-28T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 28 lutego 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <span class="font-sans text-xs px-2 py-1 rounded-full inline-block bg-green-50 text-green-700" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="66:159"> Prawo cywilne </span>
+      ÔåÆ <time datetime="2026-02-20T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 20 lutego 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <time datetime="2026-02-15T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 15 lutego 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <time datetime="2026-02-10T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 10 lutego 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <time datetime="2026-01-28T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 28 stycznia 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <time datetime="2026-01-15T00:00:00.000Z" class="font-sans text-xs text-text-muted" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="75:16"> 15 stycznia 2026 </time>
+      ÔåÆ <p class="font-sans text-sm text-text-muted leading-relaxed line-clamp-3" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="83:89">
+      ÔåÆ <span class="font-sans text-xs text-gold uppercase tracking-wider" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro" data-astro-source-loc="87:84">
+    Przeczytaj artyku┼é ÔåÆ
+    </span>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-636c3-log-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-636c3-log-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  10) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /polityka-prywatnosci ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /polityka-prywatnosci:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro" data-astro-source-loc="18:77">Dokumenty prawne</span>
+      ÔåÆ <p class="font-sans text-sm text-text-muted mb-12 reveal delay-200 active" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/polityka-prywatnosci.astro" data-astro-source-loc="21:75"> Ostatnia aktualizacja: marzec 2026 </p>
+      ÔåÆ <p>
+      ÔåÆ <strong>Anna Jarczy┼äska</strong>
+      ÔåÆ <strong>Kancelaria Prawna ABW</strong>
+      ÔåÆ <a href="mailto:a.jarczynska@kancelariaabw.pl">a.jarczynska@kancelariaabw.pl</a>
+      ÔåÆ <p>Twoje dane osobowe przetwarzane s─à na podstawie:</p>
+      ÔåÆ <li><strong>Art. 6 ust. 1 lit. b RODO</strong> ÔÇö gdy przetwarzanie jest niezb─Ödne do wykonania umowy lub podj─Öcia dzia┼éa┼ä przed jej zawarciem (np. obs┼éuga zapytania przez formularz kontaktowy),</li>
+      ÔåÆ <strong>Art. 6 ust. 1 lit. b RODO</strong>
+      ÔåÆ <li><strong>Art. 6 ust. 1 lit. a RODO</strong> ÔÇö gdy wyrazi┼ée┼ø zgod─Ö na przetwarzanie danych (np. kontakt marketingowy),</li>
+      ÔåÆ <strong>Art. 6 ust. 1 lit. a RODO</strong>
+      ÔåÆ <li><strong>Art. 6 ust. 1 lit. c RODO</strong> ÔÇö gdy przetwarzanie jest niezb─Ödne do wype┼énienia obowi─àzku prawnego ci─à┼╝─àcego na administratorze.</li>
+      ÔåÆ <strong>Art. 6 ust. 1 lit. c RODO</strong>
+      ÔåÆ <p>Przetwarzamy wy┼é─àcznie dane niezb─Ödne do realizacji celu, w szczeg├│lno┼øci: imi─Ö i nazwisko, adres e-mail, numer telefonu, tre┼ø─ç korespondencji.</p>
+      ÔåÆ <p>Zgodnie z RODO przys┼éuguj─à Ci nast─Öpuj─àce prawa:</p>
+      ÔåÆ <li>prawo dost─Öpu do Twoich danych (art. 15 RODO),</li>
+      ÔåÆ <li>prawo do sprostowania danych (art. 16 RODO),</li>
+      ÔåÆ <li>prawo do usuni─Öcia danych (ÔÇ£prawo do bycia zapomnianymÔÇØ, art. 17 RODO),</li>
+      ÔåÆ <li>prawo do ograniczenia przetwarzania (art. 18 RODO),</li>
+      ÔåÆ <li>prawo do przenoszenia danych (art. 20 RODO),</li>
+      ÔåÆ <li>prawo wniesienia sprzeciwu (art. 21 RODO),</li>
+      ÔåÆ <li>prawo wniesienia skargi do Prezesa UODO (ul. Stawki 2, 00-193 Warszawa).</li>
+      ÔåÆ <p>Dane przechowywane s─à przez czas niezb─Ödny do realizacji celu, w jakim zosta┼éy zebrane, lub do momentu cofni─Öcia zgody, nie d┼éu┼╝ej jednak ni┼╝ wymagaj─à tego przepisy prawa.</p>
+      ÔåÆ <p>Twoje dane mog─à by─ç przekazywane podmiotom przetwarzaj─àcym dane w imieniu administratora (np. dostawcom us┼éug IT), wy┼é─àcznie w zakresie niezb─Ödnym do realizacji us┼éug. Nie sprzedajemy danych osobowych.</p>
+      ÔåÆ <p>Na stronie kancelariaabw.pl u┼╝ywamy narz─Ödzia Plausible Analytics, kt├│re <strong>nie u┼╝ywa plik├│w cookies</strong> i nie zbiera danych osobowych. Analityka jest w pe┼éni anonimowa i zgodna z RODO ÔÇö nie wymagamy zgody na cookies.</p>
+      ÔåÆ <strong>nie u┼╝ywa plik├│w cookies</strong>
+      ÔåÆ <p>W sprawach zwi─àzanych z ochron─à danych osobowych mo┼╝esz skontaktowa─ç si─Ö z administratorem pod adresem: <a href="mailto:a.jarczynska@kancelariaabw.pl">a.jarczynska@kancelariaabw.pl</a>.</p>
+      ÔåÆ <a href="mailto:a.jarczynska@kancelariaabw.pl">a.jarczynska@kancelariaabw.pl</a>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-6e7eb-sci-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-6e7eb-sci-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  11) [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /regulamin ÔÇö brak narusze┼ä WCAG AA 
+
+    Error: WCAG violations on /regulamin:
+
+    [SERIOUS] color-contrast: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+      ÔåÆ <span class="font-sans text-xs uppercase tracking-widest text-gold" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/regulamin.astro" data-astro-source-loc="18:77">Dokumenty prawne</span>
+      ÔåÆ <p class="font-sans text-sm text-text-muted mb-12 reveal delay-200 active" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/regulamin.astro" data-astro-source-loc="21:75">
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="51:93">Telefon</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="57:93">Email</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="63:93">Lokalizacje</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40 uppercase tracking-wide mb-1" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="67:93">Godziny pracy</p>
+      ÔåÆ <p class="font-sans text-xs text-white opacity-40" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/components/layout/Footer.astro" data-astro-source-loc="77:58">
+    ┬® 2026 Kancelaria Prawna ABW. Wszelkie prawa zastrze┼╝one.
+    </p>
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      31 |                     v.nodes.map(n => `  ÔåÆ ${n.html}`).join('\n')
+      32 |                 ).join('\n---\n');
+    > 33 |                 expect.soft(results.violations.length, `WCAG violations on ${path}:\n${report}`).toBe(0);
+         |                                                                                                  ^
+      34 |             }
+      35 |
+      36 |             expect(results.violations.length).toBe(0);
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:33:98
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(results.violations.length).toBe(0);
+         |                                               ^
+      37 |         });
+      38 |     }
+      39 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\accessibility\axe.spec.ts:36:47
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\accessibility-axe-Accessib-90208-min-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\accessibility-axe-Accessib-90208-min-ÔÇö-brak-narusze┼ä-WCAG-AA-chromium\error-context.md
+
+  12) [chromium] ÔÇ║ tests\crawler.spec.ts:7:3 ÔÇ║ Globalny Crawler Link├│w Wewn─Ötrznych ÔÇ║ Przechodzi przez wszystkie wewn─Ötrzne linki ze strony g┼é├│wnej (kod statusu 200, brak b┼é─Öd├│w) 
+
+    Error: Odnaleziono zepsute linki (404/Crash) na stronie: 
+    /uslugi/prawo-rodzinne (Status: 500)
+    /uslugi/prawo-cywilne (Status: 500)
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoHaveLength[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected length: [32m0[39m
+    Received length: [31m2[39m
+    Received array:  [31m["/uslugi/prawo-rodzinne (Status: 500)", "/uslugi/prawo-cywilne (Status: 500)"][39m
+
+      62 |     }
+      63 |
+    > 64 |     expect(brokenLinks, `Odnaleziono zepsute linki (404/Crash) na stronie: \n${brokenLinks.join('\n')}`).toHaveLength(0);
+         |                                                                                                          ^
+      65 |     expect(pageErrors, `Odnaleziono wyj─àtki w logach JS na niekt├│rych podstronach: \n${pageErrors.map(e => e.url + ': ' + e.error).join('\n')}`).toHaveLength(0);
+      66 |   });
+      67 | });
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\crawler.spec.ts:64:106
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\crawler-Globalny-Crawler-L-f3eeb-od-statusu-200-brak-b┼é─Öd├│w--chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  13) [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:26:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö z┼éy format email 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('[role="alert"]')
+    Expected substring: [32m"email"[39m
+    Received string:    [31m"Prosz─Ö poda─ç imi─Ö i nazwisko."[39m
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('[role="alert"]')[22m
+    [2m    5 ├ù locator resolved to <div role="alert" class="bg-red-50 border border-red-200 rounded-lg px-4 py-3">ÔÇª</div>[22m
+    [2m      - unexpected value "Prosz─Ö poda─ç imi─Ö i nazwisko."[22m
+
+
+      34 |         const error = page.locator('[role="alert"]');
+      35 |         await expect(error).toBeVisible();
+    > 36 |         await expect(error).toContainText('email');
+         |                             ^
+      37 |     });
+      38 |
+      39 |     test('Honeypot ÔÇö pole ukryte (position:absolute)', async ({ page }) => {
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\contact-form.spec.ts:36:29
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-contact-form-Formularz-6282c-alidacja-ÔÇö-z┼éy-format-email-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-contact-form-Formularz-6282c-alidacja-ÔÇö-z┼éy-format-email-chromium\error-context.md
+
+  14) [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:39:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Honeypot ÔÇö pole ukryte (position:absolute) 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mfalse[39m
+    Received: [31mtrue[39m
+
+      43 |         expect(count).toBe(1);
+      44 |         const isVisible = await honeypot.isVisible();
+    > 45 |         expect(isVisible).toBe(false);
+         |                           ^
+      46 |     });
+      47 |
+      48 |     test('Formularz z poprawnymi danymi pokazuje loading state', async ({ page }) => {
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\contact-form.spec.ts:45:27
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-contact-form-Formularz-eaf59-e-ukryte-position-absolute--chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-contact-form-Formularz-eaf59-e-ukryte-position-absolute--chromium\error-context.md
+
+  15) [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:48:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz z poprawnymi danymi pokazuje loading state 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Wiadomo┼ø─ç wys┼éana')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Wiadomo┼ø─ç wys┼éana')[22m
+
+
+      62 |
+      63 |         // Po mock odpowiedzi sukces state
+    > 64 |         await expect(page.locator('text=Wiadomo┼ø─ç wys┼éana')).toBeVisible({ timeout: 5000 });
+         |                                                              ^
+      65 |     });
+      66 |
+      67 |     test('Sukces state ÔÇö wy┼øwietla si─Ö po udanym wys┼éaniu', async ({ page }) => {
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\contact-form.spec.ts:64:62
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-contact-form-Formularz-9577e-nymi-pokazuje-loading-state-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-contact-form-Formularz-9577e-nymi-pokazuje-loading-state-chromium\error-context.md
+
+  16) [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:67:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Sukces state ÔÇö wy┼øwietla si─Ö po udanym wys┼éaniu 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('text=Wiadomo┼ø─ç wys┼éana')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Wiadomo┼ø─ç wys┼éana')[22m
+
+
+      77 |
+      78 |         await page.locator('button[type="submit"]').click();
+    > 79 |         await expect(page.locator('text=Wiadomo┼ø─ç wys┼éana')).toBeVisible({ timeout: 5000 });
+         |                                                              ^
+      80 |         // Ikona checkmark powinna by─ç widoczna
+      81 |         await expect(page.locator('text=odpiszemy')).toBeVisible();
+      82 |     });
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\contact-form.spec.ts:79:62
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-contact-form-Formularz-edb5f-etla-si─Ö-po-udanym-wys┼éaniu-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-contact-form-Formularz-edb5f-etla-si─Ö-po-udanym-wys┼éaniu-chromium\error-context.md
+
+  17) [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:27:5 ÔÇ║ Nawigacja ÔÇ║ Wszystkie linki w nawigacji prowadz─à do istniej─àcych stron 
+
+    Error: /uslugi/prawo-rodzinne returned non-200
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: < [32m400[39m
+    Received:   [31m500[39m
+
+      28 |         for (const link of ALL_LINKS) {
+      29 |             const response = await page.goto(link.path);
+    > 30 |             expect(response?.status(), `${link.path} returned non-200`).toBeLessThan(400);
+         |                                                                         ^
+      31 |             const h1 = page.locator('h1').first();
+      32 |             await expect(h1).toBeVisible();
+      33 |         }
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\navigation.spec.ts:30:73
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-navigation-Nawigacja-W-96bb1-wadz─à-do-istniej─àcych-stron-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  18) [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:64:5 ÔÇ║ Nawigacja ÔÇ║ Blog ÔÇö linki "Przeczytaj artyku┼é" prowadza do post├│w 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('article a').first()[22m
+    [2m    - locator resolved to <a data-astro-source-loc="79:85" class="after:absolute after:inset-0" href="/blog/jazda-po-alkoholu-konsekwencje-prawne" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro"> Co grozi za jazd─Ö po alkoholu? Prawo karne drogoÔÇª</a>[22m
+    [2m  - attempting click action[22m
+    [2m    2 ├ù waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not stable[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 ├ù waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not stable[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is not stable[22m
+    [2m  50 ├ù retrying click action[22m
+    [2m       - waiting 500ms[22m
+    [2m       - waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - <vite-error-overlay dir="ltr"></vite-error-overlay> intercepts pointer events[22m
+    [2m  - retrying click action[22m
+    [2m    - waiting 500ms[22m
+    [2m  - element was detached from the DOM, retrying[22m
+    [2m    - waiting for" http://localhost:4321/blog" navigation to finish...[22m
+    [2m    - navigated to "http://localhost:4321/blog"[22m
+    [2m    - locator resolved to <a data-astro-source-loc="79:85" class="after:absolute after:inset-0" href="/blog/jazda-po-alkoholu-konsekwencje-prawne" data-astro-source-file="C:/MyFiles/ProgrammingProjects/MamaWiki/kancelariaabw/src/pages/blog/index.astro"> Co grozi za jazd─Ö po alkoholu? Prawo karne drogoÔÇª</a>[22m
+    [2m  - attempting click action[22m
+    [2m    2 ├ù waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <a class="after:absolute after:inset-0" href="/blog/podzial-majatku-po-rozwodzie-zasady"> Podzia┼é maj─àtku po rozwodzie ÔÇö zasady, koszty i ÔÇª</a> from <article class="group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">ÔÇª</article> subtree intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <a class="after:absolute after:inset-0" href="/blog/podzial-majatku-po-rozwodzie-zasady"> Podzia┼é maj─àtku po rozwodzie ÔÇö zasady, koszty i ÔÇª</a> from <article class="group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">ÔÇª</article> subtree intercepts pointer events[22m
+    [2m  2 ├ù retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not stable[22m
+    [2m  2 ├ù retrying click action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <a class="after:absolute after:inset-0" href="/blog/podzial-majatku-po-rozwodzie-zasady"> Podzia┼é maj─àtku po rozwodzie ÔÇö zasady, koszty i ÔÇª</a> from <article class="group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">ÔÇª</article> subtree intercepts pointer events[22m
+    [2m  2 ├ù retrying click action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <nav aria-label="Nawigacja g┼é├│wna" class="flex items-center justify-between h-16 lg:h-20">ÔÇª</nav> from <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">ÔÇª</header> subtree intercepts pointer events[22m
+    [2m  - retrying click action[22m
+    [2m    - waiting 500ms[22m
+
+
+      65 |         await page.goto('/blog');
+      66 |         const firstCardLink = page.locator('article a').first();
+    > 67 |         await firstCardLink.click();
+         |                             ^
+      68 |         // Powinni┼ømy by─ç na /blog/[slug]
+      69 |         expect(page.url()).toContain('/blog/');
+      70 |         const h1 = page.locator('h1');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\navigation.spec.ts:67:29
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-navigation-Nawigacja-B-2251b--artyku┼é-prowadza-do-post├│w-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-navigation-Nawigacja-B-2251b--artyku┼é-prowadza-do-post├│w-chromium\error-context.md
+
+  19) [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:74:5 ÔÇ║ Nawigacja ÔÇ║ Breadcrumby na podstronach dzia┼éaj─à 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('nav[aria-label="Breadcrumb"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('nav[aria-label="Breadcrumb"]')[22m
+
+
+      75 |         await page.goto('/uslugi/prawo-rodzinne');
+      76 |         const breadcrumb = page.locator('nav[aria-label="Breadcrumb"]');
+    > 77 |         await expect(breadcrumb).toBeVisible();
+         |                                  ^
+      78 |         const uslugiLink = breadcrumb.locator('a[href="/uslugi"]');
+      79 |         await expect(uslugiLink).toBeVisible();
+      80 |     });
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\navigation.spec.ts:77:34
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-navigation-Nawigacja-Breadcrumby-na-podstronach-dzia┼éaj─à-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-navigation-Nawigacja-Breadcrumby-na-podstronach-dzia┼éaj─à-chromium\error-context.md
+
+  20) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-d5a76--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-d5a76--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  21) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-83650--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-83650--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  22) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('text=Um├│w konsultacj─Ö').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Um├│w konsultacj─Ö').first()[22m
+    [2m    9 ├ù locator resolved to <a href="/kontakt" aria-label="Um├│w konsultacj─Ö prawn─à" class="hidden lg:inline-flex btn-primary">ÔåÁUm├│w konsultacj─ÖÔåÁ</a>[22m
+    [2m      - unexpected value "hidden"[22m
+
+
+      52 |             await pw.goto('/');
+      53 |             const cta = pw.locator('text=Um├│w konsultacj─Ö').first();
+    > 54 |             await expect(cta).toBeVisible();
+         |                               ^
+      55 |         });
+      56 |     });
+      57 | }
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:54:31
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-50315-widoczny-na-ekranie-g┼é├│wnym-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-50315-widoczny-na-ekranie-g┼é├│wnym-chromium\error-context.md
+
+  23) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-9595d--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-9595d--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  24) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-be398--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  25) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('text=Um├│w konsultacj─Ö').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('text=Um├│w konsultacj─Ö').first()[22m
+    [2m    9 ├ù locator resolved to <a href="/kontakt" aria-label="Um├│w konsultacj─Ö prawn─à" class="hidden lg:inline-flex btn-primary">ÔåÁUm├│w konsultacj─ÖÔåÁ</a>[22m
+    [2m      - unexpected value "hidden"[22m
+
+
+      52 |             await pw.goto('/');
+      53 |             const cta = pw.locator('text=Um├│w konsultacj─Ö').first();
+    > 54 |             await expect(cta).toBeVisible();
+         |                               ^
+      55 |         });
+      56 |     });
+      57 | }
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:54:31
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-e47e9-widoczny-na-ekranie-g┼é├│wnym-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-e47e9-widoczny-na-ekranie-g┼é├│wnym-chromium\error-context.md
+
+  26) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-a274f--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  27) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-7c0d5--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-7c0d5--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  28) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-9a18b--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-9a18b--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  29) [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('main, article').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('main, article').first()[22m
+
+
+      37 |
+      38 |                 // Strona si─Ö za┼éadowa┼éa (jest <main> lub <article>)
+    > 39 |                 await expect(pw.locator('main, article').first()).toBeVisible();
+         |                                                                   ^
+      40 |             });
+      41 |         }
+      42 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\e2e\responsive.spec.ts:39:67
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\e2e-responsive-Responsywno-fadd8--renderuje-si─Ö-bez-overflow-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\e2e-responsive-Responsywno-fadd8--renderuje-si─Ö-bez-overflow-chromium\error-context.md
+
+  30) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ / ÔÇö ma title i description ÔöÇ
+
+    Error: H1 count on /
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-tagi-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-tagi-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  31) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /o-mnie ÔÇö ma title i description 
+
+    Error: H1 count on /o-mnie
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-ae54a-ie-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-ae54a-ie-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  32) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi ÔÇö ma title i description 
+
+    Error: H1 count on /uslugi
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-8c048-gi-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-8c048-gi-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  33) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-rodzinne ÔÇö ma title i description 
+
+    Error: <title> on /uslugi/prawo-rodzinne
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected substring: [32m"Prawo rodzinne Wroc┼éaw"[39m
+    Received string:    [31m"TypeError"[39m
+
+      23 |             // <title> zawiera oczekiwany tekst
+      24 |             const title = await pw.title();
+    > 25 |             expect(title, `<title> on ${page.path}`).toContain(page.title);
+         |                                                      ^
+      26 |             expect(title.length, `Title length on ${page.path}`).toBeGreaterThan(20);
+      27 |             expect(title.length, `Title length on ${page.path}`).toBeLessThan(70);
+      28 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:25:54
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-5806a-ne-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  34) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-cywilne ÔÇö ma title i description 
+
+    Error: <title> on /uslugi/prawo-cywilne
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected substring: [32m"Prawo cywilne Wroc┼éaw"[39m
+    Received string:    [31m"TypeError"[39m
+
+      23 |             // <title> zawiera oczekiwany tekst
+      24 |             const title = await pw.title();
+    > 25 |             expect(title, `<title> on ${page.path}`).toContain(page.title);
+         |                                                      ^
+      26 |             expect(title.length, `Title length on ${page.path}`).toBeGreaterThan(20);
+      27 |             expect(title.length, `Title length on ${page.path}`).toBeLessThan(70);
+      28 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:25:54
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-f0a93-ne-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  35) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-karne ÔÇö ma title i description 
+
+    Error: H1 count on /uslugi/prawo-karne
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-e1fbb-ne-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-e1fbb-ne-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  36) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /cennik ÔÇö ma title i description 
+
+    Error: H1 count on /cennik
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-217e5-ik-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-217e5-ik-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  37) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /kontakt ÔÇö ma title i description 
+
+    Error: H1 count on /kontakt
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m4[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-c7051-kt-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-c7051-kt-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  38) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /blog ÔÇö ma title i description 
+
+    Error: H1 count on /blog
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-tagi-blog-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-tagi-blog-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  39) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /polityka-prywatnosci ÔÇö ma title i description 
+
+    Error: H1 count on /polityka-prywatnosci
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-a297b-ci-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-a297b-ci-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  40) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /regulamin ÔÇö ma title i description 
+
+    Error: Description length on /regulamin
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m50[39m
+    Received:   [31m50[39m
+
+      30 |             const description = await pw.locator('meta[name="description"]').getAttribute('content');
+      31 |             expect(description, `Description missing on ${page.path}`).toBeTruthy();
+    > 32 |             expect(description!.length, `Description length on ${page.path}`).toBeGreaterThan(50);
+         |                                                                               ^
+      33 |             expect(description!.length, `Description length on ${page.path}`).toBeLessThan(170);
+      34 |
+      35 |             // Canonical link
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:32:79
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-5f639-in-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-5f639-in-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  41) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /przetwarzanie-danych ÔÇö ma title i description 
+
+    Error: H1 count on /przetwarzanie-danych
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m5[39m
+
+      40 |             // Jeden H1
+      41 |             const h1Count = await pw.locator('h1').count();
+    > 42 |             expect(h1Count, `H1 count on ${page.path}`).toBe(1);
+         |                                                         ^
+      43 |
+      44 |             // lang="pl" na <html>
+      45 |             const lang = await pw.locator('html').getAttribute('lang');
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:42:57
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-30c94-ch-ÔÇö-ma-title-i-description-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error Context: test-results\seo-meta-tags-SEO-ÔÇö-Meta-t-30c94-ch-ÔÇö-ma-title-i-description-chromium\error-context.md
+
+  42) [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:92:5 ÔÇ║ SEO ÔÇö JSON-LD Structured Data ÔÇ║ Strona us┼éugi ÔÇö zawiera BreadcrumbList 
+
+    Error: BreadcrumbList missing
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mtrue[39m
+    Received: [31mfalse[39m
+
+       97 |         });
+       98 |         const types = schemas.map((s: Record<string, unknown>) => s['@type']);
+    >  99 |         expect(types.some((t: unknown) => t === 'BreadcrumbList'), 'BreadcrumbList missing').toBe(true);
+          |                                                                                              ^
+      100 |     });
+      101 | });
+      102 |
+        at C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw\tests\seo\meta-tags.spec.ts:99:94
+
+    attachment #1: screenshot (image/png) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\seo-meta-tags-SEO-ÔÇö-JSON-L-b495b-gi-ÔÇö-zawiera-BreadcrumbList-chromium\test-failed-1.png
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  42 failed
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ / ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /o-mnie ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-rodzinne ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-cywilne ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /uslugi/prawo-karne ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /cennik ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /kontakt ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /blog ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /polityka-prywatnosci ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\accessibility\axe.spec.ts:20:9 ÔÇ║ Accessibility ÔÇö WCAG 2.1 AA ÔÇ║ /regulamin ÔÇö brak narusze┼ä WCAG AA 
+    [chromium] ÔÇ║ tests\crawler.spec.ts:7:3 ÔÇ║ Globalny Crawler Link├│w Wewn─Ötrznych ÔÇ║ Przechodzi przez wszystkie wewn─Ötrzne linki ze strony g┼é├│wnej (kod statusu 200, brak b┼é─Öd├│w) 
+    [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:26:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Walidacja ÔÇö z┼éy format email 
+    [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:39:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Honeypot ÔÇö pole ukryte (position:absolute) 
+    [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:48:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Formularz z poprawnymi danymi pokazuje loading state 
+    [chromium] ÔÇ║ tests\e2e\contact-form.spec.ts:67:5 ÔÇ║ Formularz kontaktowy ÔÇ║ Sukces state ÔÇö wy┼øwietla si─Ö po udanym wys┼éaniu 
+    [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:27:5 ÔÇ║ Nawigacja ÔÇ║ Wszystkie linki w nawigacji prowadz─à do istniej─àcych stron 
+    [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:64:5 ÔÇ║ Nawigacja ÔÇ║ Blog ÔÇö linki "Przeczytaj artyku┼é" prowadza do post├│w 
+    [chromium] ÔÇ║ tests\e2e\navigation.spec.ts:74:5 ÔÇ║ Nawigacja ÔÇ║ Breadcrumby na podstronach dzia┼éaj─à 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö mobile-sm (375px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:51:9 ÔÇ║ Responsywno┼ø─ç ÔÇö tablet (768px) ÔÇ║ CTA "Um├│w konsultacj─Ö" widoczny na ekranie g┼é├│wnym 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö desktop (1280px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo rodzinne [/uslugi/prawo-rodzinne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\e2e\responsive.spec.ts:30:13 ÔÇ║ Responsywno┼ø─ç ÔÇö wide (1920px) ÔÇ║ Prawo cywilne [/uslugi/prawo-cywilne] renderuje si─Ö bez overflow 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ / ÔÇö ma title i description ÔöÇÔöÇÔöÇ
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /o-mnie ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-rodzinne ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-cywilne ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /uslugi/prawo-karne ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /cennik ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /kontakt ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /blog ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /polityka-prywatnosci ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /regulamin ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:20:9 ÔÇ║ SEO ÔÇö Meta tagi ÔÇ║ /przetwarzanie-danych ÔÇö ma title i description 
+    [chromium] ÔÇ║ tests\seo\meta-tags.spec.ts:92:5 ÔÇ║ SEO ÔÇö JSON-LD Structured Data ÔÇ║ Strona us┼éugi ÔÇö zawiera BreadcrumbList 
+  58 passed (41.8s)
+
+[36m  Serving HTML report at http://localhost:45084. Press Ctrl+C to quit.[39m

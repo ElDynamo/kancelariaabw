@@ -16,7 +16,7 @@ const serviceSchema = {
   "name": "Prawo nieruchomości Wrocław — Kancelaria ABW",
   "url": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw",
   "telephone": "+48609366160",
-  "description": data?.seoDescription || "Obsługa prawna w sprawach nieruchomości we Wrocławiu",
+  "description": data?.seo?.description || "Obsługa prawna w sprawach nieruchomości we Wrocławiu",
   "areaServed": ["Wrocław", "Dolny Śląsk"]
 };
 const faqSchema = {
@@ -28,14 +28,14 @@ const breadcrumb = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://kancelariaabw.pl" },
     { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://kancelariaabw.pl/uslugi" },
-    { "@type": "ListItem", "position": 3, "name": data?.heroTitle || "Nieruchomości", "item": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw" },
+    { "@type": "ListItem", "position": 3, "name": data?.hero?.title || "Nieruchomości", "item": "https://kancelariaabw.pl/uslugi/prawo-nieruchomosci-wroclaw" },
   ]
 };
 ---
 
 <Layout
   title={data?.title || "Prawo Nieruchomości"}
-  description={data?.seoDescription || ""}
+  description={data?.seo?.description || ""}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -44,9 +44,9 @@ const breadcrumb = {
   </Fragment>
 
   <ServiceHero
-    title={data?.heroTitle}
-    subtitle={data?.heroSubtitle}
-    description={data?.heroDescription}
+    title={data?.hero?.title || ""}
+    subtitle={data?.hero?.subtitle || undefined}
+    description={data?.hero?.description || undefined}
     label="Nieruchomości"
     ctaText="Umów konsultację"
     image="/photos/hero_nieruchomosci_1772972108703.png"
@@ -54,7 +54,7 @@ const breadcrumb = {
   />
 
   <section class="section bg-white">
-    <div class="container-site max-w-5xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-5xl">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <article class="lg:col-span-2 prose prose-navy max-w-none">
           {Content && <Content />}
@@ -78,7 +78,7 @@ const breadcrumb = {
   <FAQAccordion items={data?.faq || []} title="Pytania o prawo nieruchomości" />
 
   <section class="section bg-navy">
-    <div class="container-site max-w-3xl text-center">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-3xl text-center">
       <h2 class="font-serif text-3xl text-white mb-4">Problem z nieruchomością?</h2>
       <p class="font-sans text-white opacity-70 mb-8 max-w-lg mx-auto">Skontaktuj się z nami — szybko ocenimy sytuację prawną i zaproponujemy najlepsze wyjście.</p>
       <Button href="/kontakt" variant="gold" size="lg">Umów konsultację</Button>

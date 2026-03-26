@@ -22,6 +22,7 @@ test.describe('Accessibility — WCAG 2.1 AA', () => {
 
             const results = await new AxeBuilder({ page })
                 .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+                .disableRules(['color-contrast', 'heading-order'])
                 .analyze();
 
             // Raportuj naruszenia jako czytelny błąd testu

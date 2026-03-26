@@ -59,8 +59,12 @@
     @apply py-20 lg:py-28;
   }
 
-  .container-site {
-    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  .island-card {
+    @apply bg-white rounded-3xl shadow-sm border border-border/80 p-6;
+  }
+
+  .bento-box {
+    @apply grid gap-4;
   }
 
   .heading-xl {

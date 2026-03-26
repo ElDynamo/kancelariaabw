@@ -1,0 +1,118 @@
+$ astro check
+[2m10:33:24[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
+[2m10:33:24[22m [34m[content][39m Syncing content
+[2m10:33:24[22m [34m[content][39m Synced content
+[2m10:33:24[22m [34m[types][39m Generated [2m230ms[22m
+[2m10:33:24[22m [34m[check][39m Getting diagnostics for Astro files in C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw...
+[96msrc/components/layout/Layout.astro[0m:[93m56[0m:[93m7[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m56[0m       defer
+[7m  [0m [93m      ~~~~~[0m
+
+[96msrc/components/seo/StructuredData.astro[0m:[93m8[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m8[0m <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+[7m [0m [93m        ~~~~[0m
+
+[96msrc/pages/admin.astro[0m:[93m270[0m:[93m20[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m270[0m       if (btn) btn.disabled = false;
+[7m   [0m [91m                   ~~~~~~~~[0m
+[96msrc/pages/admin.astro[0m:[93m261[0m:[93m24[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m261[0m           if (btn) btn.disabled = false;
+[7m   [0m [91m                       ~~~~~~~~[0m
+[96msrc/pages/admin.astro[0m:[93m252[0m:[93m18[0m - [91merror[0m[90m ts(2339): [0mProperty 'disabled' does not exist on type 'HTMLElement'.
+
+[7m252[0m     if (btn) btn.disabled = true;
+[7m   [0m [91m                 ~~~~~~~~[0m
+
+[96msrc/pages/api/build.ts[0m:[93m7[0m:[93m38[0m - [93mwarning[0m[90m ts(6133): [0m'request' is declared but its value is never read.
+
+[7m7[0m export const POST: APIRoute = async ({ request }) => {
+[7m [0m [93m                                     ~~~~~~~~~~~[0m
+
+[96msrc/pages/blog/[slug].astro[0m:[93m6[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'Breadcrumb' is declared but its value is never read.
+
+[7m6[0m import Breadcrumb from '@components/ui/Breadcrumb.astro';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/blog/[slug].astro[0m:[93m5[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'Button' is declared but its value is never read.
+
+[7m5[0m import Button from '@components/ui/Button.astro';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/blog/[slug].astro[0m:[93m2[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'getCollection' is declared but its value is never read.
+
+[7m2[0m import { getCollection, getEntry } from 'astro:content';
+[7m [0m [93m         ~~~~~~~~~~~~~[0m
+
+[96msrc/pages/uslugi/[slug].astro[0m:[93m67[0m:[93m5[0m - [91merror[0m[90m ts(2322): [0mType 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m67[0m     title={data.hero?.title || undefined}
+[7m  [0m [91m    ~~~~~[0m
+
+[96msrc/pages/uslugi/index.astro[0m:[93m5[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'Button' is declared but its value is never read.
+
+[7m5[0m import Button from '@components/ui/Button.astro';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/uslugi/index.astro[0m:[93m4[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'ServiceCard' is declared but its value is never read.
+
+[7m4[0m import ServiceCard from '@components/ui/ServiceCard.astro';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96mscripts/create-cms-defaults.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mscripts/create-legal-docs.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mscripts/create-tools-info.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mscripts/migrate-authors.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mscripts/patch-keys.js[0m:[93m49[0m:[93m76[0m - [93mwarning[0m[90m ts(6133): [0m'p1' is declared but its value is never read.
+
+[7m49[0m                 content = content.replace(/seo:\n((?:\s+.*?\n)*)/, (match, p1) => {
+[7m  [0m [93m                                                                           ~~[0m
+[96mscripts/patch-keys.js[0m:[93m49[0m:[93m69[0m - [93mwarning[0m[90m ts(6133): [0m'match' is declared but its value is never read.
+
+[7m49[0m                 content = content.replace(/seo:\n((?:\s+.*?\n)*)/, (match, p1) => {
+[7m  [0m [93m                                                                    ~~~~~[0m
+[96mscripts/patch-keys.js[0m:[93m39[0m:[93m66[0m - [93mwarning[0m[90m ts(6133): [0m'match' is declared but its value is never read.
+
+[7m39[0m             content = content.replace(/hero:\n((?:\s+.*?\n)+)/, (match, p1) => {
+[7m  [0m [93m                                                                 ~~~~~[0m
+[96mscripts/patch-keys.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+[96mscripts/test-keystatic.js[0m:[93m1[0m:[93m12[0m - [93mwarning[0m[90m ts(80001): [0mFile is a CommonJS module; it may be converted to an ES module.
+
+[7m1[0m const fs = require('fs');
+[7m [0m [93m           ~~~~~~~~~~~~~[0m
+
+Result (57 files): 
+- 4 errors
+- 0 warnings
+- 17 hints
+
+error: script "check" exited with code 1

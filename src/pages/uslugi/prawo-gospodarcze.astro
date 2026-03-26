@@ -32,7 +32,7 @@ const breadcrumb = {
 
 <Layout
   title={data?.title || "Prawo gospodarcze Wrocław — Obsługa Prawna Firm"}
-  description={data?.seoDescription || "Obsługa prawna firm i przedsiębiorców we Wrocławiu. Rejestracja spółek, umowy, windykacja, RODO."}
+  description={data?.seo?.description || "Obsługa prawna firm i przedsiębiorców we Wrocławiu. Rejestracja spółek, umowy, windykacja, RODO."}
 >
   <Fragment slot="head">
     <StructuredData schema={serviceSchema} />
@@ -41,8 +41,8 @@ const breadcrumb = {
 
   <ServiceHero
     title={data?.hero?.title || "Prawo gospodarcze"}
-    subtitle={data?.hero?.subtitle}
-    description={data?.hero?.description}
+    subtitle={data?.hero?.subtitle || undefined}
+    description={data?.hero?.description || undefined}
     label="Obsługa prawna firm"
     ctaText="Umów konsultację"
     image="/photos/hero_obsluga_firm_1772972083263.png"
@@ -51,7 +51,7 @@ const breadcrumb = {
 
   <!-- CONTENT GRID -->
   <section class="py-20 lg:py-32 bg-white">
-    <div class="container-site max-w-5xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-5xl">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         
         <!-- SIDEBAR -->

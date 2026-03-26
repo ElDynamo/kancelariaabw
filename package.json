@@ -7,7 +7,7 @@
         "build": "astro build",
         "preview": "astro preview",
         "check": "astro check",
-        "new-post": "node scripts/new-post.mjs",
+        "new-post": "bun scripts/new-post.ts",
         "test": "playwright test",
         "test:seo": "lhci autorun",
         "test:a11y": "playwright test tests/accessibility/"

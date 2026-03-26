@@ -29,7 +29,7 @@ if (post.data.draft && !hasPreviewCookie) {
 }
 
 // Mapowanie Autora (Relacja CMS)
-const authorEntry = await getEntry('authors', post.data.author.id || post.data.author);
+const authorEntry = await getEntry('authors', post.data.author);
 const authorData = authorEntry?.data;
 
 // Powiązana usługa (Cross-Sell)
@@ -43,7 +43,7 @@ const blogPostingSchema = {
   "headline": post.data.title,
   "description": post.data.description,
   "datePublished": post.data.publishDate.toISOString(),
-  "dateModified": (post.data.lastModified ?? post.data.publishDate).toISOString?.() ?? post.data.publishDate.toISOString(),
+  "dateModified": (post.data.publishDate).toISOString?.() ?? post.data.publishDate.toISOString(),
   "author": {
     "@type": "Person",
     "name": authorData?.name || "Kancelaria ABW",
@@ -89,7 +89,7 @@ const breadcrumb = {
   </Fragment>
 
   <article class="section bg-white">
-    <div class="container-site">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-8 flex items-center justify-between">

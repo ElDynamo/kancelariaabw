@@ -1,0 +1,7 @@
+$ astro check
+[2m10:45:29[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
+[2m10:45:29[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m10:45:29[22m [34m[content][39m Syncing content
+[2m10:45:29[22m [34m[content][39m Synced content
+[2m10:45:29[22m [34m[types][39m Generated [2m323ms[22m
+[2m10:45:29[22m [34m[check][39m Getting diagnostics for Astro files in C:\MyFiles\ProgrammingProjects\MamaWiki\kancelariaabw...

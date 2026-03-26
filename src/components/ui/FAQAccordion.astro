@@ -15,7 +15,7 @@ const { items, title, class: extraClass = '' } = Astro.props;
 
 {items && items.length > 0 && (
   <section class:list={['section bg-off-white', extraClass]}>
-    <div class="container-site max-w-3xl">
+    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8 max-w-3xl">
       {title && (
         <div class="mb-8">
           <div class="flex items-center gap-2 mb-3">

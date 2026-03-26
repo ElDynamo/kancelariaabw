@@ -94,8 +94,7 @@ const submit = async () => {
       novalidate
       aria-label="Formularz kontaktowy"
     >
-      <!-- Honeypot — ukryte dla ludzi, widoczne dla botów -->
-      <div style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+      <div class="sr-only" aria-hidden="true">
         <label for="website">Strona (nie wypełniaj)</label>
         <input id="website" v-model="form.honeypot" type="text" tabindex="-1" autocomplete="off" />
       </div>
