@@ -19,19 +19,19 @@ onMounted(async () => {
   const defaultIcon = L.icon({ iconUrl, iconRetinaUrl, shadowUrl, iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] });
   L.Marker.prototype.options.icon = defaultIcon;
 
-  map = L.map(mapContainer.value, { scrollWheelZoom: false }).setView([51.1093, 17.0231], 15);
+  map = L.map(mapContainer.value, { scrollWheelZoom: false }).setView([51.1396, 16.9248], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19,
   }).addTo(map as any);
 
-  // Marker — OIRP Wrocław, ul. Włodkowica 8
-  L.marker([51.1093, 17.0231])
+  // Marker — Wrocław, ul. Szkolna 7bh
+  L.marker([51.1396, 16.9248])
     .addTo(map as any)
     .bindPopup(`
       <strong style="font-family:serif;color:#1a3a5c;">Kancelaria Prawna ABW</strong><br/>
-      <span style="font-size:12px;color:#64748b;">Miejsce spotkań: OIRP<br/>ul. Włodkowica 8, Wrocław</span><br/>
+      <span style="font-size:12px;color:#64748b;">Biuro kancelarii:<br/>ul. Szkolna 7bh, Wrocław</span><br/>
       <a href="tel:+48609366160" style="color:#c9a84c;font-size:12px;margin-top:4px;display:inline-block;">609 366 160</a>
     `);
 });
