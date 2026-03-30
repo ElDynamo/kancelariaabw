@@ -60,7 +60,7 @@ const blogSchema = {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal delay-100">
         {posts.map(post => (
-          <article class="group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">
+          <article class="relative group border border-border rounded-2xl overflow-hidden hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">
             <!-- Category tag -->
             <div class="p-5 pb-0">
               <span class:list={['font-sans text-xs px-2 py-1 rounded-full inline-block', categoryColors[post.data.category] ?? 'bg-gray-100 text-gray-700']}>
