@@ -7,11 +7,11 @@
       loading="lazy" 
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade"
-      src="https://maps.google.com/maps?q=ul.%20Szkolna%207bh,%20Raty%C5%84,%20Wroc%C5%82aw&t=&z=16&ie=UTF8&iwloc=&output=embed">
+      src="https://maps.google.com/maps?cid=11177525231103303962&hl=pl-PL&output=embed">
     </iframe>
   </div>
 </template>
 
 <script setup lang="ts">
-// Używamy natywnego iframe'a od Google Maps z wpisanym adresem dzielnicy Ratyń
+// Używamy natywnego iframe'a z CID (Identyfikatorem Miejsca), który pięknie centruje mapę na firmie
 </script>
