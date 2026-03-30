@@ -1,9 +1,6 @@
 services:
   kancelaria:
-    build:
-      context: .
-      args:
-        RESEND_API_KEY: ${RESEND_API_KEY}
+    image: ghcr.io/eldynamo/kancelariaabw:latest
     container_name: kancelaria-abw
     restart: unless-stopped
     ports:
