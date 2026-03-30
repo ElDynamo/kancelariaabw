@@ -7,11 +7,11 @@
       loading="lazy" 
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade"
-      src="https://maps.google.com/maps?q=51.1147569,17.0245063&t=&z=16&ie=UTF8&iwloc=&output=embed">
+      src="https://maps.google.com/maps?q=ul.%20Szkolna%207bh,%20Raty%C5%84,%20Wroc%C5%82aw&t=&z=16&ie=UTF8&iwloc=&output=embed">
     </iframe>
   </div>
 </template>
 
 <script setup lang="ts">
-// Konwersja z Leaflet na standardowy iframe z Google Maps (na wyraźne polecenie)
+// Używamy natywnego iframe'a od Google Maps z wpisanym adresem dzielnicy Ratyń
 </script>
