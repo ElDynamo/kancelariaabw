@@ -4,7 +4,6 @@ import StructuredData from '@components/seo/StructuredData.astro';
 import ServiceCard from '@components/ui/ServiceCard.astro';
 import Button from '@components/ui/Button.astro';
 import CTASection from '@components/ui/CTASection.astro';
-import Map from '@components/forms/Map.vue';
 
 import { getEntry } from 'astro:content';
 
@@ -275,20 +274,6 @@ const faqSchema = {
         <Button href="/kontakt" variant="primary">Napisz do nas</Button>
       </div>
 
-    </div>
-  </section>
-
-  <!-- LOKALIZACJA (MAPA) -->
-  <section class="section bg-white" aria-labelledby="location-heading">
-    <div class="w-full max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <span class="font-sans text-xs uppercase tracking-widest text-gold">Lokalizacje</span>
-        <h2 id="location-heading" class="heading-lg mt-2">Gdzie się spotykamy?</h2>
-        <p class="text-body max-w-xl mx-auto mt-3">Spotkajmy się tam, gdzie Ci wygodniej. Na co dzień obsługuję klientów w przestrzeniach OIRP przy historycznej ul. Włodkowica 8 oraz w biurze.</p>
-      </div>
-      <div class="reveal delay-100 shadow-lg rounded-3xl overflow-hidden border border-border/50 bg-off-white p-2">
-        <Map />
-      </div>
     </div>
   </section>
 
